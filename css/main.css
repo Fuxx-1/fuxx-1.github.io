@@ -1818,7 +1818,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #7f79ff;
+  background: #ff8605;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2981,7 +2981,7 @@ pre .javascript .function {
 }
 @media screen and (min-width: 1200px) {
   body {
-    background-image: url("/images/background.jpg");
+    background-image: url("images/background.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
