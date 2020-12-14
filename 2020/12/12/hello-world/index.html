@@ -442,6 +442,8 @@
           
   <div class="comments" id="comments">
     
+      <div id="gitalk-container"></div>
+    
   </div>
 
 
@@ -770,6 +772,10 @@
 
 
 
+      
+      
+       
+    
   
 
   <script type="text/javascript">
@@ -1219,17 +1225,17 @@
 <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
 <script type="text/javascript">
   var gitalk = new Gitalk({
-    clientID: '',
-    clientSecret: '',
-    repo: '',
-    owner: '',
-    admin: [''],
+    clientID: '58c10c8c18d93365dc09',
+    clientSecret: '9f2ecd7779b7eee13850c6f86710ad04231207a3',
+    repo: 'blog_comments',
+    owner: 'fuxx-1',
+    admin: ['fuxx-1'],
     id: md5(location.pathname),   // ISSUE：location.href 限制50个字符 (应该是Issue 内容存数据库的标识， 具体在页面上无感)
-    labels: ''.split(',').filter(l => l),  // 需要的 labels需要一个数组，否则会报错
-    perPage: ,
-    pagerDirection: '',
-    createIssueManually: ,
-    distractionFreeMode: 
+    labels: 'gitalk'.split(',').filter(l => l),  // 需要的 labels需要一个数组，否则会报错
+    perPage: 15,
+    pagerDirection: 'last',
+    createIssueManually: false,
+    distractionFreeMode: true
   })
   gitalk.render('gitalk-container')
 </script>
