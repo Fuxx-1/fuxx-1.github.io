@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -100,7 +100,7 @@
 <meta property="og:url" content="http://example.com/2020/12/13/2020-11-29-%E9%A2%98%E7%9B%AE%E7%BB%83%E4%B9%A0%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="Fuxxの博客">
 <meta property="og:description" content="2020-11-29 题目练习总结[1] ¶第一题 ¶Sky数 [2]">
-<meta property="og:locale">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-12-12T19:20:28.000Z">
 <meta property="article:modified_time" content="2020-12-14T08:56:46.324Z">
 <meta property="article:author" content="Fuxx-1">
@@ -119,7 +119,7 @@
     motion: true,
     duoshuo: {
       userId: '0',
-      author: '博主'
+      author: 'Author'
     },
     algolia: {
       applicationID: '',
@@ -157,7 +157,7 @@
 
 <meta name="generator" content="Hexo 5.2.0"></head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -206,7 +206,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            首页
+            Home
           </a>
         </li>
       
@@ -216,7 +216,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            归档
+            Archives
           </a>
         </li>
       
@@ -229,7 +229,7 @@
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
-            搜索
+            Search
           </a>
         </li>
       
@@ -249,7 +249,7 @@
     </span>
     <div class="local-search-input-wrapper">
       <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
+             placeholder="Searching..." spellcheck="false"
              type="text" id="local-search-input">
     </div>
   </div>
@@ -314,9 +314,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-12-13T03:20:28+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-12-13T03:20:28+08:00">
                 2020-12-13
               </time>
             
@@ -340,7 +340,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数 </span>
+                 <span class="post-meta-item-text">Visitors </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -773,6 +773,8 @@ n的总和不会超过200000</p>
           
   <div class="comments" id="comments">
     
+      <div id="gitalk-container"></div>
+    
     </div>
 
 
@@ -797,10 +799,10 @@ n的总和不会超过200000</p>
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
+            Overview
           </li>
         </ul>
       
@@ -821,7 +823,7 @@ n的总和不会超过200000</p>
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
                 <span class="site-state-item-count">4</span>
-                <span class="site-state-item-name">日志</span>
+                <span class="site-state-item-name">posts</span>
               </a>
             </div>
           
@@ -891,11 +893,11 @@ n的总和不会超过200000</p>
 
 
 <div class="powered-by">
-  由 <a class="theme-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> 强力驱动
+  Powered by <a class="theme-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  主题 -
+  Theme -
   <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Pisces
   </a>
@@ -1099,6 +1101,29 @@ n的总和不会超过200000</p>
 
 
 
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '58c10c8c18d93365dc09',
+          clientSecret: '9f2ecd7779b7eee13850c6f86710ad04231207a3',
+          repo: 'blog_comments',
+          owner: 'fuxx-1',
+          admin: fuxx-1,
+          id: ,
+          labels: gitalk,
+          perPage: 15,
+          pagerDirection: 'last',
+          createIssueManually: false,
+          distractionFreeMode: true
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
   
 
