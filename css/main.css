@@ -2929,9 +2929,8 @@ body {
 .header-inner {
   border-radius: 20px 20px 20px 20px;
 }
-.main-menu {
+.main-menu menu {
   border-radius: 20px 20px 20px 20px;
-  background-color: rgba(255,255,255,0.8);
 }
 .sidebar-inner {
   border-radius: 20px 20px 20px 20px;
