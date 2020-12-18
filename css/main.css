@@ -2909,3 +2909,9 @@ body {
 .back-to-top {
   border-radius: 0px 0px 20px 20px;
 }
+* {
+  cursor: url("/images/mouse.ico"), auto !important;
+}
+:active {
+  cursor: url("/images/mouse.ico"), auto !important;
+}
