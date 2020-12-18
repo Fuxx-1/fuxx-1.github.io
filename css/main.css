@@ -1414,6 +1414,11 @@ pre code {
   border: 1px solid #eee;
   max-width: 120px;
   padding: 2px;
+  border-radius: 50%;
+  transition: transform 1s ease-out;
+}
+.site-author-image:hover {
+  transform: rotateZ(360deg);
 }
 .site-author-name {
   color: var(--text-color);
@@ -2903,10 +2908,4 @@ body {
 }
 .back-to-top {
   border-radius: 0px 0px 20px 20px;
-}
-* {
-  cursor: url("/images/mouse.ico"), auto !important;
-}
-:active {
-  cursor: url("/images/mouse.ico"), auto !important;
 }
