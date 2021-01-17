@@ -853,7 +853,7 @@ rxf</p>
 <p>（3）将硬币移至边的另一端。</p>
 <p>如果轮到一个玩家走，这时硬币左右两边的边上的数值都是0，那么这个玩家就输了。</p>
 <p>如下图，描述的是Alice和Bob两人的对弈过程，其中黑色节点表示硬币所在节点。结果图(d)中，轮到Bob走时，硬币两边的边上都是0，所以Alcie获胜。</p>
-<p><img src="/2020/12/18/2020-12-18-%E6%AF%94%E8%B5%9B%E5%89%8D%E6%80%BB%E7%BB%93/01.png" alt="替代文字"></p>
+<p><img src="/2020/12/18/2020-12-18-%E6%AF%94%E8%B5%9B%E5%89%8D%E6%80%BB%E7%BB%93/01.png" alt="图01"></p>
 <p>（a）Alice （b）Bob （c）Alice （d）Bob</p>
 <p>现在，你的任务就是根据给出的环、边上的数值以及起点（硬币所在位置），判断先走方是否有必胜的策略。</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n, a[<span class="number">30</span>], left = <span class="number">0</span>, right = <span class="number">0</span>, flag1 = <span class="number">1</span>, flag2 = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (a[left] &amp;&amp; flag1)</span><br><span class="line">        &#123;</span><br><span class="line">            left++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            flag1 = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (a[n - right - <span class="number">1</span>] &amp;&amp; flag2)</span><br><span class="line">        &#123;</span><br><span class="line">            right++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            flag2 = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (left % <span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;YES\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (right % <span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;YES\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;NO\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -893,6 +893,73 @@ rxf</p>
 ]]></content>
       <categories>
         <category>c</category>
+      </categories>
+      <tags>
+        <tag>Experience</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java环境配置</title>
+    <url>/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h1>Java环境配置<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h1>
+<a id="more"></a>
+<h3 id="准备工作"><a class="header-anchor" href="#准备工作">¶</a>准备工作</h3>
+<p>选择需要的版本并下载<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">JDK</a>（<a href="https://baike.baidu.com/item/jdk/1011?fr=aladdin">JDK的相关介绍</a>），网站比较慢，做好等待的准备。</p>
+<h3 id="开始配置环境变量"><a class="header-anchor" href="#开始配置环境变量">¶</a>开始配置环境变量</h3>
+<p>右键此电脑 → 属性 → 高级系统设置</p>
+<p>（或按下Windows + S，搜索<code>编辑系统环境变量</code>）</p>
+<p>出现下图</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/01.png" alt="图01"></p>
+<p>按照上图所示，</p>
+<p>单击环境变量，出现下图</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/02.png" alt="图02"></p>
+<h5 id="配置Java-Home"><a class="header-anchor" href="#配置Java-Home">¶</a>配置Java_Home</h5>
+<p>按照上图所示，</p>
+<p>单击新建，按照下图输入红框内信息。</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/03.png" alt="图03"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Java_Home</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;安装Java的路径及版本</span><br><span class="line">例：C:\Program Files\Java\jdk-11.0.9</span><br></pre></td></tr></table></figure>
+<p>出现下图</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/04.png" alt="图04"></p>
+<h5 id="配置Path"><a class="header-anchor" href="#配置Path">¶</a>配置Path</h5>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/05.png" alt="图05"></p>
+<p>按照上图所示，</p>
+<p>单击Path → 单击编辑</p>
+<p>出现下图</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/06.png" alt="图06"></p>
+<p>按照上图所示，</p>
+<p>分别单击新建，加入绿框内两项。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%Java_Home%\bin</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%Java_Home%\jre\bin</span><br></pre></td></tr></table></figure>
+<p>后单击确定</p>
+<h5 id="配置CLASSPATH"><a class="header-anchor" href="#配置CLASSPATH">¶</a>配置CLASSPATH</h5>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/02.png" alt="图02"></p>
+<h5 id="配置Java-Home-v2"><a class="header-anchor" href="#配置Java-Home-v2">¶</a>配置Java_Home</h5>
+<p>按照上图所示，</p>
+<p>单击新建，按照下图输入红框内信息。</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/07.png" alt="图07"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CLASSPATH</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.;%Java_Home%\bin;%Java_Home%\lib\dt.jar;%Java_Home%\lib\tools.jar</span><br></pre></td></tr></table></figure>
+<p>后单击确定。</p>
+<h5 id="检查Java配置情况"><a class="header-anchor" href="#检查Java配置情况">¶</a>检查Java配置情况</h5>
+<p>Windows + R → 输入cmd后确定</p>
+<p>利用以下三条命令确认是否配置完毕。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line"></span><br><span class="line">javac</span><br><span class="line"></span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
+<p>以<code>java -version</code>为例，出现下图即配置成功。</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/08.png" alt="图08"></p>
+<h5 id="Java开发"><a class="header-anchor" href="#Java开发">¶</a>Java开发</h5>
+<p>利用以下命令开发（如果你懒得再配置IDE）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;利用cd命令进入目录省略</span><br><span class="line">&#x2F;&#x2F;example为编写好的java源代码文件</span><br><span class="line"></span><br><span class="line">javac example.java</span><br><span class="line"></span><br><span class="line">java example</span><br></pre></td></tr></table></figure>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Windows10 20H2 及 Java 11.0.9亲测成功 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>java</category>
       </categories>
       <tags>
         <tag>Experience</tag>
