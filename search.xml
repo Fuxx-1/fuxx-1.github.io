@@ -335,6 +335,73 @@ const类型关键字声明的对象，其值不能通过赋值来递增，递减
       </tags>
   </entry>
   <entry>
+    <title>Java环境配置</title>
+    <url>/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h1>Java环境配置<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h1>
+<a id="more"></a>
+<h3 id="准备工作"><a class="header-anchor" href="#准备工作">¶</a>准备工作</h3>
+<p>选择需要的版本并下载<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">JDK</a>（<a href="https://baike.baidu.com/item/jdk/1011?fr=aladdin">JDK的相关介绍</a>），网站比较慢，做好等待的准备。</p>
+<h3 id="开始配置环境变量"><a class="header-anchor" href="#开始配置环境变量">¶</a>开始配置环境变量</h3>
+<p>右键此电脑 → 属性 → 高级系统设置<br>
+（或按下Windows + S，搜索<code>编辑系统环境变量</code>）<br>
+出现下图</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/01.png" alt="图01"></p>
+<p>按照上图所示，<br>
+单击环境变量，出现下图</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/02.png" alt="图02"></p>
+<h5 id="配置Java-Home"><a class="header-anchor" href="#配置Java-Home">¶</a>配置Java_Home</h5>
+<p>按照上图所示，<br>
+单击新建，按照下图输入红框内信息。</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/03.png" alt="图03"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Java_Home</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;安装Java的路径及版本</span><br><span class="line">例：C:\Program Files\Java\jdk-11.0.9</span><br></pre></td></tr></table></figure>
+<p>出现下图</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/04.png" alt="图04"></p>
+<h5 id="配置Path"><a class="header-anchor" href="#配置Path">¶</a>配置Path</h5>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/05.png" alt="图05"></p>
+<p>按照上图所示，<br>
+单击Path → 单击编辑<br>
+出现下图</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/06.png" alt="图06"></p>
+<p>按照上图所示，<br>
+分别单击新建，加入绿框内两项。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%Java_Home%\bin</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%Java_Home%\jre\bin</span><br></pre></td></tr></table></figure>
+<p>后单击确定</p>
+<h5 id="配置CLASSPATH"><a class="header-anchor" href="#配置CLASSPATH">¶</a>配置CLASSPATH</h5>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/02.png" alt="图02"></p>
+<h5 id="配置Java-Home-v2"><a class="header-anchor" href="#配置Java-Home-v2">¶</a>配置Java_Home</h5>
+<p>按照上图所示，<br>
+单击新建，按照下图输入红框内信息。</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/07.png" alt="图07"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CLASSPATH</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.;%Java_Home%\bin;%Java_Home%\lib\dt.jar;%Java_Home%\lib\tools.jar</span><br></pre></td></tr></table></figure>
+<p>后单击确定。</p>
+<h5 id="检查Java配置情况"><a class="header-anchor" href="#检查Java配置情况">¶</a>检查Java配置情况</h5>
+<p>Windows + R → 输入cmd后确定<br>
+利用以下三条命令确认是否配置完毕。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line"></span><br><span class="line">javac</span><br><span class="line"></span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
+<p>以<code>java -version</code>为例，出现下图即配置成功。</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/08.png" alt="图08"></p>
+<h5 id="Java开发"><a class="header-anchor" href="#Java开发">¶</a>Java开发</h5>
+<p>利用以下命令开发（如果你懒得再配置IDE）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;利用cd命令进入目录省略</span><br><span class="line">&#x2F;&#x2F;example为编写好的java源代码文件</span><br><span class="line"></span><br><span class="line">javac example.java</span><br><span class="line"></span><br><span class="line">java example</span><br></pre></td></tr></table></figure>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Windows10 20H2 及 Java 11.0.9亲测成功 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>Experience</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2020/12/12/hello-world/</url>
     <content><![CDATA[<p>This blog is just a test of system.</p>
@@ -373,6 +440,77 @@ const类型关键字声明的对象，其值不能通过赋值来递增，递减
       </categories>
       <tags>
         <tag>Experience</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机基础-Day1</title>
+    <url>/2021/01/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-Day1/</url>
+    <content><![CDATA[<h1>Linux运维-Day1（<a href="https://edu.aliyun.com/roadmap/linux?spm=5176.13345299.1392477.2.153cf153ebf9EP">链接</a>）</h1>
+<a id="more"></a>
+<p>计算机系统<br>
+计算机硬件组成<br>
+操作系统<br>
+Linux相关介绍<br>
+Linux哲学思想<br>
+获取Linux<br>
+虚拟机</p>
+<h2 id="计算机系统"><a class="header-anchor" href="#计算机系统">¶</a>计算机系统</h2>
+<h3 id="计算机硬件"><a class="header-anchor" href="#计算机硬件">¶</a>计算机硬件</h3>
+<h4 id="计算机"><a class="header-anchor" href="#计算机">¶</a>计算机</h4>
+<p>能接受、存储、处理和输出数据</p>
+<p>硬件：</p>
+<p>CPU<br>
+ROM、RAM<br>
+外部设备</p>
+<p>软件：</p>
+<p>系统软件（操作系统、程序语言处理系统、数据库管理系统、服务程序）<br>
+应用软件（通用/专用应用软件）</p>
+<p>按规模：</p>
+<p>巨/大/小/微型计算机</p>
+<h5 id="发展历史"><a class="header-anchor" href="#发展历史">¶</a>发展历史</h5>
+<p>电子管时代<br>
+晶体管时代<br>
+集成电路时代<br>
+大规模集成电路时代</p>
+<h5 id="冯诺依曼体系结构"><a class="header-anchor" href="#冯诺依曼体系结构">¶</a>冯诺依曼体系结构</h5>
+<p><img src="/2021/01/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-Day1/01.png" alt="图01"></p>
+<p>==熟练掌握进制转换方法==</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;Linux（计算器）</span><br><span class="line">$ bc</span><br><span class="line">obase &#x3D; 2   &#x2F;&#x2F;输出的进制</span><br><span class="line">&#x2F;&#x2F;ibase &#x3D; 10</span><br><span class="line">97</span><br><span class="line">1100001</span><br><span class="line">quit</span><br></pre></td></tr></table></figure>
+<h5 id="服务器"><a class="header-anchor" href="#服务器">¶</a>服务器</h5>
+<p>服务器Serνer是计算机的—种，是网络中==为客户端计算机提供各种服务==的高性能的计算机，服务器在网络操作系统的控制下，将与其相连的硬盘、磁带、打印机及昂贵的专用通讯设备提供给网络上的客户站点共享，也能为网络用户提供==集中计算、信息发布及数据管理==等服务</p>
+<p>服务器按应用功能可分为：<br>
+Web服务器、数据库服务器、文件服务器、中间件应用服务器、日志服务器、监控服务器，程序版本控制服务器、虚拟机服务器、邮件服务器、打印服务器、域控制服务器、多媒体服务器、通讯服务器、ERP服务器等服务器</p>
+<p>按外形分类：<br>
+<a href="https://baike.baidu.com/item/%E6%9C%BA%E6%9E%B6%E5%BC%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/485424?fr=aladdin">机架式服务器</a>、<a href="https://baike.baidu.com/item/%E5%A1%94%E5%BC%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/5863706?fr=aladdin">塔式服务器</a>、<a href="https://baike.baidu.com/item/%E5%88%80%E7%89%87%E6%9C%8D%E5%8A%A1%E5%99%A8/1375424?fromtitle=%E5%88%80%E7%89%87%E5%BC%8F%E6%9C%8D%E5%8A%A1%E5%99%A8&amp;fromid=485772&amp;fr=aladdin">刀片式服务器</a></p>
+<p><a href="https://baike.baidu.com/item/%E5%8E%BBioe/16631112?fr=aladdin">去IOE</a>（IBM、Oracle、EMC）</p>
+<p>NFS、SAMBA、FTP、TOMCAT、RSYSLOG、ZABBIX、GIT、KV、DOCKER、K8S、SENDMAIL、DC(DOMAIN CONTROLLER)</p>
+<h4 id="计算机硬件-v2"><a class="header-anchor" href="#计算机硬件-v2">¶</a>计算机硬件</h4>
+<h5 id="CPU"><a class="header-anchor" href="#CPU">¶</a>CPU</h5>
+<p>主频∶<br>
+主频是CPU的时钟频率（ CPU Clock speed），是CPU运算时的工作的频率<br>
+（1秒内发生的同步脉冲数）的简称。单位是Hz。一般说来，主频越高，CPU的速度越快，由于內部结构不同，并非所有的时钟频率相同的￠P∪的性能都一样</p>
+<p>外频：<br>
+系统总线的工作频率，CPU与外部（主板芯片组）交换数据、指令的工作时钟频率</p>
+<p>倍频：<br>
+倍频则是指CPU外频与主频相差的倍数三者关系是：主频 = 外频 × 倍频</p>
+<p>高速缓存（cache）：<br>
+高速交换的存储器。CPU缓存分为一级，二级，三级缓存，即L1、L2、L3内存</p>
+<p>总线速度 （Memory- Bus Speed）：<br>
+一般等同于CPU的外频，指CPU与二级（L2）高速缓存和内存之间的通信速度</p>
+<p>地址总线宽度决定了CPU可以访问的物理地址空间（现一般为==64位==）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;Linux查看CPU参数</span><br><span class="line">$ lscpu</span><br></pre></td></tr></table></figure>
+<h6 id="从CPU体系架构区分服务器："><a class="header-anchor" href="#从CPU体系架构区分服务器：">¶</a>从CPU体系架构区分服务器：</h6>
+<p>==非x86==服务器：<br>
+使用RISC（精简指令集）或EPIC（并行指令代码）处理器，并且主要采用UNIX和其它专用操作系统的服务器，指令系统相对简单，它只要求硬件执行很有限且最常用的那部分执令，CPU主要有 Compaq的Alpha、HP的PA-RISC、IBM的 IPower Pc、MIPS的MPS和SUN的 spare、Intel研发的EPIC安腾处理器等。这种服务器价格昂贵，体系封闭，但是稳定性好，性能强，主要用在金融、电信等大型企业的核心系统。<br>
+==x86==服务器：<br>
+又称csSC（复杂指令集）架构服务器，即通常所讲的PC服务器它是基于PC机体系结构，使用nte或其它兼容ⅹ86指令集的处理器芯片的服务噩。目前主要为intel的Xeon E3，E5，E7系列，价格相对便宜、兼容性好、稳定性较差、安全性不算太高。</p>
+<h5 id="内存"><a class="header-anchor" href="#内存">¶</a>内存</h5>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>Linux运维</tag>
       </tags>
   </entry>
   <entry>
@@ -893,73 +1031,6 @@ rxf</p>
 ]]></content>
       <categories>
         <category>c</category>
-      </categories>
-      <tags>
-        <tag>Experience</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java环境配置</title>
-    <url>/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h1>Java环境配置<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h1>
-<a id="more"></a>
-<h3 id="准备工作"><a class="header-anchor" href="#准备工作">¶</a>准备工作</h3>
-<p>选择需要的版本并下载<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">JDK</a>（<a href="https://baike.baidu.com/item/jdk/1011?fr=aladdin">JDK的相关介绍</a>），网站比较慢，做好等待的准备。</p>
-<h3 id="开始配置环境变量"><a class="header-anchor" href="#开始配置环境变量">¶</a>开始配置环境变量</h3>
-<p>右键此电脑 → 属性 → 高级系统设置</p>
-<p>（或按下Windows + S，搜索<code>编辑系统环境变量</code>）</p>
-<p>出现下图</p>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/01.png" alt="图01"></p>
-<p>按照上图所示，</p>
-<p>单击环境变量，出现下图</p>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/02.png" alt="图02"></p>
-<h5 id="配置Java-Home"><a class="header-anchor" href="#配置Java-Home">¶</a>配置Java_Home</h5>
-<p>按照上图所示，</p>
-<p>单击新建，按照下图输入红框内信息。</p>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/03.png" alt="图03"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Java_Home</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;安装Java的路径及版本</span><br><span class="line">例：C:\Program Files\Java\jdk-11.0.9</span><br></pre></td></tr></table></figure>
-<p>出现下图</p>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/04.png" alt="图04"></p>
-<h5 id="配置Path"><a class="header-anchor" href="#配置Path">¶</a>配置Path</h5>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/05.png" alt="图05"></p>
-<p>按照上图所示，</p>
-<p>单击Path → 单击编辑</p>
-<p>出现下图</p>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/06.png" alt="图06"></p>
-<p>按照上图所示，</p>
-<p>分别单击新建，加入绿框内两项。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%Java_Home%\bin</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%Java_Home%\jre\bin</span><br></pre></td></tr></table></figure>
-<p>后单击确定</p>
-<h5 id="配置CLASSPATH"><a class="header-anchor" href="#配置CLASSPATH">¶</a>配置CLASSPATH</h5>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/02.png" alt="图02"></p>
-<h5 id="配置Java-Home-v2"><a class="header-anchor" href="#配置Java-Home-v2">¶</a>配置Java_Home</h5>
-<p>按照上图所示，</p>
-<p>单击新建，按照下图输入红框内信息。</p>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/07.png" alt="图07"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CLASSPATH</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.;%Java_Home%\bin;%Java_Home%\lib\dt.jar;%Java_Home%\lib\tools.jar</span><br></pre></td></tr></table></figure>
-<p>后单击确定。</p>
-<h5 id="检查Java配置情况"><a class="header-anchor" href="#检查Java配置情况">¶</a>检查Java配置情况</h5>
-<p>Windows + R → 输入cmd后确定</p>
-<p>利用以下三条命令确认是否配置完毕。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line"></span><br><span class="line">javac</span><br><span class="line"></span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
-<p>以<code>java -version</code>为例，出现下图即配置成功。</p>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/08.png" alt="图08"></p>
-<h5 id="Java开发"><a class="header-anchor" href="#Java开发">¶</a>Java开发</h5>
-<p>利用以下命令开发（如果你懒得再配置IDE）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;利用cd命令进入目录省略</span><br><span class="line">&#x2F;&#x2F;example为编写好的java源代码文件</span><br><span class="line"></span><br><span class="line">javac example.java</span><br><span class="line"></span><br><span class="line">java example</span><br></pre></td></tr></table></figure>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>Windows10 20H2 及 Java 11.0.9亲测成功 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>java</category>
       </categories>
       <tags>
         <tag>Experience</tag>
