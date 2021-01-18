@@ -429,20 +429,6 @@ format – 这是 C 字符串，包含了要被写入到流 stream 中的文本�
       </tags>
   </entry>
   <entry>
-    <title>素数筛法</title>
-    <url>/2020/12/17/%E7%B4%A0%E6%95%B0%E7%AD%9B%E6%B3%95/</url>
-    <content><![CDATA[<h1>素数筛法</h1>
-<a id="more"></a>
-<p>代码就放这里，解释见注释。</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">char</span> pend[<span class="number">100000005</span>];</span><br><span class="line"><span class="keyword">int</span> odd[<span class="number">7123456</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">count</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">    <span class="comment">/* 定义 */</span></span><br><span class="line">    pend[<span class="number">1</span>] = <span class="number">1</span>;    <span class="comment">//特判</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i * i &lt;= <span class="number">100000005</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (!pend[i])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i * i; j &lt;= <span class="number">100000005</span>; j += i)</span><br><span class="line">            &#123;</span><br><span class="line">                pend[j] = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* 线筛 */</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">100000005</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (!pend[i])</span><br><span class="line">        &#123;</span><br><span class="line">            odd[count++] = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* 储存 */</span></span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>c</category>
-      </categories>
-      <tags>
-        <tag>Experience</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>计算机基础-Day1</title>
     <url>/2021/01/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-Day1/</url>
     <content><![CDATA[<h1>Linux运维-Day1（<a href="https://edu.aliyun.com/roadmap/linux?spm=5176.13345299.1392477.2.153cf153ebf9EP">链接</a>）</h1>
@@ -511,6 +497,20 @@ Web服务器、数据库服务器、文件服务器、中间件应用服务器�
       </categories>
       <tags>
         <tag>Linux运维</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>素数筛法</title>
+    <url>/2020/12/17/%E7%B4%A0%E6%95%B0%E7%AD%9B%E6%B3%95/</url>
+    <content><![CDATA[<h1>素数筛法</h1>
+<a id="more"></a>
+<p>代码就放这里，解释见注释。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">char</span> pend[<span class="number">100000005</span>];</span><br><span class="line"><span class="keyword">int</span> odd[<span class="number">7123456</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">count</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">    <span class="comment">/* 定义 */</span></span><br><span class="line">    pend[<span class="number">1</span>] = <span class="number">1</span>;    <span class="comment">//特判</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i * i &lt;= <span class="number">100000005</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (!pend[i])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i * i; j &lt;= <span class="number">100000005</span>; j += i)</span><br><span class="line">            &#123;</span><br><span class="line">                pend[j] = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* 线筛 */</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">100000005</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (!pend[i])</span><br><span class="line">        &#123;</span><br><span class="line">            odd[count++] = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* 储存 */</span></span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>c</category>
+      </categories>
+      <tags>
+        <tag>Experience</tag>
       </tags>
   </entry>
   <entry>
