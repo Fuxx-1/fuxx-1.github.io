@@ -22,18 +22,21 @@
     var CONFIG = {"hostname":"fuxx-1.github.io","root":"/","scheme":"Pisces","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="C&#x2F;Java&#x2F;Linux">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Fuxxの博客">
-<meta property="og:url" content="http://fuxx-1.github.io/tags/OJ/index.html">
+  <meta name="description" content="Week1-Linux运维学习总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Week1-Linux运维总结">
+<meta property="og:url" content="http://fuxx-1.github.io/2021/01/24/Week1-Linux%E8%BF%90%E7%BB%B4%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="Fuxxの博客">
-<meta property="og:description" content="C&#x2F;Java&#x2F;Linux">
+<meta property="og:description" content="Week1-Linux运维学习总结">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-01-24T09:09:55.987Z">
+<meta property="article:modified_time" content="2021-01-24T10:00:19.496Z">
 <meta property="article:author" content="Fuxx-1">
+<meta property="article:tag" content="Linux运维">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://fuxx-1.github.io/tags/OJ/">
+<link rel="canonical" href="http://fuxx-1.github.io/2021/01/24/Week1-Linux%E8%BF%90%E7%BB%B4%E6%80%BB%E7%BB%93/">
 
 
 <script class="page-configurations">
@@ -41,12 +44,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签: OJ | Fuxxの博客</title>
+  <title>Week1-Linux运维总结 | Fuxxの博客</title>
   
 
 
@@ -195,7 +198,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -207,6 +210,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">Week1-Linux运维学习总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Day1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80"><span class="nav-text">Day1 计算机基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day2-Day6-Linux%E5%91%BD%E4%BB%A4%E5%8F%8A%E9%83%A8%E5%88%86%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E6%96%B9%E6%B3%95"><span class="nav-text">Day2-Day6 Linux命令及部分文件管理方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%EF%BC%88%E9%93%BE%E6%8E%A51%EF%BC%88%E5%86%85%E5%AE%B9%E5%BE%85%E5%AE%8C%E5%96%84%EF%BC%89-%E9%93%BE%E6%8E%A52%EF%BC%89"><span class="nav-text">Linux基础命令（链接1（内容待完善）|链接2）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux%E4%B8%8B%E7%9A%84%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86"><span class="nav-text">Linux下的文件管理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="nav-text">学习参考链接</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -272,78 +276,155 @@
 </noscript>
 
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner post posts-expand">
       
 
       
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://fuxx-1.github.io/2021/01/24/Week1-Linux%E8%BF%90%E7%BB%B4%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Fuxx-1">
+      <meta itemprop="description" content="C/Java/Linux">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fuxxの博客">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Week1-Linux运维总结
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-01-24 17:09:55 / 修改时间：18:00:19" itemprop="dateCreated datePublished" datetime="2021-01-24T17:09:55+08:00">2021-01-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+        </span>
+    </span>
+
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h2 class="collection-header">OJ
-          <small>标签</small>
-        </h2>
+    <span id="/2021/01/24/Week1-Linux%E8%BF%90%E7%BB%B4%E6%80%BB%E7%BB%93/" class="post-meta-item leancloud_visitors" data-flag-title="Week1-Linux运维总结" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
       </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>293</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1>Week1-Linux运维学习总结</h1>
+<a id="more"></a>
+<h2 id="Day1-计算机基础"><a class="header-anchor" href="#Day1-计算机基础">¶</a>Day1 <a href="https://fuxx-1.github.io/2021/01/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-Day1/">计算机基础</a></h2>
+<p>我大一计算机导论居然听懂了，链接是部分知识点的总结。</p>
+<h2 id="Day2-Day6-Linux命令及部分文件管理方法"><a class="header-anchor" href="#Day2-Day6-Linux命令及部分文件管理方法">¶</a>Day2-Day6 Linux命令及部分文件管理方法</h2>
+<h4 id="Linux基础命令（链接1（内容待完善）-链接2）"><a class="header-anchor" href="#Linux基础命令（链接1（内容待完善）-链接2）">¶</a>Linux基础命令（<a href>链接1（内容待完善）</a>|<a target="_blank" rel="noopener" href="https://www.linuxcool.com/">链接2</a>）</h4>
+<p>首先是学会使用Linux帮助文档和命令可以减少很大一部分记忆工作，其次是这部分主要学习利用系统工具或命令实现文件各种属性的查询、更改及删除。</p>
+<h4 id="Linux下的文件管理"><a class="header-anchor" href="#Linux下的文件管理">¶</a>Linux下的文件管理</h4>
+<p>通过对输入及输出相关命令的学习和了解，相信对以后的脚本编写会有帮助。</p>
+<h2 id="学习参考链接"><a class="header-anchor" href="#学习参考链接">¶</a>学习参考链接</h2>
+<p><a target="_blank" rel="noopener" href="http://cn.linux.vbird.org/">鸟哥的Linux私房菜</a><br>
+<a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-tutorial.html">Linux 教程|菜鸟教程</a><br>
+<a target="_blank" rel="noopener" href="http://www.linuxdown.net/">Linux下载站</a><br>
+<a target="_blank" rel="noopener" href="https://www.lanqiao.cn/courses/?tag=Linux&amp;fee=all&amp;sort=default&amp;category=%E5%85%A8%E9%83%A8&amp;level=all">蓝桥云课</a><br>
+<a target="_blank" rel="noopener" href="https://www.w3cschool.cn/linux/">Linux教程|W3Cschool</a><br>
+<a target="_blank" rel="noopener" href="https://www.linuxcool.com/">Linux命令大全（手册）</a><br>
+<a href></a></p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-12-13T03:20:28+08:00"
-              content="2020-12-13">
-          12-13
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/12/13/2020-11-29-%E9%A2%98%E7%9B%AE%E7%BB%83%E4%B9%A0%E6%80%BB%E7%BB%93/" itemprop="url">
-            <span itemprop="name">2020-11-29-题目练习总结</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          
 
-      
-    </header>
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Fuxx-1
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://fuxx-1.github.io/2021/01/24/Week1-Linux%E8%BF%90%E7%BB%B4%E6%80%BB%E7%BB%93/" title="Week1-Linux运维总结">http://fuxx-1.github.io/2021/01/24/Week1-Linux运维总结/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Linux%E8%BF%90%E7%BB%B4/" rel="tag"># Linux运维</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/01/19/Linux%E8%BF%90%E7%BB%B4-Day2/" rel="prev" title="Linux运维-Day2">
+                  <i class="fa fa-chevron-left"></i> Linux运维-Day2
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-12-13T03:20:08+08:00"
-              content="2020-12-13">
-          12-13
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/12/13/%E8%BE%93%E5%87%BA%E8%9E%BA%E6%97%8B%E6%95%B0%E5%88%97%20C%E8%AF%AD%E8%A8%80%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" itemprop="url">
-            <span itemprop="name">输出螺旋数列 C语言解决方案</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-    </div>
-  </div>
   
   
-  
-
   
 
 
 
       
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -533,6 +614,25 @@
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.css">
+
+<script>
+NexT.utils.loadComments('#gitalk-container', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '58c10c8c18d93365dc09',
+      clientSecret: '9f2ecd7779b7eee13850c6f86710ad04231207a3',
+      repo        : 'blog_comments',
+      owner       : 'Fuxx-1',
+      admin       : ['Fuxx-1'],
+      id          : '28433b9074fbd4721423ea2fee91309b',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":false},"react":{"opacity":0.8,"search":null},"path":"search.xml","field":"post","format":"html","limit":10000,"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
