@@ -1,148 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>C Primer Plus 第12章总结</title>
-    <url>/2020/12/13/C-Primer-Plus-%E7%AC%AC12%E7%AB%A0%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<h1>C Primer Plus 第12章总结<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h1>
-<h3 id="储存类别（详见链接）"><a class="header-anchor" href="#储存类别（详见链接）">¶</a>储存类别（详见<a href="https://www.runoob.com/cprogramming/c-storage-classes.html">链接</a>）</h3>
+    <title>Linux-Problem</title>
+    <url>/2021/01/29/Linux-Problem/</url>
+    <content><![CDATA[<h2 id="部分设置"><a class="header-anchor" href="#部分设置">¶</a>部分设置</h2>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PS1&#x3D;&quot;\[\033[1;33;1m\][\[\033[1;34;1m\]\u@\h:\[\033[0;36;1m\]\w\[\033[1;33;1m\]]\[\033[1;31;1m\]\$ \[\033[1;32;0m\]&quot;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<p><strong>static</strong><br>
-长期存在静态存储区，直到程序结束<br>
-静态局部变量是放在静态存储区内分配存储单元的，在整个程序运行期间都不释放，跟全局变量一样长期占用内存。</p>
-<p><strong>auto</strong><br>
-随着函数的进栈和出栈而创建和销毁<br>
-我们编写程序的时候很少用<code>auto</code>定义变量，但其实我们之前定义的变量前面没有加<code>static</code>，编译系统会默认为是<code>auto</code>的存储方式，都会把变量存放在动态存储区。</p>
-<p><strong>extern</strong><br>
-长期存在静态存储区，直到程序结束<br>
-用<code>extern</code>来声明全局变量，以扩展全局变量的作用域。</p>
-<p><strong>register</strong><br>
-离开函数值就会消失<br>
-当今的优化编译系统能够识别使用频繁的变量，从而自动将这些变量放在寄存器中，而不需要设定为<code>register</code>。因此，用<code>register</code>声明变量是不必要的。</p>
-<p><strong>例：</strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* main.c */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> count;</span><br><span class="line"><span class="function"><span class="keyword">extern</span> <span class="keyword">void</span> <span class="title">write_extern</span><span class="params">()</span></span>; <span class="comment">//跨文件调用support.c的write_extern函数</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    count = <span class="number">5</span>;</span><br><span class="line">    write_extern();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* support.c */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="keyword">extern</span> <span class="keyword">int</span> count;   <span class="comment">//跨文件调用main.c的count变量</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">write_extern</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;count is %d\n&quot;</span>, count);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* main.c和support.c必须在同一个工程内 */</span></span><br></pre></td></tr></table></figure>
-<p><strong>列表</strong></p>
-<table>
-<thead>
-<tr>
-<th>存储类别</th>
-<th>存储期</th>
-<th>作用域</th>
-<th>链接</th>
-<th>声明方式</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>自动</td>
-<td>自动</td>
-<td>块</td>
-<td>无链接</td>
-<td>块内　无关键词</td>
-</tr>
-<tr>
-<td>寄存器</td>
-<td>自动</td>
-<td>块</td>
-<td>无链接</td>
-<td>块内　关键字<code>regsiter</code></td>
-</tr>
-<tr>
-<td>静态外部链接</td>
-<td>静态</td>
-<td>文件</td>
-<td>外部</td>
-<td>所有函数外</td>
-</tr>
-<tr>
-<td>静态内部链接</td>
-<td>静态</td>
-<td>文件</td>
-<td>外部</td>
-<td>所有函数外　关键字<code>static</code></td>
-</tr>
-<tr>
-<td>静态无链接</td>
-<td>静态</td>
-<td>块</td>
-<td>无</td>
-<td>块内　关键字<code>static</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="链接"><a class="header-anchor" href="#链接">¶</a>链接</h3>
-<table>
-<thead>
-<tr>
-<th>链接属性</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>外部<code>external</code></td>
-<td>在工程必须要有一个变量的定义、可以使工程中的不同文件可以使用相同的变量</td>
-</tr>
-<tr>
-<td>内部<code>internal</code></td>
-<td>仅在该文件中可以使用，其他文件中不能访问</td>
-</tr>
-<tr>
-<td>无设置<code>none</code></td>
-<td>无</td>
-</tr>
-</tbody>
-</table>
-<h3 id="内存管理（详见链接）"><a class="header-anchor" href="#内存管理（详见链接）">¶</a>内存管理（详见<a href="https://www.runoob.com/cprogramming/c-memory-management.html">链接</a>）</h3>
-<table>
-<thead>
-<tr>
-<th>函数</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>*calloc(int num, int size);</td>
-<td>在内存中动态地分配 num 个长度为 size 的连续空间，并将每一个字节都初始化为 0。所以它的结果是分配了 num*size 个字节长度的内存空间，并且每个字节的值都是0。</td>
-</tr>
-<tr>
-<td>free(void *address);</td>
-<td>该函数释放 address 所指向的内存块,释放的是动态分配的内存空间。</td>
-</tr>
-<tr>
-<td>*malloc(int num);</td>
-<td>在堆区分配一块指定大小的内存空间，用来存放数据。这块内存空间在函数执行完成后不会被初始化，它们的值是未知的。</td>
-</tr>
-<tr>
-<td>*realloc(void *address, int newsize);</td>
-<td>该函数重新分配内存，把内存扩展到 newsize。</td>
-</tr>
-</tbody>
-</table>
-<p>上述函数多用于链表中，均处于<a href="https://www.runoob.com/cprogramming/c-standard-library-stdlib-h.html">&lt;stdlib.h&gt;</a>中。</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">char</span> name[<span class="number">100</span>];</span><br><span class="line">   <span class="keyword">char</span> *description;</span><br><span class="line"> </span><br><span class="line">   <span class="built_in">strcpy</span>(name, <span class="string">&quot;Zara Ali&quot;</span>);</span><br><span class="line"> </span><br><span class="line">   <span class="comment">/* 动态分配内存 */</span></span><br><span class="line">   description = (<span class="keyword">char</span> *)<span class="built_in">malloc</span>( <span class="number">30</span> * <span class="keyword">sizeof</span>(<span class="keyword">char</span>) );</span><br><span class="line">   <span class="keyword">if</span>( description == <span class="literal">NULL</span> )</span><br><span class="line">   &#123;</span><br><span class="line">      <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;Error - unable to allocate required memory\n&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">   &#123;</span><br><span class="line">      <span class="built_in">strcpy</span>( description, <span class="string">&quot;Zara ali a DPS student.&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="comment">/* 假设您想要存储更大的描述信息 */</span></span><br><span class="line">   description = (<span class="keyword">char</span> *) <span class="built_in">realloc</span>( description, <span class="number">100</span> * <span class="keyword">sizeof</span>(<span class="keyword">char</span>) );</span><br><span class="line">   <span class="keyword">if</span>( description == <span class="literal">NULL</span> )</span><br><span class="line">   &#123;</span><br><span class="line">      <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;Error - unable to allocate required memory\n&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">   &#123;</span><br><span class="line">      <span class="built_in">strcat</span>( description, <span class="string">&quot;She is in class 10th&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   </span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;Name = %s\n&quot;</span>, name );</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;Description: %s\n&quot;</span>, description );</span><br><span class="line"> </span><br><span class="line">   <span class="comment">/* 使用 free() 函数释放内存 */</span></span><br><span class="line">   <span class="built_in">free</span>(description);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="限定符"><a class="header-anchor" href="#限定符">¶</a>限定符</h3>
-<p><strong><code>const</code>类</strong><br>
-const类型关键字声明的对象，其值不能通过赋值来递增，递减来修改。<br>
-<strong><code>volatile</code>类</strong><br>
-只有volatile的成员函数才能被volatile的对象调用。<br>
-<strong><code>restrict</code>类</strong><br>
-不能通过除该指针外所有其他直接或间接的方式修改该对象的内容。<br>
-<strong><code>_Atomic</code>类</strong><br>
-该限定符是C11标准新增，当一个原子类型变量执行原子操作时，其它线程不能访问该变量。可用头文件stdatomic.h和Threads.h进行管理。</p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>本人编程萌新，见解仅供参考。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
+<h2 id="2021-01-25"><a class="header-anchor" href="#2021-01-25">¶</a>2021-01-25</h2>
+<p>1、定义别名命令baketc,每天将/etc/目录下所有文件，备份到/data独立的子目录下，并要求子目录格式为backupYYYY-mm-dd,备份过程可见。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">alias baketc&#x3D;&quot;&#96;mkdir &#x2F;data&#96;cp -av &#x2F;etc&#x2F; &#x2F;data&#x2F;backup&#96;date +%F&#96;&quot;</span><br></pre></td></tr></table></figure>
+<p>2、创建/data/rootdir目录， 并复制/root下所有文件到该目录内，要求保留原有权限。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#96;mkdir -p &#x2F;data&#x2F;rootdir&#96; cp -a &#x2F;root&#x2F;. &#x2F;data&#x2F;rootdir&#x2F;</span><br></pre></td></tr></table></figure>
+<h2 id="2021-01-26"><a class="header-anchor" href="#2021-01-26">¶</a>2021-01-26</h2>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rm -rf &#x2F;testdir</span><br><span class="line">tree &#x2F;testdir&#x2F;</span><br></pre></td></tr></table></figure>
+<p>1.如何创建 /testdir/dir1/x, /testdir/dir1/y, /testdir/dir1/x/a,/testdir/dir1/x/b, /testdir/dir1/y/a, /testdir/dir1/y/b创建后使用命令  tree /testdir/ 显示</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir -pv &#x2F;testdir&#x2F;dir1&#x2F;&#123;x&#x2F;&#123;a,b&#125;,y&#x2F;&#123;a,b&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>2.如何创建/testdir/dir2/x, /testdir/dir2/y, /testdir/dir2/x/a, /testdir/dir2/x/b创建后使用命令  tree /testdir/  显示</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir -pv &#x2F;testdir&#x2F;dir2&#x2F;&#123;x&#x2F;&#123;a,b&#125;,y&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2021-01-27"><a class="header-anchor" href="#2021-01-27">¶</a>2021-01-27</h2>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rm -rf &#x2F;testdir</span><br><span class="line">tree &#x2F;testdir&#x2F;</span><br></pre></td></tr></table></figure>
+<p>1.计算 1+2+3…+99+100 的和</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo &#123;1..100&#125; | tr &#39; &#39; + | bc</span><br></pre></td></tr></table></figure>
+<p>2.如何创建 /testdir/dir3 ,  /testdir/dir4 , /testdir/dir5 , /testdir/dir5/dir6 , /testdir/dir5/dir7</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir -pv &#x2F;testdir&#x2F;dir&#123;3,4,5&#x2F;&#123;dir6,dir7&#125;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2021-01-28"><a class="header-anchor" href="#2021-01-28">¶</a>2021-01-28</h2>
+<p>1.处理字符串&quot;xt.,I 1 jr#!$mn 2 c*/fe 3 uz 4&quot;，只保留其中的数字和空格.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo xt.,I 1 jr#-imn 2 c*&#x2F;fe 3 uz 4 | tr -cd [0-9]&quot; &quot;&quot;\n&quot;</span><br></pre></td></tr></table></figure>
+<p>2.一个linux用户给root发邮件，要求邮件标题为 “TW” ，邮件正文如下: &quot; Stay hungry，Stay foolish. &quot;</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo &quot;Stay hungry，Stay foolish.&quot; | mail -s &quot;TW&quot; root</span><br></pre></td></tr></table></figure>
+<h2 id="2021-01-29"><a class="header-anchor" href="#2021-01-29">¶</a>2021-01-29</h2>
+<p>1.复制 /etc/fstab 文件到 /var/tmp 下，设置文件所有者为 memberone（需要新建）有读写权限，所属组为 thoughtworks（需要新建）组有读写权限，其他人无权限。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cp &#x2F;etc&#x2F;fstab &#x2F;var&#x2F;tmp&#x2F;</span><br><span class="line">groupadd thoughtworks</span><br><span class="line">useradd -g thoughtworks memberone</span><br><span class="line">chgrp thoughtworks fstab</span><br><span class="line">chown memberone fstab</span><br><span class="line">chmod 770 fstab</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">userdel memberone</span><br><span class="line">groupdel thoughtworks</span><br><span class="line">rm -rf &#x2F;var&#x2F;tmp&#x2F;fstab</span><br></pre></td></tr></table></figure>
+<p>2.创建用户 blue ，附加组为 bin 和 root ，默认shll 为 /bin/csh，注释信息为&quot;blue shine&quot;（注：创建完成后使用命令 getent passwd blue查看注释信息；使用命令 id blue查看附加组）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">useradd -c &quot;blue shine&quot; -G bin,root -s &#x2F;bin&#x2F;csh blue</span><br><span class="line">getent passwd blue</span><br><span class="line">id blue</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">userdel blue</span><br></pre></td></tr></table></figure>
+<h2 id="2021-01-30"><a class="header-anchor" href="#2021-01-30">¶</a>2021-01-30</h2>
+<p>1.误将/bin/chmod文件的执行权限删除，如何恢复?</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chmod a-x &#x2F;bin&#x2F;chmod</span><br><span class="line">ll &#x2F;bin&#x2F;chmod</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">setfacl -m user::rwx &#x2F;bin&#x2F;chmod</span><br><span class="line">---------------------------------</span><br><span class="line">install &#x2F;bin&#x2F;chmod -m 744 &#x2F;chmod </span><br><span class="line">mv &#x2F;chmod &#x2F;bin&#x2F;chmod</span><br></pre></td></tr></table></figure>
+<p>2.取出磁盘各分区利用率，并从大到小排序</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df | cut -c46-47 | sort -n</span><br><span class="line">df | tr -s &#39; &#39; &quot;%&quot; | cut -d% -f5 | sort -nr</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>c</category>
+        <category>linux</category>
       </categories>
       <tags>
-        <tag>C Primer Plus</tag>
+        <tag>Linux运维</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux运维-命令</title>
+    <url>/2021/01/19/Linux%E8%BF%90%E7%BB%B4-%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1>Linux运维-命令【待完善】（<a href="https://edu.aliyun.com/roadmap/linux?spm=5176.13345299.1392477.2.153cf153ebf9EP">链接</a>）</h1>
+<a id="more"></a>
+<h2 id="Linux相关命令"><a class="header-anchor" href="#Linux相关命令">¶</a>Linux相关命令</h2>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">command [-option]  parameter1 parameter2 ...</span><br><span class="line"># 几个需要说明的地方：</span><br><span class="line">#（1）-option是命令的选项，选项又分为长选项和短选项。另外，有些选项还需要带参数</span><br><span class="line">#（2）如上通用格式中的parameter1 parameter2...是命令的参数，不是选项的参数</span><br><span class="line">#（3）有些命令或二进制程序还带有子命令</span><br></pre></td></tr></table></figure>
+<h3 id="文件管理"><a class="header-anchor" href="#文件管理">¶</a>文件管理</h3>
+<h4 id="cat命令"><a class="header-anchor" href="#cat命令">¶</a><a href="https://www.runoob.com/linux/linux-comm-cat.html">cat</a>命令</h4>
+<p>功能：cat（英文全拼：concatenate）命令用于连接文件并打印到标准输出设备上。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">cat [-AbeEnstTuv] [--help] [--version] fileName</span><br></pre></td></tr></table></figure>
+<p>参数说明：</p>
+<p>-n 或 --number：由 1 开始对所有输出的行数编号。<br>
+-b 或 --number-nonblank：和 -n 相似，只不过对于空白行不编号。<br>
+-s 或 --squeeze-blank：当遇到有连续两行以上的空白行，就代换为一行的空白行。<br>
+-v 或 --show-nonprinting：使用 ^ 和 M- 符号，除了 LFD 和 TAB 之外。<br>
+-E 或 --show-ends : 在每行结束处显示 $。<br>
+-T 或 --show-tabs: 将 TAB 字符显示为 ^I。<br>
+-A, --show-all：等价于 -vET。<br>
+-e：等价于&quot;-vE&quot;选项；<br>
+-t：等价于&quot;-vT&quot;选项；</p>
+<h4 id="chattr命令"><a class="header-anchor" href="#chattr命令">¶</a><a href="https://www.runoob.com/linux/linux-comm-chattr.html">chattr</a>命令</h4>
+<p>功能：chattr命令用于改变文件属性。</p>
+<p>这项指令可改变存放在ext2文件系统上的文件或目录属性，这些属性共有以下8种模式：</p>
+<p>a：让文件或目录仅供附加用途。<br>
+b：不更新文件或目录的最后存取时间。<br>
+c：将文件或目录压缩后存放。<br>
+d：将文件或目录排除在倾倒操作之外。<br>
+i：不得任意更动文件或目录。<br>
+s：保密性删除文件或目录。<br>
+S：即时更新文件或目录。<br>
+u：预防意外删除。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">chattr [-RV][-v&lt;版本编号&gt;][+/-/=&lt;属性&gt;][文件或目录...]</span><br></pre></td></tr></table></figure>
+<p>参数</p>
+<p>-R 递归处理，将指定目录下的所有文件及子目录一并处理。<br>
+-v&lt;版本编号&gt; 设置文件或目录版本。<br>
+-V 显示指令执行过程。<br>
++&lt;属性&gt; 开启文件或目录的该项属性。<br>
+-&lt;属性&gt; 关闭文件或目录的该项属性。<br>
+=&lt;属性&gt; 指定文件或目录的该项属性。</p>
+<h4 id="chgrp命令"><a class="header-anchor" href="#chgrp命令">¶</a><a href="https://www.runoob.com/linux/linux-comm-chgrp.html">chgrp</a>命令</h4>
+<p>功能：Linux chgrp（英文全拼：change group）命令用于变更文件或目录的所属群组。</p>
+<p>与 chown 命令不同，chgrp 允许普通用户改变文件所属的组，只要该用户是该组的一员。</p>
+<p>在 UNIX 系统家族里，文件或目录权限的掌控以拥有者及所属群组来管理。您可以使用 chgrp 指令去变更文件与目录的所属群组，设置方式采用群组名称或群组识别码皆可。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">chgrp [-cfhRv][--help][--version][所属群组][文件或目录...] 或 chgrp [-cfhRv][--help][--reference=&lt;参考文件或目录&gt;][--version][文件或目录...]</span><br></pre></td></tr></table></figure>
+<p>参数：</p>
+<p>-c或–changes 效果类似&quot;-v&quot;参数，但仅回报更改的部分。<br>
+-f或–quiet或–silent 　不显示错误信息。<br>
+-h或–no-dereference 　只对符号连接的文件作修改，而不更动其他任何相关文件。<br>
+-R或–recursive 　递归处理，将指定目录下的所有文件及子目录一并处理。<br>
+-v或–verbose 　显示指令执行过程。<br>
+–help 　在线帮助。<br>
+–reference=&lt;参考文件或目录&gt; 　把指定文件或目录的所属群组全部设成和参考文件或目录的所属群组相同。<br>
+–version 　显示版本信息。</p>
+<h4 id="chgrp命令-v2"><a class="header-anchor" href="#chgrp命令-v2">¶</a><a href="https://www.runoob.com/linux/linux-comm-chgrp.html">chgrp</a>命令</h4>
+<p>功能：Linux chmod（英文全拼：change mode）命令是控制用户对文件的权限的命令</p>
+<p>Linux/Unix 的文件调用权限分为三级 : 文件所有者（Owner）、用户组（Group）、其它用户（Other Users）。</p>
+<h3 id="文档编辑"><a class="header-anchor" href="#文档编辑">¶</a>文档编辑</h3>
+<h3 id="文件传输"><a class="header-anchor" href="#文件传输">¶</a>文件传输</h3>
+<h3 id="磁盘管理"><a class="header-anchor" href="#磁盘管理">¶</a>磁盘管理</h3>
+<h3 id="磁盘维护"><a class="header-anchor" href="#磁盘维护">¶</a>磁盘维护</h3>
+<h3 id="网络通讯"><a class="header-anchor" href="#网络通讯">¶</a>网络通讯</h3>
+<h3 id="系统管理"><a class="header-anchor" href="#系统管理">¶</a>系统管理</h3>
+<h3 id="系统设置"><a class="header-anchor" href="#系统设置">¶</a>系统设置</h3>
+<h4 id="alias命令"><a class="header-anchor" href="#alias命令">¶</a><a href="https://www.runoob.com/linux/linux-comm-alias.html">alias</a>命令</h4>
+<p>功能：Linux alias命令用于设置指令的别名。</p>
+<p>用户可利用alias，自定指令的别名。若仅输入alias，则可列出目前所有的别名设置。alias的效力仅及于该次登入的操作。若要每次登入是即自动设好别名，可在.profile或.cshrc中设定指令的别名。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">alias [别名] = [指令名称]</span><br></pre></td></tr></table></figure>
+<p>参数：</p>
+<p>若不加任何参数，则列出目前所有的别名设置。</p>
+<h3 id="备份压缩"><a class="header-anchor" href="#备份压缩">¶</a>备份压缩</h3>
+<h3 id="设备管理"><a class="header-anchor" href="#设备管理">¶</a>设备管理</h3>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>Linux运维</tag>
       </tags>
   </entry>
   <entry>
@@ -332,201 +315,6 @@ format – 这是 C 字符串，包含了要被写入到流 stream 中的文本�
       </categories>
       <tags>
         <tag>C Primer Plus</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java环境配置</title>
-    <url>/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h1>Java环境配置<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h1>
-<a id="more"></a>
-<h3 id="准备工作"><a class="header-anchor" href="#准备工作">¶</a>准备工作</h3>
-<p>选择需要的版本并下载<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">JDK</a>（<a href="https://baike.baidu.com/item/jdk/1011?fr=aladdin">JDK的相关介绍</a>），网站比较慢，做好等待的准备。</p>
-<h3 id="开始配置环境变量"><a class="header-anchor" href="#开始配置环境变量">¶</a>开始配置环境变量</h3>
-<p>右键此电脑 → 属性 → 高级系统设置<br>
-（或按下Windows + S，搜索<code>编辑系统环境变量</code>）<br>
-出现下图</p>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/01.png" alt="图01"></p>
-<p>按照上图所示，<br>
-单击环境变量，出现下图</p>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/02.png" alt="图02"></p>
-<h5 id="配置Java-Home"><a class="header-anchor" href="#配置Java-Home">¶</a>配置Java_Home</h5>
-<p>按照上图所示，<br>
-单击新建，按照下图输入红框内信息。</p>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/03.png" alt="图03"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Java_Home</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;安装Java的路径及版本</span><br><span class="line">例：C:\Program Files\Java\jdk-11.0.9</span><br></pre></td></tr></table></figure>
-<p>出现下图</p>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/04.png" alt="图04"></p>
-<h5 id="配置Path"><a class="header-anchor" href="#配置Path">¶</a>配置Path</h5>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/05.png" alt="图05"></p>
-<p>按照上图所示，<br>
-单击Path → 单击编辑<br>
-出现下图</p>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/06.png" alt="图06"></p>
-<p>按照上图所示，<br>
-分别单击新建，加入绿框内两项。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%Java_Home%\bin</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%Java_Home%\jre\bin</span><br></pre></td></tr></table></figure>
-<p>后单击确定</p>
-<h5 id="配置CLASSPATH"><a class="header-anchor" href="#配置CLASSPATH">¶</a>配置CLASSPATH</h5>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/02.png" alt="图02"></p>
-<h5 id="配置Java-Home-v2"><a class="header-anchor" href="#配置Java-Home-v2">¶</a>配置Java_Home</h5>
-<p>按照上图所示，<br>
-单击新建，按照下图输入红框内信息。</p>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/07.png" alt="图07"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CLASSPATH</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.;%Java_Home%\bin;%Java_Home%\lib\dt.jar;%Java_Home%\lib\tools.jar</span><br></pre></td></tr></table></figure>
-<p>后单击确定。</p>
-<h5 id="检查Java配置情况"><a class="header-anchor" href="#检查Java配置情况">¶</a>检查Java配置情况</h5>
-<p>Windows + R → 输入cmd后确定<br>
-利用以下三条命令确认是否配置完毕。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line"></span><br><span class="line">javac</span><br><span class="line"></span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
-<p>以<code>java -version</code>为例，出现下图即配置成功。</p>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/08.png" alt="图08"></p>
-<h5 id="Java开发"><a class="header-anchor" href="#Java开发">¶</a>Java开发</h5>
-<p>利用以下命令开发（如果你懒得再配置IDE）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;利用cd命令进入目录省略</span><br><span class="line">&#x2F;&#x2F;example为编写好的java源代码文件</span><br><span class="line"></span><br><span class="line">javac example.java</span><br><span class="line"></span><br><span class="line">java example</span><br></pre></td></tr></table></figure>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>Windows10 20H2 及 Java 11.0.9亲测成功 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>Experience</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux-Problem</title>
-    <url>/2021/01/29/Linux-Problem/</url>
-    <content><![CDATA[<h2 id="部分设置"><a class="header-anchor" href="#部分设置">¶</a>部分设置</h2>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PS1&#x3D;&quot;\[\033[1;33;1m\][\[\033[1;34;1m\]\u@\h:\[\033[0;36;1m\]\w\[\033[1;33;1m\]]\[\033[1;31;1m\]\$ \[\033[1;32;0m\]&quot;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="2021-01-25"><a class="header-anchor" href="#2021-01-25">¶</a>2021-01-25</h2>
-<p>1、定义别名命令baketc,每天将/etc/目录下所有文件，备份到/data独立的子目录下，并要求子目录格式为backupYYYY-mm-dd,备份过程可见。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">alias baketc&#x3D;&quot;&#96;mkdir &#x2F;data&#96;cp -av &#x2F;etc&#x2F; &#x2F;data&#x2F;backup&#96;date +%F&#96;&quot;</span><br></pre></td></tr></table></figure>
-<p>2、创建/data/rootdir目录， 并复制/root下所有文件到该目录内，要求保留原有权限。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#96;mkdir -p &#x2F;data&#x2F;rootdir&#96; cp -a &#x2F;root&#x2F;. &#x2F;data&#x2F;rootdir&#x2F;</span><br></pre></td></tr></table></figure>
-<h2 id="2021-01-26"><a class="header-anchor" href="#2021-01-26">¶</a>2021-01-26</h2>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rm -rf &#x2F;testdir</span><br><span class="line">tree &#x2F;testdir&#x2F;</span><br></pre></td></tr></table></figure>
-<p>1.如何创建 /testdir/dir1/x, /testdir/dir1/y, /testdir/dir1/x/a,/testdir/dir1/x/b, /testdir/dir1/y/a, /testdir/dir1/y/b创建后使用命令  tree /testdir/ 显示</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir -pv &#x2F;testdir&#x2F;dir1&#x2F;&#123;x&#x2F;&#123;a,b&#125;,y&#x2F;&#123;a,b&#125;&#125;</span><br></pre></td></tr></table></figure>
-<p>2.如何创建/testdir/dir2/x, /testdir/dir2/y, /testdir/dir2/x/a, /testdir/dir2/x/b创建后使用命令  tree /testdir/  显示</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir -pv &#x2F;testdir&#x2F;dir2&#x2F;&#123;x&#x2F;&#123;a,b&#125;,y&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2021-01-27"><a class="header-anchor" href="#2021-01-27">¶</a>2021-01-27</h2>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rm -rf &#x2F;testdir</span><br><span class="line">tree &#x2F;testdir&#x2F;</span><br></pre></td></tr></table></figure>
-<p>1.计算 1+2+3…+99+100 的和</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo &#123;1..100&#125; | tr &#39; &#39; + | bc</span><br></pre></td></tr></table></figure>
-<p>2.如何创建 /testdir/dir3 ,  /testdir/dir4 , /testdir/dir5 , /testdir/dir5/dir6 , /testdir/dir5/dir7</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir -pv &#x2F;testdir&#x2F;dir&#123;3,4,5&#x2F;&#123;dir6,dir7&#125;&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2021-01-28"><a class="header-anchor" href="#2021-01-28">¶</a>2021-01-28</h2>
-<p>1.处理字符串&quot;xt.,I 1 jr#!$mn 2 c*/fe 3 uz 4&quot;，只保留其中的数字和空格.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo xt.,I 1 jr#-imn 2 c*&#x2F;fe 3 uz 4 | tr -cd [0-9]&quot; &quot;&quot;\n&quot;</span><br></pre></td></tr></table></figure>
-<p>2.一个linux用户给root发邮件，要求邮件标题为 “TW” ，邮件正文如下: &quot; Stay hungry，Stay foolish. &quot;</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo &quot;Stay hungry，Stay foolish.&quot; | mail -s &quot;TW&quot; root</span><br></pre></td></tr></table></figure>
-<h2 id="2021-01-29"><a class="header-anchor" href="#2021-01-29">¶</a>2021-01-29</h2>
-<p>1.复制 /etc/fstab 文件到 /var/tmp 下，设置文件所有者为 memberone（需要新建）有读写权限，所属组为 thoughtworks（需要新建）组有读写权限，其他人无权限。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cp &#x2F;etc&#x2F;fstab &#x2F;var&#x2F;tmp&#x2F;</span><br><span class="line">groupadd thoughtworks</span><br><span class="line">useradd -g thoughtworks memberone</span><br><span class="line">chgrp thoughtworks fstab</span><br><span class="line">chown memberone fstab</span><br><span class="line">chmod 770 fstab</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">userdel memberone</span><br><span class="line">groupdel thoughtworks</span><br><span class="line">rm -rf &#x2F;var&#x2F;tmp&#x2F;fstab</span><br></pre></td></tr></table></figure>
-<p>2.创建用户 blue ，附加组为 bin 和 root ，默认shll 为 /bin/csh，注释信息为&quot;blue shine&quot;（注：创建完成后使用命令 getent passwd blue查看注释信息；使用命令 id blue查看附加组）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">useradd -c &quot;blue shine&quot; -G bin,root -s &#x2F;bin&#x2F;csh blue</span><br><span class="line">getent passwd blue</span><br><span class="line">id blue</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">userdel blue</span><br></pre></td></tr></table></figure>
-<h2 id="2021-01-30"><a class="header-anchor" href="#2021-01-30">¶</a>2021-01-30</h2>
-<p>1.误将/bin/chmod文件的执行权限删除，如何恢复?</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chmod a-x &#x2F;bin&#x2F;chmod</span><br><span class="line">ll &#x2F;bin&#x2F;chmod</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">setfacl -m user::rwx &#x2F;bin&#x2F;chmod</span><br><span class="line">---------------------------------</span><br><span class="line">install &#x2F;bin&#x2F;chmod -m 744 &#x2F;chmod </span><br><span class="line">mv &#x2F;chmod &#x2F;bin&#x2F;chmod</span><br></pre></td></tr></table></figure>
-<p>2.取出磁盘各分区利用率，并从大到小排序</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df | cut -c46-47 | sort -n</span><br><span class="line">df | tr -s &#39; &#39; &quot;%&quot; | cut -d% -f5 | sort -nr</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>Linux运维</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux运维-命令</title>
-    <url>/2021/01/19/Linux%E8%BF%90%E7%BB%B4-%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1>Linux运维-命令【待完善】（<a href="https://edu.aliyun.com/roadmap/linux?spm=5176.13345299.1392477.2.153cf153ebf9EP">链接</a>）</h1>
-<a id="more"></a>
-<h2 id="Linux相关命令"><a class="header-anchor" href="#Linux相关命令">¶</a>Linux相关命令</h2>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">command [-option]  parameter1 parameter2 ...</span><br><span class="line"># 几个需要说明的地方：</span><br><span class="line">#（1）-option是命令的选项，选项又分为长选项和短选项。另外，有些选项还需要带参数</span><br><span class="line">#（2）如上通用格式中的parameter1 parameter2...是命令的参数，不是选项的参数</span><br><span class="line">#（3）有些命令或二进制程序还带有子命令</span><br></pre></td></tr></table></figure>
-<h3 id="文件管理"><a class="header-anchor" href="#文件管理">¶</a>文件管理</h3>
-<h4 id="cat命令"><a class="header-anchor" href="#cat命令">¶</a><a href="https://www.runoob.com/linux/linux-comm-cat.html">cat</a>命令</h4>
-<p>功能：cat（英文全拼：concatenate）命令用于连接文件并打印到标准输出设备上。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">cat [-AbeEnstTuv] [--help] [--version] fileName</span><br></pre></td></tr></table></figure>
-<p>参数说明：</p>
-<p>-n 或 --number：由 1 开始对所有输出的行数编号。<br>
--b 或 --number-nonblank：和 -n 相似，只不过对于空白行不编号。<br>
--s 或 --squeeze-blank：当遇到有连续两行以上的空白行，就代换为一行的空白行。<br>
--v 或 --show-nonprinting：使用 ^ 和 M- 符号，除了 LFD 和 TAB 之外。<br>
--E 或 --show-ends : 在每行结束处显示 $。<br>
--T 或 --show-tabs: 将 TAB 字符显示为 ^I。<br>
--A, --show-all：等价于 -vET。<br>
--e：等价于&quot;-vE&quot;选项；<br>
--t：等价于&quot;-vT&quot;选项；</p>
-<h4 id="chattr命令"><a class="header-anchor" href="#chattr命令">¶</a><a href="https://www.runoob.com/linux/linux-comm-chattr.html">chattr</a>命令</h4>
-<p>功能：chattr命令用于改变文件属性。</p>
-<p>这项指令可改变存放在ext2文件系统上的文件或目录属性，这些属性共有以下8种模式：</p>
-<p>a：让文件或目录仅供附加用途。<br>
-b：不更新文件或目录的最后存取时间。<br>
-c：将文件或目录压缩后存放。<br>
-d：将文件或目录排除在倾倒操作之外。<br>
-i：不得任意更动文件或目录。<br>
-s：保密性删除文件或目录。<br>
-S：即时更新文件或目录。<br>
-u：预防意外删除。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">chattr [-RV][-v&lt;版本编号&gt;][+/-/=&lt;属性&gt;][文件或目录...]</span><br></pre></td></tr></table></figure>
-<p>参数</p>
-<p>-R 递归处理，将指定目录下的所有文件及子目录一并处理。<br>
--v&lt;版本编号&gt; 设置文件或目录版本。<br>
--V 显示指令执行过程。<br>
-+&lt;属性&gt; 开启文件或目录的该项属性。<br>
--&lt;属性&gt; 关闭文件或目录的该项属性。<br>
-=&lt;属性&gt; 指定文件或目录的该项属性。</p>
-<h4 id="chgrp命令"><a class="header-anchor" href="#chgrp命令">¶</a><a href="https://www.runoob.com/linux/linux-comm-chgrp.html">chgrp</a>命令</h4>
-<p>功能：Linux chgrp（英文全拼：change group）命令用于变更文件或目录的所属群组。</p>
-<p>与 chown 命令不同，chgrp 允许普通用户改变文件所属的组，只要该用户是该组的一员。</p>
-<p>在 UNIX 系统家族里，文件或目录权限的掌控以拥有者及所属群组来管理。您可以使用 chgrp 指令去变更文件与目录的所属群组，设置方式采用群组名称或群组识别码皆可。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">chgrp [-cfhRv][--help][--version][所属群组][文件或目录...] 或 chgrp [-cfhRv][--help][--reference=&lt;参考文件或目录&gt;][--version][文件或目录...]</span><br></pre></td></tr></table></figure>
-<p>参数：</p>
-<p>-c或–changes 效果类似&quot;-v&quot;参数，但仅回报更改的部分。<br>
--f或–quiet或–silent 　不显示错误信息。<br>
--h或–no-dereference 　只对符号连接的文件作修改，而不更动其他任何相关文件。<br>
--R或–recursive 　递归处理，将指定目录下的所有文件及子目录一并处理。<br>
--v或–verbose 　显示指令执行过程。<br>
-–help 　在线帮助。<br>
-–reference=&lt;参考文件或目录&gt; 　把指定文件或目录的所属群组全部设成和参考文件或目录的所属群组相同。<br>
-–version 　显示版本信息。</p>
-<h4 id="chgrp命令-v2"><a class="header-anchor" href="#chgrp命令-v2">¶</a><a href="https://www.runoob.com/linux/linux-comm-chgrp.html">chgrp</a>命令</h4>
-<p>功能：Linux chmod（英文全拼：change mode）命令是控制用户对文件的权限的命令</p>
-<p>Linux/Unix 的文件调用权限分为三级 : 文件所有者（Owner）、用户组（Group）、其它用户（Other Users）。</p>
-<h3 id="文档编辑"><a class="header-anchor" href="#文档编辑">¶</a>文档编辑</h3>
-<h3 id="文件传输"><a class="header-anchor" href="#文件传输">¶</a>文件传输</h3>
-<h3 id="磁盘管理"><a class="header-anchor" href="#磁盘管理">¶</a>磁盘管理</h3>
-<h3 id="磁盘维护"><a class="header-anchor" href="#磁盘维护">¶</a>磁盘维护</h3>
-<h3 id="网络通讯"><a class="header-anchor" href="#网络通讯">¶</a>网络通讯</h3>
-<h3 id="系统管理"><a class="header-anchor" href="#系统管理">¶</a>系统管理</h3>
-<h3 id="系统设置"><a class="header-anchor" href="#系统设置">¶</a>系统设置</h3>
-<h4 id="alias命令"><a class="header-anchor" href="#alias命令">¶</a><a href="https://www.runoob.com/linux/linux-comm-alias.html">alias</a>命令</h4>
-<p>功能：Linux alias命令用于设置指令的别名。</p>
-<p>用户可利用alias，自定指令的别名。若仅输入alias，则可列出目前所有的别名设置。alias的效力仅及于该次登入的操作。若要每次登入是即自动设好别名，可在.profile或.cshrc中设定指令的别名。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">alias [别名] = [指令名称]</span><br></pre></td></tr></table></figure>
-<p>参数：</p>
-<p>若不加任何参数，则列出目前所有的别名设置。</p>
-<h3 id="备份压缩"><a class="header-anchor" href="#备份压缩">¶</a>备份压缩</h3>
-<h3 id="设备管理"><a class="header-anchor" href="#设备管理">¶</a>设备管理</h3>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>Linux运维</tag>
       </tags>
   </entry>
   <entry>
@@ -774,6 +562,151 @@ Linux参考网站：<br>
       </tags>
   </entry>
   <entry>
+    <title>C Primer Plus 第12章总结</title>
+    <url>/2020/12/13/C-Primer-Plus-%E7%AC%AC12%E7%AB%A0%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h1>C Primer Plus 第12章总结<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h1>
+<h3 id="储存类别（详见链接）"><a class="header-anchor" href="#储存类别（详见链接）">¶</a>储存类别（详见<a href="https://www.runoob.com/cprogramming/c-storage-classes.html">链接</a>）</h3>
+<a id="more"></a>
+<p><strong>static</strong><br>
+长期存在静态存储区，直到程序结束<br>
+静态局部变量是放在静态存储区内分配存储单元的，在整个程序运行期间都不释放，跟全局变量一样长期占用内存。</p>
+<p><strong>auto</strong><br>
+随着函数的进栈和出栈而创建和销毁<br>
+我们编写程序的时候很少用<code>auto</code>定义变量，但其实我们之前定义的变量前面没有加<code>static</code>，编译系统会默认为是<code>auto</code>的存储方式，都会把变量存放在动态存储区。</p>
+<p><strong>extern</strong><br>
+长期存在静态存储区，直到程序结束<br>
+用<code>extern</code>来声明全局变量，以扩展全局变量的作用域。</p>
+<p><strong>register</strong><br>
+离开函数值就会消失<br>
+当今的优化编译系统能够识别使用频繁的变量，从而自动将这些变量放在寄存器中，而不需要设定为<code>register</code>。因此，用<code>register</code>声明变量是不必要的。</p>
+<p><strong>例：</strong></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* main.c */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> count;</span><br><span class="line"><span class="function"><span class="keyword">extern</span> <span class="keyword">void</span> <span class="title">write_extern</span><span class="params">()</span></span>; <span class="comment">//跨文件调用support.c的write_extern函数</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    count = <span class="number">5</span>;</span><br><span class="line">    write_extern();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* support.c */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="keyword">extern</span> <span class="keyword">int</span> count;   <span class="comment">//跨文件调用main.c的count变量</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">write_extern</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;count is %d\n&quot;</span>, count);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* main.c和support.c必须在同一个工程内 */</span></span><br></pre></td></tr></table></figure>
+<p><strong>列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>存储类别</th>
+<th>存储期</th>
+<th>作用域</th>
+<th>链接</th>
+<th>声明方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>自动</td>
+<td>自动</td>
+<td>块</td>
+<td>无链接</td>
+<td>块内　无关键词</td>
+</tr>
+<tr>
+<td>寄存器</td>
+<td>自动</td>
+<td>块</td>
+<td>无链接</td>
+<td>块内　关键字<code>regsiter</code></td>
+</tr>
+<tr>
+<td>静态外部链接</td>
+<td>静态</td>
+<td>文件</td>
+<td>外部</td>
+<td>所有函数外</td>
+</tr>
+<tr>
+<td>静态内部链接</td>
+<td>静态</td>
+<td>文件</td>
+<td>外部</td>
+<td>所有函数外　关键字<code>static</code></td>
+</tr>
+<tr>
+<td>静态无链接</td>
+<td>静态</td>
+<td>块</td>
+<td>无</td>
+<td>块内　关键字<code>static</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="链接"><a class="header-anchor" href="#链接">¶</a>链接</h3>
+<table>
+<thead>
+<tr>
+<th>链接属性</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>外部<code>external</code></td>
+<td>在工程必须要有一个变量的定义、可以使工程中的不同文件可以使用相同的变量</td>
+</tr>
+<tr>
+<td>内部<code>internal</code></td>
+<td>仅在该文件中可以使用，其他文件中不能访问</td>
+</tr>
+<tr>
+<td>无设置<code>none</code></td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+<h3 id="内存管理（详见链接）"><a class="header-anchor" href="#内存管理（详见链接）">¶</a>内存管理（详见<a href="https://www.runoob.com/cprogramming/c-memory-management.html">链接</a>）</h3>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*calloc(int num, int size);</td>
+<td>在内存中动态地分配 num 个长度为 size 的连续空间，并将每一个字节都初始化为 0。所以它的结果是分配了 num*size 个字节长度的内存空间，并且每个字节的值都是0。</td>
+</tr>
+<tr>
+<td>free(void *address);</td>
+<td>该函数释放 address 所指向的内存块,释放的是动态分配的内存空间。</td>
+</tr>
+<tr>
+<td>*malloc(int num);</td>
+<td>在堆区分配一块指定大小的内存空间，用来存放数据。这块内存空间在函数执行完成后不会被初始化，它们的值是未知的。</td>
+</tr>
+<tr>
+<td>*realloc(void *address, int newsize);</td>
+<td>该函数重新分配内存，把内存扩展到 newsize。</td>
+</tr>
+</tbody>
+</table>
+<p>上述函数多用于链表中，均处于<a href="https://www.runoob.com/cprogramming/c-standard-library-stdlib-h.html">&lt;stdlib.h&gt;</a>中。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">char</span> name[<span class="number">100</span>];</span><br><span class="line">   <span class="keyword">char</span> *description;</span><br><span class="line"> </span><br><span class="line">   <span class="built_in">strcpy</span>(name, <span class="string">&quot;Zara Ali&quot;</span>);</span><br><span class="line"> </span><br><span class="line">   <span class="comment">/* 动态分配内存 */</span></span><br><span class="line">   description = (<span class="keyword">char</span> *)<span class="built_in">malloc</span>( <span class="number">30</span> * <span class="keyword">sizeof</span>(<span class="keyword">char</span>) );</span><br><span class="line">   <span class="keyword">if</span>( description == <span class="literal">NULL</span> )</span><br><span class="line">   &#123;</span><br><span class="line">      <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;Error - unable to allocate required memory\n&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">   &#123;</span><br><span class="line">      <span class="built_in">strcpy</span>( description, <span class="string">&quot;Zara ali a DPS student.&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="comment">/* 假设您想要存储更大的描述信息 */</span></span><br><span class="line">   description = (<span class="keyword">char</span> *) <span class="built_in">realloc</span>( description, <span class="number">100</span> * <span class="keyword">sizeof</span>(<span class="keyword">char</span>) );</span><br><span class="line">   <span class="keyword">if</span>( description == <span class="literal">NULL</span> )</span><br><span class="line">   &#123;</span><br><span class="line">      <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;Error - unable to allocate required memory\n&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">   &#123;</span><br><span class="line">      <span class="built_in">strcat</span>( description, <span class="string">&quot;She is in class 10th&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   </span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;Name = %s\n&quot;</span>, name );</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;Description: %s\n&quot;</span>, description );</span><br><span class="line"> </span><br><span class="line">   <span class="comment">/* 使用 free() 函数释放内存 */</span></span><br><span class="line">   <span class="built_in">free</span>(description);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="限定符"><a class="header-anchor" href="#限定符">¶</a>限定符</h3>
+<p><strong><code>const</code>类</strong><br>
+const类型关键字声明的对象，其值不能通过赋值来递增，递减来修改。<br>
+<strong><code>volatile</code>类</strong><br>
+只有volatile的成员函数才能被volatile的对象调用。<br>
+<strong><code>restrict</code>类</strong><br>
+不能通过除该指针外所有其他直接或间接的方式修改该对象的内容。<br>
+<strong><code>_Atomic</code>类</strong><br>
+该限定符是C11标准新增，当一个原子类型变量执行原子操作时，其它线程不能访问该变量。可用头文件stdatomic.h和Threads.h进行管理。</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>本人编程萌新，见解仅供参考。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>c</category>
+      </categories>
+      <tags>
+        <tag>C Primer Plus</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Week1-Linux运维总结</title>
     <url>/2021/01/24/Week1-Linux%E8%BF%90%E7%BB%B4%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<h1>Week1-Linux运维学习总结</h1>
@@ -824,6 +757,105 @@ vim 具有程序编辑的能力，可以主动的以字体颜色辨别语法的�
       </tags>
   </entry>
   <entry>
+    <title>Java环境配置</title>
+    <url>/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h1>Java环境配置<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h1>
+<a id="more"></a>
+<h3 id="准备工作"><a class="header-anchor" href="#准备工作">¶</a>准备工作</h3>
+<p>选择需要的版本并下载<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">JDK</a>（<a href="https://baike.baidu.com/item/jdk/1011?fr=aladdin">JDK的相关介绍</a>），网站比较慢，做好等待的准备。</p>
+<h3 id="开始配置环境变量"><a class="header-anchor" href="#开始配置环境变量">¶</a>开始配置环境变量</h3>
+<p>右键此电脑 → 属性 → 高级系统设置<br>
+（或按下Windows + S，搜索<code>编辑系统环境变量</code>）<br>
+出现下图</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/01.png" alt="图01"></p>
+<p>按照上图所示，<br>
+单击环境变量，出现下图</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/02.png" alt="图02"></p>
+<h5 id="配置Java-Home"><a class="header-anchor" href="#配置Java-Home">¶</a>配置Java_Home</h5>
+<p>按照上图所示，<br>
+单击新建，按照下图输入红框内信息。</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/03.png" alt="图03"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Java_Home</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;安装Java的路径及版本</span><br><span class="line">例：C:\Program Files\Java\jdk-11.0.9</span><br></pre></td></tr></table></figure>
+<p>出现下图</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/04.png" alt="图04"></p>
+<h5 id="配置Path"><a class="header-anchor" href="#配置Path">¶</a>配置Path</h5>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/05.png" alt="图05"></p>
+<p>按照上图所示，<br>
+单击Path → 单击编辑<br>
+出现下图</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/06.png" alt="图06"></p>
+<p>按照上图所示，<br>
+分别单击新建，加入绿框内两项。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%Java_Home%\bin</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%Java_Home%\jre\bin</span><br></pre></td></tr></table></figure>
+<p>后单击确定</p>
+<h5 id="配置CLASSPATH"><a class="header-anchor" href="#配置CLASSPATH">¶</a>配置CLASSPATH</h5>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/02.png" alt="图02"></p>
+<h5 id="配置Java-Home-v2"><a class="header-anchor" href="#配置Java-Home-v2">¶</a>配置Java_Home</h5>
+<p>按照上图所示，<br>
+单击新建，按照下图输入红框内信息。</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/07.png" alt="图07"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CLASSPATH</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.;%Java_Home%\bin;%Java_Home%\lib\dt.jar;%Java_Home%\lib\tools.jar</span><br></pre></td></tr></table></figure>
+<p>后单击确定。</p>
+<h5 id="检查Java配置情况"><a class="header-anchor" href="#检查Java配置情况">¶</a>检查Java配置情况</h5>
+<p>Windows + R → 输入cmd后确定<br>
+利用以下三条命令确认是否配置完毕。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line"></span><br><span class="line">javac</span><br><span class="line"></span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
+<p>以<code>java -version</code>为例，出现下图即配置成功。</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/08.png" alt="图08"></p>
+<h5 id="Java开发"><a class="header-anchor" href="#Java开发">¶</a>Java开发</h5>
+<p>利用以下命令开发（如果你懒得再配置IDE）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;利用cd命令进入目录省略</span><br><span class="line">&#x2F;&#x2F;example为编写好的java源代码文件</span><br><span class="line"></span><br><span class="line">javac example.java</span><br><span class="line"></span><br><span class="line">java example</span><br></pre></td></tr></table></figure>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Windows10 20H2 及 Java 11.0.9亲测成功 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>Experience</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>输出螺旋数列 C语言解决方案</title>
+    <url>/2020/12/13/%E8%BE%93%E5%87%BA%E8%9E%BA%E6%97%8B%E6%95%B0%E5%88%97%20C%E8%AF%AD%E8%A8%80%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<h1>输出螺旋数列 C语言解决方案</h1>
+<h3 id="题目"><a class="header-anchor" href="#题目">¶</a>题目</h3>
+<p>自然界中我们可以常见到一些像螺，蜗牛之类的生物，他们的壳都有一道非常优美的曲线——阿基米德螺线（r=aθ）。这里我想让你帮我用程序写出N阶的型如阿基米德螺线的螺旋数组。例如3阶的螺旋数组为：<br>
+1 2 3<br>
+8 9 4<br>
+7 6 5</p>
+<h3 id="解答（非最优解）"><a class="header-anchor" href="#解答（非最优解）">¶</a>解答（非最优解）<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h3>
+<a id="more"></a>
+<p>首先，我们需要获得螺旋数列的阶数并定义二维数组，举例如下：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 设我们需要n阶的螺旋数组 */</span></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line"><span class="keyword">int</span> a[n][n];</span><br></pre></td></tr></table></figure>
+<p>其次，我们需要找到螺旋数列的规律，它有四种运动方向，分别是上、下、左、右，而我们可以利用C语言指针的特性给定义好的数组赋值，举例如下：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 向右赋值 */</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; q; j++)</span><br><span class="line">&#123;</span><br><span class="line">    *p = t; <span class="comment">//先赋值，以避免第一个元素漏赋值</span></span><br><span class="line">    p += <span class="number">1</span>; <span class="comment">//将指针指向下一个需要赋值的元素</span></span><br><span class="line">    t++;    <span class="comment">//为变量t加1，形成公差为一且递增的数列</span></span><br><span class="line">    *p = t; <span class="comment">//为变量赋值，避免该行最后一个元素漏赋值</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 向下赋值 */</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; q; j++)</span><br><span class="line">&#123;</span><br><span class="line">    *p = t; <span class="comment">//先赋值，以避免第一个元素漏赋值</span></span><br><span class="line">    p += n; <span class="comment">//将指针指向下一个需要赋值的元素</span></span><br><span class="line">    t++;    <span class="comment">//为变量t加1，形成公差为一且递增的数列</span></span><br><span class="line">    *p = t; <span class="comment">//为变量赋值，避免该行最后一个元素漏赋值</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 向右赋值 */</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; q; j++)</span><br><span class="line">&#123;</span><br><span class="line">    *p = t; <span class="comment">//先赋值，以避免第一个元素漏赋值</span></span><br><span class="line">    p -= <span class="number">1</span>; <span class="comment">//将指针指向下一个需要赋值的元素</span></span><br><span class="line">    t++;    <span class="comment">//为变量t加1，形成公差为一且递增的数列</span></span><br><span class="line">    *p = t; <span class="comment">//为变量赋值，避免该行最后一个元素漏赋值</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 向上赋值 */</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; q; j++)</span><br><span class="line">&#123;</span><br><span class="line">    *p = t; <span class="comment">//先赋值，以避免第一个元素漏赋值</span></span><br><span class="line">    p -= n; <span class="comment">//将指针指向下一个需要赋值的元素</span></span><br><span class="line">    t++;    <span class="comment">//为变量t加1，形成公差为一且递增的数列</span></span><br><span class="line">    *p = t; <span class="comment">//为变量赋值，避免该行最后一个元素漏赋值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>之后，由于我们每次需要切换赋值模式和赋值数量，所以我们需要加入一些判断条件以使我们每次赋值有效。<br>
+完整代码及注释如下：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">int</span> m = n + n - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> q = n - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> t = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> a[n][n];</span><br><span class="line">    <span class="keyword">int</span> *p;</span><br><span class="line">    p = &amp;a[<span class="number">0</span>][<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">int</span> time = <span class="number">1</span>;</span><br><span class="line">    <span class="comment">/* 获取相关值并进行相关定义及初始化 */</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; (n + n - <span class="number">1</span>); i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (time % <span class="number">4</span> == <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; q; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                *p = t;</span><br><span class="line">                p += <span class="number">1</span>;</span><br><span class="line">                t++;</span><br><span class="line">                *p = t;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (time % <span class="number">4</span> == <span class="number">2</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; q; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                *p = t;</span><br><span class="line">                p += n;</span><br><span class="line">                t++;</span><br><span class="line">                *p = t;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (time % <span class="number">4</span> == <span class="number">3</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; q; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                *p = t;</span><br><span class="line">                p -= <span class="number">1</span>;</span><br><span class="line">                t++;</span><br><span class="line">                *p = t;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (time % <span class="number">4</span> == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; q; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                *p = t;</span><br><span class="line">                p -= n;</span><br><span class="line">                t++;</span><br><span class="line">                *p = t;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (time % <span class="number">2</span> &amp;&amp; time != <span class="number">1</span>)</span><br><span class="line">            q -= <span class="number">1</span>;</span><br><span class="line">        <span class="comment">/* 逐次缩减 */</span></span><br><span class="line">        time++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* 定义大循环，循环次数为形成该螺旋数组所需的步骤 */</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%5d&quot;</span>, a[i][j]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>本人编程萌新，解法仅供参考。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>c</category>
+      </categories>
+      <tags>
+        <tag>OJ</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2020/12/12/hello-world/</url>
     <content><![CDATA[<p>This blog is just a test of system.</p>
@@ -862,38 +894,6 @@ vim 具有程序编辑的能力，可以主动的以字体颜色辨别语法的�
       </categories>
       <tags>
         <tag>Experience</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>输出螺旋数列 C语言解决方案</title>
-    <url>/2020/12/13/%E8%BE%93%E5%87%BA%E8%9E%BA%E6%97%8B%E6%95%B0%E5%88%97%20C%E8%AF%AD%E8%A8%80%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<h1>输出螺旋数列 C语言解决方案</h1>
-<h3 id="题目"><a class="header-anchor" href="#题目">¶</a>题目</h3>
-<p>自然界中我们可以常见到一些像螺，蜗牛之类的生物，他们的壳都有一道非常优美的曲线——阿基米德螺线（r=aθ）。这里我想让你帮我用程序写出N阶的型如阿基米德螺线的螺旋数组。例如3阶的螺旋数组为：<br>
-1 2 3<br>
-8 9 4<br>
-7 6 5</p>
-<h3 id="解答（非最优解）"><a class="header-anchor" href="#解答（非最优解）">¶</a>解答（非最优解）<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h3>
-<a id="more"></a>
-<p>首先，我们需要获得螺旋数列的阶数并定义二维数组，举例如下：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 设我们需要n阶的螺旋数组 */</span></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line"><span class="keyword">int</span> a[n][n];</span><br></pre></td></tr></table></figure>
-<p>其次，我们需要找到螺旋数列的规律，它有四种运动方向，分别是上、下、左、右，而我们可以利用C语言指针的特性给定义好的数组赋值，举例如下：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 向右赋值 */</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; q; j++)</span><br><span class="line">&#123;</span><br><span class="line">    *p = t; <span class="comment">//先赋值，以避免第一个元素漏赋值</span></span><br><span class="line">    p += <span class="number">1</span>; <span class="comment">//将指针指向下一个需要赋值的元素</span></span><br><span class="line">    t++;    <span class="comment">//为变量t加1，形成公差为一且递增的数列</span></span><br><span class="line">    *p = t; <span class="comment">//为变量赋值，避免该行最后一个元素漏赋值</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 向下赋值 */</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; q; j++)</span><br><span class="line">&#123;</span><br><span class="line">    *p = t; <span class="comment">//先赋值，以避免第一个元素漏赋值</span></span><br><span class="line">    p += n; <span class="comment">//将指针指向下一个需要赋值的元素</span></span><br><span class="line">    t++;    <span class="comment">//为变量t加1，形成公差为一且递增的数列</span></span><br><span class="line">    *p = t; <span class="comment">//为变量赋值，避免该行最后一个元素漏赋值</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 向右赋值 */</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; q; j++)</span><br><span class="line">&#123;</span><br><span class="line">    *p = t; <span class="comment">//先赋值，以避免第一个元素漏赋值</span></span><br><span class="line">    p -= <span class="number">1</span>; <span class="comment">//将指针指向下一个需要赋值的元素</span></span><br><span class="line">    t++;    <span class="comment">//为变量t加1，形成公差为一且递增的数列</span></span><br><span class="line">    *p = t; <span class="comment">//为变量赋值，避免该行最后一个元素漏赋值</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 向上赋值 */</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; q; j++)</span><br><span class="line">&#123;</span><br><span class="line">    *p = t; <span class="comment">//先赋值，以避免第一个元素漏赋值</span></span><br><span class="line">    p -= n; <span class="comment">//将指针指向下一个需要赋值的元素</span></span><br><span class="line">    t++;    <span class="comment">//为变量t加1，形成公差为一且递增的数列</span></span><br><span class="line">    *p = t; <span class="comment">//为变量赋值，避免该行最后一个元素漏赋值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>之后，由于我们每次需要切换赋值模式和赋值数量，所以我们需要加入一些判断条件以使我们每次赋值有效。<br>
-完整代码及注释如下：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">int</span> m = n + n - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> q = n - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> t = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> a[n][n];</span><br><span class="line">    <span class="keyword">int</span> *p;</span><br><span class="line">    p = &amp;a[<span class="number">0</span>][<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">int</span> time = <span class="number">1</span>;</span><br><span class="line">    <span class="comment">/* 获取相关值并进行相关定义及初始化 */</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; (n + n - <span class="number">1</span>); i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (time % <span class="number">4</span> == <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; q; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                *p = t;</span><br><span class="line">                p += <span class="number">1</span>;</span><br><span class="line">                t++;</span><br><span class="line">                *p = t;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (time % <span class="number">4</span> == <span class="number">2</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; q; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                *p = t;</span><br><span class="line">                p += n;</span><br><span class="line">                t++;</span><br><span class="line">                *p = t;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (time % <span class="number">4</span> == <span class="number">3</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; q; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                *p = t;</span><br><span class="line">                p -= <span class="number">1</span>;</span><br><span class="line">                t++;</span><br><span class="line">                *p = t;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (time % <span class="number">4</span> == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; q; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                *p = t;</span><br><span class="line">                p -= n;</span><br><span class="line">                t++;</span><br><span class="line">                *p = t;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (time % <span class="number">2</span> &amp;&amp; time != <span class="number">1</span>)</span><br><span class="line">            q -= <span class="number">1</span>;</span><br><span class="line">        <span class="comment">/* 逐次缩减 */</span></span><br><span class="line">        time++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* 定义大循环，循环次数为形成该螺旋数组所需的步骤 */</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%5d&quot;</span>, a[i][j]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>本人编程萌新，解法仅供参考。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>c</category>
-      </categories>
-      <tags>
-        <tag>OJ</tag>
       </tags>
   </entry>
   <entry>
