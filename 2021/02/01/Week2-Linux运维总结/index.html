@@ -22,20 +22,21 @@
     var CONFIG = {"hostname":"fuxx-1.github.io","root":"/","scheme":"Pisces","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="C&#x2F;Java&#x2F;Linux">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://fuxx-1.github.io/categories/index.html">
+  <meta name="description" content="Week2-Linux运维学习总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Week2-Linux运维总结">
+<meta property="og:url" content="http://fuxx-1.github.io/2021/02/01/Week2-Linux%E8%BF%90%E7%BB%B4%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="Fuxxの博客">
-<meta property="og:description" content="C&#x2F;Java&#x2F;Linux">
+<meta property="og:description" content="Week2-Linux运维学习总结">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-01-17T11:51:11.052Z">
-<meta property="article:modified_time" content="2021-01-17T11:51:11.052Z">
+<meta property="article:published_time" content="2021-02-01T00:22:50.025Z">
+<meta property="article:modified_time" content="2021-02-01T00:35:55.576Z">
 <meta property="article:author" content="Fuxx-1">
+<meta property="article:tag" content="Linux运维">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://fuxx-1.github.io/categories/">
+<link rel="canonical" href="http://fuxx-1.github.io/2021/02/01/Week2-Linux%E8%BF%90%E7%BB%B4%E6%80%BB%E7%BB%93/">
 
 
 <script class="page-configurations">
@@ -43,13 +44,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>分类 | Fuxxの博客
-</title>
+  <title>Week2-Linux运维总结 | Fuxxの博客</title>
   
 
 
@@ -198,7 +198,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -210,6 +210,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">Week2-Linux运维学习总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Day1-Day3-%E7%94%A8%E6%88%B7%E5%92%8C%E7%BB%84%E7%9A%84%E7%AE%A1%E7%90%86"><span class="nav-text">Day1-Day3 用户和组的管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day4-Day5-Linux-Vim"><span class="nav-text">Day4-Day5 Linux Vim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day6-Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-text">Day6 Java环境配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%91%A8%E9%A2%98%E7%9B%AE"><span class="nav-text">本周题目</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -275,56 +276,150 @@
 </noscript>
 
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
       
-  
-  
 
       
 
     
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://fuxx-1.github.io/2021/02/01/Week2-Linux%E8%BF%90%E7%BB%B4%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Fuxx-1">
+      <meta itemprop="description" content="C/Java/Linux">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fuxxの博客">
+    </span>
+
     
     
-    <div class="post-block" lang="zh-CN">
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Week2-Linux运维总结
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">分类
-</h1>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
 
-<div class="post-meta-container">
+      <time title="创建时间：2021-02-01 08:22:50 / 修改时间：08:35:55" itemprop="dateCreated datePublished" datetime="2021-02-01T08:22:50+08:00">2021-02-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+        </span>
+    </span>
+
   
-
+    <span id="/2021/02/01/Week2-Linux%E8%BF%90%E7%BB%B4%E6%80%BB%E7%BB%93/" class="post-meta-item leancloud_visitors" data-flag-title="Week2-Linux运维总结" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>350</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
 </div>
 
-</header>
+        </div>
+      </header>
 
-      
-      
-      
-      <div class="post-body">
-          <div class="category-all-page">
-  <div class="category-all-title">
-    目前共计 3 个分类
-  </div>
-  <div class="category-all">
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/c/">c</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">5</span></li></ul>
-  </div>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1>Week2-Linux运维学习总结</h1>
+<a id="more"></a>
+<h2 id="Day1-Day3-用户和组的管理"><a class="header-anchor" href="#Day1-Day3-用户和组的管理">¶</a>Day1-Day3 <a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-user-manage.html">用户和组的管理</a></h2>
+<p>Linux系统是一个多用户多任务的分时操作系统，任何一个要使用系统资源的用户，都必须首先向系统管理员申请一个账号，然后以这个账号的身份进入系统。<br>
+用户的账号一方面可以帮助系统管理员对使用系统的用户进行跟踪，并控制他们对系统资源的访问；另一方面也可以帮助用户组织文件，并为用户提供安全性保护。<br>
+每个用户账号都拥有一个唯一的用户名和各自的口令。<br>
+用户在登录时键入正确的用户名和口令后，就能够进入系统和自己的主目录。</p>
+<h2 id="Day4-Day5-Linux-Vim"><a class="header-anchor" href="#Day4-Day5-Linux-Vim">¶</a>Day4-Day5 Linux <a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-vim.html">Vim</a></h2>
+<p>所有的 Linux 系统都会内置 vim 文书编辑器，其他的文书编辑器则不一定会存在。<br>
+vim 具有程序编辑的能力，可以主动的以字体颜色辨别语法的正确性，方便程序设计。</p>
+<h2 id="Day6-Java环境配置"><a class="header-anchor" href="#Day6-Java环境配置">¶</a>Day6 <a href="https://fuxx-1.github.io/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">Java环境配置</a></h2>
+<h2 id="本周题目"><a class="header-anchor" href="#本周题目">¶</a>本周题目</h2>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Fuxx-1
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://fuxx-1.github.io/2021/02/01/Week2-Linux%E8%BF%90%E7%BB%B4%E6%80%BB%E7%BB%93/" title="Week2-Linux运维总结">http://fuxx-1.github.io/2021/02/01/Week2-Linux运维总结/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
+
+          <div class="post-tags">
+              <a href="/tags/Linux%E8%BF%90%E7%BB%B4/" rel="tag"># Linux运维</a>
+          </div>
 
         
-      </div>
-      
-      
-      
-    </div>
-    
 
-    
-    
-    
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/01/29/Linux-Problem/" rel="prev" title="Linux-Problem">
+                  <i class="fa fa-chevron-left"></i> Linux-Problem
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+  
+  
+  
+
 
 
       
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -514,6 +609,25 @@
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.css">
+
+<script>
+NexT.utils.loadComments('#gitalk-container', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '58c10c8c18d93365dc09',
+      clientSecret: '9f2ecd7779b7eee13850c6f86710ad04231207a3',
+      repo        : 'blog_comments',
+      owner       : 'Fuxx-1',
+      admin       : ['Fuxx-1'],
+      id          : '6e7cdd262566adb9c07303a104387511',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":false},"react":{"opacity":0.8,"search":null},"path":"search.xml","field":"post","format":"html","limit":10000,"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
