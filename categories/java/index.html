@@ -25,7 +25,7 @@
   <meta name="description" content="C&#x2F;Java&#x2F;Linux">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Fuxxの博客">
-<meta property="og:url" content="http://fuxx-1.github.io/categories/java/index.html">
+<meta property="og:url" content="http://fuxx-1.github.io/categories/Java/index.html">
 <meta property="og:site_name" content="Fuxxの博客">
 <meta property="og:description" content="C&#x2F;Java&#x2F;Linux">
 <meta property="og:locale" content="zh_CN">
@@ -33,7 +33,7 @@
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://fuxx-1.github.io/categories/java/">
+<link rel="canonical" href="http://fuxx-1.github.io/categories/Java/">
 
 
 <script class="page-configurations">
@@ -46,10 +46,19 @@
   };
 </script>
 
-  <title>分类: java | Fuxxの博客</title>
+  <title>分类: Java | Fuxxの博客</title>
   
 
 
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?180d823ced4f6163601b2428eb880bd4";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -283,7 +292,7 @@
   <div class="post-block">
     <div class="post-content">
       <div class="collection-title">
-        <h2 class="collection-header">java
+        <h2 class="collection-header">Java
           <small>分类</small>
         </h2>
       </div>
@@ -297,15 +306,15 @@
     <header class="post-header">
       <div class="post-meta-container">
         <time itemprop="dateCreated"
-              datetime="2021-01-17T19:56:39+08:00"
-              content="2021-01-17">
-          01-17
+              datetime="2021-02-07T16:45:04+08:00"
+              content="2021-02-07">
+          02-07
         </time>
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" itemprop="url">
-            <span itemprop="name">Java环境配置</span>
+          <a class="post-title-link" href="/2021/02/07/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/" itemprop="url">
+            <span itemprop="name">Java面向对象编程</span>
           </a>
       </div>
 
@@ -416,97 +425,6 @@
 
 
 
-<script>
-  (function() {
-    function leancloudSelector(url) {
-      url = encodeURI(url);
-      return document.getElementById(url).querySelector('.leancloud-visitors-count');
-    }
-
-    function addCount(Counter) {
-      const visitors = document.querySelector('.leancloud_visitors');
-      const url = decodeURI(visitors.id);
-      const title = visitors.dataset.flagTitle;
-
-      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
-        .then(response => response.json())
-        .then(({ results }) => {
-          if (results.length > 0) {
-            const counter = results[0];
-            leancloudSelector(url).innerText = counter.time + 1;
-            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
-              .catch(error => {
-                console.error('Failed to save visitor count', error);
-              });
-          } else {
-              Counter('post', '/classes/Counter', { title, url, time: 1 })
-                .then(response => response.json())
-                .then(() => {
-                  leancloudSelector(url).innerText = 1;
-                })
-                .catch(error => {
-                  console.error('Failed to create', error);
-                });
-          }
-        })
-        .catch(error => {
-          console.error('LeanCloud Counter Error', error);
-        });
-    }
-
-    function showTime(Counter) {
-      const visitors = document.querySelectorAll('.leancloud_visitors');
-      const entries = [...visitors].map(element => {
-        return decodeURI(element.id);
-      });
-
-      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
-        .then(response => response.json())
-        .then(({ results }) => {
-          for (let url of entries) {
-            const target = results.find(item => item.url === url);
-            leancloudSelector(url).innerText = target ? target.time : 0;
-          }
-        })
-        .catch(error => {
-          console.error('LeanCloud Counter Error', error);
-        });
-    }
-
-    const { app_id, app_key, server_url } = {"enable":true,"app_id":"h3tIB2qbjXY5drW5YPWukzq9-gzGzoHsz","app_key":"dBV0MUqkcaL9TBlq0XVEPL94","server_url":null,"security":false};
-    function fetchData(api_server) {
-      const Counter = (method, url, data) => {
-        return fetch(`${api_server}/1.1${url}`, {
-          method,
-          headers: {
-            'X-LC-Id'     : app_id,
-            'X-LC-Key'    : app_key,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data)
-        });
-      };
-      if (CONFIG.page.isPost) {
-        if (CONFIG.hostname !== location.hostname) return;
-        addCount(Counter);
-      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
-        showTime(Counter);
-      }
-    }
-
-    const api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com`;
-
-    if (api_server) {
-      fetchData(api_server);
-    } else {
-      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
-        .then(response => response.json())
-        .then(({ api_server }) => {
-          fetchData('https://' + api_server);
-        });
-    }
-  })();
-</script>
 
 
   
@@ -515,6 +433,4 @@
 
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":false},"react":{"opacity":0.8,"search":null},"path":"search.xml","field":"post","format":"html","limit":10000,"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
-</html>
-/script></body>
 </html>
