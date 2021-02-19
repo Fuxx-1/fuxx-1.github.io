@@ -1551,7 +1551,7 @@ pre code {
   width: 14px;
   background: #222;
   cursor: pointer;
-  opacity: 0.6;
+  opacity: 0.8;
   position: fixed;
   z-index: 1300;
   right: 30px;
@@ -1781,7 +1781,7 @@ pre code {
 }
 .back-to-top.back-to-top-on {
   cursor: pointer;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 .back-to-top.back-to-top-on:hover {
   opacity: 0.8;
@@ -2884,7 +2884,7 @@ mark.search-keyword {
   background: var(--body-bg-color);
 }
 .back-to-top {
-  background: var(--body-bg-color);
+  background: linear-gradient(90deg, #6dba82 0, #07b39b 15%, #1098ad 30%, #5073b8 44%, #a166ab 58%, #ef4e7b 72%, #f37055 86%, #f79533 100%);
   margin: -4px -10px -18px;
 }
 .back-to-top.back-to-top-on {
@@ -2933,6 +2933,7 @@ body {
 }
 .main-inner {
   background-color: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
 }
 .post-block {
   background-color: rgba(255,255,255,0);
@@ -2941,15 +2942,18 @@ body {
 .header-inner {
   border-radius: 20px 20px 20px 20px;
 }
-.main-menu menu {
+.main-menu {
   border-radius: 20px 20px 20px 20px;
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255,255,255,0.9);
 }
 .sidebar-inner {
   border-radius: 20px 20px 20px 20px;
 }
 .back-to-top {
   border-radius: 0px 0px 20px 20px;
+}
+.back-to-top {
+  color: #000;
 }
 * {
   cursor: url("/images/mouse.ico"), auto !important;
