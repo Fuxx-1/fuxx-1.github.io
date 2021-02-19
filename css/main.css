@@ -2958,10 +2958,10 @@ body {
   cursor: url("/images/mouse.ico"), auto !important;
 }
 .post-body a:not(.btn) {
-  color: #0593d3;
+  color: ;
   border-bottom: none;
 }
 .post-body a:not(.btn):hover {
-  color: #ff106c;
+  color: ;
   text-decoration: underline;
 }
