@@ -3,7 +3,7 @@
   <entry>
     <title>C Primer Plus 第12章总结</title>
     <url>/2020/12/13/C-Primer-Plus-%E7%AC%AC12%E7%AB%A0%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<h1>C Primer Plus 第12章总结<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h1>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1>C Primer Plus 第12章总结<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h1>
 <h3 id="储存类别（详见链接）"><a class="header-anchor" href="#储存类别（详见链接）">¶</a>储存类别（详见<a href="https://www.runoob.com/cprogramming/c-storage-classes.html">链接</a>）</h3>
 <a id="more"></a>
 <p><strong>static</strong><br>
@@ -148,7 +148,7 @@ const类型关键字声明的对象，其值不能通过赋值来递增，递减
   <entry>
     <title>C Primer Plus 第14章总结</title>
     <url>/2020/12/20/C-Primer-Plus-%E7%AC%AC14%E7%AB%A0%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<h1>C Primer Plus 第14章总结<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h1>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1>C Primer Plus 第14章总结<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h1>
 <h3 id="结构和其他数据形式"><a class="header-anchor" href="#结构和其他数据形式">¶</a>结构和其他数据形式</h3>
 <a id="more"></a>
 <h4 id="结构变量的建立、声明及初始化（链接）"><a class="header-anchor" href="#结构变量的建立、声明及初始化（链接）">¶</a>结构变量的建立、声明及初始化（<a href="https://www.runoob.com/cprogramming/c-structures.html">链接</a>）</h4>
@@ -335,76 +335,9 @@ format – 这是 C 字符串，包含了要被写入到流 stream 中的文本�
       </tags>
   </entry>
   <entry>
-    <title>Java环境配置</title>
-    <url>/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h1>Java环境配置<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h1>
-<a id="more"></a>
-<h3 id="准备工作"><a class="header-anchor" href="#准备工作">¶</a>准备工作</h3>
-<p>选择需要的版本并下载<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">JDK</a>（<a href="https://baike.baidu.com/item/jdk/1011?fr=aladdin">JDK的相关介绍</a>），网站比较慢，做好等待的准备。</p>
-<h3 id="开始配置环境变量"><a class="header-anchor" href="#开始配置环境变量">¶</a>开始配置环境变量</h3>
-<p>右键此电脑 → 属性 → 高级系统设置<br>
-（或按下Windows + S，搜索<code>编辑系统环境变量</code>）<br>
-出现下图</p>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/01.png" alt="图01"></p>
-<p>按照上图所示，<br>
-单击环境变量，出现下图</p>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/02.png" alt="图02"></p>
-<h5 id="配置Java-Home"><a class="header-anchor" href="#配置Java-Home">¶</a>配置Java_Home</h5>
-<p>按照上图所示，<br>
-单击新建，按照下图输入红框内信息。</p>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/03.png" alt="图03"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Java_Home</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;安装Java的路径及版本</span><br><span class="line">例：C:\Program Files\Java\jdk-11.0.9</span><br></pre></td></tr></table></figure>
-<p>出现下图</p>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/04.png" alt="图04"></p>
-<h5 id="配置Path"><a class="header-anchor" href="#配置Path">¶</a>配置Path</h5>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/05.png" alt="图05"></p>
-<p>按照上图所示，<br>
-单击Path → 单击编辑<br>
-出现下图</p>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/06.png" alt="图06"></p>
-<p>按照上图所示，<br>
-分别单击新建，加入绿框内两项。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%Java_Home%\bin</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%Java_Home%\jre\bin</span><br></pre></td></tr></table></figure>
-<p>后单击确定</p>
-<h5 id="配置CLASSPATH"><a class="header-anchor" href="#配置CLASSPATH">¶</a>配置CLASSPATH</h5>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/02.png" alt="图02"></p>
-<h5 id="配置Java-Home-v2"><a class="header-anchor" href="#配置Java-Home-v2">¶</a>配置Java_Home</h5>
-<p>按照上图所示，<br>
-单击新建，按照下图输入红框内信息。</p>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/07.png" alt="图07"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CLASSPATH</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.;%Java_Home%\bin;%Java_Home%\lib\dt.jar;%Java_Home%\lib\tools.jar</span><br></pre></td></tr></table></figure>
-<p>后单击确定。</p>
-<h5 id="检查Java配置情况"><a class="header-anchor" href="#检查Java配置情况">¶</a>检查Java配置情况</h5>
-<p>Windows + R → 输入cmd后确定<br>
-利用以下三条命令确认是否配置完毕。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line"></span><br><span class="line">javac</span><br><span class="line"></span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
-<p>以<code>java -version</code>为例，出现下图即配置成功。</p>
-<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/08.png" alt="图08"></p>
-<h5 id="Java开发"><a class="header-anchor" href="#Java开发">¶</a>Java开发</h5>
-<p>利用以下命令开发（如果你懒得再配置IDE）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;利用cd命令进入目录省略</span><br><span class="line">&#x2F;&#x2F;example为编写好的java源代码文件</span><br><span class="line"></span><br><span class="line">javac example.java</span><br><span class="line"></span><br><span class="line">java example</span><br></pre></td></tr></table></figure>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>Windows10 20H2 及 Java 11.0.9亲测成功 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>Experience</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux运维-命令</title>
     <url>/2021/01/19/Linux%E8%BF%90%E7%BB%B4-%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1>Linux运维-命令【待完善】（<a href="https://edu.aliyun.com/roadmap/linux?spm=5176.13345299.1392477.2.153cf153ebf9EP">链接</a>）</h1>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1>Linux运维-命令【待完善】（<a href="https://edu.aliyun.com/roadmap/linux?spm=5176.13345299.1392477.2.153cf153ebf9EP">链接</a>）</h1>
 <a id="more"></a>
 <h2 id="Linux相关命令"><a class="header-anchor" href="#Linux相关命令">¶</a>Linux相关命令</h2>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">command [-option]  parameter1 parameter2 ...</span><br><span class="line"># 几个需要说明的地方：</span><br><span class="line">#（1）-option是命令的选项，选项又分为长选项和短选项。另外，有些选项还需要带参数</span><br><span class="line">#（2）如上通用格式中的parameter1 parameter2...是命令的参数，不是选项的参数</span><br><span class="line">#（3）有些命令或二进制程序还带有子命令</span><br></pre></td></tr></table></figure>
@@ -482,57 +415,76 @@ u：预防意外删除。</p>
       </tags>
   </entry>
   <entry>
-    <title>Linux-Problem</title>
-    <url>/2021/01/29/Linux-Problem/</url>
-    <content><![CDATA[<h2 id="部分设置"><a class="header-anchor" href="#部分设置">¶</a>部分设置</h2>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PS1&#x3D;&quot;\[\033[1;33;1m\][\[\033[1;34;1m\]\u@\h:\[\033[0;36;1m\]\w\[\033[1;33;1m\]]\[\033[1;31;1m\]\$ \[\033[1;32;0m\]&quot;</span><br></pre></td></tr></table></figure>
+    <title>Java环境配置</title>
+    <url>/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1>Java环境配置<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h1>
 <a id="more"></a>
-<h2 id="2021-01-25"><a class="header-anchor" href="#2021-01-25">¶</a>2021-01-25</h2>
-<p>1、定义别名命令baketc,每天将/etc/目录下所有文件，备份到/data独立的子目录下，并要求子目录格式为backupYYYY-mm-dd,备份过程可见。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">alias baketc&#x3D;&quot;&#96;mkdir &#x2F;data&#96;cp -av &#x2F;etc&#x2F; &#x2F;data&#x2F;backup&#96;date +%F&#96;&quot;</span><br></pre></td></tr></table></figure>
-<p>2、创建/data/rootdir目录， 并复制/root下所有文件到该目录内，要求保留原有权限。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#96;mkdir -p &#x2F;data&#x2F;rootdir&#96; cp -a &#x2F;root&#x2F;. &#x2F;data&#x2F;rootdir&#x2F;</span><br></pre></td></tr></table></figure>
-<h2 id="2021-01-26"><a class="header-anchor" href="#2021-01-26">¶</a>2021-01-26</h2>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rm -rf &#x2F;testdir</span><br><span class="line">tree &#x2F;testdir&#x2F;</span><br></pre></td></tr></table></figure>
-<p>1.如何创建 /testdir/dir1/x, /testdir/dir1/y, /testdir/dir1/x/a,/testdir/dir1/x/b, /testdir/dir1/y/a, /testdir/dir1/y/b创建后使用命令  tree /testdir/ 显示</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir -pv &#x2F;testdir&#x2F;dir1&#x2F;&#123;x&#x2F;&#123;a,b&#125;,y&#x2F;&#123;a,b&#125;&#125;</span><br></pre></td></tr></table></figure>
-<p>2.如何创建/testdir/dir2/x, /testdir/dir2/y, /testdir/dir2/x/a, /testdir/dir2/x/b创建后使用命令  tree /testdir/  显示</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir -pv &#x2F;testdir&#x2F;dir2&#x2F;&#123;x&#x2F;&#123;a,b&#125;,y&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2021-01-27"><a class="header-anchor" href="#2021-01-27">¶</a>2021-01-27</h2>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rm -rf &#x2F;testdir</span><br><span class="line">tree &#x2F;testdir&#x2F;</span><br></pre></td></tr></table></figure>
-<p>1.计算 1+2+3…+99+100 的和</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo &#123;1..100&#125; | tr &#39; &#39; + | bc</span><br></pre></td></tr></table></figure>
-<p>2.如何创建 /testdir/dir3 ,  /testdir/dir4 , /testdir/dir5 , /testdir/dir5/dir6 , /testdir/dir5/dir7</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir -pv &#x2F;testdir&#x2F;dir&#123;3,4,5&#x2F;&#123;dir6,dir7&#125;&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2021-01-28"><a class="header-anchor" href="#2021-01-28">¶</a>2021-01-28</h2>
-<p>1.处理字符串&quot;xt.,I 1 jr#!$mn 2 c*/fe 3 uz 4&quot;，只保留其中的数字和空格.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo xt.,I 1 jr#-imn 2 c*&#x2F;fe 3 uz 4 | tr -cd [0-9]&quot; &quot;&quot;\n&quot;</span><br></pre></td></tr></table></figure>
-<p>2.一个linux用户给root发邮件，要求邮件标题为 “TW” ，邮件正文如下: &quot; Stay hungry，Stay foolish. &quot;</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo &quot;Stay hungry，Stay foolish.&quot; | mail -s &quot;TW&quot; root</span><br></pre></td></tr></table></figure>
-<h2 id="2021-01-29"><a class="header-anchor" href="#2021-01-29">¶</a>2021-01-29</h2>
-<p>1.复制 /etc/fstab 文件到 /var/tmp 下，设置文件所有者为 memberone（需要新建）有读写权限，所属组为 thoughtworks（需要新建）组有读写权限，其他人无权限。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cp &#x2F;etc&#x2F;fstab &#x2F;var&#x2F;tmp&#x2F;</span><br><span class="line">groupadd thoughtworks</span><br><span class="line">useradd -g thoughtworks memberone</span><br><span class="line">chgrp thoughtworks fstab</span><br><span class="line">chown memberone fstab</span><br><span class="line">chmod 770 fstab</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">userdel memberone</span><br><span class="line">groupdel thoughtworks</span><br><span class="line">rm -rf &#x2F;var&#x2F;tmp&#x2F;fstab</span><br></pre></td></tr></table></figure>
-<p>2.创建用户 blue ，附加组为 bin 和 root ，默认shll 为 /bin/csh，注释信息为&quot;blue shine&quot;（注：创建完成后使用命令 getent passwd blue查看注释信息；使用命令 id blue查看附加组）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">useradd -c &quot;blue shine&quot; -G bin,root -s &#x2F;bin&#x2F;csh blue</span><br><span class="line">getent passwd blue</span><br><span class="line">id blue</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">userdel blue</span><br></pre></td></tr></table></figure>
-<h2 id="2021-01-30"><a class="header-anchor" href="#2021-01-30">¶</a>2021-01-30</h2>
-<p>1.误将/bin/chmod文件的执行权限删除，如何恢复?</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chmod a-x &#x2F;bin&#x2F;chmod</span><br><span class="line">ll &#x2F;bin&#x2F;chmod</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">setfacl -m user::rwx &#x2F;bin&#x2F;chmod</span><br><span class="line">---------------------------------</span><br><span class="line">install &#x2F;bin&#x2F;chmod -m 744 &#x2F;chmod </span><br><span class="line">mv &#x2F;chmod &#x2F;bin&#x2F;chmod</span><br></pre></td></tr></table></figure>
-<p>2.取出磁盘各分区利用率，并从大到小排序</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df | cut -c46-47 | sort -n</span><br><span class="line">df | tr -s &#39; &#39; &quot;%&quot; | cut -d% -f5 | sort -nr</span><br></pre></td></tr></table></figure>]]></content>
+<h3 id="准备工作"><a class="header-anchor" href="#准备工作">¶</a>准备工作</h3>
+<p>选择需要的版本并下载<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">JDK</a>（<a href="https://baike.baidu.com/item/jdk/1011?fr=aladdin">JDK的相关介绍</a>），网站比较慢，做好等待的准备。</p>
+<h3 id="开始配置环境变量"><a class="header-anchor" href="#开始配置环境变量">¶</a>开始配置环境变量</h3>
+<p>右键此电脑 → 属性 → 高级系统设置<br>
+（或按下Windows + S，搜索<code>编辑系统环境变量</code>）<br>
+出现下图</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/01.png" alt="图01"></p>
+<p>按照上图所示，<br>
+单击环境变量，出现下图</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/02.png" alt="图02"></p>
+<h5 id="配置Java-Home"><a class="header-anchor" href="#配置Java-Home">¶</a>配置Java_Home</h5>
+<p>按照上图所示，<br>
+单击新建，按照下图输入红框内信息。</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/03.png" alt="图03"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Java_Home</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;安装Java的路径及版本</span><br><span class="line">例：C:\Program Files\Java\jdk-11.0.9</span><br></pre></td></tr></table></figure>
+<p>出现下图</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/04.png" alt="图04"></p>
+<h5 id="配置Path"><a class="header-anchor" href="#配置Path">¶</a>配置Path</h5>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/05.png" alt="图05"></p>
+<p>按照上图所示，<br>
+单击Path → 单击编辑<br>
+出现下图</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/06.png" alt="图06"></p>
+<p>按照上图所示，<br>
+分别单击新建，加入绿框内两项。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%Java_Home%\bin</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%Java_Home%\jre\bin</span><br></pre></td></tr></table></figure>
+<p>后单击确定</p>
+<h5 id="配置CLASSPATH"><a class="header-anchor" href="#配置CLASSPATH">¶</a>配置CLASSPATH</h5>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/02.png" alt="图02"></p>
+<h5 id="配置Java-Home-v2"><a class="header-anchor" href="#配置Java-Home-v2">¶</a>配置Java_Home</h5>
+<p>按照上图所示，<br>
+单击新建，按照下图输入红框内信息。</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/07.png" alt="图07"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CLASSPATH</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.;%Java_Home%\bin;%Java_Home%\lib\dt.jar;%Java_Home%\lib\tools.jar</span><br></pre></td></tr></table></figure>
+<p>后单击确定。</p>
+<h5 id="检查Java配置情况"><a class="header-anchor" href="#检查Java配置情况">¶</a>检查Java配置情况</h5>
+<p>Windows + R → 输入cmd后确定<br>
+利用以下三条命令确认是否配置完毕。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line"></span><br><span class="line">javac</span><br><span class="line"></span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
+<p>以<code>java -version</code>为例，出现下图即配置成功。</p>
+<p><img src="/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/08.png" alt="图08"></p>
+<h5 id="Java开发"><a class="header-anchor" href="#Java开发">¶</a>Java开发</h5>
+<p>利用以下命令开发（如果你懒得再配置IDE）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;利用cd命令进入目录省略</span><br><span class="line">&#x2F;&#x2F;example为编写好的java源代码文件</span><br><span class="line"></span><br><span class="line">javac example.java</span><br><span class="line"></span><br><span class="line">java example</span><br></pre></td></tr></table></figure>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Windows10 20H2 及 Java 11.0.9亲测成功 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
       <categories>
-        <category>linux</category>
+        <category>java</category>
       </categories>
       <tags>
-        <tag>Linux运维</tag>
+        <tag>Experience</tag>
       </tags>
   </entry>
   <entry>
     <title>Java面向对象编程</title>
     <url>/2021/02/07/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/</url>
-    <content><![CDATA[<h1>Java面向对象编程总结</h1>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1>Java面向对象编程总结</h1>
 <a id="more"></a>
 <h2 id="Java环境配置"><a class="header-anchor" href="#Java环境配置">¶</a><a href="https://fuxx-1.github.io/2021/01/17/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">Java环境配置</a></h2>
 <h2 id="Java相关知识"><a class="header-anchor" href="#Java相关知识">¶</a>Java相关知识</h2>
@@ -642,9 +594,84 @@ Java 使用包（package）这种机制是为了防止命名冲突，访问控�
       </tags>
   </entry>
   <entry>
+    <title>Linux-Problem</title>
+    <url>/2021/01/29/Linux-Problem/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="部分设置"><a class="header-anchor" href="#部分设置">¶</a>部分设置</h2>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PS1&#x3D;&quot;\[\033[1;33;1m\][\[\033[1;34;1m\]\u@\h:\[\033[0;36;1m\]\w\[\033[1;33;1m\]]\[\033[1;31;1m\]\$ \[\033[1;32;0m\]&quot;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="2021-01-25"><a class="header-anchor" href="#2021-01-25">¶</a>2021-01-25</h2>
+<p>1、定义别名命令baketc,每天将/etc/目录下所有文件，备份到/data独立的子目录下，并要求子目录格式为backupYYYY-mm-dd,备份过程可见。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">alias baketc&#x3D;&quot;&#96;mkdir &#x2F;data&#96;cp -av &#x2F;etc&#x2F; &#x2F;data&#x2F;backup&#96;date +%F&#96;&quot;</span><br></pre></td></tr></table></figure>
+<p>2、创建/data/rootdir目录， 并复制/root下所有文件到该目录内，要求保留原有权限。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#96;mkdir -p &#x2F;data&#x2F;rootdir&#96; cp -a &#x2F;root&#x2F;. &#x2F;data&#x2F;rootdir&#x2F;</span><br></pre></td></tr></table></figure>
+<h2 id="2021-01-26"><a class="header-anchor" href="#2021-01-26">¶</a>2021-01-26</h2>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rm -rf &#x2F;testdir</span><br><span class="line">tree &#x2F;testdir&#x2F;</span><br></pre></td></tr></table></figure>
+<p>1.如何创建 /testdir/dir1/x, /testdir/dir1/y, /testdir/dir1/x/a,/testdir/dir1/x/b, /testdir/dir1/y/a, /testdir/dir1/y/b创建后使用命令  tree /testdir/ 显示</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir -pv &#x2F;testdir&#x2F;dir1&#x2F;&#123;x&#x2F;&#123;a,b&#125;,y&#x2F;&#123;a,b&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>2.如何创建/testdir/dir2/x, /testdir/dir2/y, /testdir/dir2/x/a, /testdir/dir2/x/b创建后使用命令  tree /testdir/  显示</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir -pv &#x2F;testdir&#x2F;dir2&#x2F;&#123;x&#x2F;&#123;a,b&#125;,y&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2021-01-27"><a class="header-anchor" href="#2021-01-27">¶</a>2021-01-27</h2>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rm -rf &#x2F;testdir</span><br><span class="line">tree &#x2F;testdir&#x2F;</span><br></pre></td></tr></table></figure>
+<p>1.计算 1+2+3…+99+100 的和</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo &#123;1..100&#125; | tr &#39; &#39; + | bc</span><br></pre></td></tr></table></figure>
+<p>2.如何创建 /testdir/dir3 ,  /testdir/dir4 , /testdir/dir5 , /testdir/dir5/dir6 , /testdir/dir5/dir7</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir -pv &#x2F;testdir&#x2F;dir&#123;3,4,5&#x2F;&#123;dir6,dir7&#125;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2021-01-28"><a class="header-anchor" href="#2021-01-28">¶</a>2021-01-28</h2>
+<p>1.处理字符串&quot;xt.,I 1 jr#!$mn 2 c*/fe 3 uz 4&quot;，只保留其中的数字和空格.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo xt.,I 1 jr#-imn 2 c*&#x2F;fe 3 uz 4 | tr -cd [0-9]&quot; &quot;&quot;\n&quot;</span><br></pre></td></tr></table></figure>
+<p>2.一个linux用户给root发邮件，要求邮件标题为 “TW” ，邮件正文如下: &quot; Stay hungry，Stay foolish. &quot;</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo &quot;Stay hungry，Stay foolish.&quot; | mail -s &quot;TW&quot; root</span><br></pre></td></tr></table></figure>
+<h2 id="2021-01-29"><a class="header-anchor" href="#2021-01-29">¶</a>2021-01-29</h2>
+<p>1.复制 /etc/fstab 文件到 /var/tmp 下，设置文件所有者为 memberone（需要新建）有读写权限，所属组为 thoughtworks（需要新建）组有读写权限，其他人无权限。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cp &#x2F;etc&#x2F;fstab &#x2F;var&#x2F;tmp&#x2F;</span><br><span class="line">groupadd thoughtworks</span><br><span class="line">useradd -g thoughtworks memberone</span><br><span class="line">chgrp thoughtworks fstab</span><br><span class="line">chown memberone fstab</span><br><span class="line">chmod 770 fstab</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">userdel memberone</span><br><span class="line">groupdel thoughtworks</span><br><span class="line">rm -rf &#x2F;var&#x2F;tmp&#x2F;fstab</span><br></pre></td></tr></table></figure>
+<p>2.创建用户 blue ，附加组为 bin 和 root ，默认shll 为 /bin/csh，注释信息为&quot;blue shine&quot;（注：创建完成后使用命令 getent passwd blue查看注释信息；使用命令 id blue查看附加组）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">useradd -c &quot;blue shine&quot; -G bin,root -s &#x2F;bin&#x2F;csh blue</span><br><span class="line">getent passwd blue</span><br><span class="line">id blue</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">userdel blue</span><br></pre></td></tr></table></figure>
+<h2 id="2021-01-30"><a class="header-anchor" href="#2021-01-30">¶</a>2021-01-30</h2>
+<p>1.误将/bin/chmod文件的执行权限删除，如何恢复?</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chmod a-x &#x2F;bin&#x2F;chmod</span><br><span class="line">ll &#x2F;bin&#x2F;chmod</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">setfacl -m user::rwx &#x2F;bin&#x2F;chmod</span><br><span class="line">---------------------------------</span><br><span class="line">install &#x2F;bin&#x2F;chmod -m 744 &#x2F;chmod </span><br><span class="line">mv &#x2F;chmod &#x2F;bin&#x2F;chmod</span><br></pre></td></tr></table></figure>
+<p>2.取出磁盘各分区利用率，并从大到小排序</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df | cut -c46-47 | sort -n</span><br><span class="line">df | tr -s &#39; &#39; &quot;%&quot; | cut -d% -f5 | sort -nr</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>Linux运维</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Week1-Linux运维总结</title>
+    <url>/2021/01/24/Week1-Linux%E8%BF%90%E7%BB%B4%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1>Week1-Linux运维学习总结</h1>
+<a id="more"></a>
+<h2 id="Day1-计算机基础"><a class="header-anchor" href="#Day1-计算机基础">¶</a>Day1 <a href="https://fuxx-1.github.io/2021/01/17/Linux%E8%BF%90%E7%BB%B4-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a></h2>
+<p>计算机导论居然听懂了，链接是这部分知识点的总结。</p>
+<h2 id="Day2-Day6-Linux命令及部分文件管理方法"><a class="header-anchor" href="#Day2-Day6-Linux命令及部分文件管理方法">¶</a>Day2-Day6 Linux命令及部分文件管理方法</h2>
+<h4 id="Linux基础命令（链接1（内容待完善）-链接2）"><a class="header-anchor" href="#Linux基础命令（链接1（内容待完善）-链接2）">¶</a>Linux基础命令（<a href="https://fuxx-1.github.io/2021/01/19/Linux%E8%BF%90%E7%BB%B4-%E5%91%BD%E4%BB%A4/">链接1（内容待完善）</a>|<a href="https://www.linuxcool.com/">链接2</a>）</h4>
+<p>首先是学会使用Linux帮助文档和命令可以减少很大一部分记忆工作，其次是这部分主要学习利用系统工具或命令实现文件各种属性的查询、更改及删除。</p>
+<h4 id="Linux下的文件管理"><a class="header-anchor" href="#Linux下的文件管理">¶</a>Linux下的文件管理</h4>
+<p>通过对输入及输出相关命令的学习和了解，相信对以后的脚本编写会有帮助。</p>
+<h2 id="学习参考链接"><a class="header-anchor" href="#学习参考链接">¶</a>学习参考链接</h2>
+<p><a href="http://cn.linux.vbird.org/">鸟哥的Linux私房菜</a><br>
+<a href="https://www.runoob.com/linux/linux-tutorial.html">Linux 教程|菜鸟教程</a><br>
+<a href="http://www.linuxdown.net/">Linux下载站</a><br>
+<a href="https://www.lanqiao.cn/courses/?tag=Linux&amp;fee=all&amp;sort=default&amp;category=%E5%85%A8%E9%83%A8&amp;level=all">蓝桥云课</a><br>
+<a href="https://www.w3cschool.cn/linux/">Linux教程|W3Cschool</a><br>
+<a href="https://www.linuxcool.com/">Linux命令大全（手册）</a></p>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>Linux运维</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux运维-计算机基础</title>
     <url>/2021/01/17/Linux%E8%BF%90%E7%BB%B4-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h1>Linux运维-计算机基础（<a href="https://edu.aliyun.com/roadmap/linux?spm=5176.13345299.1392477.2.153cf153ebf9EP">链接</a>）</h1>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1>Linux运维-计算机基础（<a href="https://edu.aliyun.com/roadmap/linux?spm=5176.13345299.1392477.2.153cf153ebf9EP">链接</a>）</h1>
 <a id="more"></a>
 <p>计算机系统<br>
 计算机硬件组成<br>
@@ -886,36 +913,9 @@ Linux参考网站：<br>
       </tags>
   </entry>
   <entry>
-    <title>Week1-Linux运维总结</title>
-    <url>/2021/01/24/Week1-Linux%E8%BF%90%E7%BB%B4%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<h1>Week1-Linux运维学习总结</h1>
-<a id="more"></a>
-<h2 id="Day1-计算机基础"><a class="header-anchor" href="#Day1-计算机基础">¶</a>Day1 <a href="https://fuxx-1.github.io/2021/01/17/Linux%E8%BF%90%E7%BB%B4-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a></h2>
-<p>计算机导论居然听懂了，链接是这部分知识点的总结。</p>
-<h2 id="Day2-Day6-Linux命令及部分文件管理方法"><a class="header-anchor" href="#Day2-Day6-Linux命令及部分文件管理方法">¶</a>Day2-Day6 Linux命令及部分文件管理方法</h2>
-<h4 id="Linux基础命令（链接1（内容待完善）-链接2）"><a class="header-anchor" href="#Linux基础命令（链接1（内容待完善）-链接2）">¶</a>Linux基础命令（<a href="https://fuxx-1.github.io/2021/01/19/Linux%E8%BF%90%E7%BB%B4-%E5%91%BD%E4%BB%A4/">链接1（内容待完善）</a>|<a href="https://www.linuxcool.com/">链接2</a>）</h4>
-<p>首先是学会使用Linux帮助文档和命令可以减少很大一部分记忆工作，其次是这部分主要学习利用系统工具或命令实现文件各种属性的查询、更改及删除。</p>
-<h4 id="Linux下的文件管理"><a class="header-anchor" href="#Linux下的文件管理">¶</a>Linux下的文件管理</h4>
-<p>通过对输入及输出相关命令的学习和了解，相信对以后的脚本编写会有帮助。</p>
-<h2 id="学习参考链接"><a class="header-anchor" href="#学习参考链接">¶</a>学习参考链接</h2>
-<p><a href="http://cn.linux.vbird.org/">鸟哥的Linux私房菜</a><br>
-<a href="https://www.runoob.com/linux/linux-tutorial.html">Linux 教程|菜鸟教程</a><br>
-<a href="http://www.linuxdown.net/">Linux下载站</a><br>
-<a href="https://www.lanqiao.cn/courses/?tag=Linux&amp;fee=all&amp;sort=default&amp;category=%E5%85%A8%E9%83%A8&amp;level=all">蓝桥云课</a><br>
-<a href="https://www.w3cschool.cn/linux/">Linux教程|W3Cschool</a><br>
-<a href="https://www.linuxcool.com/">Linux命令大全（手册）</a></p>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>Linux运维</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Week2-Linux运维总结</title>
     <url>/2021/02/01/Week2-Linux%E8%BF%90%E7%BB%B4%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<h1>Week2-Linux运维学习总结</h1>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1>Week2-Linux运维学习总结</h1>
 <a id="more"></a>
 <h2 id="Day1-Day3-用户和组的管理"><a class="header-anchor" href="#Day1-Day3-用户和组的管理">¶</a>Day1-Day3 <a href="https://www.runoob.com/linux/linux-user-manage.html">用户和组的管理</a></h2>
 <p>Linux系统是一个多用户多任务的分时操作系统，任何一个要使用系统资源的用户，都必须首先向系统管理员申请一个账号，然后以这个账号的身份进入系统。<br>
@@ -938,7 +938,7 @@ vim 具有程序编辑的能力，可以主动的以字体颜色辨别语法的�
   <entry>
     <title>Hello World</title>
     <url>/2020/12/12/hello-world/</url>
-    <content><![CDATA[<p>This blog is just a test of system.</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>This blog is just a test of system.</p>
 <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a class="header-anchor" href="#Quick-Start">¶</a>Quick Start</h2>
 <a id="more"></a>
@@ -963,23 +963,9 @@ vim 具有程序编辑的能力，可以主动的以字体颜色辨别语法的�
       </tags>
   </entry>
   <entry>
-    <title>素数筛法</title>
-    <url>/2020/12/17/%E7%B4%A0%E6%95%B0%E7%AD%9B%E6%B3%95/</url>
-    <content><![CDATA[<h1>素数筛法</h1>
-<a id="more"></a>
-<p>代码就放这里，解释见注释。</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">char</span> pend[<span class="number">100000005</span>];</span><br><span class="line"><span class="keyword">int</span> odd[<span class="number">7123456</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">count</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">    <span class="comment">/* 定义 */</span></span><br><span class="line">    pend[<span class="number">1</span>] = <span class="number">1</span>;    <span class="comment">//特判</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i * i &lt;= <span class="number">100000005</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (!pend[i])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i * i; j &lt;= <span class="number">100000005</span>; j += i)</span><br><span class="line">            &#123;</span><br><span class="line">                pend[j] = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* 线筛 */</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">100000005</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (!pend[i])</span><br><span class="line">        &#123;</span><br><span class="line">            odd[count++] = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* 储存 */</span></span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>c</category>
-      </categories>
-      <tags>
-        <tag>Experience</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>输出螺旋数列 C语言解决方案</title>
     <url>/2020/12/13/%E8%BE%93%E5%87%BA%E8%9E%BA%E6%97%8B%E6%95%B0%E5%88%97%20C%E8%AF%AD%E8%A8%80%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<h1>输出螺旋数列 C语言解决方案</h1>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1>输出螺旋数列 C语言解决方案</h1>
 <h3 id="题目"><a class="header-anchor" href="#题目">¶</a>题目</h3>
 <p>自然界中我们可以常见到一些像螺，蜗牛之类的生物，他们的壳都有一道非常优美的曲线——阿基米德螺线（r=aθ）。这里我想让你帮我用程序写出N阶的型如阿基米德螺线的螺旋数组。例如3阶的螺旋数组为：<br>
 1 2 3<br>
@@ -1009,9 +995,23 @@ vim 具有程序编辑的能力，可以主动的以字体颜色辨别语法的�
       </tags>
   </entry>
   <entry>
+    <title>素数筛法</title>
+    <url>/2020/12/17/%E7%B4%A0%E6%95%B0%E7%AD%9B%E6%B3%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1>素数筛法</h1>
+<a id="more"></a>
+<p>代码就放这里，解释见注释。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">char</span> pend[<span class="number">100000005</span>];</span><br><span class="line"><span class="keyword">int</span> odd[<span class="number">7123456</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">count</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">    <span class="comment">/* 定义 */</span></span><br><span class="line">    pend[<span class="number">1</span>] = <span class="number">1</span>;    <span class="comment">//特判</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i * i &lt;= <span class="number">100000005</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (!pend[i])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i * i; j &lt;= <span class="number">100000005</span>; j += i)</span><br><span class="line">            &#123;</span><br><span class="line">                pend[j] = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* 线筛 */</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">100000005</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (!pend[i])</span><br><span class="line">        &#123;</span><br><span class="line">            odd[count++] = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* 储存 */</span></span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>c</category>
+      </categories>
+      <tags>
+        <tag>Experience</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2020-11-29-题目练习总结</title>
     <url>/2020/12/13/2020-11-29-%E9%A2%98%E7%9B%AE%E7%BB%83%E4%B9%A0%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<h1>2020-11-29 题目练习总结<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h1>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1>2020-11-29 题目练习总结<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h1>
 <h2 id="第一题"><a class="header-anchor" href="#第一题">¶</a><strong>第一题</strong></h2>
 <h4 id="Sky数"><a class="header-anchor" href="#Sky数">¶</a>Sky数 <sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></h4>
 <a id="more"></a>
@@ -1368,7 +1368,7 @@ n的总和不会超过200000</p>
   <entry>
     <title>2020-12-18-比赛前总结</title>
     <url>/2020/12/18/2020-12-18-%E6%AF%94%E8%B5%9B%E5%89%8D%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<h1>比赛前总结</h1>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1>比赛前总结</h1>
 <a id="more"></a>
 <h2 id="技巧"><a class="header-anchor" href="#技巧">¶</a>技巧</h2>
 <h5 id="1-getchar放回"><a class="header-anchor" href="#1-getchar放回">¶</a>1.getchar放回</h5>
