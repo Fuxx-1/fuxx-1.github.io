@@ -14,7 +14,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic|EB+Garamond:300,300italic,400,400italic,700,700italic|Source+Code+Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
@@ -41,7 +41,7 @@
 <link rel="canonical" href="http://fuxx-1.github.io/2021/02/01/Week2-Linux%E8%BF%90%E7%BB%B4%E6%80%BB%E7%BB%93/">
 
 
-<script class="page-configurations">
+<script data-pjax class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -55,7 +55,7 @@
   
 
 
-  <script>
+  <script data-pjax>
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
@@ -104,7 +104,7 @@
 </noscript>
 
 
-<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+<script src="https://fuxx-1.github.io/live2d-widget/autoload.js"></script>
 
 <link rel="alternate" href="/atom.xml" title="Fuxxの博客" type="application/atom+xml">
 </head>
@@ -274,6 +274,7 @@
   </div>
 
 
+<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
 
       </section>
         <div class="back-to-top animated">
@@ -530,7 +531,42 @@ vim 具有程序编辑的能力，可以主动的以字体颜色辨别语法的�
 
   
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '.page-configurations',
+    '.main-inner',
+    '.post-toc-wrap',
+    '.languages',
+    '.pjax'
+  ],
+  analytics: false,
+  cacheBust: false,
+  scrollRestoration: false,
+  scrollTo: !CONFIG.bookmark.enable
+});
+
+document.addEventListener('pjax:success', () => {
+  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  const hasTOC = document.querySelector('.post-toc');
+  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
+  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
 
   
 
@@ -557,7 +593,7 @@ vim 具有程序编辑的能力，可以主动的以字体颜色辨别语法的�
 
 
 
-<script>
+<script data-pjax>
   (function() {
     function leancloudSelector(url) {
       url = encodeURI(url);
@@ -650,6 +686,7 @@ vim 具有程序编辑的能力，可以主动的以字体颜色辨别语法的�
 </script>
 
 
+    <div class="pjax">
   
 
   
@@ -674,5 +711,6 @@ NexT.utils.loadComments('#gitalk-container', () => {
 });
 </script>
 
+    </div>
 </body>
 </html>
