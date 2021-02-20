@@ -2932,28 +2932,40 @@ body {
   padding: 40px;
 }
 .main-inner {
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255,255,255,0.5);
   backdrop-filter: blur(10px);
+  border-radius: 0px 0px 10px 10px;
 }
 .post-block {
   background-color: rgba(255,255,255,0);
   box-shadow: rgba(0,0,0,0) 0px 15px 35px 0px, rgba(0,0,0,0) 6px 6px 10px 0px;
 }
+.copyright {
+  background-color: rgba(255,255,255,0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 10px 10px 0px 0px;
+}
+.wordcount {
+  background-color: rgba(255,255,255,0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 0px 0px 10px 10px;
+}
 .header-inner {
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 10px 10px 10px 10px;
 }
 .main-menu {
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 10px 10px 10px 10px;
   background-color: rgba(255,255,255,0.9);
 }
 .sidebar-inner {
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 10px 10px 10px 10px;
 }
 .back-to-top {
-  border-radius: 0px 0px 20px 20px;
+  border-radius: 0px 0px 10px 10px;
 }
 .back-to-top {
   color: #000;
+  background: #fff;
 }
 * {
   cursor: url("/images/mouse.ico"), auto !important;
