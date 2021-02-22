@@ -3170,8 +3170,8 @@ body {
   padding: 40px;
 }
 .main-inner {
-  background-color: rgba(255,255,255,0.5);
-  backdrop-filter: blur(10px);
+  background-color: rgba(255,255,255,0.7);
+  backdrop-filter: blur(7px);
   border-radius: 0px 0px 10px 10px;
 }
 .post-block {
@@ -3179,13 +3179,13 @@ body {
   box-shadow: rgba(0,0,0,0) 0px 15px 35px 0px, rgba(0,0,0,0) 6px 6px 10px 0px;
 }
 .copyright {
-  background-color: rgba(255,255,255,0.5);
-  backdrop-filter: blur(10px);
+  background-color: rgba(255,255,255,0.8);
+  backdrop-filter: blur(5px);
   border-radius: 10px 10px 0px 0px;
 }
 .wordcount {
-  background-color: rgba(255,255,255,0.5);
-  backdrop-filter: blur(10px);
+  background-color: rgba(255,255,255,0.8);
+  backdrop-filter: blur(5px);
   border-radius: 0px 0px 10px 10px;
 }
 .header-inner {
