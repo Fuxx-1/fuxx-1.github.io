@@ -6,7 +6,7 @@
   <link href="http://fuxx-1.github.io/atom.xml" rel="self"/>
   
   <link href="http://fuxx-1.github.io/"/>
-  <updated>2021-02-23T10:53:34.819Z</updated>
+  <updated>2021-02-23T19:33:18.402Z</updated>
   <id>http://fuxx-1.github.io/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>备份和恢复Hexo博客</title>
+    <link href="http://fuxx-1.github.io/2021/02/23/%E5%A4%87%E4%BB%BD%E5%92%8C%E6%81%A2%E5%A4%8DHexo%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://fuxx-1.github.io/2021/02/23/%E5%A4%87%E4%BB%BD%E5%92%8C%E6%81%A2%E5%A4%8DHexo%E5%8D%9A%E5%AE%A2/</id>
+    <published>2021-02-23T14:40:32.790Z</published>
+    <updated>2021-02-23T19:33:18.402Z</updated>
+    
+    
+    <summary type="html">&lt;h1&gt;前言&lt;/h1&gt;
+&lt;p&gt;由于之前忘记备份Hexo博客的markdown文件，在重做系统时候还忘记备份博客了，导致现在不得不重新从网页上扒下来之前的文章重新写一遍，十分耗费精力。因此在网上找了下如何备份Hexo博客，在此记录下。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="hexo" scheme="http://fuxx-1.github.io/categories/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="http://fuxx-1.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Java多线程</title>
     <link href="http://fuxx-1.github.io/2021/02/21/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     <id>http://fuxx-1.github.io/2021/02/21/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</id>
     <published>2021-02-21T12:53:42.238Z</published>
-    <updated>2021-02-23T10:53:34.819Z</updated>
+    <updated>2021-02-23T13:27:17.130Z</updated>
     
     
     <summary type="html">&lt;h1&gt;Java进程和多线程&lt;/h1&gt;</summary>
@@ -120,7 +140,7 @@
     <updated>2021-01-24T10:04:49.494Z</updated>
     
     
-    <summary type="html">&lt;h1&gt;Linux运维-命令【待完善】（&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9lZHUuYWxpeXVuLmNvbS9yb2FkbWFwL2xpbnV4P3NwbT01MTc2LjEzMzQ1Mjk5LjEzOTI0NzcuMi4xNTNjZjE1M2ViZjlFUA==&quot;&gt;链接&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;）&lt;/h1&gt;</summary>
+    <summary type="html">&lt;h1&gt;Linux运维-命令【待完善】（&lt;a href=&quot;https://edu.aliyun.com/roadmap/linux?spm=5176.13345299.1392477.2.153cf153ebf9EP&quot;&gt;链接&lt;/a&gt;）&lt;/h1&gt;</summary>
     
     
     
@@ -139,7 +159,7 @@
     <updated>2021-02-21T11:45:44.841Z</updated>
     
     
-    <summary type="html">&lt;h1&gt;Linux运维-计算机基础（&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9lZHUuYWxpeXVuLmNvbS9yb2FkbWFwL2xpbnV4P3NwbT01MTc2LjEzMzQ1Mjk5LjEzOTI0NzcuMi4xNTNjZjE1M2ViZjlFUA==&quot;&gt;链接&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;）&lt;/h1&gt;</summary>
+    <summary type="html">&lt;h1&gt;Linux运维-计算机基础（&lt;a href=&quot;https://edu.aliyun.com/roadmap/linux?spm=5176.13345299.1392477.2.153cf153ebf9EP&quot;&gt;链接&lt;/a&gt;）&lt;/h1&gt;</summary>
     
     
     
@@ -213,7 +233,7 @@
     <link href="http://fuxx-1.github.io/2020/12/17/%E7%B4%A0%E6%95%B0%E7%AD%9B%E6%B3%95/"/>
     <id>http://fuxx-1.github.io/2020/12/17/%E7%B4%A0%E6%95%B0%E7%AD%9B%E6%B3%95/</id>
     <published>2020-12-17T12:10:58.788Z</published>
-    <updated>2021-02-22T09:12:40.055Z</updated>
+    <updated>2021-02-23T19:30:36.203Z</updated>
     
     
     <summary type="html">&lt;h1&gt;素数筛法&lt;/h1&gt;</summary>
@@ -282,7 +302,7 @@
     
     
     <summary type="html">&lt;h1&gt;C Primer Plus 第12章总结&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/h1&gt;
-&lt;h3 id=&quot;储存类别（详见链接）&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#储存类别（详见链接）&quot;&gt;¶&lt;/a&gt;储存类别（详见&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly93d3cucnVub29iLmNvbS9jcHJvZ3JhbW1pbmcvYy1zdG9yYWdlLWNsYXNzZXMuaHRtbA==&quot;&gt;链接&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;）&lt;/h3&gt;</summary>
+&lt;h3 id=&quot;储存类别（详见链接）&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#储存类别（详见链接）&quot;&gt;¶&lt;/a&gt;储存类别（详见&lt;a href=&quot;https://www.runoob.com/cprogramming/c-storage-classes.html&quot;&gt;链接&lt;/a&gt;）&lt;/h3&gt;</summary>
     
     
     
@@ -302,7 +322,7 @@
     
     
     <summary type="html">&lt;p&gt;This blog is just a test of system.&lt;/p&gt;
-&lt;p&gt;Welcome to &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9oZXhvLmlvLw==&quot;&gt;Hexo&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;! This is your very first post. Check &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv&quot;&gt;documentation&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=&quot;&gt;troubleshooting&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt; or you can ask me on &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&quot;&gt;GitHub&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#Quick-Start&quot;&gt;¶&lt;/a&gt;Quick Start&lt;/h2&gt;</summary>
     
     

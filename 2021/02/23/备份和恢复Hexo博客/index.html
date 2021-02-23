@@ -25,21 +25,21 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"fuxx-1.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true}};
   </script>
-<meta name="description" content="C Primer Plus 第12章总结[1] ¶储存类别（详见链接）">
+<meta name="description" content="前言 由于之前忘记备份Hexo博客的markdown文件，在重做系统时候还忘记备份博客了，导致现在不得不重新从网页上扒下来之前的文章重新写一遍，十分耗费精力。因此在网上找了下如何备份Hexo博客，在此记录下。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C Primer Plus 第12章总结">
-<meta property="og:url" content="http://fuxx-1.github.io/2020/12/13/C-Primer-Plus-%E7%AC%AC12%E7%AB%A0%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:title" content="备份和恢复Hexo博客">
+<meta property="og:url" content="http://fuxx-1.github.io/2021/02/23/%E5%A4%87%E4%BB%BD%E5%92%8C%E6%81%A2%E5%A4%8DHexo%E5%8D%9A%E5%AE%A2/index.html">
 <meta property="og:site_name" content="Fuxxの博客">
-<meta property="og:description" content="C Primer Plus 第12章总结[1] ¶储存类别（详见链接）">
+<meta property="og:description" content="前言 由于之前忘记备份Hexo博客的markdown文件，在重做系统时候还忘记备份博客了，导致现在不得不重新从网页上扒下来之前的文章重新写一遍，十分耗费精力。因此在网上找了下如何备份Hexo博客，在此记录下。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-12-12T19:19:49.074Z">
-<meta property="article:modified_time" content="2021-01-17T11:31:30.946Z">
+<meta property="article:published_time" content="2021-02-23T14:40:32.790Z">
+<meta property="article:modified_time" content="2021-02-23T19:33:18.402Z">
 <meta property="article:author" content="Fuxx-1">
-<meta property="article:tag" content="C Primer Plus">
+<meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://fuxx-1.github.io/2020/12/13/C-Primer-Plus-%E7%AC%AC12%E7%AB%A0%E6%80%BB%E7%BB%93/">
+<link rel="canonical" href="http://fuxx-1.github.io/2021/02/23/%E5%A4%87%E4%BB%BD%E5%92%8C%E6%81%A2%E5%A4%8DHexo%E5%8D%9A%E5%AE%A2/">
 
 
 <script class="page-configurations">
@@ -63,7 +63,7 @@
   </script>
 
 
-<title>C Primer Plus 第12章总结 | Fuxxの博客</title>
+<title>备份和恢复Hexo博客 | Fuxxの博客</title>
   
 
   <script>
@@ -234,7 +234,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">C Primer Plus 第12章总结[1]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%82%A8%E5%AD%98%E7%B1%BB%E5%88%AB%EF%BC%88%E8%AF%A6%E8%A7%81%E9%93%BE%E6%8E%A5%EF%BC%89"><span class="nav-text">储存类别（详见链接）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%93%BE%E6%8E%A5"><span class="nav-text">链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%EF%BC%88%E8%AF%A6%E8%A7%81%E9%93%BE%E6%8E%A5%EF%BC%89"><span class="nav-text">内存管理（详见链接）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%99%90%E5%AE%9A%E7%AC%A6"><span class="nav-text">限定符</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">备份博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%96%B0%E5%88%86%E6%94%AF"><span class="nav-text">创建新分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B-gitignore%E6%96%87%E4%BB%B6"><span class="nav-text">建立.gitignore文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8Github%E4%B8%8A%E5%A4%87%E4%BB%BD"><span class="nav-text">在Github上备份</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E9%BB%98%E8%AE%A4%E5%88%86%E6%94%AF"><span class="nav-text">设置默认分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AA%E4%BA%BA%E5%A4%87%E4%BB%BD%E4%B9%A0%E6%83%AF"><span class="nav-text">个人备份习惯</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">恢复博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%8B%E9%9A%86%E9%A1%B9%E7%9B%AE%E5%88%B0%E6%9C%AC%E5%9C%B0"><span class="nav-text">克隆项目到本地</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%81%A2%E5%A4%8D%E5%8D%9A%E5%AE%A2"><span class="nav-text">恢复博客</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -323,7 +323,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://fuxx-1.github.io/2020/12/13/C-Primer-Plus-%E7%AC%AC12%E7%AB%A0%E6%80%BB%E7%BB%93/">
+    <link itemprop="mainEntityOfPage" href="http://fuxx-1.github.io/2021/02/23/%E5%A4%87%E4%BB%BD%E5%92%8C%E6%81%A2%E5%A4%8DHexo%E5%8D%9A%E5%AE%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/files/img/avatar.jpg">
@@ -336,7 +336,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          C Primer Plus 第12章总结
+          备份和恢复Hexo博客
         </h1>
 
         <div class="post-meta-container">
@@ -347,14 +347,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2020-12-13 03:19:49" itemprop="dateCreated datePublished" datetime="2020-12-13T03:19:49+08:00">2020-12-13</time>
+      <time title="创建时间：2021-02-23 22:40:32" itemprop="dateCreated datePublished" datetime="2021-02-23T22:40:32+08:00">2021-02-23</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-17 19:31:30" itemprop="dateModified" datetime="2021-01-17T19:31:30+08:00">2021-01-17</time>
+        <time title="修改时间：2021-02-24 03:33:18" itemprop="dateModified" datetime="2021-02-24T03:33:18+08:00">2021-02-24</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -362,12 +362,12 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/c/" itemprop="url" rel="index"><span itemprop="name">c</span></a>
+          <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
         </span>
     </span>
 
   
-    <span id="/2020/12/13/C-Primer-Plus-%E7%AC%AC12%E7%AB%A0%E6%80%BB%E7%BB%93/" class="post-meta-item leancloud_visitors" data-flag-title="C Primer Plus 第12章总结" title="阅读次数">
+    <span id="/2021/02/23/%E5%A4%87%E4%BB%BD%E5%92%8C%E6%81%A2%E5%A4%8DHexo%E5%8D%9A%E5%AE%A2/" class="post-meta-item leancloud_visitors" data-flag-title="备份和恢复Hexo博客" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -381,14 +381,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.3k</span>
+      <span>1.4k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -399,140 +399,46 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1>C Primer Plus 第12章总结<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h1>
-<h3 id="储存类别（详见链接）"><a class="header-anchor" href="#储存类别（详见链接）">¶</a>储存类别（详见<a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-storage-classes.html">链接</a>）</h3>
+        <h1>前言</h1>
+<p>由于之前忘记备份Hexo博客的markdown文件，在重做系统时候还忘记备份博客了，导致现在不得不重新从网页上扒下来之前的文章重新写一遍，十分耗费精力。因此在网上找了下如何备份Hexo博客，在此记录下。</p>
 <a id="more"></a>
-<p><strong>static</strong><br>
-长期存在静态存储区，直到程序结束<br>
-静态局部变量是放在静态存储区内分配存储单元的，在整个程序运行期间都不释放，跟全局变量一样长期占用内存。</p>
-<p><strong>auto</strong><br>
-随着函数的进栈和出栈而创建和销毁<br>
-我们编写程序的时候很少用<code>auto</code>定义变量，但其实我们之前定义的变量前面没有加<code>static</code>，编译系统会默认为是<code>auto</code>的存储方式，都会把变量存放在动态存储区。</p>
-<p><strong>extern</strong><br>
-长期存在静态存储区，直到程序结束<br>
-用<code>extern</code>来声明全局变量，以扩展全局变量的作用域。</p>
-<p><strong>register</strong><br>
-离开函数值就会消失<br>
-当今的优化编译系统能够识别使用频繁的变量，从而自动将这些变量放在寄存器中，而不需要设定为<code>register</code>。因此，用<code>register</code>声明变量是不必要的。</p>
-<p><strong>例：</strong></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* main.c */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> count;</span><br><span class="line"><span class="function"><span class="keyword">extern</span> <span class="keyword">void</span> <span class="title">write_extern</span><span class="params">()</span></span>; <span class="comment">//跨文件调用support.c的write_extern函数</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    count = <span class="number">5</span>;</span><br><span class="line">    write_extern();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* support.c */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="keyword">extern</span> <span class="keyword">int</span> count;   <span class="comment">//跨文件调用main.c的count变量</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">write_extern</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;count is %d\n&quot;</span>, count);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* main.c和support.c必须在同一个工程内 */</span></span><br></pre></td></tr></table></figure>
-<p><strong>列表</strong></p>
-<table>
-<thead>
-<tr>
-<th>存储类别</th>
-<th>存储期</th>
-<th>作用域</th>
-<th>链接</th>
-<th>声明方式</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>自动</td>
-<td>自动</td>
-<td>块</td>
-<td>无链接</td>
-<td>块内　无关键词</td>
-</tr>
-<tr>
-<td>寄存器</td>
-<td>自动</td>
-<td>块</td>
-<td>无链接</td>
-<td>块内　关键字<code>regsiter</code></td>
-</tr>
-<tr>
-<td>静态外部链接</td>
-<td>静态</td>
-<td>文件</td>
-<td>外部</td>
-<td>所有函数外</td>
-</tr>
-<tr>
-<td>静态内部链接</td>
-<td>静态</td>
-<td>文件</td>
-<td>外部</td>
-<td>所有函数外　关键字<code>static</code></td>
-</tr>
-<tr>
-<td>静态无链接</td>
-<td>静态</td>
-<td>块</td>
-<td>无</td>
-<td>块内　关键字<code>static</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="链接"><a class="header-anchor" href="#链接">¶</a>链接</h3>
-<table>
-<thead>
-<tr>
-<th>链接属性</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>外部<code>external</code></td>
-<td>在工程必须要有一个变量的定义、可以使工程中的不同文件可以使用相同的变量</td>
-</tr>
-<tr>
-<td>内部<code>internal</code></td>
-<td>仅在该文件中可以使用，其他文件中不能访问</td>
-</tr>
-<tr>
-<td>无设置<code>none</code></td>
-<td>无</td>
-</tr>
-</tbody>
-</table>
-<h3 id="内存管理（详见链接）"><a class="header-anchor" href="#内存管理（详见链接）">¶</a>内存管理（详见<a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-memory-management.html">链接</a>）</h3>
-<table>
-<thead>
-<tr>
-<th>函数</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>*calloc(int num, int size);</td>
-<td>在内存中动态地分配 num 个长度为 size 的连续空间，并将每一个字节都初始化为 0。所以它的结果是分配了 num*size 个字节长度的内存空间，并且每个字节的值都是0。</td>
-</tr>
-<tr>
-<td>free(void *address);</td>
-<td>该函数释放 address 所指向的内存块,释放的是动态分配的内存空间。</td>
-</tr>
-<tr>
-<td>*malloc(int num);</td>
-<td>在堆区分配一块指定大小的内存空间，用来存放数据。这块内存空间在函数执行完成后不会被初始化，它们的值是未知的。</td>
-</tr>
-<tr>
-<td>*realloc(void *address, int newsize);</td>
-<td>该函数重新分配内存，把内存扩展到 newsize。</td>
-</tr>
-</tbody>
-</table>
-<p>上述函数多用于链表中，均处于<a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-standard-library-stdlib-h.html">&lt;stdlib.h&gt;</a>中。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">char</span> name[<span class="number">100</span>];</span><br><span class="line">   <span class="keyword">char</span> *description;</span><br><span class="line"> </span><br><span class="line">   <span class="built_in">strcpy</span>(name, <span class="string">&quot;Zara Ali&quot;</span>);</span><br><span class="line"> </span><br><span class="line">   <span class="comment">/* 动态分配内存 */</span></span><br><span class="line">   description = (<span class="keyword">char</span> *)<span class="built_in">malloc</span>( <span class="number">30</span> * <span class="keyword">sizeof</span>(<span class="keyword">char</span>) );</span><br><span class="line">   <span class="keyword">if</span>( description == <span class="literal">NULL</span> )</span><br><span class="line">   &#123;</span><br><span class="line">      <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;Error - unable to allocate required memory\n&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">   &#123;</span><br><span class="line">      <span class="built_in">strcpy</span>( description, <span class="string">&quot;Zara ali a DPS student.&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="comment">/* 假设您想要存储更大的描述信息 */</span></span><br><span class="line">   description = (<span class="keyword">char</span> *) <span class="built_in">realloc</span>( description, <span class="number">100</span> * <span class="keyword">sizeof</span>(<span class="keyword">char</span>) );</span><br><span class="line">   <span class="keyword">if</span>( description == <span class="literal">NULL</span> )</span><br><span class="line">   &#123;</span><br><span class="line">      <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;Error - unable to allocate required memory\n&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">   &#123;</span><br><span class="line">      <span class="built_in">strcat</span>( description, <span class="string">&quot;She is in class 10th&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   </span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;Name = %s\n&quot;</span>, name );</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;Description: %s\n&quot;</span>, description );</span><br><span class="line"> </span><br><span class="line">   <span class="comment">/* 使用 free() 函数释放内存 */</span></span><br><span class="line">   <span class="built_in">free</span>(description);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="限定符"><a class="header-anchor" href="#限定符">¶</a>限定符</h3>
-<p><strong><code>const</code>类</strong><br>
-const类型关键字声明的对象，其值不能通过赋值来递增，递减来修改。<br>
-<strong><code>volatile</code>类</strong><br>
-只有volatile的成员函数才能被volatile的对象调用。<br>
-<strong><code>restrict</code>类</strong><br>
-不能通过除该指针外所有其他直接或间接的方式修改该对象的内容。<br>
-<strong><code>_Atomic</code>类</strong><br>
-该限定符是C11标准新增，当一个原子类型变量执行原子操作时，其它线程不能访问该变量。可用头文件stdatomic.h和Threads.h进行管理。</p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>本人编程萌新，见解仅供参考。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
+<p>目前假设Git和Github环境已经配置好了，如果没有配置好详见「<a target="_blank" rel="noopener" href="https://lrscy.github.io/2017/05/01/Ubuntu-Github-config">Ubuntu16.04下Github配置</a>」。<br>
+Git相关操作请参考<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">廖雪峰的Git教程</a>。</p>
+<h1>备份博客</h1>
+<p>目前假设本地Hexo博客已经初始化，如果没有配置好Hexo博客详见「<a target="_blank" rel="noopener" href="https://lrscy.github.io/2017/11/10/Ubuntu-Github-io-config-Hexo">Ubuntu16.04下从零起步搭建配置github.io博客——Hexo</a>」。</p>
+<h2 id="创建新分支"><a class="header-anchor" href="#创建新分支">¶</a>创建新分支</h2>
+<p>在Github.io上建立博客时已经开了一个新仓库了，如果再开另一个仓库存放源代码有点浪费，因此采用建立新分支的方法备份博客。</p>
+<p>虽然理论上什么时候创建新分支来备份都可以，但是还是建议在建立博客的时候就创建备份分支。（然而我中途才想起来-.-）</p>
+<p>不过在建立新分支前请确保仓库内已有<code>master</code>分支（Hexo本地建站后第一次上传时会自动生成），否则后期再添加<code>master</code>分支比较麻烦（请自行搜索<code>git</code>命令）。</p>
+<p>本地Git建立新分支命令如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git checkout -b BRANCHNAME</span></span><br></pre></td></tr></table></figure>
+<p><code>BRANCHNAME</code>是自定义的新分支的名字，建议起为<code>hexo</code>。</p>
+<h2 id="建立-gitignore文件"><a class="header-anchor" href="#建立-gitignore文件">¶</a>建立<code>.gitignore</code>文件</h2>
+<p>建立<code>.gitignore</code>文件将不需要备份的文件屏蔽。个人的<code>.gitignore</code>文件如下：</p>
+<figure class="highlight shell"><figcaption><span>.gitignore</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br></pre></td></tr></table></figure>
+<h2 id="在Github上备份"><a class="header-anchor" href="#在Github上备份">¶</a>在Github上备份</h2>
+<p>通过如下命令将本地文件备份到Github上。</p>
+<p>假设目前在hexo博客的根目录下。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git add .</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git commit -m <span class="string">&quot;Backup&quot;</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git push origin hexo</span></span><br></pre></td></tr></table></figure>
+<p>这样就备份完博客了且在Github上能看到两个分支(<code>master</code>和<code>hexo</code>)。</p>
+<h2 id="设置默认分支"><a class="header-anchor" href="#设置默认分支">¶</a>设置默认分支</h2>
+<p>在Github上你的github.io仓库中设置默认分支为<code>hexo</code>。这样有助于之后恢复博客。<code>master</code>分支时默认的博客静态页面分支，在之后恢复博客的时候并不需要。</p>
+<h2 id="个人备份习惯"><a class="header-anchor" href="#个人备份习惯">¶</a>个人备份习惯</h2>
+<p>个人而言习惯于先备份文件再生成博客。即先执行<code>git add .</code>,<code>git commit -m &quot;Backup&quot;</code>,<code>git push origin hexo</code>将博客备份完成，然后执行<code>hexo g -d</code>发布博客。</p>
+<h1>恢复博客</h1>
+<p>目前假设本地Hexo博客基础环境已经搭好，如果没有配置好Hexo博客基础环境详见「<a target="_blank" rel="noopener" href="https://lrscy.github.io/2017/11/10/Ubuntu-Github-io-config-Hexo#%E5%9F%BA%E7%A1%80%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA">Ubuntu16.04下从零起步搭建配置github.io博客——Hexo</a>」。</p>
+<h2 id="克隆项目到本地"><a class="header-anchor" href="#克隆项目到本地">¶</a>克隆项目到本地</h2>
+<p>输入下列命令克隆博客必须文件(<code>hexo</code>分支)：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/yourgithubname/yourgithubname.github.io</span></span><br></pre></td></tr></table></figure>
+<h2 id="恢复博客"><a class="header-anchor" href="#恢复博客">¶</a>恢复博客</h2>
+<p>在克隆的那个文件夹下输入如下命令恢复博客：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-cli</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> npm install</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-deployer-git</span></span><br></pre></td></tr></table></figure>
+<p>在此不需要执行<code>hexo init</code>这条指令，因为不是从零搭建起新博客。</p>
+<p>完成喵～</p>
+<ul>
+<li><strong>Post author:</strong> Ruosen Li</li>
+<li><strong>Post link:</strong> <a target="_blank" rel="noopener" href="https://lrscy.github.io/2018/01/26/Hexo-Github-Backup/">https://lrscy.github.io/2018/01/26/Hexo-Github-Backup/</a></li>
+</ul>
 
     </div>
 
@@ -554,7 +460,7 @@ const类型关键字声明的对象，其值不能通过赋值来递增，递减
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://fuxx-1.github.io/2020/12/13/C-Primer-Plus-%E7%AC%AC12%E7%AB%A0%E6%80%BB%E7%BB%93/" title="C Primer Plus 第12章总结">http://fuxx-1.github.io/2020/12/13/C-Primer-Plus-第12章总结/</a>
+      <a href="http://fuxx-1.github.io/2021/02/23/%E5%A4%87%E4%BB%BD%E5%92%8C%E6%81%A2%E5%A4%8DHexo%E5%8D%9A%E5%AE%A2/" title="备份和恢复Hexo博客">http://fuxx-1.github.io/2021/02/23/备份和恢复Hexo博客/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -563,7 +469,7 @@ const类型关键字声明的对象，其值不能通过赋值来递增，递减
 </div>
 
           <div class="post-tags">
-              <a href="/tags/C-Primer-Plus/" rel="tag"># C Primer Plus</a>
+              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
           </div>
 
         
@@ -575,14 +481,11 @@ const类型关键字声明的对象，其值不能通过赋值来递增，递减
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/12/12/hello-world/" rel="prev" title="Hello World">
-                  <i class="fa fa-chevron-left"></i> Hello World
+                <a href="/2021/02/21/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="prev" title="Java多线程">
+                  <i class="fa fa-chevron-left"></i> Java多线程
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/12/13/%E8%BE%93%E5%87%BA%E8%9E%BA%E6%97%8B%E6%95%B0%E5%88%97%20C%E8%AF%AD%E8%A8%80%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" rel="next" title="输出螺旋数列 C语言解决方案">
-                  输出螺旋数列 C语言解决方案 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -796,7 +699,7 @@ NexT.utils.loadComments('.gitalk-container', () => {
       repo        : 'blog_comments',
       owner       : 'Fuxx-1',
       admin       : ['Fuxx-1'],
-      id          : '91c5027e559b8d64923bff0d95144b0d',
+      id          : '00c33070aeeb7db4c155c0d54ce78ee3',
       proxy       : 'https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token',
         language: 'zh-CN',
       distractionFreeMode: true
