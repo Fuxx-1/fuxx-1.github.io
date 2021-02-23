@@ -3,15 +3,13 @@
  var titleTime;
  document.addEventListener('visibilitychange', function () {
      if (document.hidden) {
-         $('[rel="icon"]').attr('href', "/img/trhx2.png");
          document.title = '╭(°A°`)╮ 页面崩溃啦 ~';
          clearTimeout(titleTime);
      }
      else {
-         $('[rel="icon"]').attr('href', "/img/trhx2.png");
-         document.title = '(ฅ>ω<*ฅ) 噫又好啦 ~' + OriginTitle;
+         document.title = '(ฅ>ω<*ฅ) 噫又好啦 ~';
          titleTime = setTimeout(function () {
              document.title = OriginTitle;
-         }, 1000);
+         }, 100);
      }
  });
