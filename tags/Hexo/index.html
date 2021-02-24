@@ -49,8 +49,9 @@
   };
 </script><script src="https://fuxx-1.github.io/live2d-widget/autoload.js"></script>
 
-<!--浏览器搞笑标题-->
-<script type="text/javascript" src="/files/js/FunnyTitle.js"></script>
+<!--崩溃欺骗
+<script type="text/javascript" src="/files/js/crash_cheat.js"></script>
+-->
   <script>
   (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
   daovoice('init', {
@@ -153,6 +154,7 @@
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
         <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-热度排行"><a href="/hot/" rel="section"><i class="fa fa-thermometer-half fa-fw"></i>热度排行</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -190,7 +192,7 @@
 <!-- require MetingJS -->
 <script src="https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script>
 <!--If placing an ontology inside a body causes page loading problems, try placing it behind the body-->
-<div class="aplayer" 
+<div id="aplayer" class="aplayer" 
 	data-id="6559921027" 
 	data-server="tencent" 
 	data-type="playlist" 
@@ -204,8 +206,6 @@
 	date-preload="auto"
 	data-theme="#cc543a">
 </div>
-
-
 
 </div>
         
@@ -287,7 +287,7 @@
 </div>
 
 
-<script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=55buyu18irv&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script>
+
         </div>
       </div>
         <div class="back-to-top animated" role="button">
@@ -404,8 +404,26 @@
     <span title="站点阅读时长">1:18</span>
   </span>
 </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
   <div class="addthis_inline_share_toolbox">
-    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60352b9a66e04c0b" async="async"></script>
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6035dc642359161f" async="async"></script>
   </div>
 
     </div>
@@ -447,6 +465,7 @@
 
 
   
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 <script>
@@ -548,7 +567,6 @@
   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
   <script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
   <script async src="/files/js/explosion.js"></script>
-
 
 
 
