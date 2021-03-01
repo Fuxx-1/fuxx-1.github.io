@@ -3295,3 +3295,10 @@ a#download:hover {
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
+.aplayer {
+  z-index: 10000;
+}
+#daodream-container,
+.daodream-launcher-button {
+  z-index: 100;
+}
