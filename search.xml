@@ -562,6 +562,33 @@ Java 使用包（package）这种机制是为了防止命名冲突，访问控�
       </tags>
   </entry>
   <entry>
+    <title>Week1-Linux运维总结</title>
+    <url>/2021/01/24/Week1-Linux%E8%BF%90%E7%BB%B4%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1>Week1-Linux运维学习总结</h1>
+<a id="more"></a>
+<h2 id="Day1-计算机基础"><a class="header-anchor" href="#Day1-计算机基础">¶</a>Day1 <a href="https://fuxx-1.github.io/2021/01/17/Linux%E8%BF%90%E7%BB%B4-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a></h2>
+<p>计算机导论居然听懂了，链接是这部分知识点的总结。</p>
+<h2 id="Day2-Day6-Linux命令及部分文件管理方法"><a class="header-anchor" href="#Day2-Day6-Linux命令及部分文件管理方法">¶</a>Day2-Day6 Linux命令及部分文件管理方法</h2>
+<h4 id="Linux基础命令（链接1（内容待完善）-链接2）"><a class="header-anchor" href="#Linux基础命令（链接1（内容待完善）-链接2）">¶</a>Linux基础命令（<a href="https://fuxx-1.github.io/2021/01/19/Linux%E8%BF%90%E7%BB%B4-%E5%91%BD%E4%BB%A4/">链接1（内容待完善）</a>|<a href="https://www.linuxcool.com/">链接2</a>）</h4>
+<p>首先是学会使用Linux帮助文档和命令可以减少很大一部分记忆工作，其次是这部分主要学习利用系统工具或命令实现文件各种属性的查询、更改及删除。</p>
+<h4 id="Linux下的文件管理"><a class="header-anchor" href="#Linux下的文件管理">¶</a>Linux下的文件管理</h4>
+<p>通过对输入及输出相关命令的学习和了解，相信对以后的脚本编写会有帮助。</p>
+<h2 id="学习参考链接"><a class="header-anchor" href="#学习参考链接">¶</a>学习参考链接</h2>
+<p><a href="http://cn.linux.vbird.org/">鸟哥的Linux私房菜</a><br>
+<a href="https://www.runoob.com/linux/linux-tutorial.html">Linux 教程|菜鸟教程</a><br>
+<a href="http://www.linuxdown.net/">Linux下载站</a><br>
+<a href="https://www.lanqiao.cn/courses/?tag=Linux&amp;fee=all&amp;sort=default&amp;category=%E5%85%A8%E9%83%A8&amp;level=all">蓝桥云课</a><br>
+<a href="https://www.w3cschool.cn/linux/">Linux教程|W3Cschool</a><br>
+<a href="https://www.linuxcool.com/">Linux命令大全（手册）</a></p>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>Linux运维</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux运维-命令</title>
     <url>/2021/01/19/Linux%E8%BF%90%E7%BB%B4-%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1>Linux运维-命令【待完善】（<a href="https://edu.aliyun.com/roadmap/linux?spm=5176.13345299.1392477.2.153cf153ebf9EP">链接</a>）</h1>
@@ -886,33 +913,6 @@ http://www.mindpin.com/dbjs-demo/linux/
       </tags>
   </entry>
   <entry>
-    <title>Week1-Linux运维总结</title>
-    <url>/2021/01/24/Week1-Linux%E8%BF%90%E7%BB%B4%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1>Week1-Linux运维学习总结</h1>
-<a id="more"></a>
-<h2 id="Day1-计算机基础"><a class="header-anchor" href="#Day1-计算机基础">¶</a>Day1 <a href="https://fuxx-1.github.io/2021/01/17/Linux%E8%BF%90%E7%BB%B4-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a></h2>
-<p>计算机导论居然听懂了，链接是这部分知识点的总结。</p>
-<h2 id="Day2-Day6-Linux命令及部分文件管理方法"><a class="header-anchor" href="#Day2-Day6-Linux命令及部分文件管理方法">¶</a>Day2-Day6 Linux命令及部分文件管理方法</h2>
-<h4 id="Linux基础命令（链接1（内容待完善）-链接2）"><a class="header-anchor" href="#Linux基础命令（链接1（内容待完善）-链接2）">¶</a>Linux基础命令（<a href="https://fuxx-1.github.io/2021/01/19/Linux%E8%BF%90%E7%BB%B4-%E5%91%BD%E4%BB%A4/">链接1（内容待完善）</a>|<a href="https://www.linuxcool.com/">链接2</a>）</h4>
-<p>首先是学会使用Linux帮助文档和命令可以减少很大一部分记忆工作，其次是这部分主要学习利用系统工具或命令实现文件各种属性的查询、更改及删除。</p>
-<h4 id="Linux下的文件管理"><a class="header-anchor" href="#Linux下的文件管理">¶</a>Linux下的文件管理</h4>
-<p>通过对输入及输出相关命令的学习和了解，相信对以后的脚本编写会有帮助。</p>
-<h2 id="学习参考链接"><a class="header-anchor" href="#学习参考链接">¶</a>学习参考链接</h2>
-<p><a href="http://cn.linux.vbird.org/">鸟哥的Linux私房菜</a><br>
-<a href="https://www.runoob.com/linux/linux-tutorial.html">Linux 教程|菜鸟教程</a><br>
-<a href="http://www.linuxdown.net/">Linux下载站</a><br>
-<a href="https://www.lanqiao.cn/courses/?tag=Linux&amp;fee=all&amp;sort=default&amp;category=%E5%85%A8%E9%83%A8&amp;level=all">蓝桥云课</a><br>
-<a href="https://www.w3cschool.cn/linux/">Linux教程|W3Cschool</a><br>
-<a href="https://www.linuxcool.com/">Linux命令大全（手册）</a></p>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>Linux运维</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Week2-Linux运维总结</title>
     <url>/2021/02/01/Week2-Linux%E8%BF%90%E7%BB%B4%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1>Week2-Linux运维学习总结</h1>
@@ -933,33 +933,6 @@ vim 具有程序编辑的能力，可以主动的以字体颜色辨别语法的�
       </categories>
       <tags>
         <tag>Linux运维</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/12/12/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>This blog is just a test of system.</p>
-<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a class="header-anchor" href="#Quick-Start">¶</a>Quick Start</h2>
-<a id="more"></a>
-<h3 id="Create-a-new-post"><a class="header-anchor" href="#Create-a-new-post">¶</a>Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a class="header-anchor" href="#Run-server">¶</a>Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a class="header-anchor" href="#Generate-static-files">¶</a>Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a class="header-anchor" href="#Deploy-to-remote-sites">¶</a>Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>c</category>
-      </categories>
-      <tags>
-        <tag>Website-Test</tag>
       </tags>
   </entry>
   <entry>
@@ -1014,17 +987,30 @@ Git相关操作请参考<a href="https://www.liaoxuefeng.com/wiki/00137395163059
       </tags>
   </entry>
   <entry>
-    <title>素数筛法</title>
-    <url>/2020/12/17/%E7%B4%A0%E6%95%B0%E7%AD%9B%E6%B3%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1>素数筛法</h1>
+    <title>Hello World</title>
+    <url>/2020/12/12/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>This blog is just a test of system.</p>
+<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a class="header-anchor" href="#Quick-Start">¶</a>Quick Start</h2>
 <a id="more"></a>
-<p>代码就放这里，解释见注释。</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">char</span> pend[<span class="number">100000005</span>];</span><br><span class="line"><span class="keyword">int</span> odd[<span class="number">7123456</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">count</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">    <span class="comment">/* 定义 */</span></span><br><span class="line">    pend[<span class="number">1</span>] = <span class="number">1</span>;    <span class="comment">//特判</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i * i &lt;= <span class="number">100000005</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (!pend[i])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i * i; j &lt;= <span class="number">100000005</span>; j += i)</span><br><span class="line">            &#123;</span><br><span class="line">                pend[j] = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* 线筛 */</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">100000005</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (!pend[i])</span><br><span class="line">        &#123;</span><br><span class="line">            odd[count++] = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* 储存 */</span></span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+<h3 id="Create-a-new-post"><a class="header-anchor" href="#Create-a-new-post">¶</a>Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a class="header-anchor" href="#Run-server">¶</a>Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a class="header-anchor" href="#Generate-static-files">¶</a>Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a class="header-anchor" href="#Deploy-to-remote-sites">¶</a>Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
       <categories>
         <category>c</category>
       </categories>
       <tags>
-        <tag>Experience-C</tag>
+        <tag>Website-Test</tag>
       </tags>
   </entry>
   <entry>
@@ -1057,6 +1043,20 @@ Git相关操作请参考<a href="https://www.liaoxuefeng.com/wiki/00137395163059
       </categories>
       <tags>
         <tag>Oj-C</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>素数筛法</title>
+    <url>/2020/12/17/%E7%B4%A0%E6%95%B0%E7%AD%9B%E6%B3%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1>素数筛法</h1>
+<a id="more"></a>
+<p>代码就放这里，解释见注释。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">char</span> pend[<span class="number">100000005</span>];</span><br><span class="line"><span class="keyword">int</span> odd[<span class="number">7123456</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">count</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">    <span class="comment">/* 定义 */</span></span><br><span class="line">    pend[<span class="number">1</span>] = <span class="number">1</span>;    <span class="comment">//特判</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i * i &lt;= <span class="number">100000005</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (!pend[i])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i * i; j &lt;= <span class="number">100000005</span>; j += i)</span><br><span class="line">            &#123;</span><br><span class="line">                pend[j] = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* 线筛 */</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">100000005</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (!pend[i])</span><br><span class="line">        &#123;</span><br><span class="line">            odd[count++] = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* 储存 */</span></span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>c</category>
+      </categories>
+      <tags>
+        <tag>Experience-C</tag>
       </tags>
   </entry>
   <entry>
