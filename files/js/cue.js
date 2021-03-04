@@ -3,4 +3,5 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
   alert("Fuxxの博客提醒您：\n电脑访问体验更佳！");
 } else {
   // 执行桌面端代码
+  alert("Fuxxの博客提醒您：\n看板娘可以选择切换是否开启");
 }
