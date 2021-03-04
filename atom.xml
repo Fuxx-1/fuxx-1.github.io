@@ -6,7 +6,7 @@
   <link href="http://fuxx-1.github.io/atom.xml" rel="self"/>
   
   <link href="http://fuxx-1.github.io/"/>
-  <updated>2021-02-23T19:33:18.402Z</updated>
+  <updated>2021-03-04T12:23:54.302Z</updated>
   <id>http://fuxx-1.github.io/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java基础类库</title>
+    <link href="http://fuxx-1.github.io/2021/03/04/Java%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%BA%93/"/>
+    <id>http://fuxx-1.github.io/2021/03/04/Java%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%BA%93/</id>
+    <published>2021-03-04T11:00:48.192Z</published>
+    <updated>2021-03-04T12:23:54.302Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="java" scheme="http://fuxx-1.github.io/categories/java/"/>
+    
+    
+    <category term="Experience-Java" scheme="http://fuxx-1.github.io/tags/Experience-Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数字操作类</title>
+    <link href="http://fuxx-1.github.io/2021/03/04/%E6%95%B0%E5%AD%97%E6%93%8D%E4%BD%9C%E7%B1%BB/"/>
+    <id>http://fuxx-1.github.io/2021/03/04/%E6%95%B0%E5%AD%97%E6%93%8D%E4%BD%9C%E7%B1%BB/</id>
+    <published>2021-03-04T10:49:18.462Z</published>
+    <updated>2021-03-04T12:14:43.514Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="java" scheme="http://fuxx-1.github.io/categories/java/"/>
+    
+    
+    <category term="Experience-Java" scheme="http://fuxx-1.github.io/tags/Experience-Java/"/>
+    
+  </entry>
   
   <entry>
     <title>备份和恢复Hexo博客</title>
@@ -233,7 +277,7 @@
     <link href="http://fuxx-1.github.io/2020/12/17/%E7%B4%A0%E6%95%B0%E7%AD%9B%E6%B3%95/"/>
     <id>http://fuxx-1.github.io/2020/12/17/%E7%B4%A0%E6%95%B0%E7%AD%9B%E6%B3%95/</id>
     <published>2020-12-17T12:10:58.788Z</published>
-    <updated>2021-02-23T19:30:36.203Z</updated>
+    <updated>2021-03-04T10:49:23.062Z</updated>
     
     
     <summary type="html">&lt;h1&gt;素数筛法&lt;/h1&gt;</summary>
