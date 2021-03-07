@@ -3104,11 +3104,13 @@ message:  //密码提示
 */
 body {
   background-image: url("http://desk-fd.zol-img.com.cn/t_s1366x768c5/g5/M00/0E/08/ChMkJl3g4u-IXLYLAAOQBJKADiEAAvffQOpyiMAA5Ac374.jpg?downfile=1612690250741.jpg");
-  height: 100%;
-  width: 100%;
-  background-repeat: repeat-x;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100% 100%;
+  background-position: 70% 50%;
+}
+.sidebar {
+  transition-duration: 0.2s;
 }
 .posts-expand .post-title-link {
   color: #222;
