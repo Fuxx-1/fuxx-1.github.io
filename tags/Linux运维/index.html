@@ -642,6 +642,16 @@
 </script>
 
 
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink.listen({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'http://fuxx-1.github.io/tags/Linux%E8%BF%90%E7%BB%B4/',]
+      });
+      });
+  </script>
 
 
 

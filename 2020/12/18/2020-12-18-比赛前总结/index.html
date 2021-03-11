@@ -796,6 +796,16 @@ rxf</p>
 </script>
 
 
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink.listen({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'http://fuxx-1.github.io/2020/12/18/2020-12-18-%E6%AF%94%E8%B5%9B%E5%89%8D%E6%80%BB%E7%BB%93/',]
+      });
+      });
+  </script>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.css">
 
