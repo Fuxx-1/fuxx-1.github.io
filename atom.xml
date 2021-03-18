@@ -28,6 +28,10 @@
     
     
     
+    <category term="java" scheme="http://fuxx-1.github.io/categories/java/"/>
+    
+    
+    <category term="Experience-Java" scheme="http://fuxx-1.github.io/tags/Experience-Java/"/>
     
   </entry>
   
@@ -40,10 +44,14 @@
     
     
     <summary type="html">&lt;p&gt;该博客转载自&lt;a href=&quot;https://developer.aliyun.com/profile/ranvh7lfsgaym?spm=a2c6h.12873639.0.0.75066f8fPJ6miZ&quot;&gt;温柔的养猫人&lt;/a&gt;，仅供学习参考。&lt;/p&gt;
-&lt;h2 id=&quot;StringBuffer类&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#StringBuffer类&quot;&gt;¶&lt;/a&gt;StringBuffer类&lt;/h2&gt;</summary>
+&lt;h2 id=&quot;StringBuffer类&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#StringBuffer类&quot;&gt;✦&lt;/a&gt;StringBuffer类&lt;/h2&gt;</summary>
     
     
     
+    <category term="java" scheme="http://fuxx-1.github.io/categories/java/"/>
+    
+    
+    <category term="Experience-Java" scheme="http://fuxx-1.github.io/tags/Experience-Java/"/>
     
   </entry>
   
@@ -56,10 +64,14 @@
     
     
     <summary type="html">&lt;p&gt;该博客转载自&lt;a href=&quot;https://developer.aliyun.com/profile/ranvh7lfsgaym?spm=a2c6h.12873639.0.0.75066f8fPJ6miZ&quot;&gt;温柔的养猫人&lt;/a&gt;，仅供学习参考。&lt;/p&gt;
-&lt;h2 id=&quot;Math数学计算类&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#Math数学计算类&quot;&gt;¶&lt;/a&gt;Math数学计算类&lt;/h2&gt;</summary>
+&lt;h2 id=&quot;Math数学计算类&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#Math数学计算类&quot;&gt;✦&lt;/a&gt;Math数学计算类&lt;/h2&gt;</summary>
     
     
     
+    <category term="java" scheme="http://fuxx-1.github.io/categories/java/"/>
+    
+    
+    <category term="Experience-Java" scheme="http://fuxx-1.github.io/tags/Experience-Java/"/>
     
   </entry>
   
@@ -76,6 +88,10 @@
     
     
     
+    <category term="hexo" scheme="http://fuxx-1.github.io/categories/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="http://fuxx-1.github.io/tags/Hexo/"/>
     
   </entry>
   
@@ -91,6 +107,10 @@
     
     
     
+    <category term="java" scheme="http://fuxx-1.github.io/categories/java/"/>
+    
+    
+    <category term="Experience-Java" scheme="http://fuxx-1.github.io/tags/Experience-Java/"/>
     
   </entry>
   
@@ -106,6 +126,10 @@
     
     
     
+    <category term="java" scheme="http://fuxx-1.github.io/categories/java/"/>
+    
+    
+    <category term="Experience-Java" scheme="http://fuxx-1.github.io/tags/Experience-Java/"/>
     
   </entry>
   
@@ -121,6 +145,10 @@
     
     
     
+    <category term="linux" scheme="http://fuxx-1.github.io/categories/linux/"/>
+    
+    
+    <category term="Linux运维" scheme="http://fuxx-1.github.io/tags/Linux%E8%BF%90%E7%BB%B4/"/>
     
   </entry>
   
@@ -132,11 +160,15 @@
     <updated>2021-02-21T12:55:00.313Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;部分设置&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#部分设置&quot;&gt;¶&lt;/a&gt;部分设置&lt;/h2&gt;
+    <summary type="html">&lt;h2 id=&quot;部分设置&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#部分设置&quot;&gt;✦&lt;/a&gt;部分设置&lt;/h2&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;PS1&amp;#x3D;&amp;quot;\[\033[1;33;1m\][\[\033[1;34;1m\]\u@\h:\[\033[0;36;1m\]\w\[\033[1;33;1m\]]\[\033[1;31;1m\]\$ \[\033[1;32;0m\]&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
     
+    <category term="linux" scheme="http://fuxx-1.github.io/categories/linux/"/>
+    
+    
+    <category term="Linux运维" scheme="http://fuxx-1.github.io/tags/Linux%E8%BF%90%E7%BB%B4/"/>
     
   </entry>
   
@@ -152,6 +184,10 @@
     
     
     
+    <category term="linux" scheme="http://fuxx-1.github.io/categories/linux/"/>
+    
+    
+    <category term="Linux运维" scheme="http://fuxx-1.github.io/tags/Linux%E8%BF%90%E7%BB%B4/"/>
     
   </entry>
   
@@ -167,6 +203,10 @@
     
     
     
+    <category term="linux" scheme="http://fuxx-1.github.io/categories/linux/"/>
+    
+    
+    <category term="Linux运维" scheme="http://fuxx-1.github.io/tags/Linux%E8%BF%90%E7%BB%B4/"/>
     
   </entry>
   
@@ -182,6 +222,10 @@
     
     
     
+    <category term="linux" scheme="http://fuxx-1.github.io/categories/linux/"/>
+    
+    
+    <category term="Linux运维" scheme="http://fuxx-1.github.io/tags/Linux%E8%BF%90%E7%BB%B4/"/>
     
   </entry>
   
@@ -197,6 +241,10 @@
     
     
     
+    <category term="java" scheme="http://fuxx-1.github.io/categories/java/"/>
+    
+    
+    <category term="Experience-Java" scheme="http://fuxx-1.github.io/tags/Experience-Java/"/>
     
   </entry>
   
@@ -209,10 +257,14 @@
     
     
     <summary type="html">&lt;h1&gt;C Primer Plus 第14章总结&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/h1&gt;
-&lt;h3 id=&quot;结构和其他数据形式&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#结构和其他数据形式&quot;&gt;¶&lt;/a&gt;结构和其他数据形式&lt;/h3&gt;</summary>
+&lt;h3 id=&quot;结构和其他数据形式&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#结构和其他数据形式&quot;&gt;✦&lt;/a&gt;结构和其他数据形式&lt;/h3&gt;</summary>
     
     
     
+    <category term="c" scheme="http://fuxx-1.github.io/categories/c/"/>
+    
+    
+    <category term="C Primer Plus" scheme="http://fuxx-1.github.io/tags/C-Primer-Plus/"/>
     
   </entry>
   
@@ -228,6 +280,10 @@
     
     
     
+    <category term="c" scheme="http://fuxx-1.github.io/categories/c/"/>
+    
+    
+    <category term="Experience-C" scheme="http://fuxx-1.github.io/tags/Experience-C/"/>
     
   </entry>
   
@@ -243,6 +299,10 @@
     
     
     
+    <category term="c" scheme="http://fuxx-1.github.io/categories/c/"/>
+    
+    
+    <category term="Experience-C" scheme="http://fuxx-1.github.io/tags/Experience-C/"/>
     
   </entry>
   
@@ -255,11 +315,15 @@
     
     
     <summary type="html">&lt;h1&gt;2020-11-29 题目练习总结&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/h1&gt;
-&lt;h2 id=&quot;第一题&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#第一题&quot;&gt;¶&lt;/a&gt;&lt;strong&gt;第一题&lt;/strong&gt;&lt;/h2&gt;
-&lt;h4 id=&quot;Sky数&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#Sky数&quot;&gt;¶&lt;/a&gt;Sky数 &lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;#fn2&quot; id=&quot;fnref2&quot;&gt;[2]&lt;/a&gt;&lt;/sup&gt;&lt;/h4&gt;</summary>
+&lt;h2 id=&quot;第一题&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#第一题&quot;&gt;✦&lt;/a&gt;&lt;strong&gt;第一题&lt;/strong&gt;&lt;/h2&gt;
+&lt;h4 id=&quot;Sky数&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#Sky数&quot;&gt;✦&lt;/a&gt;Sky数 &lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;#fn2&quot; id=&quot;fnref2&quot;&gt;[2]&lt;/a&gt;&lt;/sup&gt;&lt;/h4&gt;</summary>
     
     
     
+    <category term="c" scheme="http://fuxx-1.github.io/categories/c/"/>
+    
+    
+    <category term="Oj-C" scheme="http://fuxx-1.github.io/tags/Oj-C/"/>
     
   </entry>
   
@@ -272,15 +336,19 @@
     
     
     <summary type="html">&lt;h1&gt;输出螺旋数列 C语言解决方案&lt;/h1&gt;
-&lt;h3 id=&quot;题目&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#题目&quot;&gt;¶&lt;/a&gt;题目&lt;/h3&gt;
+&lt;h3 id=&quot;题目&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#题目&quot;&gt;✦&lt;/a&gt;题目&lt;/h3&gt;
 &lt;p&gt;自然界中我们可以常见到一些像螺，蜗牛之类的生物，他们的壳都有一道非常优美的曲线——阿基米德螺线（r=aθ）。这里我想让你帮我用程序写出N阶的型如阿基米德螺线的螺旋数组。例如3阶的螺旋数组为：&lt;br&gt;
 1 2 3&lt;br&gt;
 8 9 4&lt;br&gt;
 7 6 5&lt;/p&gt;
-&lt;h3 id=&quot;解答（非最优解）&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#解答（非最优解）&quot;&gt;¶&lt;/a&gt;解答（非最优解）&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;</summary>
+&lt;h3 id=&quot;解答（非最优解）&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#解答（非最优解）&quot;&gt;✦&lt;/a&gt;解答（非最优解）&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;</summary>
     
     
     
+    <category term="c" scheme="http://fuxx-1.github.io/categories/c/"/>
+    
+    
+    <category term="Oj-C" scheme="http://fuxx-1.github.io/tags/Oj-C/"/>
     
   </entry>
   
@@ -293,10 +361,14 @@
     
     
     <summary type="html">&lt;h1&gt;C Primer Plus 第12章总结&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/h1&gt;
-&lt;h3 id=&quot;储存类别（详见链接）&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#储存类别（详见链接）&quot;&gt;¶&lt;/a&gt;储存类别（详见&lt;a href=&quot;https://www.runoob.com/cprogramming/c-storage-classes.html&quot;&gt;链接&lt;/a&gt;）&lt;/h3&gt;</summary>
+&lt;h3 id=&quot;储存类别（详见链接）&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#储存类别（详见链接）&quot;&gt;✦&lt;/a&gt;储存类别（详见&lt;a href=&quot;https://www.runoob.com/cprogramming/c-storage-classes.html&quot;&gt;链接&lt;/a&gt;）&lt;/h3&gt;</summary>
     
     
     
+    <category term="c" scheme="http://fuxx-1.github.io/categories/c/"/>
+    
+    
+    <category term="C Primer Plus" scheme="http://fuxx-1.github.io/tags/C-Primer-Plus/"/>
     
   </entry>
   
@@ -310,10 +382,14 @@
     
     <summary type="html">&lt;p&gt;This blog is just a test of system.&lt;/p&gt;
 &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#Quick-Start&quot;&gt;¶&lt;/a&gt;Quick Start&lt;/h2&gt;</summary>
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#Quick-Start&quot;&gt;✦&lt;/a&gt;Quick Start&lt;/h2&gt;</summary>
     
     
     
+    <category term="c" scheme="http://fuxx-1.github.io/categories/c/"/>
+    
+    
+    <category term="Website-Test" scheme="http://fuxx-1.github.io/tags/Website-Test/"/>
     
   </entry>
   

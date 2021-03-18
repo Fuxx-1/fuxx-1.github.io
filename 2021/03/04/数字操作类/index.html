@@ -13,19 +13,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-  <meta name="keywords" content="" />
+  <meta name="keywords" content="Experience-Java" />
   
-  <meta name="description" content="该博客转载自温柔的养猫人，仅供学习参考。 ¶Math数学计算类">
+  <meta name="description" content="该博客转载自温柔的养猫人，仅供学习参考。 ✦Math数学计算类">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数字操作类">
 <meta property="og:url" content="http://fuxx-1.github.io/2021/03/04/%E6%95%B0%E5%AD%97%E6%93%8D%E4%BD%9C%E7%B1%BB/index.html">
 <meta property="og:site_name" content="Fuxxの博客">
-<meta property="og:description" content="该博客转载自温柔的养猫人，仅供学习参考。 ¶Math数学计算类">
+<meta property="og:description" content="该博客转载自温柔的养猫人，仅供学习参考。 ✦Math数学计算类">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://fuxx-1.github.io/files/img/favicon-32x32.png">
 <meta property="article:published_time" content="2021-03-04T10:49:18.462Z">
 <meta property="article:modified_time" content="2021-03-06T14:17:07.149Z">
 <meta property="article:author" content="Fuxx-1">
+<meta property="article:tag" content="Experience-Java">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://fuxx-1.github.io/files/img/favicon-32x32.png">
 <meta name="twitter:site" content="@null">
@@ -162,7 +163,7 @@
                 
                 <hr />
                 <p>该博客转载自<a target="_blank" rel="noopener" href="https://developer.aliyun.com/profile/ranvh7lfsgaym?spm=a2c6h.12873639.0.0.75066f8fPJ6miZ">温柔的养猫人</a>，仅供学习参考。</p>
-<h2 id="Math数学计算类"><a class="header-anchor" href="#Math数学计算类">¶</a>Math数学计算类</h2>
+<h2 id="Math数学计算类"><a class="header-anchor" href="#Math数学计算类">✦</a>Math数学计算类</h2>
 <a id="more"></a>
 <p>Math类的主要功能是进行数学计算的操作类，提供有基础的计算公式，这个类的构造方法被私有化了，而且该类之中提供的所有方法都是static型的方法，即：这些方法都可以通过类名称直接调用。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        System.out.println(Math.abs(-<span class="number">10.1</span>));   <span class="comment">//获取绝对值：10.1</span></span><br><span class="line">        System.out.println(Math.max(<span class="number">10.2</span>,<span class="number">20.3</span>));   <span class="comment">//获取最大值：20.3</span></span><br><span class="line">        System.out.println(Math.log(<span class="number">5</span>));   <span class="comment">//获取对数：1.6094379124341003</span></span><br><span class="line">        System.out.println(Math.round(<span class="number">15.1</span>));  <span class="comment">//四舍五入：15</span></span><br><span class="line">        System.out.println(Math.round(-<span class="number">15.5</span>));   <span class="comment">//四舍五入：-15</span></span><br><span class="line">        System.out.println(Math.round(-<span class="number">15.51</span>));   <span class="comment">//四舍五入：-16</span></span><br><span class="line">        System.out.println(Math.pow(<span class="number">10.2</span>,<span class="number">20.2</span>));   <span class="comment">//幂:2.364413713591828E20</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -170,7 +171,7 @@
 <p>**范例：**自定义的四舍五入功能</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MathUtil</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">MathUtil</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 实现数据的四舍五入操作</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> num   要进行四舍五入操作的数字</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> scale 四舍五入保留的小数位数</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 四舍五入处理后的结果</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span> <span class="title">round</span><span class="params">(<span class="keyword">double</span> num, <span class="keyword">int</span> scale)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Math.round(num * Math.pow(<span class="number">10</span>, scale)) / Math.pow(<span class="number">10</span>, scale);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        System.out.println(MathUtil.round(<span class="number">19.86273</span>,<span class="number">2</span>));     <span class="comment">//19.86</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Math类里面提供的基本上都是基础的数学公式，需要的时候需要自己重新整合。</p>
-<h2 id="Random随机数生成类"><a class="header-anchor" href="#Random随机数生成类">¶</a>Random随机数生成类</h2>
+<h2 id="Random随机数生成类"><a class="header-anchor" href="#Random随机数生成类">✦</a>Random随机数生成类</h2>
 <p>java.util.Random类的主要功能是产生随机数，这个类主要依靠内部提供的方法来完成：</p>
 <p>产生一个不大于边界的随机正整数：public int nextInt(int bound)；</p>
 <p>**范例：**产生随机数</p>
@@ -182,7 +183,7 @@
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> data[] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">7</span>];   <span class="comment">//开辟7个大小的空间</span></span><br><span class="line">        Random rand = <span class="keyword">new</span> Random();</span><br><span class="line">        <span class="keyword">int</span> foot = <span class="number">0</span>;        <span class="comment">//操作data脚标</span></span><br><span class="line">        <span class="keyword">while</span> (foot &lt; <span class="number">7</span>) &#123;         <span class="comment">//选择7个数字</span></span><br><span class="line">            <span class="keyword">int</span> num = rand.nextInt(<span class="number">37</span>);      <span class="comment">//生成一个数字</span></span><br><span class="line">            <span class="keyword">if</span> (isUse(num, data)) &#123;         <span class="comment">//该数字现在可以使用</span></span><br><span class="line">                data[foot++] = num;   <span class="comment">//保存数据</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        java.util.Arrays.sort(data);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; data.length; x ++) &#123;</span><br><span class="line">            System.out.print(data[x]+ <span class="string">&quot;、&quot;</span>);    <span class="comment">//7、8、9、18、19、25、34</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 判断传入的数字是否为0以及是否在数组中存在</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> num  要判断的数字</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> temp 已存在的数据</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 如果该数字不是0并且可以使用返回true, 否则返回false</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isUse</span><span class="params">(<span class="keyword">int</span> num, <span class="keyword">int</span>[] temp)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (num == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; temp.length; x ++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (num == temp[x] ) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>以后这种随机的操作都可以利用Random来处理。</p>
-<h2 id="大数字操作类"><a class="header-anchor" href="#大数字操作类">¶</a>大数字操作类</h2>
+<h2 id="大数字操作类"><a class="header-anchor" href="#大数字操作类">✦</a>大数字操作类</h2>
 <p>在进行数学计算的过程里面还有一个大数字的操作类，可以实现海量数字的计算（能提供的也只是基础计算），现在假设一个数字很大，超过了double的范围，那么这个时候并没有任何一种数据类型可以保存下此类的内容，最早的时候只能通过String保存。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String strA=<span class="string">&quot;120&quot;</span>;</span><br><span class="line">String strB=<span class="string">&quot;230&quot;</span>;</span><br></pre></td></tr></table></figure>
 <p>如果现在想要进行加法计算，那么就需要逐位拆分，每一位自己计算，而后自己独立控制进位处理，那么这样的开发难度是非常高的，所以为了解决这类问题，提供有两个大数字的操作类：BigInteger、BigDecimal。</p>
@@ -286,7 +287,7 @@ cpu处理
             const hostUrl       = "http://fuxx-1.github.io/2021/03/04/%E6%95%B0%E5%AD%97%E6%93%8D%E4%BD%9C%E7%B1%BB/";
             const title         = "「数字操作类」";
             const excerpt       = `该博客转载自温柔的养猫人，仅供学习参考。
-¶Math数学计算类`;
+✦Math数学计算类`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -305,7 +306,7 @@ cpu处理
                 <div class="footer-tag clearfix">
                     <div class="pull-left">
                     <i class="fa fa-tags"></i>
-                        
+                        <a class="tag-none-link" href="/tags/Experience-Java/" rel="tag">Experience-Java</a>
                     </div>
                     <div class="pull-date">
                     <span>最后编辑：2021-03-06</span>
@@ -353,9 +354,21 @@ cpu处理
                     <div class="sticky-area">
                 
                 
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/c/">c</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">5</span></li></ul>
+  </aside>
+
 
             
                 
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/C-Primer-Plus/" style="font-size: 0.67em;">C Primer Plus</a> <a href="/tags/Experience-C/" style="font-size: 0.67em;">Experience-C</a> <a href="/tags/Experience-Java/" style="font-size: 0.8em;">Experience-Java</a> <a href="/tags/Hexo/" style="font-size: 0.6em;">Hexo</a> <a href="/tags/Linux%E8%BF%90%E7%BB%B4/" style="font-size: 0.73em;">Linux运维</a> <a href="/tags/Oj-C/" style="font-size: 0.67em;">Oj-C</a> <a href="/tags/Website-Test/" style="font-size: 0.6em;">Website-Test</a>
+      </div>
+  </aside>
+
             
                 
   <aside id="krw-posts" class="widget widget-kratos-posts">

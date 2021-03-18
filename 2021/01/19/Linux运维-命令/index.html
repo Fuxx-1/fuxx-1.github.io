@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-  <meta name="keywords" content="" />
+  <meta name="keywords" content="Linux运维" />
   
   <meta name="description" content="Linux运维-命令【待完善】（链接）">
 <meta property="og:type" content="article">
@@ -26,6 +26,7 @@
 <meta property="article:published_time" content="2021-01-19T06:37:52.466Z">
 <meta property="article:modified_time" content="2021-01-24T10:04:49.494Z">
 <meta property="article:author" content="Fuxx-1">
+<meta property="article:tag" content="Linux运维">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://fuxx-1.github.io/files/img/favicon-32x32.png">
 <meta name="twitter:site" content="@null">
@@ -163,10 +164,10 @@
                 <hr />
                 <h1>Linux运维-命令【待完善】（<a target="_blank" rel="noopener" href="https://edu.aliyun.com/roadmap/linux?spm=5176.13345299.1392477.2.153cf153ebf9EP">链接</a>）</h1>
 <a id="more"></a>
-<h2 id="Linux相关命令"><a class="header-anchor" href="#Linux相关命令">¶</a>Linux相关命令</h2>
+<h2 id="Linux相关命令"><a class="header-anchor" href="#Linux相关命令">✦</a>Linux相关命令</h2>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">command [-option]  parameter1 parameter2 ...</span><br><span class="line"># 几个需要说明的地方：</span><br><span class="line">#（1）-option是命令的选项，选项又分为长选项和短选项。另外，有些选项还需要带参数</span><br><span class="line">#（2）如上通用格式中的parameter1 parameter2...是命令的参数，不是选项的参数</span><br><span class="line">#（3）有些命令或二进制程序还带有子命令</span><br></pre></td></tr></table></figure>
-<h3 id="文件管理"><a class="header-anchor" href="#文件管理">¶</a>文件管理</h3>
-<h4 id="cat命令"><a class="header-anchor" href="#cat命令">¶</a><a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-cat.html">cat</a>命令</h4>
+<h3 id="文件管理"><a class="header-anchor" href="#文件管理">✦</a>文件管理</h3>
+<h4 id="cat命令"><a class="header-anchor" href="#cat命令">✦</a><a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-cat.html">cat</a>命令</h4>
 <p>功能：cat（英文全拼：concatenate）命令用于连接文件并打印到标准输出设备上。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat [-AbeEnstTuv] [--help] [--version] fileName</span><br></pre></td></tr></table></figure>
 <p>参数说明：</p>
@@ -179,7 +180,7 @@
 -A, --show-all：等价于 -vET。<br>
 -e：等价于&quot;-vE&quot;选项；<br>
 -t：等价于&quot;-vT&quot;选项；</p>
-<h4 id="chattr命令"><a class="header-anchor" href="#chattr命令">¶</a><a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-chattr.html">chattr</a>命令</h4>
+<h4 id="chattr命令"><a class="header-anchor" href="#chattr命令">✦</a><a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-chattr.html">chattr</a>命令</h4>
 <p>功能：chattr命令用于改变文件属性。</p>
 <p>这项指令可改变存放在ext2文件系统上的文件或目录属性，这些属性共有以下8种模式：</p>
 <p>a：让文件或目录仅供附加用途。<br>
@@ -198,7 +199,7 @@ u：预防意外删除。</p>
 +&lt;属性&gt; 开启文件或目录的该项属性。<br>
 -&lt;属性&gt; 关闭文件或目录的该项属性。<br>
 =&lt;属性&gt; 指定文件或目录的该项属性。</p>
-<h4 id="chgrp命令"><a class="header-anchor" href="#chgrp命令">¶</a><a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-chgrp.html">chgrp</a>命令</h4>
+<h4 id="chgrp命令"><a class="header-anchor" href="#chgrp命令">✦</a><a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-chgrp.html">chgrp</a>命令</h4>
 <p>功能：Linux chgrp（英文全拼：change group）命令用于变更文件或目录的所属群组。</p>
 <p>与 chown 命令不同，chgrp 允许普通用户改变文件所属的组，只要该用户是该组的一员。</p>
 <p>在 UNIX 系统家族里，文件或目录权限的掌控以拥有者及所属群组来管理。您可以使用 chgrp 指令去变更文件与目录的所属群组，设置方式采用群组名称或群组识别码皆可。</p>
@@ -212,24 +213,24 @@ u：预防意外删除。</p>
 –help 　在线帮助。<br>
 –reference=&lt;参考文件或目录&gt; 　把指定文件或目录的所属群组全部设成和参考文件或目录的所属群组相同。<br>
 –version 　显示版本信息。</p>
-<h4 id="chgrp命令-v2"><a class="header-anchor" href="#chgrp命令-v2">¶</a><a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-chgrp.html">chgrp</a>命令</h4>
+<h4 id="chgrp命令-v2"><a class="header-anchor" href="#chgrp命令-v2">✦</a><a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-chgrp.html">chgrp</a>命令</h4>
 <p>功能：Linux chmod（英文全拼：change mode）命令是控制用户对文件的权限的命令</p>
 <p>Linux/Unix 的文件调用权限分为三级 : 文件所有者（Owner）、用户组（Group）、其它用户（Other Users）。</p>
-<h3 id="文档编辑"><a class="header-anchor" href="#文档编辑">¶</a>文档编辑</h3>
-<h3 id="文件传输"><a class="header-anchor" href="#文件传输">¶</a>文件传输</h3>
-<h3 id="磁盘管理"><a class="header-anchor" href="#磁盘管理">¶</a>磁盘管理</h3>
-<h3 id="磁盘维护"><a class="header-anchor" href="#磁盘维护">¶</a>磁盘维护</h3>
-<h3 id="网络通讯"><a class="header-anchor" href="#网络通讯">¶</a>网络通讯</h3>
-<h3 id="系统管理"><a class="header-anchor" href="#系统管理">¶</a>系统管理</h3>
-<h3 id="系统设置"><a class="header-anchor" href="#系统设置">¶</a>系统设置</h3>
-<h4 id="alias命令"><a class="header-anchor" href="#alias命令">¶</a><a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-alias.html">alias</a>命令</h4>
+<h3 id="文档编辑"><a class="header-anchor" href="#文档编辑">✦</a>文档编辑</h3>
+<h3 id="文件传输"><a class="header-anchor" href="#文件传输">✦</a>文件传输</h3>
+<h3 id="磁盘管理"><a class="header-anchor" href="#磁盘管理">✦</a>磁盘管理</h3>
+<h3 id="磁盘维护"><a class="header-anchor" href="#磁盘维护">✦</a>磁盘维护</h3>
+<h3 id="网络通讯"><a class="header-anchor" href="#网络通讯">✦</a>网络通讯</h3>
+<h3 id="系统管理"><a class="header-anchor" href="#系统管理">✦</a>系统管理</h3>
+<h3 id="系统设置"><a class="header-anchor" href="#系统设置">✦</a>系统设置</h3>
+<h4 id="alias命令"><a class="header-anchor" href="#alias命令">✦</a><a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-alias.html">alias</a>命令</h4>
 <p>功能：Linux alias命令用于设置指令的别名。</p>
 <p>用户可利用alias，自定指令的别名。若仅输入alias，则可列出目前所有的别名设置。alias的效力仅及于该次登入的操作。若要每次登入是即自动设好别名，可在.profile或.cshrc中设定指令的别名。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alias [别名] = [指令名称]</span><br></pre></td></tr></table></figure>
 <p>参数：</p>
 <p>若不加任何参数，则列出目前所有的别名设置。</p>
-<h3 id="备份压缩"><a class="header-anchor" href="#备份压缩">¶</a>备份压缩</h3>
-<h3 id="设备管理"><a class="header-anchor" href="#设备管理">¶</a>设备管理</h3>
+<h3 id="备份压缩"><a class="header-anchor" href="#备份压缩">✦</a>备份压缩</h3>
+<h3 id="设备管理"><a class="header-anchor" href="#设备管理">✦</a>设备管理</h3>
 
             </div>
             
@@ -316,7 +317,7 @@ u：预防意外删除。</p>
                 <div class="footer-tag clearfix">
                     <div class="pull-left">
                     <i class="fa fa-tags"></i>
-                        
+                        <a class="tag-none-link" href="/tags/Linux%E8%BF%90%E7%BB%B4/" rel="tag">Linux运维</a>
                     </div>
                     <div class="pull-date">
                     <span>最后编辑：2021-01-24</span>
@@ -364,9 +365,21 @@ u：预防意外删除。</p>
                     <div class="sticky-area">
                 
                 
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/c/">c</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">5</span></li></ul>
+  </aside>
+
 
             
                 
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/C-Primer-Plus/" style="font-size: 0.67em;">C Primer Plus</a> <a href="/tags/Experience-C/" style="font-size: 0.67em;">Experience-C</a> <a href="/tags/Experience-Java/" style="font-size: 0.8em;">Experience-Java</a> <a href="/tags/Hexo/" style="font-size: 0.6em;">Hexo</a> <a href="/tags/Linux%E8%BF%90%E7%BB%B4/" style="font-size: 0.73em;">Linux运维</a> <a href="/tags/Oj-C/" style="font-size: 0.67em;">Oj-C</a> <a href="/tags/Website-Test/" style="font-size: 0.6em;">Website-Test</a>
+      </div>
+  </aside>
+
             
                 
   <aside id="krw-posts" class="widget widget-kratos-posts">

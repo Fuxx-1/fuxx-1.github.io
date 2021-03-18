@@ -13,19 +13,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-  <meta name="keywords" content="" />
+  <meta name="keywords" content="C Primer Plus" />
   
-  <meta name="description" content="C Primer Plus 第12章总结[1] ¶储存类别（详见链接）">
+  <meta name="description" content="C Primer Plus 第12章总结[1] ✦储存类别（详见链接）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C Primer Plus 第12章总结">
 <meta property="og:url" content="http://fuxx-1.github.io/2020/12/13/C-Primer-Plus-%E7%AC%AC12%E7%AB%A0%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="Fuxxの博客">
-<meta property="og:description" content="C Primer Plus 第12章总结[1] ¶储存类别（详见链接）">
+<meta property="og:description" content="C Primer Plus 第12章总结[1] ✦储存类别（详见链接）">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://fuxx-1.github.io/files/img/favicon-32x32.png">
 <meta property="article:published_time" content="2020-12-12T19:19:49.074Z">
 <meta property="article:modified_time" content="2021-01-17T11:31:30.946Z">
 <meta property="article:author" content="Fuxx-1">
+<meta property="article:tag" content="C Primer Plus">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://fuxx-1.github.io/files/img/favicon-32x32.png">
 <meta name="twitter:site" content="@null">
@@ -162,7 +163,7 @@
                 
                 <hr />
                 <h1>C Primer Plus 第12章总结<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h1>
-<h3 id="储存类别（详见链接）"><a class="header-anchor" href="#储存类别（详见链接）">¶</a>储存类别（详见<a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-storage-classes.html">链接</a>）</h3>
+<h3 id="储存类别（详见链接）"><a class="header-anchor" href="#储存类别（详见链接）">✦</a>储存类别（详见<a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-storage-classes.html">链接</a>）</h3>
 <a id="more"></a>
 <p><strong>static</strong><br>
 长期存在静态存储区，直到程序结束<br>
@@ -227,7 +228,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="链接"><a class="header-anchor" href="#链接">¶</a>链接</h3>
+<h3 id="链接"><a class="header-anchor" href="#链接">✦</a>链接</h3>
 <table>
 <thead>
 <tr>
@@ -250,7 +251,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="内存管理（详见链接）"><a class="header-anchor" href="#内存管理（详见链接）">¶</a>内存管理（详见<a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-memory-management.html">链接</a>）</h3>
+<h3 id="内存管理（详见链接）"><a class="header-anchor" href="#内存管理（详见链接）">✦</a>内存管理（详见<a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-memory-management.html">链接</a>）</h3>
 <table>
 <thead>
 <tr>
@@ -279,7 +280,7 @@
 </table>
 <p>上述函数多用于链表中，均处于<a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-standard-library-stdlib-h.html">&lt;stdlib.h&gt;</a>中。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">char</span> name[<span class="number">100</span>];</span><br><span class="line">   <span class="keyword">char</span> *description;</span><br><span class="line"> </span><br><span class="line">   <span class="built_in">strcpy</span>(name, <span class="string">&quot;Zara Ali&quot;</span>);</span><br><span class="line"> </span><br><span class="line">   <span class="comment">/* 动态分配内存 */</span></span><br><span class="line">   description = (<span class="keyword">char</span> *)<span class="built_in">malloc</span>( <span class="number">30</span> * <span class="keyword">sizeof</span>(<span class="keyword">char</span>) );</span><br><span class="line">   <span class="keyword">if</span>( description == <span class="literal">NULL</span> )</span><br><span class="line">   &#123;</span><br><span class="line">      <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;Error - unable to allocate required memory\n&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">   &#123;</span><br><span class="line">      <span class="built_in">strcpy</span>( description, <span class="string">&quot;Zara ali a DPS student.&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="comment">/* 假设您想要存储更大的描述信息 */</span></span><br><span class="line">   description = (<span class="keyword">char</span> *) <span class="built_in">realloc</span>( description, <span class="number">100</span> * <span class="keyword">sizeof</span>(<span class="keyword">char</span>) );</span><br><span class="line">   <span class="keyword">if</span>( description == <span class="literal">NULL</span> )</span><br><span class="line">   &#123;</span><br><span class="line">      <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;Error - unable to allocate required memory\n&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">   &#123;</span><br><span class="line">      <span class="built_in">strcat</span>( description, <span class="string">&quot;She is in class 10th&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   </span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;Name = %s\n&quot;</span>, name );</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;Description: %s\n&quot;</span>, description );</span><br><span class="line"> </span><br><span class="line">   <span class="comment">/* 使用 free() 函数释放内存 */</span></span><br><span class="line">   <span class="built_in">free</span>(description);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="限定符"><a class="header-anchor" href="#限定符">¶</a>限定符</h3>
+<h3 id="限定符"><a class="header-anchor" href="#限定符">✦</a>限定符</h3>
 <p><strong><code>const</code>类</strong><br>
 const类型关键字声明的对象，其值不能通过赋值来递增，递减来修改。<br>
 <strong><code>volatile</code>类</strong><br>
@@ -363,7 +364,7 @@ const类型关键字声明的对象，其值不能通过赋值来递增，递减
             const hostUrl       = "http://fuxx-1.github.io/2020/12/13/C-Primer-Plus-%E7%AC%AC12%E7%AB%A0%E6%80%BB%E7%BB%93/";
             const title         = "「C Primer Plus 第12章总结」";
             const excerpt       = `C Primer Plus 第12章总结[1]
-¶储存类别（详见链接）`;
+✦储存类别（详见链接）`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -382,7 +383,7 @@ const类型关键字声明的对象，其值不能通过赋值来递增，递减
                 <div class="footer-tag clearfix">
                     <div class="pull-left">
                     <i class="fa fa-tags"></i>
-                        
+                        <a class="tag-none-link" href="/tags/C-Primer-Plus/" rel="tag">C Primer Plus</a>
                     </div>
                     <div class="pull-date">
                     <span>最后编辑：2021-01-17</span>
@@ -430,9 +431,21 @@ const类型关键字声明的对象，其值不能通过赋值来递增，递减
                     <div class="sticky-area">
                 
                 
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/c/">c</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">5</span></li></ul>
+  </aside>
+
 
             
                 
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/C-Primer-Plus/" style="font-size: 0.67em;">C Primer Plus</a> <a href="/tags/Experience-C/" style="font-size: 0.67em;">Experience-C</a> <a href="/tags/Experience-Java/" style="font-size: 0.8em;">Experience-Java</a> <a href="/tags/Hexo/" style="font-size: 0.6em;">Hexo</a> <a href="/tags/Linux%E8%BF%90%E7%BB%B4/" style="font-size: 0.73em;">Linux运维</a> <a href="/tags/Oj-C/" style="font-size: 0.67em;">Oj-C</a> <a href="/tags/Website-Test/" style="font-size: 0.6em;">Website-Test</a>
+      </div>
+  </aside>
+
             
                 
   <aside id="krw-posts" class="widget widget-kratos-posts">
