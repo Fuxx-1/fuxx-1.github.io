@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  <link rel="icon" href="/files/img/favicon-32x32.png">
+  <title>数字操作类 | Fuxxの博客</title>
+  <meta name="author" content="Fuxx-1" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+  <meta name="keywords" content="Experience-Java" />
+  
+  <meta name="description" content="该博客转载自温柔的养猫人，仅供学习参考。 ✦Math数学计算类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数字操作类">
+<meta property="og:url" content="http://fuxx-1.github.io/2021/03/04/%E6%95%B0%E5%AD%97%E6%93%8D%E4%BD%9C%E7%B1%BB/index.html">
+<meta property="og:site_name" content="Fuxxの博客">
+<meta property="og:description" content="该博客转载自温柔的养猫人，仅供学习参考。 ✦Math数学计算类">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://fuxx-1.github.io/files/img/favicon-32x32.png">
+<meta property="article:published_time" content="2021-03-04T10:49:18.462Z">
+<meta property="article:modified_time" content="2021-03-06T14:17:07.149Z">
+<meta property="article:author" content="Fuxx-1">
+<meta property="article:tag" content="Experience-Java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://fuxx-1.github.io/files/img/favicon-32x32.png">
+<meta name="twitter:site" content="@null">
+  
+  <!-- 站点验证相关 -->
+  
+  
+  
+  
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" type="text/css" media="all">
+  
+  <link rel="stylesheet" id="highlight-css" href="/css/highlight.min.css" type="text/css" media="all">
+  
+  
+  <link rel="stylesheet" id="fontawe-css"
+    href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="nprogress-css" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css"
+    type="text/css" media="all">
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+  <link rel="stylesheet" id="darkmode-css" href="/css/kr-dark.min.css" type="text/css" media="all">
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+
+  <!-- Custom Style -->
+  <script src="https://fuxx-1.github.io/live2d-widget/autoload.js"></script>
+  <script src="https://fuxx-1.gitee.io/live2d-widget/autoload.js"></script>
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Fuxxの博客" type="application/atom+xml">
+</head>
+
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <div class="nav-toggle"><a class="kratos-nav-toggle js-kratos-nav-toggle"><i></i></a></div>
+            <header id="kratos-header-section">
+                <div class="container">
+                    <div class="nav-header">
+                        <div class="color-logo"><a href="/">Fuxxの博客</a></div>
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                                    
+                                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/archives/"><i class="fa fa-file"></i>档案馆</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/about/"><i class="fa fa-user"></i>关于</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/tags/"><i class="fa fa-tags"></i>标签</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/categories/"><i class="fa fa-th"></i>分类</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/search/"><i class="fa fa-search"></i>搜索</a></li>
+                                    
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>Fuxxの博客</h2> <br />
+                        <span>永远相信美好的事情即将发生</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+                    
+
+        <section class="col-md-8">
+    <article>
+        <div class="kratos-hentry kratos-post-inner clearfix">
+            <header class="kratos-entry-header">
+                <h1 class="kratos-entry-title text-center">数字操作类</h1>
+                
+                <ul class="kratos-post-meta text-center">
+                    <li><i class="fa fa-calendar"></i> 2021-03-04</li>
+                    <li><i class="fa fa-user"></i> 作者 Fuxx-1</li>
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~6.46K
+                        
+                        字
+                    </li>
+                    
+                        <li id="/2021/03/04/%E6%95%B0%E5%AD%97%E6%93%8D%E4%BD%9C%E7%B1%BB/" class="leancloud_visitors" data-flag-title="数字操作类">
+                            <i class="fa fa-eye"></i>
+                            <span class="leancloud-visitors-count"> </span> 次阅读
+                        </li>
+                        
+                    
+                </ul>
+            </header>
+            <div class="kratos-post-content">
+                <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                    本文最后编辑于 <time datetime="1615040227149"></time> 前，其中的内容可能需要更新。
+                </div>
+                
+                <hr />
+                <p>该博客转载自<a target="_blank" rel="noopener" href="https://developer.aliyun.com/profile/ranvh7lfsgaym?spm=a2c6h.12873639.0.0.75066f8fPJ6miZ">温柔的养猫人</a>，仅供学习参考。</p>
+<h2 id="Math数学计算类"><a class="header-anchor" href="#Math数学计算类">✦</a>Math数学计算类</h2>
+<a id="more"></a>
+<p>Math类的主要功能是进行数学计算的操作类，提供有基础的计算公式，这个类的构造方法被私有化了，而且该类之中提供的所有方法都是static型的方法，即：这些方法都可以通过类名称直接调用。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        System.out.println(Math.abs(-<span class="number">10.1</span>));   <span class="comment">//获取绝对值：10.1</span></span><br><span class="line">        System.out.println(Math.max(<span class="number">10.2</span>,<span class="number">20.3</span>));   <span class="comment">//获取最大值：20.3</span></span><br><span class="line">        System.out.println(Math.log(<span class="number">5</span>));   <span class="comment">//获取对数：1.6094379124341003</span></span><br><span class="line">        System.out.println(Math.round(<span class="number">15.1</span>));  <span class="comment">//四舍五入：15</span></span><br><span class="line">        System.out.println(Math.round(-<span class="number">15.5</span>));   <span class="comment">//四舍五入：-15</span></span><br><span class="line">        System.out.println(Math.round(-<span class="number">15.51</span>));   <span class="comment">//四舍五入：-16</span></span><br><span class="line">        System.out.println(Math.pow(<span class="number">10.2</span>,<span class="number">20.2</span>));   <span class="comment">//幂:2.364413713591828E20</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>虽然在Math类里面提供有四舍五入的处理方法，但是这个四舍五入在进行处理的时候是直接将小数点后的所有位进行进位处理，这个肯定不方便，那么现在最方便的做法是可以实现指定位数的保留。</p>
+<p>**范例：**自定义的四舍五入功能</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MathUtil</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">MathUtil</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 实现数据的四舍五入操作</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> num   要进行四舍五入操作的数字</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> scale 四舍五入保留的小数位数</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 四舍五入处理后的结果</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span> <span class="title">round</span><span class="params">(<span class="keyword">double</span> num, <span class="keyword">int</span> scale)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Math.round(num * Math.pow(<span class="number">10</span>, scale)) / Math.pow(<span class="number">10</span>, scale);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        System.out.println(MathUtil.round(<span class="number">19.86273</span>,<span class="number">2</span>));     <span class="comment">//19.86</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Math类里面提供的基本上都是基础的数学公式，需要的时候需要自己重新整合。</p>
+<h2 id="Random随机数生成类"><a class="header-anchor" href="#Random随机数生成类">✦</a>Random随机数生成类</h2>
+<p>java.util.Random类的主要功能是产生随机数，这个类主要依靠内部提供的方法来完成：</p>
+<p>产生一个不大于边界的随机正整数：public int nextInt(int bound)；</p>
+<p>**范例：**产生随机数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        Random rand =<span class="keyword">new</span> Random();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; <span class="number">10</span>; x++) &#123;</span><br><span class="line">            System.out.print(rand.nextInt(<span class="number">10</span>)+<span class="string">&quot;、&quot;</span>);<span class="comment">//6、2、2、0、5、7、3、1、9、5、</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在国内有一款36选7的彩票，那么就可以利用Random实现随机生成彩票号。<br>
+**范例：**随机生成彩票号</p>
+<ul>
+<li>对于这里面的数字肯定不能有0，不能够重复。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> data[] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">7</span>];   <span class="comment">//开辟7个大小的空间</span></span><br><span class="line">        Random rand = <span class="keyword">new</span> Random();</span><br><span class="line">        <span class="keyword">int</span> foot = <span class="number">0</span>;        <span class="comment">//操作data脚标</span></span><br><span class="line">        <span class="keyword">while</span> (foot &lt; <span class="number">7</span>) &#123;         <span class="comment">//选择7个数字</span></span><br><span class="line">            <span class="keyword">int</span> num = rand.nextInt(<span class="number">37</span>);      <span class="comment">//生成一个数字</span></span><br><span class="line">            <span class="keyword">if</span> (isUse(num, data)) &#123;         <span class="comment">//该数字现在可以使用</span></span><br><span class="line">                data[foot++] = num;   <span class="comment">//保存数据</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        java.util.Arrays.sort(data);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; data.length; x ++) &#123;</span><br><span class="line">            System.out.print(data[x]+ <span class="string">&quot;、&quot;</span>);    <span class="comment">//7、8、9、18、19、25、34</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 判断传入的数字是否为0以及是否在数组中存在</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> num  要判断的数字</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> temp 已存在的数据</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 如果该数字不是0并且可以使用返回true, 否则返回false</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isUse</span><span class="params">(<span class="keyword">int</span> num, <span class="keyword">int</span>[] temp)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (num == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; temp.length; x ++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (num == temp[x] ) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以后这种随机的操作都可以利用Random来处理。</p>
+<h2 id="大数字操作类"><a class="header-anchor" href="#大数字操作类">✦</a>大数字操作类</h2>
+<p>在进行数学计算的过程里面还有一个大数字的操作类，可以实现海量数字的计算（能提供的也只是基础计算），现在假设一个数字很大，超过了double的范围，那么这个时候并没有任何一种数据类型可以保存下此类的内容，最早的时候只能通过String保存。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String strA=<span class="string">&quot;120&quot;</span>;</span><br><span class="line">String strB=<span class="string">&quot;230&quot;</span>;</span><br></pre></td></tr></table></figure>
+<p>如果现在想要进行加法计算，那么就需要逐位拆分，每一位自己计算，而后自己独立控制进位处理，那么这样的开发难度是非常高的，所以为了解决这类问题，提供有两个大数字的操作类：BigInteger、BigDecimal。</p>
+<img src="/2021/03/04/%E6%95%B0%E5%AD%97%E6%93%8D%E4%BD%9C%E7%B1%BB/af26e1c0cf18472a8f8d0f71e7febf4f.png" style="zoom:80%">
+大数字类
+<p>之前分析了，当数字很大的时候只能利用字符串描述数字操作，所以这一点可以观察两个大数字操作类的构造方法：</p>
+<ul>
+<li>BigInteger类构造：public BigInteger(String val)；</li>
+<li>BigDecimal类构造： public BigDecimal(String val)；</li>
+</ul>
+<p>**范例：**使用BigInteger实现四则运算</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        BigInteger bigA=<span class="keyword">new</span> BigInteger(<span class="string">&quot;234234234234234234&quot;</span>);</span><br><span class="line">        BigInteger bigB=<span class="keyword">new</span> BigInteger(<span class="string">&quot;23423423&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;加法操作：&quot;</span>+bigA.add(bigB));    <span class="comment">//234234234257657657</span></span><br><span class="line">        System.out.println(<span class="string">&quot;减法操作：&quot;</span>+bigA.subtract(bigB));    <span class="comment">//234234234210810811</span></span><br><span class="line">        System.out.println(<span class="string">&quot;乘法操作：&quot;</span>+bigA.multiply(bigB));  <span class="comment">//5486567549549549544062982</span></span><br><span class="line">        System.out.println(<span class="string">&quot;除法操作：&quot;</span>+bigA.divide(bigB));      <span class="comment">//10000000180</span></span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>需要注意的是，虽然提供有大数字操作类，但是整体的操作之中还是需要考虑到一个性能问题。<br>
+**范例：**观察性能问题</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        BigInteger bigA=<span class="keyword">new</span> BigInteger(<span class="string">&quot;234234234234234234&quot;</span>);</span><br><span class="line">        System.out.println(bigA.pow(Integer.MAX_VALUE));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<img src="/2021/03/04/%E6%95%B0%E5%AD%97%E6%93%8D%E4%BD%9C%E7%B1%BB/b94c11a86e32455f857e55cd11733e86.png" style="zoom:80%">
+cpu处理
+<p>此时的计算过程是非常缓慢的，所以任何的电脑是有极限的。<br>
+既然在进行数学除法的时候有可能无法进行整除处理，那么就可以使用其他的除法计算来求出余数：</p>
+<ul>
+<li>求余：public BigInteger[] divideAndRemainder(BigInteger val)；数组第一个元素为商，第二个为余数；</li>
+</ul>
+<p>**范例：**求余除法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        BigInteger bigA = <span class="keyword">new</span> BigInteger(<span class="string">&quot;234234234234234234&quot;</span>);</span><br><span class="line">        BigInteger bigB = <span class="keyword">new</span> BigInteger(<span class="string">&quot;23423423&quot;</span>);</span><br><span class="line">        BigInteger[] result = bigA.divideAndRemainder(bigB);</span><br><span class="line">        System.out.println(<span class="string">&quot;商：&quot;</span> + result[<span class="number">0</span>] + <span class="string">&quot;、余数：&quot;</span> + result[<span class="number">1</span>]);<span class="comment">//商：100000000180、余数：18018094</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果在开发中真进行计算的时候，该计算没有超过基本数据类型所包含的位数强烈不建议使用大数字类，因为这种计算性能很差。</p>
+<p>BigDecimal操作形式和BigInteger是非常类似的，都有基础的数学支持。<br>
+**范例：**使用BigDecimal计算</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        BigDecimal bigA = <span class="keyword">new</span> BigDecimal(<span class="string">&quot;32890234890&quot;</span>);</span><br><span class="line">        BigDecimal bigB = <span class="keyword">new</span> BigDecimal(<span class="string">&quot;1892039&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;加法计算：&quot;</span>+bigA.add(bigB));   <span class="comment">//32892126929</span></span><br><span class="line">        BigDecimal result[] = bigA.divideAndRemainder(bigB);</span><br><span class="line">        System.out.println(<span class="string">&quot;除法计算：商：&quot;</span> + result[<span class="number">0</span>] + <span class="string">&quot;、余数：&quot;</span> + result[<span class="number">1</span>]);<span class="comment">//商：17383、余数：920953</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>但是在使用BigDecimal的时候有一个数据进位的问题，在这个类里面定义有如下的除法计算：</p>
+<ul>
+<li>除法计算：public BigDecimal divide(BigDecimal divisor, int scale, RoundingMode roundingMode)；</li>
+</ul>
+<p>**范例：**使用BigDecimal实现四舍五入处理</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MathUtil</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">MathUtil</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 实现数据的四舍五入操作</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> num   要进行四舍五入操作的是数字</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> scale 四舍五入保留的小数位数</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 四舍五入处理后的结果</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span> <span class="title">round</span><span class="params">(<span class="keyword">double</span> num, <span class="keyword">int</span> scale)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> BigDecimal(num).divide(<span class="keyword">new</span> BigDecimal(<span class="number">1.0</span>), scale, RoundingMode.HALF_UP).doubleValue();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaAPIDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        System.out.println(MathUtil.round(<span class="number">19.6352</span>, <span class="number">2</span>));  <span class="comment">//19.64</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Math的处理由于使用的都是基本数据类型，所以性能一定要高于大数字处理类。</p>
+
+            </div>
+            
+                <div class="kratos-copyright text-center clearfix">
+                    <h5>本作品采用 <a rel="license nofollow" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+                </div>
+            
+            <footer class="kratos-entry-footer clearfix">
+                
+                    <div class="post-like-donate text-center clearfix" id="post-like-donate">
+                    
+                    
+                        <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                        <div class="share-wrap" style="display: none;">
+    <div class="share-group">
+        <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-qq"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain qzone" onclick="share('qzone');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-star"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weixin"></i>
+            </div>
+            <div class="share-int">
+                <div class="qrcode" id="wechat-qr"></div>
+                <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weibo" onclick="share('weibo');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weibo"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-facebook"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain twitter style-plain" onclick="share('twitter');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-twitter"></i>
+            </div>
+        </a>
+    </div>
+    <script type="text/javascript">
+        $(()=>{
+            new QRCode("wechat-qr", {
+                text: "http://fuxx-1.github.io/2021/03/04/%E6%95%B0%E5%AD%97%E6%93%8D%E4%BD%9C%E7%B1%BB/",
+                width: 150,
+                height: 150,
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        });
+        function share(dest) {
+            const qqBase        = "https://connect.qq.com/widget/shareqq/index.html?";
+            const weiboBase     = "https://service.weibo.com/share/share.php?";
+            const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+            const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
+            const twitterBase   = "https://twitter.com/intent/tweet?";
+            const hostUrl       = "http://fuxx-1.github.io/2021/03/04/%E6%95%B0%E5%AD%97%E6%93%8D%E4%BD%9C%E7%B1%BB/";
+            const title         = "「数字操作类」";
+            const excerpt       = `该博客转载自温柔的养猫人，仅供学习参考。
+✦Math数学计算类`;
+            let _URL;
+            switch (dest) {
+                case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
+                case "weibo"    : _URL = weiboBase+"url="+hostUrl+"&title="+title+excerpt;                                 break;
+                case "qzone"    : _URL = qzoneBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
+                case "facebook" : _URL = facebookBase+"u="+hostUrl;                                                        break;
+                case "twitter"  : _URL = twitterBase+"text="+title+excerpt+"&url="+hostUrl;                                break;
+            }
+            window.open(_URL);
+        };
+    </script>
+</div>
+                    
+                    </div>
+                
+                <div class="footer-tag clearfix">
+                    <div class="pull-left">
+                    <i class="fa fa-tags"></i>
+                        <a class="tag-none-link" href="/tags/Experience-Java/" rel="tag">Experience-Java</a>
+                    </div>
+                    <div class="pull-date">
+                    <span>最后编辑：2021-03-06</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+            <nav class="navigation post-navigation clearfix" role="navigation">
+                
+                <div class="nav-previous clearfix">
+                    <a title=" 备份和恢复Hexo博客" href="/2021/02/23/备份和恢复Hexo博客/">&lt; 上一篇</a>
+                </div>
+                
+                
+                <div class="nav-next clearfix">
+                    <a title=" Java基础类库" href="/2021/03/04/Java基础类库/">下一篇 &gt;</a>
+                </div>
+                
+            </nav>
+        
+        
+            <div id="v-comments" class="post-comments"></div>
+<script>
+    var load_comm = () => {
+        const init = () => {
+            new Valine({
+                el: '#v-comments',
+                appId: 'h3tIB2qbjXY5drW5YPWukzq9-gzGzoHsz',
+                appKey: 'dBV0MUqkcaL9TBlq0XVEPL94',
+                visitor: true,
+                enableQQ: true,
+                path: '/2021/03/04/%E6%95%B0%E5%AD%97%E6%93%8D%E4%BD%9C%E7%B1%BB/'
+            });
+        }
+        if (typeof Valine == 'undefined') {
+            const src = 'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js';
+            $.getScript(src, init);
+        } else {
+            init();
+        }
+    };
+</script>
+<noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://valine.js.org/">comments powered by Valine.</a></noscript>
+
+        
+    </article>
+</section>
+
+                
+            
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/files/img/avatar.jpg" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">Fuxx-1</p>
+    </div>
+</aside>
+            
+                    <div class="sticky-area">
+                
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/c/">c</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">5</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/C-Primer-Plus/" style="font-size: 0.67em;">C Primer Plus</a> <a href="/tags/Experience-C/" style="font-size: 0.67em;">Experience-C</a> <a href="/tags/Experience-Java/" style="font-size: 0.8em;">Experience-Java</a> <a href="/tags/Hexo/" style="font-size: 0.6em;">Hexo</a> <a href="/tags/Linux%E8%BF%90%E7%BB%B4/" style="font-size: 0.73em;">Linux运维</a> <a href="/tags/Oj-C/" style="font-size: 0.67em;">Oj-C</a> <a href="/tags/Website-Test/" style="font-size: 0.6em;">Website-Test</a>
+      </div>
+  </aside>
+
+            
+                
+  <aside id="krw-posts" class="widget widget-kratos-posts">
+  <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
+  <div class="tab-content">
+      <ul class="list-group">
+        
+        
+          
+          
+            <a class="list-group-item" href="/2021/03/14/Week2-Java%E6%80%BB%E7%BB%93/"><i class="fa  fa-book"></i> Week2-Java总结</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/03/04/Java%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%BA%93/"><i class="fa  fa-book"></i> Java基础类库</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/03/04/%E6%95%B0%E5%AD%97%E6%93%8D%E4%BD%9C%E7%B1%BB/"><i class="fa  fa-book"></i> 数字操作类</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/02/23/%E5%A4%87%E4%BB%BD%E5%92%8C%E6%81%A2%E5%A4%8DHexo%E5%8D%9A%E5%AE%A2/"><i class="fa  fa-book"></i> 备份和恢复Hexo博客</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/02/21/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/"><i class="fa  fa-book"></i> Java多线程</a>
+            
+          
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+      </ul>
+  </div>
+  </aside>
+
+            
+    </div>
+</section>
+        
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="footer"  class="ap-lrc"  >
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search/">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="box theme-box" id="darkmode-switch">
+                        <span class="fa fa-adjust"></span>
+                    </div>
+                
+                
+            </div>
+            <div class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                        
+                        <li><a target="_blank" rel="nofollow" href="https://t.me/CandyUnion"><i class="fa fa-telegram"></i></a></li>
+                        
+                        
+                        
+                        <li><a target="_blank" rel="me" href="https://nya.one/@fuxx-1"><i class="fa fa fa-share-alt-square"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://github.com/fuxx-1"><i class="fa fa-github"></i></a></li>
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2021 Fuxxの博客 版权所有.</li>
+                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by Fuxx-1.</li>
+                        </div>
+                        <div>
+                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+                            <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
+                        </div>
+                        <div>
+                            
+                            
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
+<script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
+
+    <div>
+        <canvas id="snow"></canvas>
+        <script async type="text/javascript" src="/js/snow.min.js"></script>
+    </div>
+
+<script async src="/js/candy.min.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <meting-js
+        server="tencent"
+        type="playlist"
+        id="6559921027"
+        order="random"
+        fixed="true"
+    >
+    </meting-js>
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script defer src="/js/kratosr.min.js"></script>
+<script defer src="/js/pjax.min.js"></script>
+
+
+    <script defer src="/js/kr-dark.min.js"></script>
+
+
+    </body>
+</html>
