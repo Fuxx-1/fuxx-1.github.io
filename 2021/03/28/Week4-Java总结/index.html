@@ -15,16 +15,16 @@
   
   <meta name="keywords" content="Experience-Java" />
   
-  <meta name="description" content="Java反射[1] ✦一、反射的概述 JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。 要想解剖一个类,必须先要获取到该类的字节码文件对象。而解剖使用的就是Class类中的方法.所以先要获取到每一个字节码文件对应的Class类型的对象. 以">
+  <meta name="description" content="Java反射[1] ✦一、反射的概述 JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。 要想解剖一个类,必须先要获取到该类的字节码文件对象。而解剖使用的就是Class类中的方法.所以先要获取到每一个字节码文件对应的Class类型的对象.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Week4-Java总结">
 <meta property="og:url" content="http://fuxx-1.github.io/2021/03/28/Week4-Java%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="Fuxxの博客">
-<meta property="og:description" content="Java反射[1] ✦一、反射的概述 JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。 要想解剖一个类,必须先要获取到该类的字节码文件对象。而解剖使用的就是Class类中的方法.所以先要获取到每一个字节码文件对应的Class类型的对象. 以">
+<meta property="og:description" content="Java反射[1] ✦一、反射的概述 JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。 要想解剖一个类,必须先要获取到该类的字节码文件对象。而解剖使用的就是Class类中的方法.所以先要获取到每一个字节码文件对应的Class类型的对象.">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://fuxx-1.github.io/files/img/favicon-32x32.png">
 <meta property="article:published_time" content="2021-03-28T09:38:23.656Z">
-<meta property="article:modified_time" content="2021-03-29T05:12:57.164Z">
+<meta property="article:modified_time" content="2021-03-29T05:18:23.501Z">
 <meta property="article:author" content="Fuxx-1">
 <meta property="article:tag" content="Experience-Java">
 <meta name="twitter:card" content="summary">
@@ -149,7 +149,7 @@
             </header>
             <div class="kratos-post-content">
                 <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                    本文最后编辑于 <time datetime="1616994777164"></time> 前，其中的内容可能需要更新。
+                    本文最后编辑于 <time datetime="1616995103501"></time> 前，其中的内容可能需要更新。
                 </div>
                 
                 <hr />
@@ -157,6 +157,7 @@
 <h2 id="一、反射的概述"><a class="header-anchor" href="#一、反射的概述">✦</a>一、反射的概述</h2>
 <p>JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。</p>
 <p>要想解剖一个类,必须先要获取到该类的字节码文件对象。而解剖使用的就是Class类中的方法.所以先要获取到每一个字节码文件对应的Class类型的对象.</p>
+<a id="more"></a>
 <p><strong>以上的总结就是什么是反射</strong></p>
 <p>反射就是把java类中的各种成分映射成一个个的Java对象</p>
 <p>例如：一个类有：成员变量、方法、构造方法、包等等信息，利用反射技术可以对一个类进行解剖，把个个组成部分映射成一个个对象。</p>
@@ -573,7 +574,8 @@ TreeSet</p>
             const title         = "「Week4-Java总结」";
             const excerpt       = `Java反射[1]
 ✦一、反射的概述
-JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能称为java语言...`;
+JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。
+要想解剖一个类,必须先要获取到该类的字节码文件对象。而解剖使用的就是Class类中的方法.所以先要获取到每一个字节码文件对应的Class类型的对象.`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;

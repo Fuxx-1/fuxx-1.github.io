@@ -6,7 +6,7 @@
   <link href="http://fuxx-1.github.io/atom.xml" rel="self"/>
   
   <link href="http://fuxx-1.github.io/"/>
-  <updated>2021-03-29T05:12:57.164Z</updated>
+  <updated>2021-03-29T05:18:23.501Z</updated>
   <id>http://fuxx-1.github.io/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="http://fuxx-1.github.io/2021/03/28/Week4-Java%E6%80%BB%E7%BB%93/"/>
     <id>http://fuxx-1.github.io/2021/03/28/Week4-Java%E6%80%BB%E7%BB%93/</id>
     <published>2021-03-28T09:38:23.656Z</published>
-    <updated>2021-03-29T05:12:57.164Z</updated>
+    <updated>2021-03-29T05:18:23.501Z</updated>
     
     
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
+    <summary type="html">&lt;h1&gt;Java反射&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/h1&gt;
+&lt;h2 id=&quot;一、反射的概述&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#一、反射的概述&quot;&gt;✦&lt;/a&gt;一、反射的概述&lt;/h2&gt;
+&lt;p&gt;JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。&lt;/p&gt;
+&lt;p&gt;要想解剖一个类,必须先要获取到该类的字节码文件对象。而解剖使用的就是Class类中的方法.所以先要获取到每一个字节码文件对应的Class类型的对象.&lt;/p&gt;</summary>
     
     
     
