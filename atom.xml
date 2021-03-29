@@ -6,7 +6,7 @@
   <link href="http://fuxx-1.github.io/atom.xml" rel="self"/>
   
   <link href="http://fuxx-1.github.io/"/>
-  <updated>2021-03-21T08:36:00.632Z</updated>
+  <updated>2021-03-29T05:12:57.164Z</updated>
   <id>http://fuxx-1.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Week4-Java总结</title>
+    <link href="http://fuxx-1.github.io/2021/03/28/Week4-Java%E6%80%BB%E7%BB%93/"/>
+    <id>http://fuxx-1.github.io/2021/03/28/Week4-Java%E6%80%BB%E7%BB%93/</id>
+    <published>2021-03-28T09:38:23.656Z</published>
+    <updated>2021-03-29T05:12:57.164Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="java" scheme="http://fuxx-1.github.io/categories/java/"/>
+    
+    
+    <category term="Experience-Java" scheme="http://fuxx-1.github.io/tags/Experience-Java/"/>
+    
+  </entry>
   
   <entry>
     <title>Week3-Java总结&amp;算法总结</title>
@@ -388,27 +410,6 @@
     
     
     <category term="C Primer Plus" scheme="http://fuxx-1.github.io/tags/C-Primer-Plus/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://fuxx-1.github.io/2020/12/12/hello-world/"/>
-    <id>http://fuxx-1.github.io/2020/12/12/hello-world/</id>
-    <published>2020-12-12T12:48:27.148Z</published>
-    <updated>2021-02-22T16:35:43.733Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;This blog is just a test of system.&lt;/p&gt;
-&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#Quick-Start&quot;&gt;✦&lt;/a&gt;Quick Start&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="c" scheme="http://fuxx-1.github.io/categories/c/"/>
-    
-    
-    <category term="Website-Test" scheme="http://fuxx-1.github.io/tags/Website-Test/"/>
     
   </entry>
   
