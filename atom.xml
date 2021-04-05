@@ -18,9 +18,9 @@
   
   <entry>
     <title>Week4-Java总结</title>
-    <link href="http://fuxx-1.github.io/2021/03/28/Week4-Java%E6%80%BB%E7%BB%93/"/>
-    <id>http://fuxx-1.github.io/2021/03/28/Week4-Java%E6%80%BB%E7%BB%93/</id>
-    <published>2021-03-28T09:38:23.656Z</published>
+    <link href="http://fuxx-1.github.io/2021/04/05/Week5-Java%E6%80%BB%E7%BB%93%20/"/>
+    <id>http://fuxx-1.github.io/2021/04/05/Week5-Java%E6%80%BB%E7%BB%93%20/</id>
+    <published>2021-04-05T06:33:06.770Z</published>
     <updated>2021-03-29T05:18:23.501Z</updated>
     
     
@@ -28,6 +28,28 @@
 &lt;h2 id=&quot;一、反射的概述&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#一、反射的概述&quot;&gt;✦&lt;/a&gt;一、反射的概述&lt;/h2&gt;
 &lt;p&gt;JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。&lt;/p&gt;
 &lt;p&gt;要想解剖一个类,必须先要获取到该类的字节码文件对象。而解剖使用的就是Class类中的方法.所以先要获取到每一个字节码文件对应的Class类型的对象.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="java" scheme="http://fuxx-1.github.io/categories/java/"/>
+    
+    
+    <category term="Experience-Java" scheme="http://fuxx-1.github.io/tags/Experience-Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Week5-Java总结</title>
+    <link href="http://fuxx-1.github.io/2021/03/28/Week4-Java%E6%80%BB%E7%BB%93/"/>
+    <id>http://fuxx-1.github.io/2021/03/28/Week4-Java%E6%80%BB%E7%BB%93/</id>
+    <published>2021-03-28T09:38:23.656Z</published>
+    <updated>2021-04-05T08:41:42.668Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
     
     
     
@@ -333,7 +355,7 @@
     <link href="http://fuxx-1.github.io/2020/12/17/%E7%B4%A0%E6%95%B0%E7%AD%9B%E6%B3%95/"/>
     <id>http://fuxx-1.github.io/2020/12/17/%E7%B4%A0%E6%95%B0%E7%AD%9B%E6%B3%95/</id>
     <published>2020-12-17T12:10:58.788Z</published>
-    <updated>2021-03-04T10:49:23.062Z</updated>
+    <updated>2021-03-26T11:00:02.343Z</updated>
     
     
     <summary type="html">&lt;h1&gt;素数筛法&lt;/h1&gt;</summary>
@@ -390,26 +412,6 @@
     
     
     <category term="Oj-C" scheme="http://fuxx-1.github.io/tags/Oj-C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C Primer Plus 第12章总结</title>
-    <link href="http://fuxx-1.github.io/2020/12/13/C-Primer-Plus-%E7%AC%AC12%E7%AB%A0%E6%80%BB%E7%BB%93/"/>
-    <id>http://fuxx-1.github.io/2020/12/13/C-Primer-Plus-%E7%AC%AC12%E7%AB%A0%E6%80%BB%E7%BB%93/</id>
-    <published>2020-12-12T19:19:49.074Z</published>
-    <updated>2021-01-17T11:31:30.946Z</updated>
-    
-    
-    <summary type="html">&lt;h1&gt;C Primer Plus 第12章总结&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/h1&gt;
-&lt;h3 id=&quot;储存类别（详见链接）&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#储存类别（详见链接）&quot;&gt;✦&lt;/a&gt;储存类别（详见&lt;a href=&quot;https://www.runoob.com/cprogramming/c-storage-classes.html&quot;&gt;链接&lt;/a&gt;）&lt;/h3&gt;</summary>
-    
-    
-    
-    <category term="c" scheme="http://fuxx-1.github.io/categories/c/"/>
-    
-    
-    <category term="C Primer Plus" scheme="http://fuxx-1.github.io/tags/C-Primer-Plus/"/>
     
   </entry>
   
