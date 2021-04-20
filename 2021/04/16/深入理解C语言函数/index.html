@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="/files/img/favicon-32x32.png">
-  <title>Linux-Problem | Fuxxの博客</title>
+  <title>深入理解C语言函数 | Fuxxの博客</title>
   <meta name="author" content="Fuxx-1" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -13,20 +13,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-  <meta name="keywords" content="Linux运维" />
+  <meta name="keywords" content="Experience-C" />
   
-  <meta name="description" content="✦部分设置 1PS1&#x3D;&quot;\[\033[1;33;1m\][\[\033[1;34;1m\]\u@\h:\[\033[0;36;1m\]\w\[\033[1;33;1m\]]\[\033[1;31;1m\]\$ \[\033[1;32;0m\]&quot;">
+  <meta name="description" content="两个顺序表之间 ✦深入理解strcpy函数 ✦函数参数解析 strcpy(目的字符数组地址, 源字符数组地址); ✦应用方式1 12345678int main(void) &amp;#123;    char s1[81] &#x3D; &quot;China&quot;;    char s2[81] &#x3D; &quot;India&quot;;    strcpy(s1, s2);	&#x2F;&#x2F;s2 -&gt; s1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux-Problem">
-<meta property="og:url" content="http://fuxx-1.github.io/2021/01/29/Linux-Problem/index.html">
+<meta property="og:title" content="深入理解C语言函数">
+<meta property="og:url" content="http://fuxx-1.github.io/2021/04/16/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="Fuxxの博客">
-<meta property="og:description" content="✦部分设置 1PS1&#x3D;&quot;\[\033[1;33;1m\][\[\033[1;34;1m\]\u@\h:\[\033[0;36;1m\]\w\[\033[1;33;1m\]]\[\033[1;31;1m\]\$ \[\033[1;32;0m\]&quot;">
+<meta property="og:description" content="两个顺序表之间 ✦深入理解strcpy函数 ✦函数参数解析 strcpy(目的字符数组地址, 源字符数组地址); ✦应用方式1 12345678int main(void) &amp;#123;    char s1[81] &#x3D; &quot;China&quot;;    char s2[81] &#x3D; &quot;India&quot;;    strcpy(s1, s2);	&#x2F;&#x2F;s2 -&gt; s1">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://fuxx-1.github.io/files/img/favicon-32x32.png">
-<meta property="article:published_time" content="2021-01-29T08:57:42.428Z">
-<meta property="article:modified_time" content="2021-02-21T12:55:00.313Z">
+<meta property="article:published_time" content="2021-04-16T11:52:37.229Z">
+<meta property="article:modified_time" content="2021-04-16T13:39:53.151Z">
 <meta property="article:author" content="Fuxx-1">
-<meta property="article:tag" content="Linux运维">
+<meta property="article:tag" content="Experience-C">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://fuxx-1.github.io/files/img/favicon-32x32.png">
 <meta name="twitter:site" content="@null">
@@ -125,21 +125,21 @@
     <article>
         <div class="kratos-hentry kratos-post-inner clearfix">
             <header class="kratos-entry-header">
-                <h1 class="kratos-entry-title text-center">Linux-Problem</h1>
+                <h1 class="kratos-entry-title text-center">深入理解C语言函数</h1>
                 
                 <ul class="kratos-post-meta text-center">
-                    <li><i class="fa fa-calendar"></i> 2021-01-29</li>
+                    <li><i class="fa fa-calendar"></i> 2021-04-16</li>
                     <li><i class="fa fa-user"></i> 作者 Fuxx-1</li>
                     <li>
                         <i class="fa fa-edit"></i> 
                         
                         
-                            ~2.57K
+                            ~2.53K
                         
                         字
                     </li>
                     
-                        <li id="/2021/01/29/Linux-Problem/" class="leancloud_visitors" data-flag-title="Linux-Problem">
+                        <li id="/2021/04/16/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0/" class="leancloud_visitors" data-flag-title="深入理解C语言函数">
                             <i class="fa fa-eye"></i>
                             <span class="leancloud-visitors-count"> </span> 次阅读
                         </li>
@@ -149,48 +149,44 @@
             </header>
             <div class="kratos-post-content">
                 <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                    本文最后编辑于 <time datetime="1613912100313"></time> 前，其中的内容可能需要更新。
+                    本文最后编辑于 <time datetime="1618580393151"></time> 前，其中的内容可能需要更新。
                 </div>
                 
                 <hr />
-                <h2 id="部分设置"><a class="header-anchor" href="#部分设置">✦</a>部分设置</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PS1&#x3D;&quot;\[\033[1;33;1m\][\[\033[1;34;1m\]\u@\h:\[\033[0;36;1m\]\w\[\033[1;33;1m\]]\[\033[1;31;1m\]\$ \[\033[1;32;0m\]&quot;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="2021-01-25"><a class="header-anchor" href="#2021-01-25">✦</a>2021-01-25</h2>
-<p>1、定义别名命令baketc,每天将/etc/目录下所有文件，备份到/data独立的子目录下，并要求子目录格式为backupYYYY-mm-dd,备份过程可见。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alias baketc&#x3D;&quot;&#96;mkdir &#x2F;data&#96;cp -av &#x2F;etc&#x2F; &#x2F;data&#x2F;backup&#96;date +%F&#96;&quot;</span><br></pre></td></tr></table></figure>
-<p>2、创建/data/rootdir目录， 并复制/root下所有文件到该目录内，要求保留原有权限。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#96;mkdir -p &#x2F;data&#x2F;rootdir&#96; cp -a &#x2F;root&#x2F;. &#x2F;data&#x2F;rootdir&#x2F;</span><br></pre></td></tr></table></figure>
-<h2 id="2021-01-26"><a class="header-anchor" href="#2021-01-26">✦</a>2021-01-26</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm -rf &#x2F;testdir</span><br><span class="line">tree &#x2F;testdir&#x2F;</span><br></pre></td></tr></table></figure>
-<p>1.如何创建 /testdir/dir1/x, /testdir/dir1/y, /testdir/dir1/x/a,/testdir/dir1/x/b, /testdir/dir1/y/a, /testdir/dir1/y/b创建后使用命令  tree /testdir/ 显示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -pv &#x2F;testdir&#x2F;dir1&#x2F;&#123;x&#x2F;&#123;a,b&#125;,y&#x2F;&#123;a,b&#125;&#125;</span><br></pre></td></tr></table></figure>
-<p>2.如何创建/testdir/dir2/x, /testdir/dir2/y, /testdir/dir2/x/a, /testdir/dir2/x/b创建后使用命令  tree /testdir/  显示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -pv &#x2F;testdir&#x2F;dir2&#x2F;&#123;x&#x2F;&#123;a,b&#125;,y&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2021-01-27"><a class="header-anchor" href="#2021-01-27">✦</a>2021-01-27</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm -rf &#x2F;testdir</span><br><span class="line">tree &#x2F;testdir&#x2F;</span><br></pre></td></tr></table></figure>
-<p>1.计算 1+2+3…+99+100 的和</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#123;1..100&#125; | tr &#39; &#39; + | bc</span><br></pre></td></tr></table></figure>
-<p>2.如何创建 /testdir/dir3 ,  /testdir/dir4 , /testdir/dir5 , /testdir/dir5/dir6 , /testdir/dir5/dir7</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -pv &#x2F;testdir&#x2F;dir&#123;3,4,5&#x2F;&#123;dir6,dir7&#125;&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2021-01-28"><a class="header-anchor" href="#2021-01-28">✦</a>2021-01-28</h2>
-<p>1.处理字符串&quot;xt.,I 1 jr#!$mn 2 c*/fe 3 uz 4&quot;，只保留其中的数字和空格.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo xt.,I 1 jr#-imn 2 c*&#x2F;fe 3 uz 4 | tr -cd [0-9]&quot; &quot;&quot;\n&quot;</span><br></pre></td></tr></table></figure>
-<p>2.一个linux用户给root发邮件，要求邮件标题为 “TW” ，邮件正文如下: &quot; Stay hungry，Stay foolish. &quot;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;Stay hungry，Stay foolish.&quot; | mail -s &quot;TW&quot; root</span><br></pre></td></tr></table></figure>
-<h2 id="2021-01-29"><a class="header-anchor" href="#2021-01-29">✦</a>2021-01-29</h2>
-<p>1.复制 /etc/fstab 文件到 /var/tmp 下，设置文件所有者为 memberone（需要新建）有读写权限，所属组为 thoughtworks（需要新建）组有读写权限，其他人无权限。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cp &#x2F;etc&#x2F;fstab &#x2F;var&#x2F;tmp&#x2F;</span><br><span class="line">groupadd thoughtworks</span><br><span class="line">useradd -g thoughtworks memberone</span><br><span class="line">chgrp thoughtworks fstab</span><br><span class="line">chown memberone fstab</span><br><span class="line">chmod 770 fstab</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">userdel memberone</span><br><span class="line">groupdel thoughtworks</span><br><span class="line">rm -rf &#x2F;var&#x2F;tmp&#x2F;fstab</span><br></pre></td></tr></table></figure>
-<p>2.创建用户 blue ，附加组为 bin 和 root ，默认shll 为 /bin/csh，注释信息为&quot;blue shine&quot;（注：创建完成后使用命令 getent passwd blue查看注释信息；使用命令 id blue查看附加组）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">useradd -c &quot;blue shine&quot; -G bin,root -s &#x2F;bin&#x2F;csh blue</span><br><span class="line">getent passwd blue</span><br><span class="line">id blue</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">userdel blue</span><br></pre></td></tr></table></figure>
-<h2 id="2021-01-30"><a class="header-anchor" href="#2021-01-30">✦</a>2021-01-30</h2>
-<p>1.误将/bin/chmod文件的执行权限删除，如何恢复?</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod a-x &#x2F;bin&#x2F;chmod</span><br><span class="line">ll &#x2F;bin&#x2F;chmod</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setfacl -m user::rwx &#x2F;bin&#x2F;chmod</span><br><span class="line">---------------------------------</span><br><span class="line">install &#x2F;bin&#x2F;chmod -m 744 &#x2F;chmod </span><br><span class="line">mv &#x2F;chmod &#x2F;bin&#x2F;chmod</span><br></pre></td></tr></table></figure>
-<p>2.取出磁盘各分区利用率，并从大到小排序</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df | cut -c46-47 | sort -n</span><br><span class="line">df | tr -s &#39; &#39; &quot;%&quot; | cut -d% -f5 | sort -nr</span><br></pre></td></tr></table></figure>
+                <h1>两个顺序表之间</h1>
+<h2 id="深入理解strcpy函数"><a class="header-anchor" href="#深入理解strcpy函数">✦</a>深入理解<code>strcpy</code>函数</h2>
+<h3 id="函数参数解析"><a class="header-anchor" href="#函数参数解析">✦</a>函数参数解析</h3>
+<p><code>strcpy(目的字符数组地址, 源字符数组地址);</code></p>
+<h3 id="应用方式1"><a class="header-anchor" href="#应用方式1">✦</a>应用方式1</h3>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span> s1[<span class="number">81</span>] = <span class="string">&quot;China&quot;</span>;</span><br><span class="line">    <span class="keyword">char</span> s2[<span class="number">81</span>] = <span class="string">&quot;India&quot;</span>;</span><br><span class="line">    <span class="built_in">strcpy</span>(s1, s2);	<span class="comment">//s2 -&gt; s1</span></span><br><span class="line">    <span class="built_in">puts</span>(s1);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//Output:India</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="应用方式2"><a class="header-anchor" href="#应用方式2">✦</a>应用方式2</h3>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span> s1[<span class="number">81</span>] = <span class="string">&quot;China&quot;</span>;</span><br><span class="line">    <span class="keyword">char</span> s2[<span class="number">81</span>] = <span class="string">&quot;India&quot;</span>;</span><br><span class="line">    <span class="built_in">strcpy</span>(s1 + <span class="number">2</span>, s2 + <span class="number">1</span>);</span><br><span class="line">    <span class="built_in">puts</span>(s1);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//Output:chndia</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="函数实现"><a class="header-anchor" href="#函数实现">✦</a>函数实现</h3>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">strcpy</span><span class="params">(<span class="keyword">char</span> s1[], <span class="keyword">char</span> s2[])</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (s2[i]) &#123;</span><br><span class="line">        s1[j++] = s2[i++];</span><br><span class="line">    &#125;</span><br><span class="line">    s1[j++] = s2[i++];</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="优化"><a class="header-anchor" href="#优化">✦</a>优化</h4>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">void strcpy(char s1[], char s2[]) &#123;</span><br><span class="line">    int i = 0, j = 0;</span><br><span class="line"><span class="addition">+   while (s1[j++] = s2[i++]) &#123;&#125;</span></span><br><span class="line"><span class="deletion">-   while (s2[i]) &#123;</span></span><br><span class="line"><span class="deletion">-   	s1[j++] = s2[i++];</span></span><br><span class="line"><span class="deletion">-   &#125;</span></span><br><span class="line"><span class="deletion">-   s1[j++] = s2[i++];</span></span><br><span class="line">    return;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>注意</strong>：</p>
+<ul>
+<li>兼顾函数的高可用性和易读性</li>
+<li>赋值表达式做条件时，先赋值，后做条件</li>
+</ul>
+</blockquote>
+<h2 id="✦将一个顺序表作为两个顺序表使用"><a class="header-anchor" href="#✦将一个顺序表作为两个顺序表使用">✦</a>✦将一个顺序表作为两个顺序表使用</h2>
+<h3 id="删除一个字符串中的某个字符"><a class="header-anchor" href="#删除一个字符串中的某个字符">✦</a>删除一个字符串中的某个字符</h3>
+<p>样例：</p>
+<p>“<code>mydoghasabook</code>” -&gt; “<code>mydghasabk</code>”</p>
+<h4 id="程序样例1："><a class="header-anchor" href="#程序样例1：">✦</a>程序样例1：</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span> s[] = <span class="string">&quot;mydoghasabook&quot;</span>;</span><br><span class="line">    <span class="keyword">char</span> key = <span class="string">&#x27;o&#x27;</span>;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (s[i]) &#123;</span><br><span class="line">        <span class="keyword">if</span> (s[i] - key) &#123;</span><br><span class="line">            i++;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">//删除语句</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i; s[j]; j++) &#123;</span><br><span class="line">                s[j] = s[j + <span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">puts</span>(s);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="优化-v2"><a class="header-anchor" href="#优化-v2">✦</a>优化</h5>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span> s[] = <span class="string">&quot;mydoghasabook&quot;</span>;</span><br><span class="line">    <span class="keyword">char</span> key = <span class="string">&#x27;o&#x27;</span>;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (s[i]) &#123;</span><br><span class="line">        <span class="keyword">if</span> (s[i] - key) &#123;</span><br><span class="line">            i++;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">//删除语句</span></span><br><span class="line">            s[i] = <span class="number">0</span>;</span><br><span class="line">            <span class="built_in">strcpy</span>(s + i, s + i + <span class="number">1</span>);</span><br><span class="line">            <span class="comment">//strcat(s, s + i + 1);</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">puts</span>(s);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="程序样例2"><a class="header-anchor" href="#程序样例2">✦</a>程序样例2</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span> s[] = <span class="string">&quot;mydoghasabook&quot;</span>;</span><br><span class="line">    <span class="keyword">char</span> key = <span class="string">&#x27;o&#x27;</span>;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (s[i]) &#123;</span><br><span class="line">        <span class="keyword">if</span> (s[i] - key) &#123;</span><br><span class="line">            s[j++] = s[i];</span><br><span class="line">        &#125;</span><br><span class="line">            i++;</span><br><span class="line">    &#125;</span><br><span class="line">    s[j] = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">puts</span>(s);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="优化-v3"><a class="header-anchor" href="#优化-v3">✦</a>优化</h5>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span> s[] = <span class="string">&quot;mydoghasabook&quot;</span>;</span><br><span class="line">    <span class="keyword">char</span> key = <span class="string">&#x27;o&#x27;</span>;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (s[j++] = s[i]) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!(s[i++] - key)) &#123;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">puts</span>(s);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="优化2"><a class="header-anchor" href="#优化2">✦</a>优化2</h5>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span> s[] = <span class="string">&quot;mydoghasabook&quot;</span>;</span><br><span class="line">    <span class="keyword">char</span> key = <span class="string">&#x27;o&#x27;</span>;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (; !(s[i] - key) || (s[j++] = s[i]); i++) &#123;&#125;</span><br><span class="line">    <span class="built_in">puts</span>(s);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
             </div>
             
                 <div class="kratos-copyright text-center clearfix">
@@ -243,7 +239,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://fuxx-1.github.io/2021/01/29/Linux-Problem/",
+                text: "http://fuxx-1.github.io/2021/04/16/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -255,10 +251,14 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://fuxx-1.github.io/2021/01/29/Linux-Problem/";
-            const title         = "「Linux-Problem」";
-            const excerpt       = `✦部分设置
-1PS1&#x3D;&quot;\[\033[1;33;1m\][\[\033[1;34;1m\]\u@\h:\[\033[0;36;1m\]\w\[\033[1;33;1m\]]\[\033[1;31;1m\]\$ \[\033[1;32;0m\]&quot;`;
+            const hostUrl       = "http://fuxx-1.github.io/2021/04/16/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0/";
+            const title         = "「深入理解C语言函数」";
+            const excerpt       = `两个顺序表之间
+✦深入理解strcpy函数
+✦函数参数解析
+strcpy(目的字符数组地址, 源字符数组地址);
+✦应用方式1
+12345678int main(void) &#123;    char s1[81] = &quot;...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -277,10 +277,10 @@
                 <div class="footer-tag clearfix">
                     <div class="pull-left">
                     <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Linux%E8%BF%90%E7%BB%B4/" rel="tag">Linux运维</a>
+                        <a class="tag-none-link" href="/tags/Experience-C/" rel="tag">Experience-C</a>
                     </div>
                     <div class="pull-date">
-                    <span>最后编辑：2021-02-21</span>
+                    <span>最后编辑：2021-04-16</span>
                     </div>
                 </div>
             </footer>
@@ -289,12 +289,12 @@
             <nav class="navigation post-navigation clearfix" role="navigation">
                 
                 <div class="nav-previous clearfix">
-                    <a title=" Week1-Linux运维总结" href="/2021/01/24/Week1-Linux运维总结/">&lt; 上一篇</a>
+                    <a title=" Week4-Java总结" href="/2021/04/05/Week4-Java总结 /">&lt; 上一篇</a>
                 </div>
                 
                 
                 <div class="nav-next clearfix">
-                    <a title=" Week2-Linux运维总结" href="/2021/02/01/Week2-Linux运维总结/">下一篇 &gt;</a>
+                    <a title=" 约瑟夫环" href="/2021/04/20/约瑟夫环/">下一篇 &gt;</a>
                 </div>
                 
             </nav>
@@ -310,7 +310,7 @@
                 appKey: 'dBV0MUqkcaL9TBlq0XVEPL94',
                 visitor: true,
                 enableQQ: true,
-                path: '/2021/01/29/Linux-Problem/'
+                path: '/2021/04/16/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0/'
             });
         }
         if (typeof Valine == 'undefined') {
