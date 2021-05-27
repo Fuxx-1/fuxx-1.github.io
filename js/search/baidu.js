@@ -246,34 +246,30 @@ var SearchService = '';
   var template = '<div id="u-search"><div class="modal"> <header class="modal-header" class="clearfix"><form id="u-search-modal-form" class="u-search-form" name="uSearchModalForm"> <input type="text" id="u-search-modal-input" class="u-search-input" /> <button type="submit" id="u-search-modal-btn-submit" class="u-search-btn-submit"> <span class="fas fa-search"></span> </button></form> <a class="btn-close"> <span class="fas fa-times"></span> </a><div class="modal-loading"><div class="modal-loading-bar"></div></div> </header> <main class="modal-body"><ul class="modal-results modal-ajax-content"></ul> </main> <footer class="modal-footer clearfix"><div class="modal-metadata modal-ajax-content"> <strong class="range"></strong> of <strong class="total"></strong></div><div class="modal-error"></div> <div class="logo"></div> <a class="nav btn-next modal-ajax-content"> <span class="text">NEXT</span> <span class="fal fa-chevron-right"></span> </a> <a class="nav btn-prev modal-ajax-content"> <span class="fal fa-chevron-left"></span> <span class="text">PREV</span> </a> </footer></div><div class="modal-overlay"></div></div>';
 })(jQuery);
 
-var AlgoliaSearch;
+var BaiduSearch;
 (function($) {
   'use strict';
 
   /**
-   * Search by Algolia Search
+   * TODO
+   * Search by Baidu Search API
    * @param options : (object)
    */
-  AlgoliaSearch = function(options) {
+  BaiduSearch = function(options) {
     SearchService.apply(this, arguments);
     var self = this;
-    var endpoint = 'https://' + self.config.appId + '-dsn.algolia.net/1/indexes/' + self.config.indexName;
-    self.addLogo('algolia');
+    var endpoint = '';
+    self.addLogo('baidu');
 
     /**
      * Generate result list html
      * @param data : (array) result items
      */
-    self.buildResultList = function(data) {
+    self.buildResultList = function(data, queryText) {
+      var results = [];
       var html = '';
-      $.each(data, function(index, row) {
-        var url = row.permalink || row.path || '';
-        if (!row.permalink && row.path) {
-          url = ROOT + url;
-        }
-        var title = row.title;
-        var digest = '';
-        html += self.buildResult(url, title, digest, index + 1);
+      $.each(data, function(index, post) {
+        if (self.contentSearch(post, queryText)) { html += self.buildResult(post.linkUrl, post.title, post.abstract); }
       });
       html += '<script>try{pjax.refresh(document.querySelector(\'#u-search\'));document.addEventListener(\'pjax:send\',function(){$(\'#u-search\').fadeOut(500);$(\'body\').removeClass(\'modal-active\')});}catch(e){$(\'#u-search\').fadeOut(500);}</script>';
       return html;
@@ -281,62 +277,62 @@ var AlgoliaSearch;
 
     /**
      * Generate metadata after a successful query
-     * @param data : (object) the raw search response data
+     * @param data : (object) the raw google custom search response data
      */
     self.buildMetadata = function(data) {
-      self.nav.current = data.page * data.hitsPerPage + 1;
-      self.nav.currentCount = data.hits.length;
-      self.nav.total = parseInt(data.nbHits);
-      self.dom.modal_metadata.children('.total').html(self.nav.total);
-      self.dom.modal_metadata.children('.range').html(self.nav.current + '-' + (self.nav.current + self.nav.currentCount - 1));
-      if (self.nav.total > 0) {
-        self.dom.modal_metadata.show();
-      } else {
-        self.dom.modal_metadata.hide();
-      }
 
-      if (data.page < data.nbPages - 1) {
-        self.nav.next = (data.page + 1) + 1;
-        self.dom.btn_next.show();
-      } else {
-        self.nav.next = -1;
-        self.dom.btn_next.hide();
-      }
-      if (data.page > 0) {
-        self.nav.prev = (data.page + 1) - 1;
-        self.dom.btn_prev.show();
-      } else {
-        self.nav.prev = -1;
-        self.dom.btn_prev.hide();
-      }
+    };
+
+    self.loadScript = function() {
+      self.dom.input.each(function(index, elem) {
+        $(elem).attr('disabled', true);
+      });
+      var script = '<script src=\'http://zhannei.baidu.com/api/customsearch/apiaccept?sid=' + self.config.apiId + '&v=2.0&callback=customSearch.initBaidu\' type=\'text/javascript\' charset=\'utf-8\'></script>';
+      self.dom.body.append(script);
+    };
+
+    self.initBaidu = function() {
+      self.cse = new BCse.Search(self.config.apiId);
+      //self.cse.setPageNum(self.config.per_page);
+      self.dom.input.each(function(index, elem) {
+        $(elem).attr('disabled', false);
+      });
     };
 
     /**
-     * Send a GET request
-     * @param queryText : (string) the query text
-     * @param page : (int) the current page (start from 1)
-     * @param callback : (function)
+     * Get search results
+     * @param queryText {String}
+     * @param page {Integer}
+     * @param callback {Function}
      */
     self.query = function(queryText, page, callback) {
-      $.get(endpoint, {
-        query                     : queryText,
-        page                      : page - 1,
-        hitsPerPage               : self.config.per_page,
-        'x-algolia-application-id': self.config.appId,
-        'x-algolia-api-key'       : self.config.apiKey
-      }, function(data, status) {
-        if (status === 'success' && data.hits && data.hits.length > 0) {
-          var results = self.buildResultList(data.hits);
-          self.dom.modal_results.html(results);
+      self.cse.getResult(queryText, function(data) {
+        console.log('Searching: ' + queryText);
+        self.cse.getError(function(data) {
+          console.log(data);
+        });
+        if (data.length > 0) {
+          self.buildResultList(data, queryText);
+          self.cse.getSearchInfo(queryText, function(data) {
+            console.log(data);
+            self.buildMetadata(data);
+          });
         } else {
-          self.onQueryError(queryText, status);
+          self.nav.total = 0;
+          self.nav.next = -1;
+          self.nav.prev = -1;
+          self.dom.modal_metadata.hide();
+          self.dom.btn_next.hide();
+          self.dom.btn_prev.hide();
+          self.onQueryError(queryText, 'success');
         }
-        self.buildMetadata(data);
-        if (callback) {
-          callback(data);
+        if (callback instanceof Function) {
+          callback();
         }
       });
     };
+
+    self.loadScript();
 
     return self;
   };
