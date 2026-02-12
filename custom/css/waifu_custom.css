@@ -1,0 +1,36 @@
+#waifu {
+  width: 200px;
+  transition: opacity 0.75s ease-in-out;
+}
+
+#waifu #live2d {
+  height: 200px;
+  width: 200px;
+}
+
+#waifu-tool {
+  left: 15px;
+  top: 5px;
+}
+
+#waifu {
+  right: auto;
+  left: 0;
+  width: 200px;
+}
+
+.fa-lg {
+  font-size: 0.9em !important;
+}
+
+#waifu-tool span {
+  height: 22px;
+}
+
+#waifu-tips {
+  min-height: 50px;
+  width: 150px;
+  font-size: 0.45em;
+  line-height: 12px;
+  left: 15px;
+}

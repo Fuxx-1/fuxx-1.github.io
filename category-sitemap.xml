@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://blog.newimg.ltd/</loc>
+        <changefreq>daily</changefreq>
+        <priority>1</priority>
+    </url>
+
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/java/sourecode/</loc>
+        <lastmod>2026-02-12T15:51:49.074Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/java/knowledge/</loc>
+        <lastmod>2026-02-12T15:51:49.074Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/java/</loc>
+        <lastmod>2026-02-12T15:51:49.074Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/github/action/</loc>
+        <lastmod>2026-02-12T15:51:49.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/web/custom/</loc>
+        <lastmod>2026-02-12T15:51:49.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/software/introduce/</loc>
+        <lastmod>2026-02-12T15:51:49.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/hexo/backup/</loc>
+        <lastmod>2026-02-12T15:51:49.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/environment/general/</loc>
+        <lastmod>2026-02-12T15:51:49.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/review/general/</loc>
+        <lastmod>2026-02-12T15:51:49.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/github/</loc>
+        <lastmod>2026-02-12T15:51:49.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/linux/ssl/</loc>
+        <lastmod>2026-02-12T15:51:49.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/c/knowledge/</loc>
+        <lastmod>2026-02-12T15:51:49.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/web/</loc>
+        <lastmod>2026-02-12T15:51:49.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/software/</loc>
+        <lastmod>2026-02-12T15:51:49.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/hexo/</loc>
+        <lastmod>2026-02-12T15:51:49.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/java/introduce/</loc>
+        <lastmod>2026-02-12T15:51:49.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/environment/</loc>
+        <lastmod>2026-02-12T15:51:49.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/java/algorithm/</loc>
+        <lastmod>2026-02-12T15:51:49.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/git/command/</loc>
+        <lastmod>2026-02-12T15:51:49.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/review/</loc>
+        <lastmod>2026-02-12T15:51:49.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/linux/</loc>
+        <lastmod>2026-02-12T15:51:49.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/git/</loc>
+        <lastmod>2026-02-12T15:51:49.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/c/algorithm/</loc>
+        <lastmod>2026-02-12T15:51:49.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/c/</loc>
+        <lastmod>2026-02-12T15:51:49.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/linux/knowledge/</loc>
+        <lastmod>2026-02-12T15:51:49.072Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/Test/</loc>
+        <lastmod>2026-02-12T15:51:49.072Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/c/config/</loc>
+        <lastmod>2026-02-12T15:51:49.072Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/linux/command/</loc>
+        <lastmod>2026-02-12T15:51:49.071Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/java/oop/</loc>
+        <lastmod>2026-02-12T15:51:49.071Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/java/environment/</loc>
+        <lastmod>2026-02-12T15:51:49.071Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/java/thread/</loc>
+        <lastmod>2026-02-12T15:51:49.071Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/experience/linux/</loc>
+        <lastmod>2026-02-12T15:51:49.071Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/experience/</loc>
+        <lastmod>2026-02-12T15:51:49.071Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://blog.newimg.ltd/categories/c/CPrimerPlus/</loc>
+        <lastmod>2026-02-12T15:51:49.071Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+</urlset>
+<!-- XML Sitemap generated by Hexo SEO Friendly Sitemap Generator -->

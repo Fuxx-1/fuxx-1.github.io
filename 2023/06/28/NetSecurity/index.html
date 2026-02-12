@@ -1,0 +1,4783 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#5.8.0'>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="Volantis" content="5.8.0">
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+  <link rel="canonical" href="https://blog.newimg.ltd/2023/06/28/netsecurity/"/>
+  <!-- 渲染优化 -->
+    <meta http-equiv='x-dns-prefetch-control' content='on' />
+      <link rel='dns-prefetch' href='https://unpkg.com'>
+      <link rel="preconnect" href="https://unpkg.com" crossorigin>
+      <link rel='dns-prefetch' href='https://gcore.jsdelivr.net/'>
+      <link rel="preconnect" href="https://gcore.jsdelivr.net/" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Content-Security-Policy" content=" default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https: *; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *; ">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <!-- import head_begin begin -->
+  <!-- import head_begin end -->
+  <!-- Custom Files headBegin begin-->
+  <!-- 引入骛霞文楷 -->
+<link rel="stylesheet" href="https://cdn.qoop.top/blog/font/LXGWWenKai/index.css"/>
+<!-- 引入pandown.js -->
+<script type="text/javascript" src="https://cdn.qoop.top/blog/js/CloudDisk.js"></script>
+<script type="text/javascript" src="./custom/js/async_load.js"></script>
+<script type="text/javascript" src="./custom/js/hideObj.js"></script>
+
+  <!-- Custom Files headBegin end-->
+  <!-- front-matter head_begin begin -->
+  <!-- front-matter head_begin end -->
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.newimg.ltd/blog/logo/favicon-32x32.png">
+  <link rel="preload" href="/css/style.css" as="style">
+  <link rel="preload" href="https://cdn.qoop.top/blog/volantis-static/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.qoop.top/blog/volantis-static/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <!-- feed -->
+      <link rel="alternate" href="/atom.xml" title="Fuxxの博客" type="application/atom+xml">
+      <link rel="alternate" href="/rss2.xml" title="Fuxxの博客" type="application/rss+xml">
+  <!-- 页面元数据 -->
+  <title>期末网安 - Fuxxの博客</title>
+  <meta name="keywords" content="experience,undefined">
+  <meta desc name="description" content="Fuxx-1 - Fuxx-1 - Fuxxの博客">
+  
+<meta property="og:type" content="article">
+<meta property="og:title" content="期末网安">
+<meta property="og:url" content="https://blog.newimg.ltd/2023/06/28/NetSecurity/index.html">
+<meta property="og:site_name" content="Fuxxの博客">
+<meta property="og:description" content="第一章计算机安全的定义对某个自动化信息系统的保护措施，其目的在于实现信息系统资源的完整性、可用性及机密。 相关性质： 机密性：保护个人隐私信息，防止非授权泄漏 数据机密性：保证私有的或机密的信息不泄漏给非授权用户 隐私性：保证个人可以控制和影响与之相关的信息（即个人隐私）   完整性：防范不当修改和破坏，保证信息的认证与授权 数据完整性：保证信息和代码只能以某种特定的授权方式更改 系统完整性：系统">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.qoop.top/blog/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-06-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-02-12T15:51:49.072Z">
+<meta property="article:author" content="Fuxx-1">
+<meta property="article:tag" content="experience">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.qoop.top/blog/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+  <style>
+    /* 首屏样式 */
+    #safearea {
+  display: none;
+}
+:root {
+  --color-site-body: #f4f4f4;
+  --color-site-bg: #f4f4f4;
+  --color-site-inner: #fff;
+  --color-site-footer: #666;
+  --color-card: #fff;
+  --color-text: #444;
+  --color-block: #f6f6f6;
+  --color-inlinecode: #c74f00;
+  --color-codeblock: #fff7ea;
+  --color-h1: #3a3a3a;
+  --color-h2: #3a3a3a;
+  --color-h3: #333;
+  --color-h4: #444;
+  --color-h5: #555;
+  --color-h6: #666;
+  --color-p: #444;
+  --color-list: #666;
+  --color-list-hl: #36ac91;
+  --color-meta: #888;
+  --color-read-bkg: #e0d8c8;
+  --color-read-post: #f8f1e2;
+  --color-copyright-bkg: #f5f5f5;
+}
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+*::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+*::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: #44d7b6;
+  cursor: pointer;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #ff5722;
+}
+html {
+  color: var(--color-text);
+  width: 100%;
+  height: 100%;
+  font-family: "LXGW WenKai", "Microsoft YaHei", Arial, Menlo, Monaco, monospace, sans-serif;
+  font-size: 16px;
+}
+html >::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+html >::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+html >::-webkit-scrollbar-thumb {
+  background: #54b5a0 linear-gradient(45deg, rgba(255,255,255,0.4) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 75%, transparent 75%, transparent);
+  cursor: pointer;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+html >::-webkit-scrollbar-thumb:hover {
+  background: #54b5a0 linear-gradient(45deg, rgba(255,255,255,0.4) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 75%, transparent 75%, transparent);
+}
+body {
+  background-color: var(--color-site-body);
+  text-rendering: optimizelegibility;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body.modal-active {
+  overflow: hidden;
+}
+@media screen and (max-width: 680px) {
+  body.modal-active {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+a {
+  color: #1b79c4;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+a:hover {
+  color: #ff5722;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+ul,
+ol {
+  padding-left: 0;
+}
+ul li,
+ol li {
+  list-style: none;
+}
+header {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+}
+img {
+  border: 0;
+  background: none;
+  max-width: 100%;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  height: 0;
+  border: 0;
+  border-radius: 1px;
+  -webkit-border-radius: 1px;
+  border-bottom: 1px solid rgba(68,68,68,0.1);
+}
+button,
+input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+@supports (backdrop-filter: blur(20px)) {
+  .blur {
+    background: rgba(255,255,255,0.9) !important;
+    backdrop-filter: saturate(200%) blur(20px);
+  }
+}
+@supports (backdrop-filter: blur(20px)) {
+  .blur#comments {
+    backdrop-filter: unset;
+  }
+}
+#layoutHelper-comments {
+  margin-bottom: 100px;
+}
+.shadow {
+  box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+}
+.shadow.floatable {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+.shadow.floatable:hover {
+  box-shadow: 0 2px 4px 0px rgba(0,0,0,0.1), 0 4px 8px 0px rgba(0,0,0,0.1), 0 8px 16px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 2px 4px 0px rgba(0,0,0,0.1), 0 4px 8px 0px rgba(0,0,0,0.1), 0 8px 16px 0px rgba(0,0,0,0.1);
+}
+#l_cover {
+  min-height: 64px;
+}
+.cover-wrapper {
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  height: 100vh;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -khtml-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  color: var(--color-site-inner);
+  padding: 0 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: -100px;
+}
+.cover-wrapper .cover-body {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.cover-wrapper#full {
+  height: calc(100vh + 100px);
+  padding-bottom: 100px;
+}
+.cover-wrapper#half {
+  max-height: 640px;
+  min-height: 400px;
+  height: calc(36vh - 64px + 200px);
+}
+.cover-wrapper #scroll-down {
+  width: 100%;
+  height: 64px;
+  position: absolute;
+  bottom: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+.cover-wrapper #scroll-down .scroll-down-effects {
+  color: #fff;
+  font-size: 24px;
+  line-height: 64px;
+  position: absolute;
+  width: 24px;
+  left: calc(50% - 12px);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  animation: scroll-down-effect 1.5s infinite;
+  -webkit-animation: scroll-down-effect 1.5s infinite;
+  -khtml-animation: scroll-down-effect 1.5s infinite;
+  -moz-animation: scroll-down-effect 1.5s infinite;
+  -o-animation: scroll-down-effect 1.5s infinite;
+  -ms-animation: scroll-down-effect 1.5s infinite;
+}
+@-moz-keyframes scroll-down-effect {
+  0% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    top: -16px;
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-webkit-keyframes scroll-down-effect {
+  0% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    top: -16px;
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-o-keyframes scroll-down-effect {
+  0% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    top: -16px;
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@keyframes scroll-down-effect {
+  0% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    top: -16px;
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+.cover-wrapper .cover-body {
+  margin-top: 64px;
+  margin-bottom: 100px;
+}
+.cover-wrapper .cover-body,
+.cover-wrapper .cover-body .top,
+.cover-wrapper .cover-body .bottom {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  max-width: 100%;
+}
+.cover-wrapper .cover-body .bottom {
+  margin-top: 32px;
+}
+.cover-wrapper .cover-body .title {
+  font-family: "LXGW WenKai", "Microsoft YaHei", Arial, Helvetica, monospace;
+  font-size: 3.125rem;
+  line-height: 1.2;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.cover-wrapper .cover-body .subtitle {
+  font-size: 20px;
+}
+.cover-wrapper .cover-body .logo {
+  max-height: 120px;
+  max-width: calc(100% - 4 * 16px);
+}
+@media screen and (min-height: 1024px) {
+  .cover-wrapper .cover-body .title {
+    font-size: 3rem;
+  }
+  .cover-wrapper .cover-body .subtitle {
+    font-size: 1.05rem;
+  }
+  .cover-wrapper .cover-body .logo {
+    max-height: 150px;
+  }
+}
+.cover-wrapper .cover-body .m_search {
+  position: relative;
+  max-width: calc(100% - 16px);
+  width: 320px;
+  vertical-align: middle;
+}
+.cover-wrapper .cover-body .m_search .form {
+  position: relative;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  width: 100%;
+}
+.cover-wrapper .cover-body .m_search .icon,
+.cover-wrapper .cover-body .m_search .input {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+.cover-wrapper .cover-body .m_search .icon {
+  position: absolute;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  line-height: 2.5rem;
+  width: 32px;
+  top: 0;
+  left: 5px;
+  color: rgba(68,68,68,0.75);
+}
+.cover-wrapper .cover-body .m_search .input {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  height: 2.5rem;
+  width: 100%;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-size: 0.875rem;
+  -webkit-appearance: none;
+  padding-left: 36px;
+  border-radius: 1.4rem;
+  -webkit-border-radius: 1.4rem;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  border: none;
+  color: var(--color-text);
+}
+@media screen and (max-width: 500px) {
+  .cover-wrapper .cover-body .m_search .input {
+    padding-left: 36px;
+  }
+}
+.cover-wrapper .cover-body .m_search .input:hover {
+  background: rgba(255,255,255,0.8);
+}
+.cover-wrapper .cover-body .m_search .input:focus {
+  background: #fff;
+}
+.cover-wrapper .list-h {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -khtml-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  align-items: stretch;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.cover-wrapper .list-h a {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 0;
+  -ms-flex: 1 0;
+  flex: 1 0;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  font-weight: 600;
+}
+.cover-wrapper .list-h a img {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  margin: 4px;
+  min-width: 40px;
+  max-width: 44px;
+}
+@media screen and (max-width: 768px) {
+  .cover-wrapper .list-h a img {
+    min-width: 36px;
+    max-width: 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .cover-wrapper .list-h a img {
+    margin: 2px 4px;
+    min-width: 32px;
+    max-width: 36px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .cover-wrapper .list-h a img {
+    min-width: 28px;
+    max-width: 32px;
+  }
+}
+.cover-wrapper {
+  max-width: 100%;
+}
+.cover-wrapper.search .bottom .menu {
+  margin-top: 16px;
+}
+.cover-wrapper.search .bottom .menu .list-h a {
+  white-space: nowrap;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  align-items: baseline;
+  padding: 2px;
+  margin: 4px;
+  color: var(--color-site-inner);
+  opacity: 0.75;
+  -webkit-opacity: 0.75;
+  -moz-opacity: 0.75;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  border-bottom: 2px solid transparent;
+}
+.cover-wrapper.search .bottom .menu .list-h a i {
+  margin-right: 4px;
+}
+.cover-wrapper.search .bottom .menu .list-h a p {
+  font-size: 0.9375rem;
+}
+.cover-wrapper.search .bottom .menu .list-h a:hover,
+.cover-wrapper.search .bottom .menu .list-h a.active,
+.cover-wrapper.search .bottom .menu .list-h a:active {
+  opacity: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  border-bottom: 2px solid var(--color-site-inner);
+}
+.cover-wrapper #parallax-window {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+.parallax-mirror {
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-name: fadeIn;
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: 'dark';
+  }
+  :root:not([color-scheme]) {
+    --color-site-body: #121212;
+    --color-read-bkg: #1f1f1f;
+    --color-read-post: #262626;
+    --color-site-bg: #1f1f1f;
+    --color-site-inner: rgba(238,238,238,0.871);
+    --color-site-footer: rgba(170,170,170,0.871);
+    --color-card: #262626;
+    --color-text: rgba(238,238,238,0.871);
+    --color-block: #434343;
+    --color-codeblock: #1f1f1f;
+    --color-inlinecode: #d56d28;
+    --color-h1: rgba(255,255,255,0.871);
+    --color-h2: rgba(255,255,255,0.871);
+    --color-h3: rgba(255,255,255,0.6);
+    --color-h4: rgba(255,255,255,0.6);
+    --color-h5: rgba(255,255,255,0.6);
+    --color-h6: rgba(255,255,255,0.6);
+    --color-p: rgba(217,217,217,0.871);
+    --color-list: rgba(217,217,217,0.871);
+    --color-list-hl: #69dfc4;
+    --color-meta: rgba(191,191,191,0.871);
+    --color-link: rgba(191,191,191,0.871);
+    --color-copyright-bkg: #21252b;
+  }
+  :root:not([color-scheme]) img {
+    filter: brightness(70%) !important;
+  }
+  :root:not([color-scheme]) .blur {
+    background: rgba(31,31,31,0.9) !important;
+  }
+  :root:not([color-scheme]) .white-box.blur {
+    background: rgba(38,38,38,0.9) !important;
+  }
+  :root:not([color-scheme]) .nav-main .u-search-input {
+    background: var(--color-card) !important;
+  }
+  :root:not([color-scheme]) #l_main .article .prev-next>a {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) #l_main .article .prev-next>a:hover {
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) .article blockquote {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .article-title a {
+    color: var(--color-h1) !important;
+  }
+  :root:not([color-scheme]) details>summary {
+    color: var(--color-p) !important;
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) details {
+    border: 1px solid var(--color-site-bg) !important;
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) #u-search .modal,
+  :root:not([color-scheme]) #u-search .modal-header,
+  :root:not([color-scheme]) #u-search .modal-body {
+    background: var(--color-card) !important;
+  }
+  :root:not([color-scheme]) #u-search .modal-body .modal-results .result:hover {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .u-search-input:hover {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .u-search-input:focus {
+    background: var(--color-site-body) !important;
+  }
+}
+[color-scheme='dark'] {
+  --color-site-body: #121212;
+  --color-read-bkg: #1f1f1f;
+  --color-read-post: #262626;
+  --color-site-bg: #1f1f1f;
+  --color-site-inner: rgba(238,238,238,0.871);
+  --color-site-footer: rgba(170,170,170,0.871);
+  --color-card: #262626;
+  --color-text: rgba(238,238,238,0.871);
+  --color-block: #434343;
+  --color-codeblock: #1f1f1f;
+  --color-inlinecode: #d56d28;
+  --color-h1: rgba(255,255,255,0.871);
+  --color-h2: rgba(255,255,255,0.871);
+  --color-h3: rgba(255,255,255,0.6);
+  --color-h4: rgba(255,255,255,0.6);
+  --color-h5: rgba(255,255,255,0.6);
+  --color-h6: rgba(255,255,255,0.6);
+  --color-p: rgba(217,217,217,0.871);
+  --color-list: rgba(217,217,217,0.871);
+  --color-list-hl: #69dfc4;
+  --color-meta: rgba(191,191,191,0.871);
+  --color-link: rgba(191,191,191,0.871);
+  --color-copyright-bkg: #21252b;
+}
+[color-scheme='dark'] img {
+  filter: brightness(70%) !important;
+}
+[color-scheme='dark'] .blur {
+  background: rgba(31,31,31,0.9) !important;
+}
+[color-scheme='dark'] .white-box.blur {
+  background: rgba(38,38,38,0.9) !important;
+}
+[color-scheme='dark'] .nav-main .u-search-input {
+  background: var(--color-card) !important;
+}
+[color-scheme='dark'] #l_main .article .prev-next>a {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] #l_main .article .prev-next>a:hover {
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] .article blockquote {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .article-title a {
+  color: var(--color-h1) !important;
+}
+[color-scheme='dark'] details>summary {
+  color: var(--color-p) !important;
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] details {
+  border: 1px solid var(--color-site-bg) !important;
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] #u-search .modal,
+[color-scheme='dark'] #u-search .modal-header,
+[color-scheme='dark'] #u-search .modal-body {
+  background: var(--color-card) !important;
+}
+[color-scheme='dark'] #u-search .modal-body .modal-results .result:hover {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .u-search-input:hover {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .u-search-input:focus {
+  background: var(--color-site-body) !important;
+}
+@media screen and (max-width: 500px) {
+  [color-scheme='dark'] .l_header .m_search {
+    background: var(--color-site-bg) !important;
+  }
+}
+@font-face {
+  font-family: 'UbuntuMono';
+  src: url("https://cdn.qoop.top/blog/volantis-static/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
+  font-weight: 'normal';
+  font-style: 'normal';
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Varela Round';
+  src: url("https://cdn.qoop.top/blog/volantis-static/media/fonts/VarelaRound/VarelaRound-Regular.ttf");
+  font-weight: 'normal';
+  font-style: 'normal';
+  font-display: swap;
+}
+.l_header {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  background: var(--color-card);
+  box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+}
+.l_header.auto {
+  transition: opacity 0.4s ease;
+  -webkit-transition: opacity 0.4s ease;
+  -khtml-transition: opacity 0.4s ease;
+  -moz-transition: opacity 0.4s ease;
+  -o-transition: opacity 0.4s ease;
+  -ms-transition: opacity 0.4s ease;
+  visibility: hidden;
+}
+.l_header.auto.show {
+  opacity: 1 !important;
+  -webkit-opacity: 1 !important;
+  -moz-opacity: 1 !important;
+  visibility: visible;
+}
+.l_header .container {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.l_header #wrapper {
+  height: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.l_header #wrapper .nav-main,
+.l_header #wrapper .nav-sub {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -khtml-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -khtml-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -o-justify-content: space-between;
+  -ms-justify-content: space-between;
+  align-items: center;
+}
+.l_header #wrapper .nav-main {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+.l_header #wrapper.sub .nav-main {
+  transform: translateY(-64px);
+  -webkit-transform: translateY(-64px);
+  -khtml-transform: translateY(-64px);
+  -moz-transform: translateY(-64px);
+  -o-transform: translateY(-64px);
+  -ms-transform: translateY(-64px);
+}
+.l_header #wrapper .nav-sub {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+  opacity: 0;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  height: 64px;
+  width: calc(100% - 2 * 16px);
+  position: absolute;
+}
+.l_header #wrapper .nav-sub ::-webkit-scrollbar {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+@media screen and (min-width: 2048px) {
+  .l_header #wrapper .nav-sub {
+    max-width: 55vw;
+    margin: auto;
+  }
+}
+.l_header #wrapper.sub .nav-sub {
+  opacity: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+}
+.l_header #wrapper .title {
+  position: relative;
+  color: var(--color-text);
+  padding-left: 24px;
+  max-height: 64px;
+}
+.l_header #wrapper .nav-main .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
+  line-height: 64px;
+  padding: 0 24px;
+  font-size: 1.25rem;
+  font-family: "LXGW WenKai", "Microsoft YaHei", Arial, Helvetica, monospace;
+}
+.l_header #wrapper .nav-main .title img {
+  height: 64px;
+}
+.l_header .nav-sub {
+  max-width: 1080px;
+  margin: auto;
+}
+.l_header .nav-sub .title {
+  font-weight: bold;
+  font-family: "LXGW WenKai", "Microsoft YaHei", Arial, Menlo, Monaco, monospace, sans-serif;
+  line-height: 1.2;
+  max-height: 64px;
+  white-space: normal;
+  flex-shrink: 1;
+}
+.l_header .switcher {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  line-height: 64px;
+  align-items: center;
+}
+.l_header .switcher .s-toc {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .l_header .switcher .s-toc {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: -ms-flexbox /* TWEENER - IE 10 */;
+    display: -webkit-flex /* NEW - Chrome */;
+    display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+    display: flex;
+  }
+}
+.l_header .switcher >li {
+  height: 48px;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+  margin: 2px;
+}
+@media screen and (max-width: 500px) {
+  .l_header .switcher >li {
+    margin: 0 1px;
+    height: 48px;
+  }
+}
+.l_header .switcher >li >a {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 0.85em 1.1em;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border: none;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+  color: #44d7b6;
+}
+.l_header .switcher >li >a:hover {
+  border: none;
+}
+.l_header .switcher >li >a.active,
+.l_header .switcher >li >a:active {
+  border: none;
+  background: var(--color-site-bg);
+}
+@media screen and (max-width: 500px) {
+  .l_header .switcher >li >a {
+    width: 36px;
+    height: 48px;
+  }
+}
+.l_header .nav-sub .switcher {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+}
+.l_header .m_search {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  height: 64px;
+  width: 240px;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+@media screen and (max-width: 1024px) {
+  .l_header .m_search {
+    width: 44px;
+    min-width: 44px;
+  }
+  .l_header .m_search input::placeholder {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  .l_header .m_search:hover {
+    width: 240px;
+  }
+  .l_header .m_search:hover input::placeholder {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@media screen and (min-width: 500px) {
+  .l_header .m_search:hover .input {
+    width: 100%;
+  }
+  .l_header .m_search:hover .input::placeholder {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@media screen and (max-width: 500px) {
+  .l_header .m_search {
+    min-width: 0;
+  }
+  .l_header .m_search input::placeholder {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+.l_header .m_search .form {
+  position: relative;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.l_header .m_search .icon {
+  position: absolute;
+  width: 36px;
+  left: 5px;
+  color: var(--color-meta);
+}
+@media screen and (max-width: 500px) {
+  .l_header .m_search .icon {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: none;
+  }
+}
+.l_header .m_search .input {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: 1.3;
+  width: 100%;
+  color: var(--color-text);
+  background: #fafafa;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding-left: 40px;
+  font-size: 0.875rem;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border: none;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+@media screen and (min-width: 500px) {
+  .l_header .m_search .input:focus {
+    box-shadow: 0 4px 8px 0px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 4px 8px 0px rgba(0,0,0,0.1);
+  }
+}
+@media screen and (max-width: 500px) {
+  .l_header .m_search .input {
+    background: var(--color-block);
+    padding-left: 8px;
+    border: none;
+  }
+  .l_header .m_search .input:hover,
+  .l_header .m_search .input:focus {
+    border: none;
+  }
+}
+@media (max-width: 500px) {
+  .l_header .m_search {
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+    background: #fff;
+    transition: all 0.28s ease;
+    -webkit-transition: all 0.28s ease;
+    -khtml-transition: all 0.28s ease;
+    -moz-transition: all 0.28s ease;
+    -o-transition: all 0.28s ease;
+    -ms-transition: all 0.28s ease;
+  }
+  .l_header .m_search .input {
+    border-radius: 32px;
+    -webkit-border-radius: 32px;
+    margin-left: 16px;
+    padding-left: 16px;
+  }
+  .l_header.z_search-open .m_search {
+    width: 100%;
+  }
+  .l_header.z_search-open .m_search .input {
+    width: calc(100% - 120px);
+  }
+}
+ul.m-pc >li>a {
+  color: inherit;
+  border-bottom: 2px solid transparent;
+}
+ul.m-pc >li>a:active,
+ul.m-pc >li>a.active {
+  border-bottom: 2px solid #44d7b6;
+}
+ul.m-pc li:hover >ul.list-v,
+ul.list-v li:hover >ul.list-v {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+}
+ul.nav-list-h {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: stretch;
+}
+ul.nav-list-h>li {
+  position: relative;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  height: 100%;
+  line-height: 2.4;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+ul.nav-list-h>li >a {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 600;
+}
+ul.list-v {
+  z-index: 1;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  position: absolute;
+  background: var(--color-card);
+  box-shadow: 0 2px 4px 0px rgba(0,0,0,0.08), 0 4px 8px 0px rgba(0,0,0,0.08), 0 8px 16px 0px rgba(0,0,0,0.08);
+  -webkit-box-shadow: 0 2px 4px 0px rgba(0,0,0,0.08), 0 4px 8px 0px rgba(0,0,0,0.08), 0 8px 16px 0px rgba(0,0,0,0.08);
+  margin-top: -6px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  padding: 8px 0;
+}
+ul.list-v.show {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+}
+ul.list-v hr {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+ul.list-v >li {
+  white-space: nowrap;
+  word-break: keep-all;
+}
+ul.list-v >li.header {
+  font-size: 0.78125rem;
+  font-weight: bold;
+  line-height: 2em;
+  color: var(--color-meta);
+  margin: 8px 16px 4px;
+}
+ul.list-v >li.header i {
+  margin-right: 8px;
+}
+ul.list-v >li ul {
+  margin-left: 0;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  margin-top: -40px;
+}
+ul.list-v .aplayer-container {
+  min-height: 64px;
+  padding: 6px 16px;
+}
+ul.list-v >li>a {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  color: var(--color-list);
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 36px;
+  padding: 0 20px 0 16px;
+  text-overflow: ellipsis;
+  margin: 0 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+@media screen and (max-width: 1024px) {
+  ul.list-v >li>a {
+    line-height: 40px;
+  }
+}
+ul.list-v >li>a >i {
+  margin-right: 8px;
+}
+ul.list-v >li>a:active,
+ul.list-v >li>a.active {
+  color: var(--color-list-hl);
+}
+ul.list-v >li>a:hover {
+  color: var(--color-list-hl);
+  background: var(--color-site-bg);
+}
+.l_header .menu >ul>li>a {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  padding: 0 8px;
+}
+.l_header .menu >ul>li>a >i {
+  margin-right: 4px;
+}
+.l_header ul.nav-list-h>li {
+  color: var(--color-list);
+  line-height: 64px;
+}
+.l_header ul.nav-list-h>li >a {
+  max-height: 64px;
+  overflow: hidden;
+  color: inherit;
+}
+.l_header ul.nav-list-h>li >a:active,
+.l_header ul.nav-list-h>li >a.active {
+  color: #44d7b6;
+}
+.l_header ul.nav-list-h>li:hover>a {
+  color: var(--color-list-hl);
+}
+.l_header ul.nav-list-h>li i.music {
+  animation: rotate-effect 1.5s linear infinite;
+  -webkit-animation: rotate-effect 1.5s linear infinite;
+  -khtml-animation: rotate-effect 1.5s linear infinite;
+  -moz-animation: rotate-effect 1.5s linear infinite;
+  -o-animation: rotate-effect 1.5s linear infinite;
+  -ms-animation: rotate-effect 1.5s linear infinite;
+}
+@-moz-keyframes rotate-effect {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -khtml-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -khtml-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate-effect {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -khtml-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -khtml-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+@-o-keyframes rotate-effect {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -khtml-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -khtml-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+@keyframes rotate-effect {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -khtml-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -khtml-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+.menu-phone li ul.list-v {
+  right: calc(100% - 0.5 * 16px);
+}
+.menu-phone li ul.list-v ul {
+  right: calc(100% - 0.5 * 16px);
+}
+#wrapper {
+  max-width: 1080px;
+  margin: auto;
+}
+@media screen and (min-width: 2048px) {
+  #wrapper {
+    max-width: 55vw;
+  }
+}
+#wrapper .menu {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+  margin: 0 16px 0 0;
+}
+#wrapper .menu .list-v ul {
+  left: calc(100% - 0.5 * 16px);
+}
+.menu-phone {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  margin-top: 16px;
+  right: 8px;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+.menu-phone ul {
+  right: calc(100% - 0.5 * 16px);
+}
+@media screen and (max-width: 500px) {
+  .menu-phone {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: block;
+  }
+}
+.l_header {
+  max-width: 65vw;
+  left: calc((100% - 65vw) * 0.5);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+@media screen and (max-width: 2048px) {
+  .l_header {
+    max-width: 1112px;
+    left: calc((100% - 1112px) * 0.5);
+  }
+}
+@media screen and (max-width: 1112px) {
+  .l_header {
+    left: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .l_header .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .l_header #wrapper .nav-main .title {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .l_header #wrapper .nav-sub {
+    width: 100%;
+  }
+  .l_header #wrapper .nav-sub .title {
+    overflow-y: scroll;
+    margin-top: 2px;
+    padding: 8px 16px;
+  }
+  .l_header #wrapper .switcher {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: -ms-flexbox /* TWEENER - IE 10 */;
+    display: -webkit-flex /* NEW - Chrome */;
+    display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+    display: flex;
+    margin-right: 8px;
+  }
+  .l_header .menu {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .list-v li {
+    max-width: 270px;
+  }
+}
+#u-search {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 60px 20px;
+  z-index: 1001;
+}
+@media screen and (max-width: 680px) {
+  #u-search {
+    padding: 0px;
+  }
+}
+@media screen and (prefers-color-scheme: dark) and (max-width: 500px) {
+  .l_header .m_search {
+    background: var(--color-site-bg) !important;
+  }
+}
+
+  </style>
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+    <script>
+      let userColorScheme=localStorage.getItem("color-scheme")
+      if(userColorScheme){
+        document.documentElement.setAttribute("color-scheme", userColorScheme);
+      }
+    </script>
+  
+<script>
+if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
+    document.write(
+	'<style>'+
+		'html{'+
+			'overflow-x: hidden !important;'+
+			'overflow-y: hidden !important;'+
+		'}'+
+		'.kill-ie{'+
+			'text-align:center;'+
+			'height: 100%;'+
+			'margin-top: 15%;'+
+			'margin-bottom: 5500%;'+
+		'}'+
+    '.kill-t{'+
+      'font-size: 2rem;'+
+    '}'+
+    '.kill-c{'+
+      'font-size: 1.2rem;'+
+    '}'+
+		'#l_header,#l_body{'+
+			'display: none;'+
+		'}'+
+	'</style>'+
+    '<div class="kill-ie">'+
+        `<span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>`+
+        `<span class="kill-c">微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</span><br/>`+
+        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>了解详情 ></strong></a>`+
+    '</div>');
+</script>
+
+
+<noscript>
+	<style>
+		html{
+			overflow-x: hidden !important;
+			overflow-y: hidden !important;
+		}
+		.kill-noscript{
+			text-align:center;
+			height: 100%;
+			margin-top: 15%;
+			margin-bottom: 5500%;
+		}
+    .kill-t{
+      font-size: 2rem;
+    }
+    .kill-c{
+      font-size: 1.2rem;
+    }
+		#l_header,#l_body{
+			display: none;
+		}
+	</style>
+    <div class="kill-noscript">
+        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>
+        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+    </div>
+</noscript>
+
+
+  <script>
+  /************这个文件存放不需要重载的全局变量和全局函数*********/
+  window.volantis = {}; // volantis 全局变量
+  volantis.debug = "env"; // 调试模式
+  volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
+
+  volantis.GLOBAL_CONFIG ={
+    debug: "env",
+    cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
+    default: {"avatar":"https://cdn.qoop.top/blog/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://cdn.qoop.top/blog/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://cdn.qoop.top/blog/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://cdn.qoop.top/blog/volantis-static/media/placeholder/image/2659360.svg"},
+    lastupdate: new Date(1770911527988),
+    sidebar: {
+      for_page: ["blogger","webinfo","category","tagcloud","music"],
+      for_post: ["toc","music"],
+      webinfo: {
+        lastupd: {
+          enable: true,
+          friendlyShow: true
+        },
+        runtime: {
+          data: "2020/01/01",
+          unit: "天"
+        }
+      }
+    },
+    plugins: {
+      message: {"enable":true,"css":"https://cdn.qoop.top/blog/volantis-static/libs/izitoast/dist/css/iziToast.min.css","js":"https://cdn.qoop.top/blog/volantis-static/libs/izitoast/dist/js/iziToast.min.js","icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
+      fancybox: {"css":"https://cdn.qoop.top/blog/volantis-static/libs/@fancyapps/ui/dist/fancybox.css","js":"https://cdn.qoop.top/blog/volantis-static/libs/@fancyapps/ui/dist/fancybox.umd.js"},
+      
+      aplayer: {
+        id: 6559921027,
+        enable:true
+      },
+      
+      
+      
+      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","menus.link","hr","menus.darkMode","plugins.articlePage","music"],"options":{"iconPrefix":"fa-solid","articleShowLink":true,"musicAlwaysShow":true},"plugins":{"navigation":[{"id":"left","name":"转到上一页","icon":"fa-solid fa-arrow-left","event":"history.back()","group":"navigation"},{"id":"right","name":"转到下一页","icon":"fa-solid fa-arrow-right","event":"history.forward()","group":"navigation"},{"id":"redo","name":"刷新当前页面","icon":"fa-solid fa-redo","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到顶部","icon":"fa-solid fa-arrow-up","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"粘贴文本","icon":"fa-solid fa-paste","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全选文本","icon":"fa-solid fa-object-ungroup","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪切文本","icon":"fa-solid fa-cut","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"复制文本","icon":"fa-solid fa-copy","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站内搜索","icon":"fa-solid fa-search","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"bingSearch","name":"必应搜索","icon":"fa-solid fa-search","event":"window.open(`https://cn.bing.com/search?q=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"新标签页打开","icon":"fa-solid fa-external-link-square-alt","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"复制链接地址","icon":"fa-solid fa-link","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"copyImg","name":"复制图片","icon":"fa-solid fa-image","event":"copyImg","group":"elementImage"},{"id":"googleImg","name":"谷歌识图","icon":"fa-solid fa-images","event":"window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"打印页面","icon":"fa-solid fa-print","event":"printMode","group":"articlePage"},{"id":"readMode","name":"阅读模式","icon":"fa-solid fa-book-open","event":"readMode","group":"articlePage"}]},"menus":{"link":["hr"],"darkMode":[{"id":"darkMode","name":"暗黑模式","icon":"fa-solid fa-moon","event":"volantis.dark.toggle()","group":"darkMode"}]}}
+      
+    }
+  }
+
+  /******************** volantis.EventListener ********************************/
+  // 事件监听器 see: /source/js/app.js
+  volantis.EventListener = {}
+  // 这里存放pjax切换页面时将被移除的事件监听器
+  volantis.EventListener.list = []
+  //构造方法
+  function volantisEventListener(type, f, ele) {
+    this.type = type
+    this.f = f
+    this.ele = ele
+  }
+  // 移除事件监听器
+  volantis.EventListener.remove = () => {
+    volantis.EventListener.list.forEach(function (i) {
+      i.ele.removeEventListener(i.type, i.f, false)
+    })
+    volantis.EventListener.list = []
+  }
+  /******************** volantis.dom.$ ********************************/
+  // 注：这里没有选择器，也没有forEach一次只处理一个dom，这里重新封装主题常用的dom方法，返回的是dom对象，对象包含了以下方法，同时保留dom的原生API
+  function volantisDom(ele) {
+    if (!ele) ele = document.createElement("div")
+    this.ele = ele;
+    // ==============================================================
+    this.ele.find = (c) => {
+      let q = this.ele.querySelector(c)
+      if (q)
+        return new volantisDom(q)
+    }
+    // ==============================================================
+    this.ele.hasClass = (c) => {
+      return this.ele.className.match(new RegExp('(\\s|^)' + c + '(\\s|$)'));
+    }
+    this.ele.addClass = (c) => {
+      this.ele.classList.add(c);
+      return this.ele
+    }
+    this.ele.removeClass = (c) => {
+      this.ele.classList.remove(c);
+      return this.ele
+    }
+    this.ele.toggleClass = (c) => {
+      if (this.ele.hasClass(c)) {
+        this.ele.removeClass(c)
+      } else {
+        this.ele.addClass(c)
+      }
+      return this.ele
+    }
+    // ==============================================================
+    // 参数 r 为 true 表示pjax切换页面时事件监听器将被移除，false不移除
+    this.ele.on = (c, f, r = 1) => {
+      this.ele.addEventListener(c, f, false)
+      if (r) {
+        volantis.EventListener.list.push(new volantisEventListener(c, f, this.ele))
+      }
+      return this.ele
+    }
+    this.ele.click = (f, r) => {
+      this.ele.on("click", f, r)
+      return this.ele
+    }
+    this.ele.scroll = (f, r) => {
+      this.ele.on("scroll", f, r)
+      return this.ele
+    }
+    // ==============================================================
+    this.ele.html = (c) => {
+      // if(c=== undefined){
+      //   return this.ele.innerHTML
+      // }else{
+      this.ele.innerHTML = c
+      return this.ele
+      // }
+    }
+    // ==============================================================
+    this.ele.hide = (c) => {
+      this.ele.style.display = "none"
+      return this.ele
+    }
+    this.ele.show = (c) => {
+      this.ele.style.display = "block"
+      return this.ele
+    }
+    // ==============================================================
+    return this.ele
+  }
+  volantis.dom.$ = (ele) => {
+    return !!ele ? new volantisDom(ele) : null;
+  }
+  /******************** RunItem ********************************/
+  function RunItem() {
+    this.list = []; // 存放回调函数
+    this.start = () => {
+      for (var i = 0; i < this.list.length; i++) {
+        this.list[i].run();
+      }
+    };
+    this.push = (fn, name, setRequestAnimationFrame = true) => {
+      let myfn = fn
+      if (setRequestAnimationFrame) {
+        myfn = ()=>{
+          volantis.requestAnimationFrame(fn)
+        }
+      }
+      var f = new Item(myfn, name);
+      this.list.push(f);
+    };
+    this.remove = (name) =>{
+      for (let index = 0; index < this.list.length; index++) {
+        const e = this.list[index];
+        if (e.name == name) {
+          this.list.splice(index,1);
+        }
+      }
+    }
+    // 构造一个可以run的对象
+    function Item(fn, name) {
+      // 函数名称
+      this.name = name || fn.name;
+      // run方法
+      this.run = () => {
+        try {
+          fn()
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    }
+  }
+  /******************** Pjax ********************************/
+  // /layout/_plugins/pjax/index.ejs
+  // volantis.pjax.send(callBack[,"callBackName"]) 传入pjax:send回调函数
+  // volantis.pjax.push(callBack[,"callBackName"]) 传入pjax:complete回调函数
+  // volantis.pjax.error(callBack[,"callBackName"]) 传入pjax:error回调函数
+  volantis.pjax = {};
+  volantis.pjax.method = {
+    complete: new RunItem(),
+    error: new RunItem(),
+    send: new RunItem(),
+  };
+  volantis.pjax = Object.assign(volantis.pjax, {
+    push: volantis.pjax.method.complete.push,
+    error: volantis.pjax.method.error.push,
+    send: volantis.pjax.method.send.push,
+  });
+  /******************** RightMenu ********************************/
+  // volantis.rightmenu.handle(callBack[,"callBackName"]) 外部菜单项控制
+  // 可在 volantis.mouseEvent 处获取右键事件
+  volantis.rightmenu = {};
+  volantis.rightmenu.method = {
+    handle: new RunItem(),
+  }
+  volantis.rightmenu = Object.assign(volantis.rightmenu, {
+    handle: volantis.rightmenu.method.handle.push,
+  });
+  /********************  Dark Mode  ********************************/
+  // /layout/_partial/scripts/darkmode.ejs
+  // volantis.dark.mode 当前模式 dark or light
+  // volantis.dark.toggle() 暗黑模式触发器
+  // volantis.dark.push(callBack[,"callBackName"]) 传入触发器回调函数
+  volantis.dark = {};
+  volantis.dark.method = {
+    toggle: new RunItem(),
+  };
+  volantis.dark = Object.assign(volantis.dark, {
+    push: volantis.dark.method.toggle.push,
+  });
+  /********************  Message  ********************************/
+  // VolantisApp.message
+  /********************  isMobile  ********************************/
+  // /source/js/app.js
+  // volantis.isMobile
+  // volantis.isMobileOld
+  /********************脚本动态加载函数********************************/
+  // volantis.js(src, cb)  cb 可以传入onload回调函数 或者 JSON对象 例如: volantis.js("src", ()=>{}) 或 volantis.js("src", {defer:true,onload:()=>{}})
+  // volantis.css(src)
+
+  // 返回Promise对象，如下方法同步加载资源，这利于处理文件资源之间的依赖关系，例如：APlayer 需要在 MetingJS 之前加载
+  // (async () => {
+  //     await volantis.js("...theme.plugins.aplayer.js.aplayer...")
+  //     await volantis.js("...theme.plugins.aplayer.js.meting...")
+  // })();
+
+  // 已经加入了setTimeout
+  volantis.js = (src, cb) => {
+    return new Promise(resolve => {
+      setTimeout(function () {
+        var HEAD = document.getElementsByTagName("head")[0] || document.documentElement;
+        var script = document.createElement("script");
+        script.setAttribute("type", "text/javascript");
+        if (cb) {
+          if (JSON.stringify(cb)) {
+            for (let p in cb) {
+              if (p == "onload") {
+                script[p] = () => {
+                  cb[p]()
+                  resolve()
+                }
+              } else {
+                script[p] = cb[p]
+                script.onload = resolve
+              }
+            }
+          } else {
+            script.onload = () => {
+              cb()
+              resolve()
+            };
+          }
+        } else {
+          script.onload = resolve
+        }
+        script.setAttribute("src", src);
+        HEAD.appendChild(script);
+      });
+    });
+  }
+  volantis.css = (src) => {
+    return new Promise(resolve => {
+      setTimeout(function () {
+        var link = document.createElement('link');
+        link.rel = "stylesheet";
+        link.href = src;
+        link.onload = resolve;
+        document.getElementsByTagName("head")[0].appendChild(link);
+      });
+    });
+  }
+  /********************按需加载的插件********************************/
+  // volantis.import.jQuery().then(()=>{})
+  volantis.import = {
+    jQuery: () => {
+      if (typeof jQuery == "undefined") {
+        return volantis.js("https://cdn.qoop.top/blog/volantis-static/libs/jquery/dist/jquery.min.js")
+      } else {
+        return new Promise(resolve => {
+          resolve()
+        });
+      }
+    }
+  }
+  /********************** requestAnimationFrame ********************************/
+  // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  volantis.requestAnimationFrame = (fn)=>{
+    if (!window.requestAnimationFrame) {
+      window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
+    }
+    window.requestAnimationFrame(fn)
+  }
+  /************************ layoutHelper *****************************************/
+  volantis.layoutHelper = (helper, html, opt)=>{
+    opt = Object.assign({clean:false, pjax:true}, opt)
+    function myhelper(helper, html, clean) {
+      volantis.tempDiv = document.createElement("div");
+      volantis.tempDiv.innerHTML = html;
+      let layoutHelper = document.querySelector("#layoutHelper-"+helper)
+      if (layoutHelper) {
+        if (clean) {
+          layoutHelper.innerHTML = ""
+        }
+        layoutHelper.append(volantis.tempDiv);
+      }
+    }
+    myhelper(helper, html, opt.clean)
+    if (opt.pjax) {
+      volantis.pjax.push(()=>{
+        myhelper(helper, html, opt.clean)
+      },"layoutHelper-"+helper)
+    }
+  }
+  /****************************** 滚动事件处理 ****************************************/
+  volantis.scroll = {
+    engine: new RunItem(),
+    unengine: new RunItem(),
+  };
+  volantis.scroll = Object.assign(volantis.scroll, {
+    push: volantis.scroll.engine.push,
+  });
+  // 滚动条距离顶部的距离
+  volantis.scroll.getScrollTop = () =>{
+    let scrollPos;
+    if (window.pageYOffset) {
+      scrollPos = window.pageYOffset;
+    } else if (document.compatMode && document.compatMode != 'BackCompat') {
+      scrollPos = document.documentElement.scrollTop;
+    } else if (document.body) {
+      scrollPos = document.body.scrollTop;
+    }
+    return scrollPos;
+  }
+  // 使用 requestAnimationFrame 处理滚动事件
+  // `volantis.scroll.del` 中存储了一个数值, 该数值检测一定时间间隔内滚动条滚动的位移, 数值的检测频率是浏览器的刷新频率. 数值为正数时, 表示向下滚动. 数值为负数时, 表示向上滚动.
+  volantis.scroll.handleScrollEvents = () => {
+    volantis.scroll.lastScrollTop = volantis.scroll.getScrollTop()
+    function loop() {
+      const scrollTop = volantis.scroll.getScrollTop();
+      if (volantis.scroll.lastScrollTop !== scrollTop) {
+        volantis.scroll.del = scrollTop - volantis.scroll.lastScrollTop;
+        volantis.scroll.lastScrollTop = scrollTop;
+        // if (volantis.scroll.del > 0) {
+        //   console.log("向下滚动");
+        // } else {
+        //   console.log("向上滚动");
+        // }
+        // 注销过期的unengine未滚动事件
+        volantis.scroll.unengine.list=[]
+        volantis.scroll.engine.start();
+      }else{
+        volantis.scroll.unengine.start();
+      }
+      volantis.requestAnimationFrame(loop)
+    }
+    volantis.requestAnimationFrame(loop)
+  }
+  volantis.scroll.handleScrollEvents()
+  volantis.scroll.ele = null;
+  // 触发页面滚动至目标元素位置
+  volantis.scroll.to = (ele, option = {}) => {
+    if (!ele) return;
+    volantis.scroll.ele = ele;
+    // 默认配置
+    opt = {
+      top: ele.getBoundingClientRect().top + document.documentElement.scrollTop,
+      behavior: "smooth"
+    }
+    // 定义配置
+    if ("top" in option) {
+      opt.top = option.top
+    }
+    if ("behavior" in option) {
+      opt.behavior = option.behavior
+    }
+    if ("addTop" in option) {
+      opt.top += option.addTop
+    }
+    if (!("observerDic" in option)) {
+      option.observerDic = 100
+    }
+    // 滚动
+    window.scrollTo(opt);
+    // 监视器
+    // 监视并矫正元素滚动到指定位置
+    // 用于处理 lazyload 引起的 cls 导致的定位失败问题
+    // option.observer = false
+    if (option.observer) {
+      setTimeout(() => {
+        if (volantis.scroll.ele != ele) {
+          return
+        }
+        volantis.scroll.unengine.push(() => {
+          let me = ele.getBoundingClientRect().top
+          if(!(me >= -option.observerDic && me <= option.observerDic)){
+            volantis.scroll.to(ele, option)
+          }
+          volantis.scroll.unengine.remove("unengineObserver")
+        },"unengineObserver")
+      },1000)
+    }
+  }
+  /********************** Content Visibility ********************************/
+  // 见 source/css/first.styl 如果遇到任何问题 删除 .post-story 即可
+  // 一个元素被声明 content-visibility 属性后 如果元素不在 viewport 中 浏览器不会计算其后代元素样式和属性 从而节省 Style & Layout 耗时
+  // content-visibility 的副作用: 锚点失效 等等(实验初期 暂不明确), 使用此方法清除样式
+  volantis.cleanContentVisibility = ()=>{
+    if (document.querySelector(".post-story")) {
+      console.log("cleanContentVisibility");
+      document.querySelectorAll(".post-story").forEach(e=>{
+        e.classList.remove("post-story")
+      })
+    }
+  }
+  /******************************************************************************/
+  /******************************************************************************/
+  /******************************************************************************/
+  //图像加载出错时的处理
+  function errorImgAvatar(img) {
+    img.src = "https://cdn.qoop.top/blog/volantis-static/media/placeholder/avatar/round/3442075.svg";
+    img.onerror = null;
+  }
+  function errorImgCover(img) {
+    img.src = "https://cdn.qoop.top/blog/volantis-static/media/placeholder/cover/76b86c0226ffd.svg";
+    img.onerror = null;
+  }
+  /******************************************************************************/
+</script>
+
+  <!-- import head_end begin -->
+  <!-- import head_end end -->
+  <!-- Custom Files headEnd begin-->
+  
+  <!-- Custom Files headEnd end-->
+  <!-- front-matter head_end begin -->
+  <!-- front-matter head_end end -->
+</head>
+  <body itemscope itemtype="http://schema.org/WebPage">
+    <!-- import body_begin begin-->
+    <!-- import body_begin end-->
+    <!-- Custom Files bodyBegin begin-->
+    
+    <!-- Custom Files bodyBegin end-->
+    <!-- front-matter body_begin begin -->
+    <!-- front-matter body_begin end -->
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
+        
+          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+            Fuxxの博客
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/" title="首页"
+                  
+                  
+                  
+                    active-action="action-home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="归档"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/friends/" title="友链"
+                  
+                  
+                  
+                    active-action="action-friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/about/" title="关于"
+                  
+                  
+                  
+                    active-action="action-about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+      
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fa-solid fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+      
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;" title="search"></a></li>
+				
+				<li>
+          <a class="s-menu fa-solid fa-bars fa-fw" target="_self" href="/" onclick="return false;" title="menu"></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/" title="首页"
+                  
+                  
+                  
+                    active-action="action-home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="归档"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/friends/" title="友链"
+                  
+                  
+                  
+                    active-action="action-friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/about/" title="关于"
+                  
+                  
+                  
+                    active-action="action-about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+
+      <!-- Custom Files header begin -->
+      
+      <!-- Custom Files header end -->
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+      <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
+      <div id="none" class='cover-wrapper post search' style="display: none;">
+        
+  <div id="parallax-window"></div>
+
+<div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">Fuxxの博客</p>
+    
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="Start with search" />
+          <i class="icon fa-solid fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/categories/"
+              
+              
+              active-action="action-categories">
+              <i class='fas fa-folder-open fa-fw'></i><p>分类</p>
+            </a>
+          
+            <a href="/tags/"
+              
+              
+              active-action="action-tags">
+              <i class='fas fa-tags fa-fw'></i><p>标签</p>
+            </a>
+          
+            <a href="/archives/"
+              
+              
+              active-action="action-archives">
+              <i class='fas fa-archive fa-fw'></i><p>归档</p>
+            </a>
+          
+            <a href="/friends/"
+              
+              
+              active-action="action-friends">
+              <i class='fas fa-link fa-fw'></i><p>友链</p>
+            </a>
+          
+            <a href="/about/"
+              
+              
+              active-action="action-about">
+              <i class='fas fa-info-circle fa-fw'></i><p>关于</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+      </div>
+    
+  
+</div>
+
+      <div id="safearea">
+        <div class="body-wrapper">
+          
+<div id="l_main" class=''>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://blog.newimg.ltd/2023/06/28/NetSecurity/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Fuxxの博客">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Fuxxの博客">
+    <meta itemprop="description" content="Fuxx-1">
+  </span>
+  
+
+
+  
+    <span hidden>
+      <meta itemprop="image" content="https://cdn.qoop.top/blog/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title" itemprop="name headline">
+        期末网安
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/about/" rel="nofollow">
+    <img itemprop="image" src="https://gcore.jsdelivr.net/gh/Fuxx-1/StaticFile@main/Files/img/avatar/avatar.webp" class="lazyload placeholder" data-srcset="https://gcore.jsdelivr.net/gh/Fuxx-1/StaticFile@main/Files/img/avatar/avatar.webp" srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg">
+    <p itemprop="name">Fuxx-1</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/review/">review</a><span class="sep"></span><a class="category-link" href="/categories/review/general/">general</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/review/" itemprop="url"><span itemprop="name">review</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/review/general/" itemprop="url"><span itemprop="name">general</span></a>
+      </span>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-06-28T00:00:00+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年6月28日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+<div class="new-meta-item browse">
+  <a class='notlink'>
+    <p>
+      <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
+      
+      <span id="lc-pv" data-title="期末网安" data-path="/2023/06/28/NetSecurity/">
+        <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
+      </span>
+      
+      <span>次浏览</span>
+    </p>
+  </a>
+</div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h3 id="计算机安全的定义"><a href="#计算机安全的定义" class="headerlink" title="计算机安全的定义"></a>计算机安全的定义</h3><p>对某个自动化信息系统的保护措施，其目的在于实现信息系统资源的完整性、可用性及机密。</p>
+<h4 id="相关性质："><a href="#相关性质：" class="headerlink" title="相关性质："></a>相关性质：</h4><ul>
+<li>机密性：保护个人隐私信息，防止非授权泄漏<ul>
+<li>数据机密性：保证私有的或机密的信息不泄漏给非授权用户</li>
+<li>隐私性：保证个人可以控制和影响与之相关的信息（即个人隐私）</li>
+</ul>
+</li>
+<li>完整性：防范不当修改和破坏，保证信息的认证与授权<ul>
+<li>数据完整性：保证信息和代码只能以某种特定的授权方式更改</li>
+<li>系统完整性：系统能够实现预期功能，不被故意或偶然的非授权操作控制</li>
+</ul>
+</li>
+<li>可用性：保证及时且可靠地获取和使用信息</li>
+<li>真实性：可以被验证和信任的属性，来源可信性。即验证使用者身份、以及系统信号来自可靠信息源</li>
+<li>可计量性：每个实体行为可以被唯一地溯源，非否认、告警、错误隔离、入侵检测、错误恢复等</li>
+</ul>
+<blockquote>
+<p>安全威胁违反安全性的例子</p>
+</blockquote>
+<pre><code>1️⃣ 用户A向B传递了文件，该文件中包含了敏感的数据：比如合同标的。C通过监视该传输过程截取了文件副本。
+2️⃣一个雇员被解雇而没有通知大家，人事经理向服务器发出了删除该雇员账号的要求。但该消息被雇员截获，并使之能延迟足够长时间。以便能够最后访问服务器获取敏感信息。然后再转发该息。
+3️⃣某网络管理员D在其管理下向一台计算机E传递一条消息，指示E更新一个授权文件，该文件包含了一些能够访问该机的用户Id。F截获了该消息，进行了删改并传给E。E以为来自于D从而接受并更新了授权文件。
+4️⃣用户F没有中途阻止某消息，而是直接构造了自己希望内容的消息，好像该消息来自于D。E接受并更改了授权文件
+5️⃣ 一个客户向代理商发出带有多个交易指示的消息。随后该投资跌值，而该客户不承认发出过该消息
+</code></pre>
+<h3 id="端到端通信和点到点通信"><a href="#端到端通信和点到点通信" class="headerlink" title="端到端通信和点到点通信"></a>端到端通信和点到点通信</h3><h4 id="点到点通信"><a href="#点到点通信" class="headerlink" title="点到点通信"></a>点到点通信</h4><p>物理层、数据链路层和网络层是面向网络通信的低三层，为网络环境中的主机提供点对点通信服务。点到点通信并不能保证数据传输的可靠性，也不能说明源主机与目的主机之间是哪两个进程在通信。</p>
+<h4 id="端到端通信"><a href="#端到端通信" class="headerlink" title="端到端通信"></a>端到端通信</h4><p>端到端通信完成应用程序（进程）之间的通信。OSI 参考模型中的传输层功能的裨是最终完成端到端的可靠连接。“端”是指用户应用程序的“端口”。</p>
+<h3 id="TCP-协议五元组？"><a href="#TCP-协议五元组？" class="headerlink" title="TCP 协议五元组？"></a>TCP 协议五元组？</h3><p>TCP 协议的五元组是指由源 IP 地址、目的 IP 地址、源端口号、目的端口号和传输协议类型这五个值组成的标识一个 TCP 连接的唯一标识符。</p>
+<h3 id="被动攻击"><a href="#被动攻击" class="headerlink" title="被动攻击"></a>被动攻击</h3><table>
+<thead>
+<tr>
+<th align="center">概念</th>
+<th align="center">特征</th>
+<th align="center">对策</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">攻击者只是窃听或监视数据传输，目标是获取传输的数据信息。常见的有消息内容泄漏和流量分析。</td>
+<td align="center">难以检测，不改变数据及通信</td>
+<td align="center">防范而非检测</td>
+</tr>
+</tbody></table>
+<h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><ul>
+<li>消息内容泄露攻击<ul>
+<li>电话交谈、电子邮件消息和传输文件中都有可能包含敏感或机密信息</li>
+</ul>
+</li>
+<li>流量分析攻击<ul>
+<li>攻击者对观察到的信息进行分析，推测出消息内容</li>
+</ul>
+</li>
+</ul>
+<p>被动攻击非常难以检测，因其不改变数据。对付被动攻击的重点是防范而不是检测</p>
+<img src="https://cdn.newimg.ltd/img/202306271459034.png" class="lazyload placeholder" data-srcset="https://cdn.newimg.ltd/img/202306271459034.png" srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg">
+
+<h3 id="主动攻击"><a href="#主动攻击" class="headerlink" title="主动攻击"></a>主动攻击</h3><table>
+<thead>
+<tr>
+<th align="center">概念</th>
+<th align="center">特征</th>
+<th align="center">对策</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">数据流的改写及错误数据流的添加。包括假冒（伪装）、重放、篡改消息、拒绝服务。试图改变系统资源或影响系统操作。</td>
+<td align="center">易于检测防范困难</td>
+<td align="center">物理保护、检测以防范</td>
+</tr>
+</tbody></table>
+<ul>
+<li>假冒（伪装）<ul>
+<li>发生在一个实体假冒成另一个实体的场合。</li>
+</ul>
+</li>
+<li>重放<ul>
+<li>涉及被动获取数据单元并按照它之前的顺序重新传输，由此产生一个非授权效应。</li>
+</ul>
+</li>
+<li>篡改消息<ul>
+<li>合法消息的某些部分被篡改，或者消息被延迟、被重排，从而产生一个非授权效应。e.g.，一条含义为“允许 John Smith 读取机密文件 accounts”的消息被篡改为“允许 Fred Brown 读机密文件 accounts”</li>
+</ul>
+</li>
+<li>拒绝服务<ul>
+<li>可以阻止或禁止对通信设备的正常使用和管理。</li>
+</ul>
+</li>
+</ul>
+<h3 id="网络访问安全模型"><a href="#网络访问安全模型" class="headerlink" title="网络访问安全模型"></a>网络访问安全模型</h3><p><img src="https://cdn.newimg.ltd/img/202306271503073.png" class="lazyload placeholder" data-srcset="https://cdn.newimg.ltd/img/202306271503073.png" srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg" alt="image.png"></p>
+<p>解决有害访问的安全机制包含：<br>（1）看门人功能。如基于口令的登录过程<br>（2）逻辑屏蔽。设计检测和拒绝蠕虫、病毒以及类似攻击。</p>
+<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><h3 id="传统加密"><a href="#传统加密" class="headerlink" title="传统加密"></a>传统加密</h3><p>传统加密的原理：取代和置换<br>取代(Substitution)：将明文集中每个元素映射为另外一个元素。<br>置换(Permutation)：重新排列明文中每个元素<br>求积密文：以上二者结合</p>
+<p>一般的数据加密模型</p>
+<p><img src="https://cdn.newimg.ltd/img/202306271510448.png" class="lazyload placeholder" data-srcset="https://cdn.newimg.ltd/img/202306271510448.png" srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg" alt="image.png"></p>
+<p>加密的目的：<br>通过将消息编码或隐藏使其不可读，从而保护机密性</p>
+<p>同一个密钥可以同时用作信息的加密和解密，这种加密方法称为对称加密，也称为单密钥加密<br>一个对称加密方案由 5 部分组成：</p>
+<ul>
+<li>明文(plaintext)<ul>
+<li>原始消息或数据，作为算法的输入，任何人可解读。</li>
+</ul>
+</li>
+<li>加密算法(encryption algorithm)<ul>
+<li>变换函数，对明文进行各种取代和变换。</li>
+</ul>
+</li>
+<li>密钥(secret key)<ul>
+<li>密钥也是算法的输入，参与变换的参数，算法进行的具体替换和转换取决于这个密钥</li>
+</ul>
+</li>
+<li>密文(ciphertext)<ul>
+<li>产生的已被打乱的消息输出，取决于明文和密钥，对于一个给定的消息，两个不同的密钥会产生两个不同的密文</li>
+</ul>
+</li>
+<li>解密算法(decryption algorithm)<ul>
+<li>本质是加密算法的逆变换，输入密文，输出明文</li>
+</ul>
+</li>
+</ul>
+<p>明文 X 用加密算法 E 和加密密钥 Ke 得到密文 Y&#x3D;E(Ke ,X)。在传送过程中可能出现密文截取者。到了收端，利用解密算法 D 和解密密钥 Kd，解出明文为 D(Kd , Y)&#x3D;D(Kd , E(Ke , X))&#x3D;X。截取者又称为攻击者或入侵者。<br>对称加密的安全使用有如下两个要求：<br>(1)需要一个强加密算法；<br>(2)发送者和接收者必须通过一个安全的方式获得密钥且保证密钥安全。<br>对称加密的安全取决于密钥的保密性而非算法的保密性。</p>
+<h3 id="Feistel-密码结构"><a href="#Feistel-密码结构" class="headerlink" title="*Feistel 密码结构"></a>*Feistel 密码结构</h3><p>实际中，我们需要加密，也需要解密。因此，有两种方法：<br>1、定义每个替换、置换的逆，这样增加了复杂度<br>2、定义一种结构，容易求逆，这样可以使用基本的相同编码或硬件用于加密和解密<br>Horst Feistel（working at IBM Thomas J Watson Research Labs ）于 1973 年，提出了基于可逆乘积加密器，即现在大部分对称分组密码算法的核心 Feistel Cipher 。</p>
+<img src="https://cdn.newimg.ltd/img/202306271515029.png" class="lazyload placeholder" data-srcset="https://cdn.newimg.ltd/img/202306271515029.png" srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg" width="300px">
+
+<p>算法输入为长度 2W 的明文块和密钥 K，执行 N 轮循环处理,每次循环的输入取决于上一轮的输出<br>将输入分组分成左 Li-1 和右 Ri-1 两部分<br>变换是在密码的第 n 轮只使用 Ri-1 和子密钥 Ki<br>对左半部数据执行替代操作(substitution)；将右半部数据和子密钥应用函数 F，其输出与左一半做异或，作为下轮的右半部分<br>最后将这两部分进行互换(permutation swapping)</p>
+<img src="https://cdn.newimg.ltd/img/202306271517651.png" class="lazyload placeholder" data-srcset="https://cdn.newimg.ltd/img/202306271517651.png" srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg" width="400px">
+<img src="https://cdn.newimg.ltd/img/202306271517115.png" class="lazyload placeholder" data-srcset="https://cdn.newimg.ltd/img/202306271517115.png" srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg" width="400px">
+
+<img src="https://cdn.newimg.ltd/img/202306271521647.png" class="lazyload placeholder" data-srcset="https://cdn.newimg.ltd/img/202306271521647.png" srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg" width="400px">
+
+<h3 id="Feistel-Cipher-的设计问题"><a href="#Feistel-Cipher-的设计问题" class="headerlink" title="*Feistel Cipher 的设计问题"></a>*Feistel Cipher 的设计问题</h3><p>对称分组密码的具体操作取决于以下参数和设计属性：</p>
+<ol>
+<li>分组大小(block size)：越大的分组意味着越高的安全性，但减小了加密&#x2F;解密速率。128 比特大小的分组是一个合理的折中且是近来分组密码设计的普遍选择。</li>
+<li>密钥大小(key size)：越长的密钥意味着越高的安全性，但可能会减小加密&#x2F;解密速率。在安全性与速度间抉择，64、128bit。</li>
+<li>迭代轮数：对称分组密码的本质是单轮处理不能提供充分的安全性，多轮处理能提供更高的安全性。增加轮数可以提高安全性,但降低速度，典型大小是 16 轮</li>
+<li>子密钥产生算法：越复杂则密码分析越困难</li>
+<li>轮函数 Round：越复杂则抗密码分析的能力越强</li>
+<li>其他考虑<br>速度（尤其是软件实现的速度）<br>算法简洁清楚，便于分析，发现密码分析弱点</li>
+</ol>
+<h3 id="Feistel-类算法举例"><a href="#Feistel-类算法举例" class="headerlink" title="*Feistel 类算法举例:"></a>*Feistel 类算法举例:</h3><p>DES、CAST、Blowfish&#x2F;(Twofish)、RC6(&#x2F;5)</p>
+<p>不是 Feistel 结构的：AES、IDEA</p>
+<p>绝大数分组密码属于或类似 Feistel 结构：多轮、每轮有 XOR（或能恢复的操作）、轮函数</p>
+<h3 id="二重-DES"><a href="#二重-DES" class="headerlink" title="二重 DES"></a>二重 DES</h3><p>二重 DES 是对 DES 算法的加强版本。它采用两次 DES 算法对明文进行加密，即先用一个密钥对明文进行一次加密，再用另一个密钥对加密后的结果进行一次加密。因为使用两个密钥，所以又称为双重 DES。</p>
+<p>安全性问题：虽然二重 DES 的安全性比单重 DES 更高，但是它仍然存在被暴力破解的风险。对于一个有限的密钥空间，使用暴力破解的方法可以尝试所有的密钥组合，从而破解出密钥。</p>
+<h3 id="三重-DES"><a href="#三重-DES" class="headerlink" title="三重 DES"></a>三重 DES</h3><p>三重 DES（Triple DES）是一种对称加密算法，是在 DES 算法的基础上发展而来的加密算法。它采用了三次 DES 算法对明文进行加密，即先用一个密钥对明文进行一次加密，再用另一个密钥对加密后的结果进行解密，最后用第三个密钥对解密后的结果再进行一次加密。</p>
+<p>当 K1&#x3D;K2&#x3D;K3 时，有 C&#x3D;E(K1,D(K1,E(K1,P)))&#x3D;E(K1,P)，这样 3DES 会退化为 DES。</p>
+<h4 id="3DES-的特点："><a href="#3DES-的特点：" class="headerlink" title="3DES 的特点："></a>3DES 的特点：</h4><p>由于 168 比特的密钥长度，它克服了 DES 对穷举法攻击的不足<br>3DES 的底层加密算法和 DES 相同，而这个算法比任何其它算法都经过了更长时间、更详细的审查，除穷举法以外没有发现任何有效的基于此算法的攻击</p>
+<h4 id="3DES-的缺点："><a href="#3DES-的缺点：" class="headerlink" title="3DES 的缺点："></a>3DES 的缺点：</h4><p>DES 算法软件运行较慢(原始 DES 为硬件实现，没有高效的软件代码)，3DES 迭代轮数是 DES 的三倍，因此 3DES 更慢<br>DES 和 3DES 都使用 64 比特大小的分组，安全性较弱</p>
+<h3 id="高级加密标准"><a href="#高级加密标准" class="headerlink" title="高级加密标准"></a>高级加密标准</h3><p>属于分组加密算法、分组长度 128bits、密钥长度 128&#x2F;192&#x2F;256bits，相应 10&#x2F;12&#x2F;14 轮</p>
+<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><p>速度快，耗用内存小，可靠性、防御能力强，将替代 DES 成为新的数据加密标准</p>
+<p>设计原则</p>
+<ul>
+<li>设计简单</li>
+<li>在多个平台上速度快，编码紧凑</li>
+<li>抵抗所有已知的攻击</li>
+</ul>
+<p>Rijndael 没有采用 Feistel 结构，轮函数由 3 个不同的可逆均匀变换构成的，称为 3 个层。<br>Rijndael 是一个分组密码算法，其分组长度和密钥长度相互独立，都可以改变。</p>
+<p><img src="https://cdn.newimg.ltd/img/202306271538766.png" class="lazyload placeholder" data-srcset="https://cdn.newimg.ltd/img/202306271538766.png" srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg" alt="image.png"></p>
+<p>不是 Feistel 结构<br>密钥扩展<br>4 个不同步骤，1 个移位，3 个替换<br>结构简单<br>只有轮密钥加步骤使用密钥<br>轮密钥加本身不强大<br>每一步都简单可逆<br>解密算法按照相反顺序使用扩展密钥，但解密算法与加密算法不同<br>若 4 个步骤均可逆，可恢复明文<br>加解密最后一轮都只要 3 个步骤</p>
+<h3 id="随机数和伪随机数"><a href="#随机数和伪随机数" class="headerlink" title="随机数和伪随机数"></a>随机数和伪随机数</h3><h4 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h4><p>产生随机数有多种不同的方法。这些方法被称为随机数发生器。随机数最重要的特性是它在产生是后面的那个数与前面的那个数毫无关系。<br>真正的随机数是使用物理现象产生的，它们的缺点是技术要求比较高。<br>在实际应用中往往使用伪随机数就足够了。这些数列是“似乎”随机的数，实际上它们是通过一个固定的、可以重复的计算方法产生的。它们不真正地随机，因为它们实际上是可以计算出来的，但是它们具有类似于随机数的统计特征。这样的发生器叫做伪随机数发生器。</p>
+<h4 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h4><p>随机性：主要包含两种性质<br>（1）均匀分布：1 和 0 出现的频率大致相同。<br>（2）独立：数字之间相互独立。<br>不可预测性：无法根据前期的数据预测后续的数据。</p>
+<p>两种类型的随机数产生器</p>
+<p><img src="https://cdn.newimg.ltd/img/202306281548107.png" class="lazyload placeholder" data-srcset="https://cdn.newimg.ltd/img/202306281548107.png" srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg" alt="image.png"></p>
+<p>真随机数 TRNG：运用一些自然发生的过程产生真正的随机数，如抛硬币、样本热噪声、测量机械过程等<br>伪随机数 PRNG：运用一个短的输入流（种子）的确定性序列获得适度的比特随机流。目前常用这种方法：LSFR 和分组密码生成器 PRF</p>
+<h3 id="分组密码工作模式"><a href="#分组密码工作模式" class="headerlink" title="分组密码工作模式"></a>分组密码工作模式</h3><p>为了将分组密码算法应用于实际，人们定义了很多工作模式<br>分组密码的工作模式：根据不同的数据格式和安全性要求, 以一个具体的分组密码算法为基础构造一个分组密码系统的方法<br>分组密码的工作模式应当力求简单, 有效和易于实现<br>需要采用适当的工作模式来隐蔽明文的统计特性、数据的格式等<br>降低删除、重放、插入和伪造成功的机会</p>
+<h4 id="1．电码本-ECB-模式"><a href="#1．电码本-ECB-模式" class="headerlink" title="1．电码本(ECB)模式"></a>1．电码本(ECB)模式</h4><p>在 ECB 模式下明文一次被处理 b 比特，且明文的每一个分组都使用同一密钥加密。形象地说，可以认为有一个非常大的电码本，对任意一个可能的明文分组，电码本中都有一项对应于它的密文。</p>
+<p>在 ECB 模式下明文一次被处理 b 比特，且明文的每一个分组都使用同一密钥加密。形象地说，可以认为有一个非常大的电码本，对任意一个可能的明文分组，电码本中都有一项对应于它的密文。</p>
+<ul>
+<li>优点：<br>实现简单<br>不同明文分组的加密可并行实施，尤其是硬件实现时速度很快</li>
+<li>缺点：<br>相同的明文分组对应着相同的密文分组，适合加密短信息<br>不能隐蔽明文分组的统计规律和结构规律,不能抵抗替换攻击</li>
+</ul>
+<p><img src="https://cdn.newimg.ltd/img/202306281552034.png" class="lazyload placeholder" data-srcset="https://cdn.newimg.ltd/img/202306281552034.png" srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg" alt="image.png"></p>
+<h4 id="2．密码分组链接-CBC-模式"><a href="#2．密码分组链接-CBC-模式" class="headerlink" title="2．密码分组链接(CBC)模式"></a>2．密码分组链接(CBC)模式</h4><p>密码分组链接方式 CBC(Cipher Block Chaining)<br>在密码分组链接模式中，加密算法的输入是当前明文分组与前一密文分组的异或；每个分组使用同一密钥。相当于将所有的明文组连接起来了。<br>加密函数的每次输入和明文分组之间的关系不固定。因此，64 比特的重复模式并不会被暴露。</p>
+<ul>
+<li>优点：避免明密对应</li>
+<li>缺点：不能并行加密、无法随机存取</li>
+</ul>
+<h4 id="3．密码反馈-CFB-模式"><a href="#3．密码反馈-CFB-模式" class="headerlink" title="3．密码反馈(CFB)模式"></a>3．密码反馈(CFB)模式</h4><p>核心思想：将分组密码转换为流密码，不需要使用解密，仅需使用加密<br>若待加密消息需按字符、字节或比特处理时，可采用 CFB 模式<br>称待加密消息按 s 比特处理的 CFB 模式为 s 比特 CFB 模式<br>适用范围:<br>适用于每次处理 s 比特明文块的特定需求的加密情形,能灵活适应数据各格式的需要<br>例如,数据库加密要求加密时不能改变明文的字节长度,这时就要以明文字节为单位进行加密<br>使用密码反馈模式能将任意分组密码转化为流密码</p>
+<p>4．输出反馈(OFB)模式</p>
+<p>OFB 模式在结构上类似于 CFB 模式，但反馈的内容是 DES 的输出而不是密文</p>
+<p>5．计数器(CTR)模式</p>
+<p>利用固定密钥 K 对自然数序列加密，将得到的密文分组序列看作密钥流序列，按加法密码的方式与明文分组逐位异或的一种方式<br>效率，能并行处理<br>预处理<br>加密数据块的随机访问<br>可证明安全<br>简单性（不需要使用解密，仅需使用加密）</p>
+<h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><h3 id="防篡改——错误校验码"><a href="#防篡改——错误校验码" class="headerlink" title="防篡改——错误校验码"></a>防篡改——错误校验码</h3><h4 id="（1）奇偶校验码（只能校验是否有错）"><a href="#（1）奇偶校验码（只能校验是否有错）" class="headerlink" title="（1）奇偶校验码（只能校验是否有错）"></a>（1）奇偶校验码（只能校验是否有错）</h4><p>原理：如果有 n 个有效的信息位，那么我们会在这些信息位的首部或者尾部加入一位的奇偶校验位<br>奇校验码：整个校验码(有效信息位和校验位)中”1”的个数为奇数<br>偶校验码：整个校验码(有效信息位和校验位)中”1”的个数为偶数</p>
+<p>例 1： 给出两个编码 1001101 和 1010111 的奇校验码和偶校验码。设最高位为校验位，余 7 位是信息位，则对应的奇偶校验码为：<br>奇校验： 11001101 01010111<br>偶校验： 01001101 11010111</p>
+<p>缺陷：<br>（1）偶数个数缺陷检验不出<br>（2）无法对错误定位，进而纠错</p>
+<h3 id="消息摘要的-3-种安全保护方式"><a href="#消息摘要的-3-种安全保护方式" class="headerlink" title="消息摘要的 3 种安全保护方式"></a>消息摘要的 3 种安全保护方式</h3><p>（1）使用传统密码<br>如果只有发送方和接收方共享密钥，可以同时保证机密性。</p>
+<p>（2）使用公钥密码<br>发送方使用发送方的私钥加密，接收方用发送方的公钥解密。优势在于：<br>既能提供数字签名，又能提供消息认证<br>不需要再通信各方分发密钥</p>
+<p>（3）使用散列函数但未使用加密<br>假设通信双方共享秘密值 SAB</p>
+<h3 id="安全散列函数"><a href="#安全散列函数" class="headerlink" title="安全散列函数"></a>安全散列函数</h3><p>单向散列函数或安全散列函数可用于：消息认证以及数字签名。常见散列函数：SHA；MD5</p>
+<p>hash 码，也称为：哈希函数、hash 值、消息摘要、数字指纹（Digitalfinger print）、压缩（Compression）函数、紧缩（Contraction ）函数、数据鉴别码 DAC（Data authentication code）、篡改检验码 MDC(Manipulation detection code)。<br>与 MAC 的区别：与密钥无关仅是消息 M 的函数；是所有消息位的函数，具有错误检测能力（即改变消息的若干位，都会导致 hash 码的改变）。</p>
+<h3 id="散列函数要求"><a href="#散列函数要求" class="headerlink" title="散列函数要求"></a>散列函数要求</h3><p>Hash 函数 H(x)可以为消息、文件或数据产生“数字指纹”，用于认证的 Hash 函数 H(M)必须满足下列性质：</p>
+<ul>
+<li>H 可适用于任意长度的数据块；</li>
+<li>H 能够生成固定长度的输出；称为消息摘要(MessageDigest)</li>
+<li>对任意给定数据块 x，计算 H(x)容易实现，且适合软硬件实现；</li>
+<li>单向性：对任意给定值 h，找到 x 使 H(x) &#x3D;h 在计算上不可行；</li>
+<li>弱碰撞抵抗( Weak Collision Resistance，WCR)：对任意给定 x，找到 y≠x 使 H(x)&#x3D;H(y)在计算上不可行；</li>
+<li>强碰撞抵抗( Strong Collision Resistance，SCR)：找到 y ≠ x 使 H(x)&#x3D;H(y)在计算上不可行。</li>
+</ul>
+<p>1、2、3 可行性要求<br>4 抗原像攻击，保证散列码恢复不出原始消息，有秘密值参与的应用时非常重要<br>假如散列函数不是单向的，而攻击者能够分析或截获消息 M 和散列码 C &#x3D; H(SAB||M)，则攻击者很容易发现秘密值。攻击者对散列函数取逆得到 SAB||M &#x3D; H-1 (C)。因为这时攻击者拥有 M 和 SAB||M，所以他们可以轻而易举地恢复 SAB 。<br>5 抗第二原像攻击：对于给定的消息，不可能找到具有相同散列值的可替换消息。利用加密的散列码可防止消息被伪造。如果该性质非真则攻击者可以进行如下操作:<br>第一，分析或截获消息及其加密的散列码；<br>第二，根据消息产生没有加密的散列码；<br>第三，生成具有相同散列码的可替换消息。<br>6 抗碰撞性：防止生日攻击等。<br>该攻击把 m 比特的散列函数强度从 2m 简化至 2m&#x2F;2</p>
+<h3 id="HMAC"><a href="#HMAC" class="headerlink" title="HMAC"></a>HMAC</h3><p>HMAC 主要是为了能对信源可信性和消息完整性同时进行验证。<br>优点：软件实现速度快、开源的代码库</p>
+<ul>
+<li><p>摘要算法，只能够证明签名消息的完整性。</p>
+</li>
+<li><p>HMAC 与消息摘要 MD 的最大不同，就是有签名密钥；<br>HMAC 被广泛的运用于网络协议的认证阶段，例如 SET、SSL 等！<br>HMAC 运算利用哈希算法，以一个密钥和一个消息为输入，生成一个消息摘要作为输出。</p>
+</li>
+<li><p>黑盒设计，直接利用 hash 函数</p>
+</li>
+<li><p>只是一个框架，嵌入式的 hash，具有很好的移植性</p>
+</li>
+<li><p>保持 hash 原有特性，不发生显著退化</p>
+</li>
+<li><p>共享秘密值方式，处理简单</p>
+</li>
+<li><p>强度依赖于 hash 函数</p>
+</li>
+</ul>
+<p>前两个目标，优势：<br>第一，黑盒设计可复用现有 HMAC 模块。这样，已经预先封装的大量 HMAC 代码可以不加修改地使用。<br>第二，便于更新维护。如果想替换一个 HMAC 实现中的特定散列函数，所需做的只是除去现有的散列函数模块，放入新模块。如果需要更快的散列函数时就可以这样操作。更为重要的是，如果嵌入式散列函数的安全性受到威胁，可通过简单地用更加安全的模块取代嵌入式散列函数，从而保证了 HMAC 的安全。<br>最后一个目标是 HMAC 相对其他散列方案最主要的优点。如果能提供有一定合理性的抗密码分析强度的嵌入式散列函数，就能够证明 HMAC 是安全的。</p>
+<h3 id="公钥密码算法"><a href="#公钥密码算法" class="headerlink" title="公钥密码算法"></a>公钥密码算法</h3><p>自从公钥密码的思想提出以来，国际上已经提出了许多种公钥密码算法，但比较流行的主要有两类：<br>一类是基于大整数因子分解问题的，其中最典型的代表是 RSA；<br>另一类是基于离散对数问题的，比如 ElGamal 公钥密码和影响比较大的椭圆曲线（ECC）公钥密码。</p>
+<h3 id="RSA"><a href="#RSA" class="headerlink" title="*RSA"></a>*RSA</h3><p>RSA 算法是在 1978 年由 Rivest、Shamir 和 Adleman 提出的，它的安全性依赖于大数因式分解的困难性。众所周知，大数分解和素性检测是著名的数论难题。</p>
+<p>1、加密算法<br>RSA 算法中模数 n 是两个大素数 p 和 q 的乘积，公钥 e 和模数 n 是公开的，而私钥 d 是保密的。RSA 算法的加密过程就是通过 n 和 e 将明文 M（M&lt;n）转化成密文 C。<br>若用整数 M 表示明文，用整数 C 表示密文(M，C&lt;n)，则加密和解密运算为：<br>$$加密：C &#x3D; M^e mod n	（其中gcd(M,n)&#x3D;1）$$<br>$$解密：M &#x3D; C^d mod n	$$</p>
+<p><img src="https://cdn.newimg.ltd/img/202306281608874.png" class="lazyload placeholder" data-srcset="https://cdn.newimg.ltd/img/202306281608874.png" srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg" alt="image.png"></p>
+<p>其中：加解密方均知道 n 和 e，加密方不知道 d，仅解密方拥有 d 值。<br>公钥 PU&#x3D;{e.n},私钥 PR&#x3D;{d.n}。算法必须满足以下条件才可以使用：<br>可以找到 e、d、n 的值，使得对所有的 M&lt;n，Med mod n&#x3D;M 成立；<br>对所有的满足 M&lt;n 的值，计算 Me 和 Cd 相对容易；<br>对给定 e 和 n，不可能推出 d。注：当 e 与 n 值较大时，n 的分解非常困难，难以求出 d。</p>
+<p>2、密钥的产生<br>计算 n。用户秘密地选择两个大素数 p 和 q，计算出 n&#x3D;p×q。n 称为 RSA 算法的模数。<br>计算 φ(n)。用户计算出 n 的欧拉函数 φ(n)&#x3D;(p-1)×(q-1)，φ(n)的定义为不超过 n，且与 n 互素的正整数的个数<br>选择 e。用户从[0, φ(n)-1]中选择一个与 φ(n)互素的数 e 作为公开的加密指数。<br>计算 d。求解 d 满足 e×d &#x3D; 1 mod φ(n)　作为解密指数<br>得出所需要的公开密钥和秘密密钥：<br>公开密钥(即加密密钥) PU&#x3D;{e, n}<br>秘密密钥(即解密密钥) PR&#x3D;{d, n}</p>
+<h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><h3 id="对称密钥与公开密钥密钥数"><a href="#对称密钥与公开密钥密钥数" class="headerlink" title="对称密钥与公开密钥密钥数"></a>对称密钥与公开密钥密钥数</h3><p>密钥管理量的困难<br>密钥管理两个问题：密钥的存储、密钥的更新，试思考：<br>（1）当用户规模为 n 时，为保证用户两两之间进行通信，对于对称加密，需要使用的密钥对的最少个数？对于非对称加密，需要使用的密钥对的最少个数？</p>
+<blockquote>
+<p>对称密钥：n(n-1)&#x2F;2； 非对称密钥：n 对</p>
+</blockquote>
+<p>（2）当用户规模为 n 时，新用户加入时，对于对称加密&#x2F;非对称加密，需要使用的密钥对的最少个数？</p>
+<blockquote>
+<p>对称密钥：n 对；非对称密钥：1 对</p>
+</blockquote>
+<h3 id="密钥分发方法"><a href="#密钥分发方法" class="headerlink" title="密钥分发方法"></a>密钥分发方法</h3><ul>
+<li>通信一方选定密钥并通过物理方法传递给另一方</li>
+<li>可信第三方选定密钥并通过物理方法传递给通信双方</li>
+<li>通信双方使用早先用过的密钥加密传递新的共享密钥</li>
+<li>通过与可信第三方的安全加密链路获得共享密钥<br>1，2 方法适合链路级加密，不适合端到端安全通信；方法 3 可以兼顾两种链路，但是早先密钥泄漏会导致安全威胁。<br>目前常用第 4 种方法。</li>
+</ul>
+<p>方法 4 的安全保障需要两种密钥：会话密钥、永久密钥</p>
+<ul>
+<li>会话密钥：有时也称数据密钥，用于数据加密传输，是一次性的临时密钥</li>
+<li>永久密钥：也称秘密密钥，用于会话密钥的分发和安全传递。<br>方法 4 会用密钥分发中心 KDC（Key Distribution Center）管理和分发密钥。</li>
+</ul>
+<h3 id="Kerberos"><a href="#Kerberos" class="headerlink" title="Kerberos"></a>Kerberos</h3><p>Kerberos 设计的目的是解决在分布网络环境下，用户访问网络资源时的安全问题。Kerberos 的安全不依赖于用户登陆的主机或者应用服务器，而是依赖于几个认证服务器。<br>Kerberos 协议中有 4 个通信参与方：需要验证身份的通信双方,一个双方都信任的第三方 KDC（包含认证服务器 AS 和票据授权服务器 TGS）。<br>将发起认证服务的一方称为客户端<br>客户端需要访问的对象称为服务器。</p>
+<p>在 Kerberos 认证协议中，存在四个角色<br>（1）客户端（C，即用户）<br>请求服务的用户<br>（2）应用服务器（V，即提供某种服务器的服务器）<br>向用户提供服务的一方<br>（3）认证服务器（AS： Authentication Server）<br>负责验证用户的身份，如果通过了认证，则向用户提供访问票据准许服务器的票据授权票据（Ticket-Granting Ticket）<br>（4）票据授权服务器（TGS：Ticket-Granting Server）<br>负责验证用户的票据授权票据，如果验证通过，则为用户提供访问服务器的服务授权票据（Service-Granting Ticket）</p>
+<h3 id="公钥证书"><a href="#公钥证书" class="headerlink" title="公钥证书"></a>公钥证书</h3><p>公钥加密的意思就是公钥是公开的。通过广泛接受的公钥算法，如 RSA，任何参与者都可以给其他参与者发送他的或她的公钥，或向群体广播自己的公钥。<br>优点：方法简单方便，缺点：任何人可以伪造公共通告<br>具体来说：某用户可以伪装用户 A 向其他参与者发送公钥或者广播公钥。直到一段时间后用户 A 发觉了伪造并且警告其他参与者，伪装者在此之前都可以读到试图发送给 A 的加密消息，并且使用假的公钥进行认证。</p>
+<p>解决方案：公钥证书，包含公钥、公钥所有者的 ID、可信第三方签名。<br>可信第三方，即用户团体所信任的认证中心(CA)，如政府机构或金融机构<br>用户可通过安全渠道将自身公钥提交给 CA 获取证书。然后用户就可以发布证书。任何需要该用户公钥的人都可以获取这个证书并且通过所附的可信签名验证其有效性</p>
+<h3 id="X-509-标准"><a href="#X-509-标准" class="headerlink" title="X.509 标准"></a>X.509 标准</h3><p>通用公钥证书格式：X.509 标准<br>应用场合，大多数网络安全设施，包括：<br>IP 安全、安全套接字层（SSL）、安全电子交易（SET）、S&#x2F;MIME</p>
+<h3 id="PKI"><a href="#PKI" class="headerlink" title="PKI"></a>PKI</h3><p>PKI（Public Key Infrastructure）是一个用公钥概念与技术来实施和提供安全服务的具有普适性的安全基础设施。PKI 公钥基础设施的主要任务是在开放环境中为开放性业务提供数字签名服务。</p>
+<h2 id="第五章"><a href="#第五章" class="headerlink" title="第五章"></a>第五章</h2><h3 id="SSL-会话与连接"><a href="#SSL-会话与连接" class="headerlink" title="SSL 会话与连接"></a>SSL 会话与连接</h3><p><img src="https://cdn.newimg.ltd/img/202306281622178.png" class="lazyload placeholder" data-srcset="https://cdn.newimg.ltd/img/202306281622178.png" srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg" alt="image.png"></p>
+<p><img src="https://cdn.newimg.ltd/img/202306281624427.png" class="lazyload placeholder" data-srcset="https://cdn.newimg.ltd/img/202306281624427.png" srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg" alt="image.png"></p>
+<p>握手协议：用来实现密钥交换和认证<br>记录层协议：用来安全传输数据<br>修改密码规格协议：启用新的密码参数<br>报警协议：报警和错误</p>
+<p>警告消息(Warning Msg)</p>
+<ul>
+<li>仅仅是通告对方有关报警信息，不会导致连接的关闭。一般连接被关闭，尽管其它己经打开的连接依然可以使用，但是会话标识被标记为无效，因此可以防止通过该会话创建新的连接。<br>致命消息</li>
+<li>将导致连接被立即中止，并将与这个连接相关的会话（会话标识符）作废，以免这个会话被继续用来建立新的连接。</li>
+</ul>
+<p>用于将 SSL 握手协议或者记录层协议等过程有关的告警传输给对方或向对方发出警告，或者中止当前连接。</p>
+<p>握手协议本质上是一个密钥交换协议，但它也包含认证功能，因此可以视为认证和密钥交换协议<br>握手协议主要由四个过程组成</p>
+<ul>
+<li>交换安全能力</li>
+<li>服务器认证和密钥交换</li>
+<li>客户端认证和密钥交换</li>
+<li>完成：通知启用新的安全参数</li>
+</ul>
+<p><img src="https://cdn.newimg.ltd/img/202306281627558.png" class="lazyload placeholder" data-srcset="https://cdn.newimg.ltd/img/202306281627558.png" srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg" alt="image.png"></p>
+<p><img src="https://cdn.newimg.ltd/img/202306281627924.png" class="lazyload placeholder" data-srcset="https://cdn.newimg.ltd/img/202306281627924.png" srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg" alt="image.png"></p>
+<h3 id="SSL-与-HTTP"><a href="#SSL-与-HTTP" class="headerlink" title="SSL 与 HTTP"></a>SSL 与 HTTP</h3><p>HTTP 协议在传输过程中没有提供足够的安全保护<br>网景公司（Netscape）在 1995 年首先提出了采用 SSL 保护 HTTP 的方案（ HTTP over SSL ）<br>HTTP over TLS 具体在 RFC 2817 和 RFC 2818 中描述<br>HTTPS（Secure Hypertext Transfer Protocol）安全超文本传输协议 Netscape 公司 1994 年所研发</p>
+<h2 id="第六章"><a href="#第六章" class="headerlink" title="第六章"></a>第六章</h2><p>试回忆，你所遇到的电子邮件安全威胁？</p>
+<ul>
+<li><p>垃圾邮件（spam）：垃圾邮件是指未经请求的广告性电子邮件。垃圾邮件可能会包含冒充身份的钓鱼邮件或恶意软件。</p>
+</li>
+<li><p>钓鱼邮件（phishing）：钓鱼邮件是指伪装成合法机构或个人的电子邮件，旨在欺骗接收者提供个人信息、账户信息或密码等敏感信息。</p>
+</li>
+<li><p>恶意软件（malware）：恶意软件是指在电子邮件中携带的恶意代码或文件，包括病毒、木马、间谍软件等，可能会感染您的计算机或手机并窃取敏感信息。</p>
+</li>
+<li><p>带有恶意链接或附件的电子邮件：这些电子邮件可能包含恶意链接或附件，当接收者点击链接或打开附件时，可能会导致系统感染恶意软件或黑客攻击。</p>
+</li>
+<li><p>带有伪装附件的电子邮件：这些电子邮件可能包含伪装成常见文件类型的恶意附件，例如 PDF、Word 文档或压缩文件，当接收者打开附件时，可能会感染恶意软件或黑客攻击。</p>
+</li>
+<li><p>内部威胁：内部威胁是指由组织内部的员工或其他人员故意或无意地泄露敏感信息或攻击组织的网络安全。</p>
+</li>
+</ul>
+<p>S&#x2F;MIME协议提供4种与消息相关的服务：身份认证、机密性、压缩、电子邮件兼容性。</p>
+<table>
+<thead>
+<tr>
+<th align="center">功能</th>
+<th align="center">典型算法</th>
+<th align="center">典型案例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">数字签名</td>
+<td align="center">RSA&#x2F;SHA-256</td>
+<td align="center">使用SHA-256生成一条带有散列值的消息<br>此消息摘要使用SHA-256与发送方的私钥进行加密，并包含在邮件中</td>
+</tr>
+<tr>
+<td align="center">消息加密</td>
+<td align="center">带CBC的AES-128</td>
+<td align="center">使用带有CBC的AES-128加密消息<br>使用发送方生成的一次性会话密钥。会话密钥使用RSA与接收方的公钥进行加密，并包含在消息中</td>
+</tr>
+<tr>
+<td align="center">压缩</td>
+<td align="center">未定义</td>
+<td align="center">可以压缩消息以进行存储或传输</td>
+</tr>
+<tr>
+<td align="center">邮件兼容性</td>
+<td align="center">radix-64转换</td>
+<td align="center">为了提供电子邮件应用程序的透明性，可以使用radix-64<br>conversion将加密的消息转换为ASCII字符串</td>
+</tr>
+</tbody></table>
+<h3 id="PGP"><a href="#PGP" class="headerlink" title="PGP"></a>PGP</h3><p>PGP（Pretty Good Privacy）协议，一个提供加密和认证的基于 RSA 公钥及 AES 等加密算法的加密软件系列。与S&#x2F;MIME功能基本相同，其区别在于：<br>密钥认证：PGP协议由用户生成自己的公钥和私钥；S&#x2F;MIME由证书颁发机构（CA）颁发X.509证书。<br>密钥分发：PGP不包含每封邮件的发送方公钥，因此邮件接收方必须单独获取发送方的公钥才能验证邮件。如在受TLS保护的网站上发布&#x2F;下载对应的PGP密钥。<br>PGP 提供电子邮件的安全性、发送方鉴别和报文完整性。假定 A 向 B 发送电子邮件明文 X，使用 PGP 进行加密。<br>发送方A 有三个密钥：A 的私钥、B 的公钥和 A 生成的一次性密钥。<br>接收方B 有两个密钥：B 的私钥和 A 的公钥。<br><img src="https://cdn.newimg.ltd/img/202306281635076.png" class="lazyload placeholder" data-srcset="https://cdn.newimg.ltd/img/202306281635076.png" srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg" alt="image.png"></p>
+<ol>
+<li>对明文邮件 X 进行 MD5 运算，得出 MD5 报文摘要，即 H&#x3D;H(X)。</li>
+<li>用 A 的私钥对 H 进行加密（即数字签名）得出消息认证码MAC，即E(PRA，H(X)) </li>
+<li>把它拼接在明文 X 后面，得到扩展的邮件，即 X ||  E(PRA，H(X)) 。</li>
+<li>压缩。即 Z( X || E(PRA , H(X)))。</li>
+<li>使用 A 自己生成的一次性密钥Ks对扩展的邮件进行加密，即E(Ks， Z( X || E(PRA , H(X)))) 。</li>
+<li>用 B 的公钥对 A 生成的一次性密钥进行加密，即E(PUB， Ks) 。因为加密所用的密钥是一次性的，即密钥只会使用一次，不会出现因为密钥泄露导致之前的加密内容被解密。即使密钥被泄露了，也只会影响一次通信过程。</li>
+<li>把加了密的一次性密钥和加了密的扩展的邮件连接发送给 B，即E(PUB , Ks) || E(Ks ,  Z( X||E(PRA , H(X)))) 。</li>
+</ol>
+<p><img src="https://cdn.newimg.ltd/img/202306281635936.png" class="lazyload placeholder" data-srcset="https://cdn.newimg.ltd/img/202306281635936.png" srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg" alt="image.png"></p>
+<ol>
+<li>把被加密的一次性密钥E(PUB , Ks)和被加密的扩展报文E(Ks，Z( X || E(PRA , H(X))) )分离开。</li>
+<li>用 B 自己的私钥解出 A 的一次性密钥Ks，即Ks &#x3D;D(PRB, E(PUB , Ks) )。</li>
+<li>用解出的一次性密钥Ks对报文进行解密，即Z( X || E(PRA , H(X))) &#x3D; D(Ks , E(Ks， Z( X || E(PRA , H(X))) )</li>
+<li>解压缩。即X || E(PRA , H(X)) &#x3D; Z-1(Z( X || E(PRA , H(X))) )</li>
+<li>然后分离出明文 X 和 E(PRA , H(X)) 。</li>
+<li>用 A 的公钥对 MAC 进行解密（即签名核实），得出报文摘要 H。即H(X) &#x3D; D(PUA,E(PRA , H(X)) ) ，这个报文摘要就是 A 原先用明文邮件 X 通过 MD5 运算生成的那个报文摘要。</li>
+<li>对签名进行验证：对分离出的明文邮件 X 进行 MD5 报文摘要运算，得出另一个报文摘要 H(X)。把 H(X) 和前面得出的 H 进行比较，是否和一样。如一样，则对邮件的发送方的鉴别就通过了，报文的完整性也得到肯定。</li>
+</ol>
+<h4 id="为何先压缩再加密？"><a href="#为何先压缩再加密？" class="headerlink" title="为何先压缩再加密？"></a>为何先压缩再加密？</h4><p>由于压缩的实质就是将有序的消息进行无序化处理，当消息规则性越强压缩效果可能越好，而加密的过程也是将消息进行无序化处理。<br>因此，先加密再压缩是在无序的基础上变更无序，没有什么实质性作用，可能原来10G的文件，还是10G。但是若先压缩再加密，就可能使得原来10G的文件变为5G，因此传输的消息将变少。</p>
+<p>PGP 可以只签名而不(使用对方公钥)加密整个邮件。那么我们需要去掉图中的哪些步骤呢？</p>
+<p>这适用于公开发表声明时，声明人为了证实自己的身份，可以用自己的私匙签名。这样就可以让收件人能确认发信人的身份，也可以防止发信人抵赖自己的声明。这一点在商业领域有很大的应用前途，它可以防止发信人抵赖和信件被途中篡改。<br>同样的，PGP可以只加密而不签名整个邮件，以提供邮件保密性。</p>
+<h3 id="DNSSEC"><a href="#DNSSEC" class="headerlink" title="DNSSEC"></a>DNSSEC</h3><p>Domain Name System Security Extensions (DNSSEC) DNS安全扩展，是由IETF提供的一系列DNS安全认证的机制。<br>它提供了一种来源鉴定和数据完整性的扩展，但不去保障可用性、加密性和证实域名不存在。<br>DNSSEC的主要思想是通过在DNS记录中添加加密签名，从而为DNS解析流程提供来源可认证和数据完整性的保障。<br>开启DNSSEC,可有效防止DNS欺骗和缓存污染等攻击</p>
+<h2 id="第七章"><a href="#第七章" class="headerlink" title="第七章"></a>第七章</h2><h3 id="IPSec"><a href="#IPSec" class="headerlink" title="IPSec"></a>IPSec</h3><p>两种操作模式</p>
+<ul>
+<li>传输模式</li>
+<li>隧道模式<br>两个数据库</li>
+<li>安全策略数据库SPD</li>
+<li>安全关联数据库SAD<br>两个通信协议：</li>
+<li>AH ：认证头（Authentication Head)</li>
+<li>ESP:   封装安全载荷（Encapsulating Security Payload ）<br>两个算法：</li>
+<li>加密算法</li>
+<li>认证算法<br>三个密钥管理协议</li>
+<li>安全关联与密钥管理协议（ISAKMP： Internet Security Association and Key Management Protocol）</li>
+<li>因特网密钥交换管理协议（IKE： Internet Key Exchange ）</li>
+<li>Oakley： IKE的密钥交换协议</li>
+</ul>
+<p>什么是隧道技术</p>
+<p>VPN的具体实现技术是采用隧道，通过其在公网中建立企业之间的链接，将用户的数据封装在隧道中进行传输。<br>隧道技术与接入方式无关，它可以支持各种形式的接入，如拨号方式接入、CABLE Modem、xDSL以及ISDN、E1专线和无线接入等。<br>一个隧道协议通常包括以下几个方面： </p>
+<ul>
+<li>乘客协议：被封装的协议，如PPP、SLIP； </li>
+<li>封装协议：隧道的建立、维持和断开，如L2TP、IPSec等； </li>
+<li>承载协议：承载经过封装后的数据包的协议，如IP和ATM等。</li>
+</ul>
+<p>目前因特网上较为常见的隧道协议大致有：<br>第二层隧道协议：PPTP（由微软、Ascend、3COM 等公司支持）、L2F（Cisco、北方电信等公司支持）、L2TP（由 IETF 起草，微软 Ascend 、Cisco、 3COM 等公司参与）<br>第三层隧道协议：GRE（RFC 1701 ）、IPSec    </p>
+<p>隧道可在网络的任一层实现</p>
+<ul>
+<li>数据链路层隧道：先把各种网络协议封装到PPP中，再把整个数据包装入隧道协议中。这种双层封装方法形成的数据包靠第二层协议进行传输。第二层隧道协议有L2F、PPTP、L2TP等。</li>
+<li>网络层隧道：把各种网络协议直接装入隧道协议中，形成的数据包依靠第三层协议进行传输。第三层隧道协议有GRE、IPSec等。</li>
+</ul>
+<p>第二层和第三层隧道协议的区别主要在于用户数据在网络协议栈的第几层被封装。其中GRE和IPSec主要用于实现专线VPN业务，L2TP主要用于实现拨号VPN业务，也可用于实现专线VPN业务。 </p>
+<h3 id="封装安全载荷-ESP-协议格式"><a href="#封装安全载荷-ESP-协议格式" class="headerlink" title="封装安全载荷 ESP 协议格式"></a>封装安全载荷 ESP 协议格式</h3><p>ESP有两种模式</p>
+<ul>
+<li>传输模式：仅适用于主机实现，且仅为上层协议提供保护，而不包括IP头。</li>
+<li>隧道模式：可适用于主机和安全网关，整个数据包被封装在ESP有效负载中，并产生一个新的IP头附加在ESP头之前。</li>
+</ul>
+<p><img src="https://cdn.newimg.ltd/img/202306281641043.png" class="lazyload placeholder" data-srcset="https://cdn.newimg.ltd/img/202306281641043.png" srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg" alt="image.png"></p>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+        
+          
+          <div class="copyright license">
+            <div class="license-title">期末网安</div>
+            <div class="license-link"><a href="https://blog.newimg.ltd/2023/06/28/NetSecurity/">https://blog.newimg.ltd/2023/06/28/NetSecurity/</a>
+            </div>
+            <div class="license-meta">
+              <div class="license-meta-item">
+                <div class="license-meta-title">本文作者</div>
+                <div class="license-meta-text">Fuxx-1</div>
+              </div>
+              <div class="license-meta-item">
+                <div class="license-meta-title">发布于</div>
+                <div class="license-meta-text">2023年6月28日</div>
+              </div>
+              
+              <div class="license-meta-item">
+                <div class="license-meta-title">更新于</div>
+                <div class="license-meta-text">2026年2月12日</div>
+              </div>
+              
+              
+              <div class="license-meta-item">
+                <div class="license-meta-title">许可协议</div>
+                <div class="license-meta-text">允许规范转载</div>
+              </div>
+            </div>
+            <div class="license-statement">转载请保留本文转载地址，著作权归作者所有！</div>
+          </div>
+        
+      
+      <!-- 打赏组件 -->
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2026-02-12T23:51:49+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2026年2月12日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/experience/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>experience</p></a></div>
+  <span hidden itemprop="keywords">experience</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.newimg.ltd/2023/06/28/NetSecurity/&title=期末网安 - Fuxxの博客&summary="
+          
+          >
+          
+            <img src="https://cdn.qoop.top/blog/volantis-static/media/org.volantis/logo/128/qq.png" class="lazyload placeholder" data-srcset="https://cdn.qoop.top/blog/volantis-static/media/org.volantis/logo/128/qq.png" srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.newimg.ltd/2023/06/28/NetSecurity/&title=期末网安 - Fuxxの博客&summary="
+          
+          >
+          
+            <img src="https://cdn.qoop.top/blog/volantis-static/media/org.volantis/logo/128/qzone.png" class="lazyload placeholder" data-srcset="https://cdn.qoop.top/blog/volantis-static/media/org.volantis/logo/128/qzone.png" srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.newimg.ltd/2023/06/28/NetSecurity/&title=期末网安 - Fuxxの博客&summary="
+          
+          >
+          
+            <img src="https://cdn.qoop.top/blog/volantis-static/media/org.volantis/logo/128/weibo.png" class="lazyload placeholder" data-srcset="https://cdn.qoop.top/blog/volantis-static/media/org.volantis/logo/128/weibo.png" srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2023/06/28/NetDesign/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>网络规划与设计</p>
+          <p class='content'>第一章系统集成三大部分
+网络系统
+硬件系统
+软件系统
+
+
+系统集成的复杂性系统集成的复杂性体现在：技术、成员、环境、约束四个方面，它们之间互为依存关系。
+
+实现技术的集成性
+成员目标的复杂性
+应...</p>
+        </a>
+      
+      
+        <a class='next' href='/2023/06/24/%E6%9C%9F%E6%9C%ABWeb/'>
+          <p class='title'>期末Web<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>填空
+简答1)简述 ajax 中 get 和 post 的请求方式及他们的优缺点？(6 分)1在 Ajax 中，可以使用 GET 和 POST 两种 HTTP 请求方法来发送请求和接收响应数据。...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  <script>
+    pandown()
+</script>
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2023/06/28/NetSecurity/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
+  
+
+  
+    
+    
+      
+    
+  
+
+  
+    
+    
+      
+
+  <section class='widget desktop mobile pjax music'>
+    
+  <header>
+    
+      <i class="fas fa-headphones-alt fa-fw" aria-hidden="true"></i><span class='name'>音乐</span>
+    
+  </header>
+
+
+    <div class='content'>
+      
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='random'
+      fixed='false'
+      list-max-height='320px'
+      server='tencent'
+      type='playlist'
+      id='6559921027'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+    </div>
+  </section>
+
+
+    
+  
+
+
+<div class="widget-sticky pjax">
+
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0"><span class="toc-text">第一章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AE%89%E5%85%A8%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">计算机安全的定义</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E6%80%A7%E8%B4%A8%EF%BC%9A"><span class="toc-text">相关性质：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AB%AF%E5%88%B0%E7%AB%AF%E9%80%9A%E4%BF%A1%E5%92%8C%E7%82%B9%E5%88%B0%E7%82%B9%E9%80%9A%E4%BF%A1"><span class="toc-text">端到端通信和点到点通信</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%82%B9%E5%88%B0%E7%82%B9%E9%80%9A%E4%BF%A1"><span class="toc-text">点到点通信</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AB%AF%E5%88%B0%E7%AB%AF%E9%80%9A%E4%BF%A1"><span class="toc-text">端到端通信</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP-%E5%8D%8F%E8%AE%AE%E4%BA%94%E5%85%83%E7%BB%84%EF%BC%9F"><span class="toc-text">TCP 协议五元组？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A2%AB%E5%8A%A8%E6%94%BB%E5%87%BB"><span class="toc-text">被动攻击</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E7%B1%BB"><span class="toc-text">分类</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E5%8A%A8%E6%94%BB%E5%87%BB"><span class="toc-text">主动攻击</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E8%AE%BF%E9%97%AE%E5%AE%89%E5%85%A8%E6%A8%A1%E5%9E%8B"><span class="toc-text">网络访问安全模型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0"><span class="toc-text">第二章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%A0%E7%BB%9F%E5%8A%A0%E5%AF%86"><span class="toc-text">传统加密</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Feistel-%E5%AF%86%E7%A0%81%E7%BB%93%E6%9E%84"><span class="toc-text">*Feistel 密码结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Feistel-Cipher-%E7%9A%84%E8%AE%BE%E8%AE%A1%E9%97%AE%E9%A2%98"><span class="toc-text">*Feistel Cipher 的设计问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Feistel-%E7%B1%BB%E7%AE%97%E6%B3%95%E4%B8%BE%E4%BE%8B"><span class="toc-text">*Feistel 类算法举例:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E9%87%8D-DES"><span class="toc-text">二重 DES</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E9%87%8D-DES"><span class="toc-text">三重 DES</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3DES-%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%9A"><span class="toc-text">3DES 的特点：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3DES-%E7%9A%84%E7%BC%BA%E7%82%B9%EF%BC%9A"><span class="toc-text">3DES 的缺点：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E5%8A%A0%E5%AF%86%E6%A0%87%E5%87%86"><span class="toc-text">高级加密标准</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%B9%E7%82%B9"><span class="toc-text">特点</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E6%95%B0%E5%92%8C%E4%BC%AA%E9%9A%8F%E6%9C%BA%E6%95%B0"><span class="toc-text">随机数和伪随机数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%AB%E4%B9%89"><span class="toc-text">含义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%A7%E8%B4%A8"><span class="toc-text">性质</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E7%BB%84%E5%AF%86%E7%A0%81%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F"><span class="toc-text">分组密码工作模式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%8E%E7%94%B5%E7%A0%81%E6%9C%AC-ECB-%E6%A8%A1%E5%BC%8F"><span class="toc-text">1．电码本(ECB)模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%8E%E5%AF%86%E7%A0%81%E5%88%86%E7%BB%84%E9%93%BE%E6%8E%A5-CBC-%E6%A8%A1%E5%BC%8F"><span class="toc-text">2．密码分组链接(CBC)模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%EF%BC%8E%E5%AF%86%E7%A0%81%E5%8F%8D%E9%A6%88-CFB-%E6%A8%A1%E5%BC%8F"><span class="toc-text">3．密码反馈(CFB)模式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0"><span class="toc-text">第三章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%B2%E7%AF%A1%E6%94%B9%E2%80%94%E2%80%94%E9%94%99%E8%AF%AF%E6%A0%A1%E9%AA%8C%E7%A0%81"><span class="toc-text">防篡改——错误校验码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%A5%87%E5%81%B6%E6%A0%A1%E9%AA%8C%E7%A0%81%EF%BC%88%E5%8F%AA%E8%83%BD%E6%A0%A1%E9%AA%8C%E6%98%AF%E5%90%A6%E6%9C%89%E9%94%99%EF%BC%89"><span class="toc-text">（1）奇偶校验码（只能校验是否有错）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E6%91%98%E8%A6%81%E7%9A%84-3-%E7%A7%8D%E5%AE%89%E5%85%A8%E4%BF%9D%E6%8A%A4%E6%96%B9%E5%BC%8F"><span class="toc-text">消息摘要的 3 种安全保护方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E6%95%A3%E5%88%97%E5%87%BD%E6%95%B0"><span class="toc-text">安全散列函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%A3%E5%88%97%E5%87%BD%E6%95%B0%E8%A6%81%E6%B1%82"><span class="toc-text">散列函数要求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HMAC"><span class="toc-text">HMAC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AC%E9%92%A5%E5%AF%86%E7%A0%81%E7%AE%97%E6%B3%95"><span class="toc-text">公钥密码算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RSA"><span class="toc-text">*RSA</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0"><span class="toc-text">第四章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E7%A7%B0%E5%AF%86%E9%92%A5%E4%B8%8E%E5%85%AC%E5%BC%80%E5%AF%86%E9%92%A5%E5%AF%86%E9%92%A5%E6%95%B0"><span class="toc-text">对称密钥与公开密钥密钥数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%86%E9%92%A5%E5%88%86%E5%8F%91%E6%96%B9%E6%B3%95"><span class="toc-text">密钥分发方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Kerberos"><span class="toc-text">Kerberos</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AC%E9%92%A5%E8%AF%81%E4%B9%A6"><span class="toc-text">公钥证书</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#X-509-%E6%A0%87%E5%87%86"><span class="toc-text">X.509 标准</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PKI"><span class="toc-text">PKI</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0"><span class="toc-text">第五章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SSL-%E4%BC%9A%E8%AF%9D%E4%B8%8E%E8%BF%9E%E6%8E%A5"><span class="toc-text">SSL 会话与连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SSL-%E4%B8%8E-HTTP"><span class="toc-text">SSL 与 HTTP</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0"><span class="toc-text">第六章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PGP"><span class="toc-text">PGP</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BA%E4%BD%95%E5%85%88%E5%8E%8B%E7%BC%A9%E5%86%8D%E5%8A%A0%E5%AF%86%EF%BC%9F"><span class="toc-text">为何先压缩再加密？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DNSSEC"><span class="toc-text">DNSSEC</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0"><span class="toc-text">第七章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#IPSec"><span class="toc-text">IPSec</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%81%E8%A3%85%E5%AE%89%E5%85%A8%E8%BD%BD%E8%8D%B7-ESP-%E5%8D%8F%E8%AE%AE%E6%A0%BC%E5%BC%8F"><span class="toc-text">封装安全载荷 ESP 协议格式</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+  
+
+</div>
+
+
+<!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <!-- Custom Files side begin -->
+  
+  <!-- Custom Files side end -->
+</aside>
+
+
+
+          <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<pjax>
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+  pdata.commentConfig={};
+  //  see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs
+  
+    // header
+    var l_header=document.getElementById("l_header");
+    
+    l_header.classList.add("show");
+    
+    
+      // cover
+      var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
+      var scroll_down=document.getElementById('scroll-down');
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
+      scroll_down.style.display="none";
+    
+  
+</script>
+</pjax>
+        </div>
+        
+  
+  <footer class="footer clearfix"  itemscope itemtype="http://schema.org/WPFooter">
+    <br><br>
+    
+      
+        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+      
+    
+      
+        
+          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+</div>
+        
+      
+    
+      
+        
+          <div><div style="padding:5px;display: flex;justify-content: flex-start;align-items: center;position: absolute;left: 50%;transform: translate(-50%,0);min-width: 400px;"><div><a target="_blank" href="https://beian.miit.gov.cn/">陕ICP备2021011674号-1</a></div><div>&nbsp;&nbsp;|&nbsp;&nbsp;</div><div><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61010302000955"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAC3FBMVEUAAAD+/ODz6Kr//+PeqFfYrn3x167k0JXoxnyaaVzhs2ifaFXbrGLkvFnpyF7v2X/kwm3cp1nhsGfqw3rZqG3ntVzjrFPt3oDjvGnfr2fbnFGti3q0lH7ktoLryXn9v1T4znr/74bnvGz034v+2I/ktoDz6ZLkwY/Dfz7buoftzYbq2IPr0pjs3bLv6KPRrnbKhFv79ND488n/+dDZr4Lx38f/+cH/95f42oL7/97s2Y3++uzw1rvTk3DmuloAAHkBAm7uzWYAAGXktV3qvFr/0ljksE7fo0rWHxhrdocAAIAABHf143Pyy27w1GwGA2jtymHpwWDqxV/qyVyTeFrrwFflwFPislP+xVLpsErbmUfVkEbysETemUTpgj7ThT3XdTg5FDjdhTXWZTDaTCm7TCbTOCLXPiD9LA/QFg3UAwnOAQOEj5kcPpdyhZSptJEACJFpfo4AG44XMInFvYfTvIejmYSVkINyeoJzdoK9un6SjX7FrnwAEHp8enny2HjWwHjKtnhcX3jYzHeNhnfu2HWUjHWsonPNwnH70m9WTm8AAW//723pym3dtmn/0mbnxGa0o2ZeWWb8zGT/4mPtwmJuYmL/22D/vmB5ZGC9kF7/2l0MAF3uyFqnjVn4xFjYnli0mVi5i1jiqVfyyVbmtlbXkVNUOFPlvFLpt1LNrFKjfVLuvlBgHlDsuU/ouU9ONU/ov05ODk7/2E02Gk3jqkqEaUr/tUngjkf7n0bXikb6xERCJETdn0LckUG1gD/ooD3Ulj3jkz3TZT3WjjzOeDqBWDr3pDnglTlMADnbbTf2gjbkbzaTYDZpAjbplzTtcTTEazPXXzOeXzDscS3MPi38jizJWSrVSCrrXynzfCjVdCjZRyjTQCbFUiTlYCPXPSHLPSHWMR/wXh7iRh7GPh3PLBrSIRrWGhfMJxPGJxPRDBG/ABG2ABCxDg7BDAvEGArZAAbJAALPAADa4ry/AAAAPnRSTlMACEIaxqxpAvv7+ff19PDs7Ovn5uXk5OHg29LRy8fEw8G+vLqysaufnJiVk4yDfG9dXFpMSEFBNTApJyEcFO3QiBQAAAFzSURBVBjTYoACZjYZaTZmBmRgxsp9+di21ZysxggxxlmJZy/ev9LXnriIEa5VYUPIray0lOyd+ctVoKKWXFsmXXvu8exO5vsZnnuErcCC5m1e8x5nPXrxOu3TzSqHFguQmI18tff+Jx89HqR7fE5v7q5TtAYK6h8v81p4Ovv6wbAdmRc6HMpddYGCmudrCqbtTn2anHBq15SZ9iUx6kBBkSTfXIfUuBsPL909c9i/uP6EJFAQMJ6j2/Ps32Yk30uIy3jjXxgRLwEUVN07ubTo5LsPr16mXD1X29gZrgUUlN23uD/H28lp09o5TvYVs523ygEFORYsO+TbEOI5cVVTV+XUA1Fu/EBBoxXu0bfnT98cEePa45oUHR7MBHK9IV9Y/BFHFzc7R7/YqF4BsBiDqVBw0NLQoMAAF3c7vwmCEEFln1ZnZxe3wJWx7nZ2jj5qkNDU5l2/ZE3kusjQuRsDxPXYoQFqa6DBIiUmyqKkYwIWAgD35oZAL/mkFwAAAABJRU5ErkJggg==" style="float:left;" /><p style="float:left;margin-left: 5px;">陕公网安备61010302000955号</p></a></div></div><br></div>
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="/">Copyright © 2020-Now newimg.ltd</a></p>
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          
+            
+              <a href="/atom.xml"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
+            
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=NVNATUBNXFRbUnVERBtWWlg"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
+            
+              <a href="https://github.com/fuxx-1/"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
+            
+              <a href="https://gcore.jsdelivr.net/gh/Fuxx-1/StaticFile@main/Files/img/private/QQ.webp"
+                class="social fab fa-qq flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
+        </div>
+      
+    
+    <!-- Custom Files footer begin-->
+    
+    <!-- Custom Files footer end-->
+  </footer>
+
+
+        <a id="s-top" class="fa-solid fa-arrow-up fa-fw" href="/" onclick="return false;" title="top"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+  /******************** volantis.dom ********************************/
+  // 页面选择器 将dom对象缓存起来 see: /source/js/app.js etc.
+  volantis.dom.bodyAnchor = volantis.dom.$(document.getElementById("safearea")); // 页面主体
+  volantis.dom.topBtn = volantis.dom.$(document.getElementById('s-top')); // 向上
+  volantis.dom.wrapper = volantis.dom.$(document.getElementById('wrapper')); // 整个导航栏
+  volantis.dom.coverAnchor = volantis.dom.$(document.querySelector('#l_cover .cover-wrapper')); // 1个
+  volantis.dom.switcher = volantis.dom.$(document.querySelector('#l_header .switcher .s-search')); // 搜索按钮   移动端 1个
+  volantis.dom.header = volantis.dom.$(document.getElementById('l_header')); // 移动端导航栏
+  volantis.dom.search = volantis.dom.$(document.querySelector('#l_header .m_search')); // 搜索框 桌面端 移动端 1个
+  volantis.dom.mPhoneList = volantis.dom.$(document.querySelectorAll('#l_header .m-phone .list-v')); //  手机端 子菜单 多个
+</script>
+
+<script>
+  
+  volantis.css("https://cdn.qoop.top/blog/volantis-static/libs/@fortawesome/fontawesome-free/css/all.min.css");
+  
+  
+  volantis.css("https://cdn.qoop.top/blog/volantis-static/libs/font-awesome-animation/font-awesome-animation.min.css");
+  
+  
+  volantis.css("https://cdn.qoop.top/blog/volantis-static/libs/node-waves/dist/waves.min.css");
+  
+</script>
+
+<!-- required -->
+
+
+<!-- internal -->
+
+<script src="/js/app.js"></script>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="rightmenu-wrapper">
+  <ul class="list-v rightmenu" id="rightmenu-content">
+    
+  <li class='navigation menuNavigation-Content'>
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="history.back()"><i class="fa-solid fa-arrow-left fa-fw"></i></a>
+
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="history.forward()"><i class="fa-solid fa-arrow-right fa-fw"></i></a>
+
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="window.location.reload()"><i class="fa-solid fa-redo fa-fw"></i></a>
+
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)"><i class="fa-solid fa-arrow-up fa-fw"></i></a>
+
+
+  </li>
+
+
+    <hr class="menuLoad-Content" >
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyPaste" data-event="copyPaste" data-group="inputBox">
+      <i class="fa-solid fa-paste fa-fw"></i>
+      粘贴文本
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyAll" data-event="copyAll" data-group="inputBox">
+      <i class="fa-solid fa-object-ungroup fa-fw"></i>
+      全选文本
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyCut" data-event="copyCut" data-group="inputBox">
+      <i class="fa-solid fa-cut fa-fw"></i>
+      剪切文本
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyText" data-event="copyText" data-group="seletctText">
+      <i class="fa-solid fa-copy fa-fw"></i>
+      复制文本
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="searchWord" data-event="OpenSearch(__text__)" data-group="seletctText">
+      <i class="fa-solid fa-search fa-fw"></i>
+      站内搜索
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="bingSearch" data-event="window.open(`https://cn.bing.com/search?q=${__text__}`)" data-group="seletctText">
+      <i class="fa-solid fa-search fa-fw"></i>
+      必应搜索
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="openTab" data-event="window.open(__link__)" data-group="elementCheck">
+      <i class="fa-solid fa-external-link-square-alt fa-fw"></i>
+      新标签页打开
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyLink" data-event="copyLink" data-group="elementCheck">
+      <i class="fa-solid fa-link fa-fw"></i>
+      复制链接地址
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyImg" data-event="copyImg" data-group="elementImage">
+      <i class="fa-solid fa-image fa-fw"></i>
+      复制图片
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="googleImg" data-event="window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)" data-group="elementImage">
+      <i class="fa-solid fa-images fa-fw"></i>
+      谷歌识图
+    </span>
+  </li>
+
+
+
+    <hr class="menuLoad-Content" >
+
+
+
+    <hr class="menuLoad-Content" >
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="darkMode" data-event="volantis.dark.toggle()" data-group="darkMode">
+      <i class="fa-solid fa-moon fa-fw"></i>
+      暗黑模式
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="printMode" data-event="printMode" data-group="articlePage">
+      <i class="fa-solid fa-print fa-fw"></i>
+      打印页面
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="readMode" data-event="readMode" data-group="articlePage">
+      <i class="fa-solid fa-book-open fa-fw"></i>
+      阅读模式
+    </span>
+  </li>
+
+
+<div id="menuMusic">
+  <li class='music name menuOption-Content'>
+    <p class='nav music-title fix-cursor-default'></p>
+  </li>
+  <li class='music ctrl'>
+    <a class='nav icon-only backward fix-cursor-default' href="/" onclick="return false;" title="backward">
+      <i class='fa-solid fa-step-backward fa-fw'></i>
+    </a>
+    <a class='nav icon-only toggle fix-cursor-default' href="/" onclick="return false;" title="toggle">
+      <i class='fa-solid fa-play fa-fw'></i>
+    </a>
+    <a class='nav icon-only forward fix-cursor-default' href="/" onclick="return false;" title="forward">
+      <i class='fa-solid fa-step-forward fa-fw'></i>
+    </a>
+  </li>
+  <li class='music volume'>
+    <div class='nav volume'>
+      <div class="aplayer-volume-bar-wrap">
+        <div class="aplayer-volume-bar fix-cursor-pointer">
+          <div class="aplayer-volume"></div>
+          <i class='left fa-solid fa-volume-off fa-fw'></i>
+          <i class='right fa-solid fa-volume-up fa-fw'></i>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>
+
+  </ul>
+</div>
+<script src="/js/plugins/rightMenus.js"></script>
+<script>
+  const RightMenusFunction = {};
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  //RightMenusFunction['copyPaste'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['copyAll'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['copyCut'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['copyText'] = (fun) => {fun()}
+
+
+
+
+
+  RightMenusFunction['searchWord'] = (__text__) => {OpenSearch(__text__)}
+
+
+
+
+
+  RightMenusFunction['bingSearch'] = (__text__) => {window.open(`https://cn.bing.com/search?q=${__text__}`)}
+
+
+
+
+
+  RightMenusFunction['openTab'] = (__link__) => {window.open(__link__)}
+
+
+
+
+
+  //RightMenusFunction['copyLink'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['copyImg'] = (fun) => {fun()}
+
+
+
+
+
+  RightMenusFunction['googleImg'] = (__link__) => {window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)}
+
+
+
+
+
+
+
+
+
+  RightMenusFunction['darkMode'] = () => {volantis.dark.toggle()}
+
+
+
+
+
+  //RightMenusFunction['printMode'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['readMode'] = (fun) => {fun()}
+
+
+
+
+
+</script>
+
+
+
+<!-- rightmenu要在darkmode之前（ToggleButton） darkmode要在comments之前（volantis.dark.push）-->
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "color-scheme";
+const rootElementDarkModeAttributeName = "color-scheme";
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+  getCustomDarkMode();
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+/**
+ * get target mode
+ */
+ const getCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  if(currentSetting=="dark"){
+    volantis.dark.mode="light";
+  }else{
+    volantis.dark.mode="dark";
+  }
+  // console.log(volantis.dark.mode)
+};
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+/**
+ * 暗黑模式触发器
+ */
+volantis.dark.toggle=()=>{
+  const mode = toggleCustomDarkMode();
+  applyCustomDarkModeSettings(mode);
+  // 使用 volantis.dark.push 方法传入volantis.dark.toggle回调函数 参见layout/_partial/scripts/global.ejs
+  volantis.dark.method.toggle.start();
+}
+/**
+ * bind event for toggle button
+ */
+
+function bindToggleButton() {
+  var btn= document.querySelectorAll("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn")
+  btn.forEach(function (e) {
+    volantis.dom.$(e).on('click',volantis.dark.toggle);
+  })
+}
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", ()=>{
+  volantis.requestAnimationFrame(bindToggleButton)
+});
+volantis.pjax.push(bindToggleButton);
+
+const darkModelListeners={
+  dark:(mediaQueryList )=>{
+    if(mediaQueryList.matches){
+      volantis.dark.mode = "dark";
+    }
+    volantis.dark.method.toggle.start();
+  },
+  light:(mediaQueryList)=>{
+    if(mediaQueryList.matches){
+      volantis.dark.mode = "light";
+    }
+    volantis.dark.method.toggle.start();
+  }
+}
+window.matchMedia('(prefers-color-scheme: dark)').addListener(darkModelListeners.dark)
+window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListeners.light)
+</script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    
+      const sites_api = document.getElementById('sites-api');
+      if (sites_api != undefined && typeof SitesJS === 'undefined') {
+        volantis.js("/js/plugins/tags/sites.js")
+      }
+    
+    
+      const friends_api = document.getElementById('friends-api');
+      if (friends_api != undefined && typeof FriendsJS === 'undefined') {
+        volantis.js("/js/plugins/tags/friends.js")
+      }
+    
+    
+      const contributors_api = document.getElementById('contributors-api');
+      if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
+        volantis.js("/js/plugins/tags/contributors.js")
+      }
+    
+  };
+  loadIssuesJS()
+  volantis.pjax.push(()=>{
+    loadIssuesJS();
+  })
+
+</script>
+
+
+
+
+  <script defer src="https://cdn.qoop.top/blog/volantis-static/libs/vanilla-lazyload/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+
+<script>
+  window.FPConfig = {
+	delay: 0,
+	ignoreKeywords: ["#"],
+	maxRPS: 6,
+	hoverDelay: 0
+  };
+</script>
+<script defer src="https://cdn.qoop.top/blog/volantis-static/libs/flying-pages/flying-pages.min.js"></script>
+
+
+
+
+
+
+
+  <script>
+  volantis.css("https://cdn.qoop.top/blog/volantis-static/libs/aplayer/dist/APlayer.min.css");
+  (async () => {
+    // APlayer 需要在  MetingJS 之前加载
+    await volantis.js("https://cdn.qoop.top/blog/volantis-static/libs/aplayer/dist/APlayer.min.js")
+    await volantis.js("https://cdn.qoop.top/blog/volantis-static/libs/meting/dist/Meting.min.js")
+  
+    // 右键 music 需要在 APlayer  MetingJS 之后加载
+    await volantis.js('/js/plugins/aplayer.js')
+  
+  })();
+
+  function SetAPlayerPlugin(){
+    let Metings = document.querySelectorAll('meting-js');
+    if (Metings.length === 0) {return;};
+    if (Metings[0].aplayer && Metings[0].aplayer.on) {
+      // improve the accessibility https://web.dev/button-name/
+      document.querySelectorAll(".aplayer-icon-menu").forEach(e=>{
+        e.setAttribute("aria-label","Aplayer Menu")
+      })
+      // message see: /layout/_plugins/message/script.ejs
+      
+        try {
+          setTimeout(() => {
+            Metings.forEach((item, index) => {
+              const aplayerItem = item.aplayer; if(!aplayerItem) return;
+              const rightAplayerCheck = 'true' === 'true'
+                && item.meta.id === '6559921027';
+              if(rightAplayerCheck && typeof RightMenuAplayer !="undefined") RightMenuAplayer.checkAPlayer();
+              if(aplayerItem.events.events.play.every(item => {return item.name !== 'messagePlay'})) {
+                aplayerItem.on('play', function messagePlay() {
+                  let index = aplayerItem.list.index;
+                  let title = aplayerItem.list.audios[index].title;
+                  let artist = aplayerItem.list.audios[index].artist;
+                  setTimeout(() => {
+                    VolantisApp.message('音乐通知', title + ' - ' + artist, {
+                      icon: 'fa-solid fa-play',
+                      transitionIn: 'flipInX',
+                      transitionOut: 'flipOutX'
+                    });
+                  }, 100)
+                });
+              }
+              if(aplayerItem.events.events.pause.every(item => {return item.name !== 'messagePause'})) {
+                aplayerItem.on('pause', function messagePause() {
+                  let index = aplayerItem.list.index;
+                  let title = aplayerItem.list.audios[index].title;
+                  let artist = aplayerItem.list.audios[index].artist;
+                  setTimeout(() => {
+                    // 歌曲播放结束也会触发 pause 事件，为了避免错误提示，等待一会儿
+                    if(aplayerItem.paused) {
+                      VolantisApp.message('音乐通知', title + ' - ' + artist, {
+                        icon: 'fa-solid fa-pause',
+                        transitionIn: 'flipInX',
+                        transitionOut: 'flipOutX'
+                      });
+                    }
+                  }, 100)
+                });
+              }
+            });
+          }, 500)
+        } catch (error) { console.error(error); }
+      
+    }else{
+      volantis.requestAnimationFrame(SetAPlayerPlugin)
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", ()=>{
+    SetAPlayerPlugin();
+  });
+  volantis.pjax.push(SetAPlayerPlugin);
+</script>
+
+
+
+
+      <script>
+  volantis.layoutHelper("comments",`<div id="waline"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`)
+  
+  function pjax_waline() {
+    if(!document.querySelector("#waline"))return;
+    let locale = {};
+    let path = pdata.commentPath;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    if(pagePlaceholder.length != 0) {
+      locale.placeholder = pagePlaceholder;
+    }
+
+    try {
+      Waline.init(Object.assign(Object.assign({"js":"https://unpkg.com/@waline/client@v2/dist/waline.js","css":"https://unpkg.com/@waline/client@v2/dist/waline.css","path":null,"placeholder":"快来评论吧~","serverURL":"https://comment.newimg.ltd","imageUploader":{"api":null,"token":null,"resp":null},"pageview":true,"comment":true}, {
+        el: '#waline',
+        path: path,
+        // https://github.com/volantis-x/hexo-theme-volantis/issues/713
+        
+        locale,
+      }),pdata.commentConfig));
+    } catch (error) {
+      alert(`Waline ${error}`)
+    }
+    fancybox_waline()
+  }
+
+  function fancybox_waline() {
+    if(typeof VolantisFancyBox === "undefined") {
+      const checkFancyBox = setInterval(() => {
+        if(typeof VolantisFancyBox === "undefined") return;
+        clearInterval(checkFancyBox);
+        VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
+      })
+    } else {
+      VolantisFancyBox.bind('#waline .wl-content img:not(.wl-emoji)');
+    }
+  }
+
+  volantis.css('https://unpkg.com/@waline/client@v2/dist/waline.css')
+  volantis.js('https://unpkg.com/@waline/client@v2/dist/waline.js').then(pjax_waline)
+  volantis.pjax.push(pjax_waline);
+</script>
+    
+
+
+
+
+
+<!-- optional -->
+
+  <script>
+  const SearchServiceDataPathRoot = ("/" || "/").endsWith("/") ?
+    "/" || "/" :
+    "//" || "/";
+  const SearchServiceDataPath = SearchServiceDataPathRoot + "content.json";
+
+  function loadSearchScript() {
+    // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
+    return volantis.js("/js/search/hexo.js");
+  }
+
+  function loadSearchService() {
+    loadSearchScript();
+    document.querySelectorAll(".input.u-search-input").forEach((e) => {
+      e.removeEventListener("focus", loadSearchService, false);
+    });
+
+    document.querySelectorAll(".u-search-form").forEach((e) => {
+      e.addEventListener("submit", (event) => {
+        event.preventDefault();
+      }, false);
+    });
+  }
+
+  // 打开并搜索 字符串 s
+  function OpenSearch(s) {
+    if (typeof SearchService === 'undefined')
+      loadSearchScript().then(() => {
+        SearchService.setQueryText(s);
+        SearchService.search();
+      });
+    else {
+      SearchService.setQueryText(s);
+      SearchService.search();
+    }
+  }
+
+  // 访问含有 ?s=xxx  的链接时打开搜索 // 与搜索引擎 structured data 相关: /scripts/helpers/structured-data/lib/config.js
+  if (window.location.search && /^\?s=/g.test(window.location.search)) {
+    let queryText = decodeURI(window.location.search)
+      .replace(/\ /g, "-")
+      .replace(/^\?s=/g, "");
+    OpenSearch(queryText);
+  }
+
+  // 搜索输入框获取焦点时加载搜索
+  document.querySelectorAll(".input.u-search-input").forEach((e) => {
+    e.addEventListener("focus", loadSearchService, false);
+  });
+</script>
+
+
+
+  
+<script src="https://cdn.qoop.top/blog/volantis-static/libs/node-waves/dist/waves.min.js"></script>
+
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function () {
+  Waves.attach('.flat-btn', ['waves-button']);
+  Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+  Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+  Waves.attach('.flat-box', ['waves-block']);
+  Waves.attach('.float-box', ['waves-block', 'waves-float']);
+  Waves.attach('.waves-image');
+  Waves.init();
+});
+</script>
+
+
+
+  
+<script src="https://cdn.qoop.top/blog/volantis-static/libs/comment_typing/comment_typing.js"></script>
+
+
+
+
+  
+  
+<script src="https://unpkg.com/prismjs/components/prism-core.min.js"></script>
+
+
+  
+<script src="https://unpkg.com/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+  
+<script src="https://unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+
+  
+<script src="https://unpkg.com/prismjs/plugins/download-button/prism-download-button.min.js"></script>
+
+
+  
+<script src="https://unpkg.com/prismjs/plugins/diff-highlight/prism-diff-highlight.min.js"></script>
+
+
+  
+<script src="https://unpkg.com/prismjs/plugins/line-highlight/prism-line-highlight.min.js"></script>
+
+
+
+  
+<link rel="stylesheet" href="https://unpkg.com/prismjs/plugins/inline-color/prism-inline-color.min.css">
+
+
+  
+<link rel="stylesheet" href="https://unpkg.com/prism-themes/themes/prism-one-light.min.css">
+
+
+  
+<link rel="stylesheet" href="https://unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.min.css">
+
+
+  
+<link rel="stylesheet" href="https://unpkg.com/prismjs/plugins/diff-highlight/prism-diff-highlight.min.css">
+
+
+  
+<link rel="stylesheet" href="https://unpkg.com/prismjs/plugins/line-highlight/prism-line-highlight.min.css">
+
+
+<script>
+
+  function pjax_prismjs_copyCode(){
+    if (!document.querySelector("pre")) {
+      return;
+    }
+    let pres = document.querySelectorAll("pre")
+    pres.forEach(pre=>{
+      var wrapper = document.createElement('div');
+      wrapper.classList.add('code-toolbar');
+      pre.parentNode.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+    })
+    VolantisApp.utilCopyCode(".code-toolbar pre")
+  }
+  volantis.requestAnimationFrame(pjax_prismjs_copyCode)
+  volantis.pjax.push(pjax_prismjs_copyCode)
+
+</script>
+
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'fHW34R1DcJienNdei4u22WF4-MdYXbMMI',
+    app_key: 'q4RTL9pg0IzB4wOvFhAzqH0a',
+    custom_api_server: 'https://api.leancloud.newimg.ltd',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'https://blog.newimg.ltd' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'https://blog.newimg.ltd' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'https://blog.newimg.ltd' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.custom_api_server || `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+
+
+
+
+  <script>
+  let imgs = ["https://gcore.jsdelivr.net/gh/Fuxx-1/StaticFile@main/background/webp/002.webp","https://gcore.jsdelivr.net/gh/Fuxx-1/StaticFile@main/background/webp/016.webp","https://gcore.jsdelivr.net/gh/Fuxx-1/StaticFile@main/background/webp/001.webp","https://gcore.jsdelivr.net/gh/Fuxx-1/StaticFile@main/background/webp/004.webp","https://gcore.jsdelivr.net/gh/Fuxx-1/StaticFile@main/background/webp/008.webp"];
+  let index = 0;
+  let IntervalParallax = null;
+
+  function parallax(){
+    let ParallaxWindow = document.querySelector("#parallax-window");
+    
+    Parallax.window = ParallaxWindow;
+    Parallax.options.fade = 500;
+    Parallax.cache = 1;
+    next_parallax();
+    Parallax.init();
+    if (imgs.length>1) {
+      IntervalParallax = setInterval(function () {
+        next_parallax();
+      }, '30000');
+    }
+  }
+
+  function next_parallax() {
+    if (typeof Parallax == "undefined") {
+      return
+    }
+    
+      if (!document.querySelector("#full")&&!document.querySelector("#half")) {
+        return
+      }
+    
+    if (imgs.length>=1) {
+      Parallax.options.src = imgs[index % imgs.length];
+      Parallax.start();
+      index++;
+      if (Parallax.cache) {
+        fetch(imgs[index % imgs.length] +"?t=" + new Date().getTime());
+        if (index == imgs.length) {
+          Parallax.cache = 0;
+        }
+      }
+    }
+  }
+  var runningOnBrowser = typeof window !== "undefined";
+  var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+  if (!isBot) {
+    volantis.js('/js/plugins/parallax.js').then(()=>{
+      parallax()
+    })
+    volantis.pjax.send(()=>{
+      clearInterval(IntervalParallax)
+    },"clearIntervalParallax");
+    volantis.pjax.push(parallax);
+  }
+</script>
+
+
+
+
+  <script>
+  function load_swiper() {
+    if (!document.querySelectorAll(".swiper-container")[0]) return;
+    volantis.css("https://cdn.qoop.top/blog/volantis-static/libs/swiper/swiper-bundle.min.css");
+    volantis.js("https://cdn.qoop.top/blog/volantis-static/libs/swiper/swiper-bundle.min.js").then(() => {
+      pjax_swiper();
+    });
+  }
+
+  load_swiper();
+
+  function pjax_swiper() {
+    volantis.swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+      centeredSlides: true,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }
+
+  volantis.pjax.push(() => {
+    if (!document.querySelectorAll(".swiper-container")[0]) return;
+    if (typeof volantis.swiper === "undefined") {
+      load_swiper();
+    } else {
+      pjax_swiper();
+    }
+  });
+</script>
+
+
+<!-- pjax 标签必须存在于所有页面 否则 pjax error -->
+<pjax>
+
+</pjax>
+
+<script>
+  function listennSidebarTOC() {
+    const navItems = document.querySelectorAll(".toc li");
+    if (!navItems.length) return;
+    let targets = []
+    const sections = [...navItems].map((element) => {
+      const link = element.querySelector(".toc-link");
+      const target = document.getElementById(
+        decodeURI(link.getAttribute("href")).replace("#", "")
+      );
+      targets.push(target)
+      // 解除 a 标签 href 的 锚点定位, a 标签 href 的 锚点定位 会随机启用?? 产生错位???
+      link.setAttribute("onclick","return false;")
+      link.setAttribute("toc-action","toc-"+decodeURI(link.getAttribute("href")).replace("#", ""))
+      link.setAttribute("href","/")
+      // 配置 点击 触发新的锚点定位
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        // 这里的 addTop 是通过错位使得 toc 自动展开.
+        volantis.scroll.to(target,{addTop: 5, observer:true})
+        // Anchor id
+        history.pushState(null, document.title, "#" + target.id);
+      });
+      return target;
+    });
+
+    function activateNavByIndex(target) {
+      if (target.classList.contains("active-current")) return;
+
+      document.querySelectorAll(".toc .active").forEach((element) => {
+        element.classList.remove("active", "active-current");
+      });
+      target.classList.add("active", "active-current");
+      let parent = target.parentNode;
+      while (!parent.matches(".toc")) {
+        if (parent.matches("li")) parent.classList.add("active");
+        parent = parent.parentNode;
+      }
+    }
+
+    // 方案一：
+    volantis.activateNavIndex=0
+    activateNavByIndex(navItems[volantis.activateNavIndex])
+    volantis.scroll.push(()=>{
+      if (targets[0].getBoundingClientRect().top >= 0) {
+        volantis.activateNavIndex = 0
+      }else if (targets[targets.length-1].getBoundingClientRect().top < 0) {
+        volantis.activateNavIndex = targets.length-1
+      } else {
+        for (let index = 0; index < targets.length; index++) {
+          const target0 = targets[index];
+          const target1 = targets[(index+1)%targets.length];
+          if (target0.getBoundingClientRect().top < 0&&target1.getBoundingClientRect().top >= 0) {
+            volantis.activateNavIndex=index
+            break;
+          }
+        }
+      }
+      activateNavByIndex(navItems[volantis.activateNavIndex])
+    })
+
+    // 方案二：
+    // IntersectionObserver 不是完美精确到像素级别 也不是低延时性的
+    // function findIndex(entries) {
+    //   let index = 0;
+    //   let entry = entries[index];
+    //   if (entry.boundingClientRect.top > 0) {
+    //     index = sections.indexOf(entry.target);
+    //     return index === 0 ? 0 : index - 1;
+    //   }
+    //   for (; index < entries.length; index++) {
+    //     if (entries[index].boundingClientRect.top <= 0) {
+    //       entry = entries[index];
+    //     } else {
+    //       return sections.indexOf(entry.target);
+    //     }
+    //   }
+    //   return sections.indexOf(entry.target);
+    // }
+    // function createIntersectionObserver(marginTop) {
+    //   marginTop = Math.floor(marginTop + 10000);
+    //   let intersectionObserver = new IntersectionObserver(
+    //     (entries, observe) => {
+    //       let scrollHeight = document.documentElement.scrollHeight;
+    //       if (scrollHeight > marginTop) {
+    //         observe.disconnect();
+    //         createIntersectionObserver(scrollHeight);
+    //         return;
+    //       }
+    //       let index = findIndex(entries);
+    //       activateNavByIndex(navItems[index]);
+    //     }, {
+    //       rootMargin: marginTop + "px 0px -100% 0px",
+    //       threshold: 0,
+    //     }
+    //   );
+    //   sections.forEach((element) => {
+    //     element && intersectionObserver.observe(element);
+    //   });
+    // }
+    // createIntersectionObserver(document.documentElement.scrollHeight);
+  }
+
+  document.addEventListener("DOMContentLoaded", ()=>{
+    volantis.requestAnimationFrame(listennSidebarTOC)
+  });
+  document.addEventListener("pjax:success", ()=>{
+    volantis.requestAnimationFrame(listennSidebarTOC)
+  });
+</script>
+
+
+
+<script>
+  document.onreadystatechange = function () {
+    if (document.readyState == 'complete') {
+      // 页面加载完毕 样式加载失败，或是当前网速慢，或是开启了省流模式
+      const { saveData, effectiveType } = navigator.connection || navigator.mozConnection || navigator.webkitConnection || {}
+      if (getComputedStyle(document.querySelector("#safearea"), null)["display"] == "none" || saveData || /2g/.test(effectiveType)) {
+        document.querySelectorAll(".reveal").forEach(function (e) {
+          e.style["opacity"] = "1";
+        });
+        document.querySelector("#safearea").style["display"] = "block";
+      }
+    }
+  }
+</script>
+
+
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Fuxxの博客","url":"https://blog.newimg.ltd/","logo":{"@type":"ImageObject","url":"https://cdn.qoop.top/blog/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Fuxx-1","image":{"@type":"ImageObject","url":"https://cdn.qoop.top/blog/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.newimg.ltd/","sameAs":["https://github.com/volantis-x"],"description":"Fuxx-1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.newimg.ltd/","name":"Fuxxの博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://blog.newimg.ltd/categories/review/","name":"review"}},{"@type":"ListItem","position":2,"item":{"@id":"https://blog.newimg.ltd/categories/review/general/","name":"general"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.newimg.ltd/2023/06/28/NetSecurity/","name":"期末网安"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Fuxxの博客","url":"https://blog.newimg.ltd/","description":"Fuxx-1","author":{"@type":"Person","name":"Fuxx-1","image":{"@type":"ImageObject","url":"https://cdn.qoop.top/blog/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.newimg.ltd/","description":"Fuxx-1"},"publisher":{"@type":"Organization","name":"Fuxxの博客","url":"https://blog.newimg.ltd/","logo":{"@type":"ImageObject","url":"https://cdn.qoop.top/blog/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.newimg.ltd?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"期末网安","description":"Fuxx-1","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.newimg.ltd/2023/06/28/NetSecurity/"},"author":{"@type":"Person","name":"Fuxx-1","image":{"@type":"ImageObject","url":"https://cdn.qoop.top/blog/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.newimg.ltd/"},"publisher":{"@type":"Organization","name":"Fuxxの博客","logo":{"@type":"ImageObject","url":"https://cdn.qoop.top/blog/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.newimg.ltd/2023/06/28/NetSecurity/","wordCount":0,"datePublished":"2023-06-27T16:00:00.000Z","dateModified":"2026-02-12T15:51:49.072Z","articleSection":"review","keywords":"experience","image":{"@type":"ImageObject","url":"https://cdn.qoop.top/blog/volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+
+
+
+      
+        <!--
+  pjax重载区域接口：
+  1.  <pjax></pjax> 标签 pjax 标签必须存在于所有页面 否则 pjax error
+  2.  script[data-pjax]
+  3.  .pjax-reload script
+  4.  .pjax
+-->
+
+
+
+<script src="https://cdn.qoop.top/blog/volantis-static/libs/pjax/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox]):not([onclick="return false;"]):not([onclick="return!1"]):not([target="_blank"]):not([target="view_window"]):not([href$=".xml"])',
+        selectors: [
+          "head title",
+          "head meta[name=keywords]",
+          "head meta[name=description]",
+          
+          "#l_main",
+          "#pjax-header-nav-list",
+          ".pjax",
+          "pjax", // <pjax></pjax> 标签
+          "script[data-pjax], .pjax-reload script" // script标签添加data-pjax 或 script标签外层添加.pjax-reload 的script代码段重载
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000,
+        
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
+      volantis.pjax.method.send.start();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
+      volantis.pjax.method.complete.start();
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      if(volantis.debug) {
+        console.error(e);
+        console.log('pjax error: \n' + JSON.stringify(e));
+      }else{
+        // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
+        volantis.pjax.method.error.start();
+        window.location.href = e.triggerElement.href;
+      }
+    });
+</script>
+
+      
+    </div>
+    <!-- import body_end begin-->
+    <!-- import body_end end-->
+    <!-- Custom Files bodyEnd begin-->
+    
+    <!-- Custom Files bodyEnd end-->
+    <!-- front-matter body_end begin -->
+    <!-- front-matter body_end end -->
+  </body>
+</html>

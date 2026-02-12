@@ -1,0 +1,17 @@
+@media screen and (max-width: 500px) {
+  #tidio-chat-iframe {
+    right: 0px !important;
+    bottom: 80px !important;
+  }
+}
+
+#tidio-chat-iframe {
+  position: fixed !important;
+  right: 10px !important;
+  bottom: 85px !important;
+  left: auto !important;
+}
+
+#tidio-chat {
+  transition: opacity 0.75s ease-in-out;
+}
